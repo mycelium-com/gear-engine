@@ -1,8 +1,13 @@
+git_source(:github) do |repo_name|
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  "https://github.com/#{repo_name}.git"
+end
+
 source 'https://rubygems.org' do
   if ENV['BUILD_ROOT'].to_s.empty?
-    gem 'straight', github: 'MyceliumGear/straight'
+    gem 'straight', github: 'mycelium-com/gear-straight'
   else
-    gem 'straight', git: "#{ENV['BUILD_ROOT']}/straight/.git", ref: ENV['STRAIGHT_REF']
+    gem 'straight', git: "#{ENV['BUILD_ROOT']}/gear-straight/.git", ref: ENV['STRAIGHT_REF']
     gem 'logstash-logger', github: 'dwbutler/logstash-logger', ref: '621ba20862424f3993c620fc4b1fb0bf819da9e1' # https://github.com/dwbutler/logstash-logger/pull/54
   end
   gem 'pg'
