@@ -1,6 +1,7 @@
 GIT
-  remote: git://github.com/MyceliumGear/straight.git
+  remote: /gear/gear-straight/.git
   revision: 7ff9dbed0b1bc0da6d287c45773b663df821ad86
+  ref: master
   specs:
     straight (1.0.0)
       btcruby (~> 1.0)
@@ -8,6 +9,15 @@ GIT
       faraday
       httparty (~> 0.13.5)
       satoshi-unit (~> 0.1)
+
+GIT
+  remote: https://github.com/dwbutler/logstash-logger.git
+  revision: 621ba20862424f3993c620fc4b1fb0bf819da9e1
+  ref: 621ba20862424f3993c620fc4b1fb0bf819da9e1
+  specs:
+    logstash-logger (0.10.2)
+      logstash-event (~> 1.2)
+      stud
 
 GEM
   remote: https://rubygems.org/
@@ -90,6 +100,7 @@ GEM
     log4r (1.1.10)
     logmaster (0.2.0)
       pony
+    logstash-event (1.2.02)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.6.1)
@@ -148,6 +159,7 @@ GEM
       json
       websocket-client-simple (>= 0.2.1)
     sqlite3 (1.3.10)
+    stud (0.0.23)
     thread_safe (0.3.5)
     timecop (0.8.0)
     trollop (2.1.2)
@@ -178,6 +190,7 @@ DEPENDENCIES
   httparty!
   jeweler (~> 2.0.1)
   logmaster (~> 0.2.0)!
+  logstash-logger!
   pg!
   rbtrace!
   redis!
@@ -193,4 +206,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.14.6
+   1.16.0
