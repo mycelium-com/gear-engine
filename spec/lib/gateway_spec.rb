@@ -534,6 +534,20 @@ RSpec.describe StraightServer::Gateway do
     end
   end
 
+  describe '.get_last_keychain_id' do
+    it 'returns correct last_keychain_id depending on network mode' do
+      @gateway.create_order(amount: 2252, currency: 'BTC', keychain_id: 300)
+      expect(@gateway.get_last_keychain_id).to eq(300)
+
+      @gateway.test_mode = true
+      @gateway.create_order(amount: 2252, currency: 'BTC', keychain_id: 2)
+      expect(@gateway.get_last_keychain_id).to eq(2)
+
+      @gateway.test_mode = false
+      expect(@gateway.get_last_keychain_id).to eq(300)
+    end
+  end
+
   def hmac_sha256(key, secret)
     OpenSSL::HMAC.digest('sha256', secret, key.to_s).unpack("H*").first
   end

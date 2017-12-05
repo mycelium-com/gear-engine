@@ -182,8 +182,12 @@ module StraightServer
       result
     end
 
+    def get_last_keychain_id
+      test_mode ? test_last_keychain_id : last_keychain_id
+    end
+
     def get_next_last_keychain_id
-      self.test_mode ? self.test_last_keychain_id + 1 : self.last_keychain_id + 1
+      get_last_keychain_id + 1
     end
 
     # TODO: make it pretty

@@ -110,7 +110,7 @@ module StraightServer
     end
 
     def last_keychain_id
-      [200, {}, { gateway_id: @gateway.id, last_keychain_id: @gateway.last_keychain_id }.to_json]
+      [200, {}, { gateway_id: @gateway.id, last_keychain_id: @gateway.get_last_keychain_id }.to_json]
     end
 
     def invoice
