@@ -78,8 +78,12 @@ module StraightServer
       @order_callbacks = [
         lambda do |order|
           StraightServer::Thread.new do
-            send_order_to_websocket_client order
-            websockets.delete order.id
+            if order.status < 2
+              send_order_to_websocket_client order, close: false
+            else
+              send_order_to_websocket_client order
+              websockets.delete order.id
+            end
           end
           StraightServer::Thread.new do
             send_callback_http_request order
