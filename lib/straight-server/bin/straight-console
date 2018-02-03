@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require 'irb'
+require_relative '../lib/straight-server'
+StraightServer::Initializer.new.prepare
+
+ARGV.clear
+IRB.start

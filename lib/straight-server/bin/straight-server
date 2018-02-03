@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require 'rbtrace'
+require 'goliath'
+
+require_relative '../lib/straight-server'
+require_relative '../lib/straight-server/server'

@@ -1,0 +1,8 @@
+gemfile: Gemfile.travis
+language: ruby
+rvm:
+  - 2.2.1
+services:
+  - redis-server
+notifications:
+  slack: mycelium-gear:ovM1xPrG9BmKTHGkM0k42gkP
