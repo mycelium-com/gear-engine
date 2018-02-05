@@ -1,8 +1,7 @@
-require 'goliath/constants'
-
 module StraightServer
   class SignatureValidator
-    include Goliath::Constants
+
+    HTTP_PREFIX = 'HTTP_'
 
     attr_reader :gateway, :env
 

@@ -1,0 +1,62 @@
+{
+  "type": "object",
+  "required": [
+    "address",
+    "amount",
+    "amount_in_btc",
+    "amount_paid_in_btc",
+    "amount_to_pay_in_btc",
+    "id",
+    "keychain_id",
+    "last_keychain_id",
+    "payment_id",
+    "status",
+    "tid",
+    "transaction_ids"
+  ],
+  "properties": {
+    "address": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "integer",
+      "exclusiveMinimum": 0
+    },
+    "amount_in_btc": {
+      "type": "string"
+    },
+    "amount_paid_in_btc": {
+      "type": "string"
+    },
+    "amount_to_pay_in_btc": {
+      "type": "string"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "keychain_id": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "last_keychain_id": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "payment_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "integer"
+    },
+    "tid": {
+      "type": ["null", "string"]
+    },
+    "transaction_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "uniqueItems": true
+      }
+    }
+  }
+}

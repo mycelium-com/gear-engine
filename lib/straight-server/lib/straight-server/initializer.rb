@@ -42,7 +42,7 @@ module StraightServer
       read_config_file
       yield StraightServer::Config if block_given?
       create_logger
-      connect_to_db
+      # connect_to_db
       self.run_migrations if run_migrations && migrations_pending?
       # DB connection should be established and tables should be present before the models definition
       require_relative 'gateway'
