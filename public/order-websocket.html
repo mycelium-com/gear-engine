@@ -1,0 +1,23 @@
+<pre id="log"></pre>
+<script>
+var output = document.getElementById('log');
+var websocket = new WebSocket(
+  window.location.protocol.replace('http','ws') + '//'
+  + window.location.host
+  + '/orders/'
+  + window.location.hash.replace('#','')
+  + '/websocket'
+);
+websocket.onopen = function () {
+  output.innerHTML += "[websocket.onopen]\n\n";
+};
+websocket.onmessage = function (message) {
+  output.innerHTML += "[websocket.onmessage]\n\n" + message.data + "\n\n";
+};
+websocket.onerror = function () {
+  output.innerHTML += "[websocket.onerror]\n\n";
+};
+websocket.onclose = function () {
+  output.innerHTML += "[websocket.onclose]\n\n";
+};
+</script>

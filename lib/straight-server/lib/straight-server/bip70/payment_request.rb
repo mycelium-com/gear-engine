@@ -61,7 +61,7 @@ module StraightServer
         def create_pki_data
           pki_data = Payments::X509Certificates.new
 
-          certificates = File.read(Config.ssl_certificate_path)
+          certificates = File.read(absolute_path Config.ssl_certificate_path)
           certificates.each_line("-----END CERTIFICATE-----\n") do |cert|
             pki_data.certificate << OpenSSL::X509::Certificate.new(cert).to_der
           end
@@ -74,10 +74,14 @@ module StraightServer
             raise PaymentRequestError.new('No private key was found! Please provide it in config file')
           end
 
-          key = File.read(Config.private_key_path)
+          key = File.read(absolute_path Config.private_key_path)
 
           private_key = OpenSSL::PKey::RSA.new(key)
           private_key.sign(OpenSSL::Digest::SHA256.new, data)
+        end
+
+        def absolute_path(target)
+          File.expand_path(target, StraightServer::Initializer::ConfigDir.path)
         end
 
     end

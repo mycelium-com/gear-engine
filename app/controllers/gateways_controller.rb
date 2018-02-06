@@ -1,4 +1,4 @@
-class GatewaysController < ApplicationController
+class GatewaysController < ApiController
 
   def last_keychain_id
     @gateway = StraightServer::Gateway.find_by_hashed_id(params[:gateway_id])

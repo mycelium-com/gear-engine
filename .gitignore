@@ -28,3 +28,6 @@
 # straight-server
 /config/straight/*/straight.log
 /config/straight/*/server_secret
+
+# rspec
+/spec/examples.txt

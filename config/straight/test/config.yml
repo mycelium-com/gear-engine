@@ -35,8 +35,8 @@ count_orders: true
 
 # Path to certificates and private key for BIP70 protocol. Uncomment this and provide
 # it to send payment requests to wallets.
-#ssl_certificate_path: '/path/to/ssl_certificate'
-#private_key_path: '/path/to/private_key'
+ssl_certificate_path: 'bip70.crt'
+private_key_path: 'bip70.key'
 
 redis:
   host: localhost

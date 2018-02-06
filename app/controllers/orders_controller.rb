@@ -1,4 +1,4 @@
-class OrdersController < ApplicationController
+class OrdersController < ApiController
 
   def create
     # validate_signature || throttle
@@ -52,22 +52,24 @@ class OrdersController < ApplicationController
   end
 
   def websocket
-    ws = Faye::WebSocket.new(request.env)
-
     if order
+      ws = Faye::WebSocket.new(request.env)
       if order.status >= 2
+        # FIXME: due to order.reprocess this branch may have no sense anymore
         ws.send order.to_json
-        ws.close
+        Thread.new do
+          sleep 1
+          ws.close
+        end
       else
         order.gateway.add_websocket_for_order(ws, order)
       end
-    else
-      ws.send('error: order not found')
-      ws.close
-    end
 
-    self.response = ActionDispatch::Response.new(*ws.rack_response)
-    self.response.close
+      self.response = ActionDispatch::Response.new(*ws.rack_response)
+      self.response.close
+    else
+      head :not_found
+    end
   end
 
   def cancel
@@ -87,7 +89,7 @@ class OrdersController < ApplicationController
 
   def invoice
     if order
-      payment_request = Bip70::PaymentRequest.new(order: order).to_s
+      payment_request = StraightServer::Bip70::PaymentRequest.new(order: order).to_s
 
       # {
       #     'Expires':                   '0',
@@ -100,19 +102,25 @@ class OrdersController < ApplicationController
     end
   end
 
+  # FIXME: Probably this action should be non-blocking and only schedule reprocessing.
+  # Also, with Sidekiq we may monitor lots of orders for a very long time with exponential backoff.
+  # But if order suddenly gets "paid" after long time when currency rate already changed,
+  # merchant will need to manually check if it has been paid enough to fulfill the order.
+  # Since we aim to automate merchant's business process, we may wish to implement some
+  # profitable strategy to deal with late payments.
   def reprocess
     # validate_signature || throttle
-
-    if order
-      before = order.to_json
-      begin
-        order.reprocess!
-      rescue => ex
-        render status: 409, json: %({"error":#{ex.message.inspect}})
-      end
-      after = order.to_json
-      render json: %({"before":#{before},"after":#{after}})
-    end
+    #
+    # if order
+    #   before = order.to_json
+    #   begin
+    #     order.reprocess!
+    #   rescue => ex
+    #     render status: 409, json: %({"error":#{ex.message.inspect}})
+    #   end
+    #   after = order.to_json
+    #   render json: %({"before":#{before},"after":#{after}})
+    # end
   end
 
   private

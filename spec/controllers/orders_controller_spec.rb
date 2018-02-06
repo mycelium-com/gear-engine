@@ -10,9 +10,11 @@ RSpec.describe OrdersController, type: :controller do
     end
   end
 
-  context "create" do
+  let(:params) { build(:params_create_order) }
+  let(:order) { create(:order) }
+  let(:order_id) { { order_id: order.payment_id } }
 
-    let(:params) { build(:params_create_order) }
+  context "create" do
 
     it "creates order" do
       expect {
@@ -28,10 +30,8 @@ RSpec.describe OrdersController, type: :controller do
 
   context "show" do
 
-    let(:order) { create(:order) }
-
     it "shows order" do
-      get :show, params: { order_id: order.payment_id }
+      get :show, params: order_id
       expect(response.status).to eq 200
       expect(response).to match_response_schema :order
       expect_order_json order, response.body
@@ -40,21 +40,31 @@ RSpec.describe OrdersController, type: :controller do
 
   context "websocket" do
 
-    let(:order) { create(:order) }
-
     it "creates websocket" do
       expect {
-        get :websocket, params: { order_id: order.payment_id }
+        get :websocket, params: order_id
       }.to change { order.gateway.websockets.size }.by 1
     end
   end
 
   context "cancel" do
+
+    it "cancels new order" do
+      expect(order[:status]).to eq 0
+      post :cancel, params: order_id
+      expect(response.status).to eq 204
+      expect(order.reload[:status]).to eq 6
+    end
   end
 
   context "invoice" do
-  end
 
-  context "reprocess" do
+    it "creates BIP70 invoice" do
+      get :invoice, params: order_id
+      puts response.headers.inspect
+      expect(response.headers['Content-Type']).to eq 'application/bitcoin-paymentrequest'
+      expect(response.headers['Content-Transfer-Encoding']).to eq 'binary'
+      expect(response.body).to include 'Payment request for GearPoweredMerchant'
+    end
   end
 end
