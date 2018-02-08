@@ -9,3 +9,10 @@ Attempt to merge `straight` and `straight-server` gems into single Rails app.
 See https://www.engineyard.com/blog/rails-encrypted-credentials-on-rails-5.2
 
 Master key saved to Vault as `secret/gear-engine:RAILS_MASTER_KEY`
+
+## TODO
+
+* Order monitoring via Sidekiq
+* OrdersController reprocess
+* OrdersController validate_signature
+* OrdersController throttle

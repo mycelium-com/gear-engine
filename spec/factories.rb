@@ -6,6 +6,22 @@ FactoryBot.define do
   factory :params_create_order, parent: :params do
     gateway_id { create(:gateway).hashed_id }
     amount 1
+
+    trait :negative_amount do
+      amount -1
+    end
+
+    trait :no_amount do
+      amount ''
+    end
+
+    trait :with_data do
+      data(hello: 'world')
+    end
+
+    trait :with_callback_data do
+      callback_data 'some random data'
+    end
   end
 
   factory :gateway, class: StraightServer::Gateway do

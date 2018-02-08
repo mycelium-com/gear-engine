@@ -15,10 +15,15 @@ gem 'puma', '~> 3.11'
 # gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
+# Background processing
+gem 'sidekiq'
+# gem 'retriable'
+# Business logic encapsulation
+gem 'interactor-rails', github: 'collectiveidea/interactor-rails'
 
 # straight
-gem 'btcruby', '1.1.1'
-gem 'satoshi-unit', '0.1.8'
+gem 'btcruby' #, '1.1.1'
+gem 'satoshi-unit' #, '0.1.8'
 # gem 'httparty', '~> 0.13.5'
 gem 'faraday'
 gem 'concurrent-ruby'
@@ -78,7 +83,8 @@ group :test do
   gem 'capybara', '~> 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
+  # gem 'chromedriver-helper'
+  # Currently using: https://github.com/mozilla/geckodriver/releases
   gem 'webmock'
   gem 'vcr'
   gem 'timecop'

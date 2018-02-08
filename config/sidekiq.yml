@@ -1,0 +1,10 @@
+:queues:
+- urgent
+- default
+- background
+
+development:
+  :concurrency: 2
+
+production:
+  :concurrency: 8

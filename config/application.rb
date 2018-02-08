@@ -34,6 +34,10 @@ module GearEngine
     # the framework and any gems in your application.
 
     config.sequel.after_connect = proc do
+      Sequel::Model.include GlobalID::Identification
+      GlobalID::Locator.use :'gear-engine' do |gid|
+        gid.model_class.with_pk!(gid.model_id)
+      end
       require 'straight/lib/straight'
       require 'straight-server/lib/straight-server'
       begin

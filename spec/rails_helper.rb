@@ -32,7 +32,8 @@ require 'capybara/rspec'
 RSpec.configure do |config|
 
   config.before :suite do
-    DatabaseCleaner.strategy = :truncation
+    DatabaseCleaner[:sequel].strategy = :truncation
+    DatabaseCleaner[:redis].strategy  = :truncation
     DatabaseCleaner.clean_with :truncation
   end
 

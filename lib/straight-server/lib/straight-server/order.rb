@@ -8,7 +8,7 @@ module StraightServer
 
     plugin :serialization
 
-    # Additional data that can be passed and stored with each order. Not returned with the callback.
+    # Additional data that can be passed and stored with each order. Not returned with the callback (false, see `git show e44e3cd2`).
     serialize_attributes :marshal, :data
 
     # data that was provided by the merchan upon order creation and is sent back with the callback
