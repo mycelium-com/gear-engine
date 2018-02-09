@@ -2,11 +2,11 @@ class OrderScheduleStatusCheck
   include Interactor
 
   def call
-    OrderStatusCheckJob.new(context.order).enqueue
+    OrderStatusCheckJob.new(order: context.order, final: false).enqueue
     context.schedule = []
-    on_schedule do |time|
+    on_schedule do |time, final|
       context.schedule << time
-      OrderStatusCheckJob.new(context.order).enqueue(wait_until: time)
+      OrderStatusCheckJob.new(order: context.order, final: final).enqueue(wait_until: time)
     end
   end
 
@@ -34,9 +34,9 @@ class OrderScheduleStatusCheck
     now    = start
     with_intervals often do |interval|
       now += interval
-      yield now
+      yield now, false
     end
-    yield finish
+    yield finish, true
   end
 
   def with_intervals(max_period:, base_interval:, max_interval:, rand_factor:, multiplier:)

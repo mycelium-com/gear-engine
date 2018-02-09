@@ -279,6 +279,7 @@ module StraightServer
       self.gateway.increment_order_counter!(:new) if StraightServer::Config.count_orders
     end
 
+=begin
     # Reloads the method in Straight engine. We need to take
     # Order#created_at into account now, so that we don't start checking on
     # an order that is already expired. Or, if it's not expired yet,
@@ -303,6 +304,7 @@ module StraightServer
       super
       StraightServer.insight_client.remove_address(self.address) if self.status >= 2 && StraightServer.insight_client
     end
+=end
 
     def time_left_before_expiration
       time_passed_after_creation = (Time.now - created_at).to_i

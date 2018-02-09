@@ -6,9 +6,9 @@ require File.expand_path('../../config/environment', __FILE__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
-require 'support/factory_bot'
 require 'json_matchers/rspec'
 require 'capybara/rspec'
+require 'webmock/rspec'
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
@@ -31,16 +31,15 @@ require 'capybara/rspec'
 
 RSpec.configure do |config|
 
-  config.before :suite do
-    DatabaseCleaner[:sequel].strategy = :truncation
-    DatabaseCleaner[:redis].strategy  = :truncation
-    DatabaseCleaner.clean_with :truncation
-  end
+  config.include FactoryBot::Syntax::Methods
 
-  config.around :each do |example|
-    DatabaseCleaner.cleaning do
-      example.run
-    end
+  DatabaseCleaner[:sequel].strategy = :truncation
+  DatabaseCleaner[:redis].strategy  = :truncation
+
+  config.before :each do
+    ActiveJob::Base.queue_adapter.enqueued_jobs.clear
+    ActiveJob::Base.queue_adapter.performed_jobs.clear
+    DatabaseCleaner.clean
   end
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
@@ -49,7 +48,7 @@ RSpec.configure do |config|
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
-  config.use_transactional_fixtures = true
+  # config.use_transactional_fixtures = true
 
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
@@ -70,6 +69,12 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+end
+
+VCR.configure do |config|
+  config.hook_into :webmock
+  config.ignore_localhost     = true
+  config.cassette_library_dir = "#{::Rails.root}/spec/fixtures/vcr"
 end
 
 Capybara.configure do |config|

@@ -176,6 +176,7 @@ module StraightServer
       end if addons
     end
 
+=begin
     # Finds orders that have statuses < 2 and starts querying the blockchain
     # for them (unless they are also expired). This is for cases when the server was shut down,
     # but some orders statuses are not resolved.
@@ -206,6 +207,7 @@ module StraightServer
         end
       end
     end
+=end
     
     def open_ws_connect
       websocket_urls = [StraightServer::Config[:'blockchain_adapters.Insight.websocket_url']].flatten.compact

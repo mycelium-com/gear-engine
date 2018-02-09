@@ -1,3 +1,4 @@
+=begin
 require_relative 'throttler'
 
 module StraightServer
@@ -254,3 +255,4 @@ module StraightServer
       end
   end
 end
+=end

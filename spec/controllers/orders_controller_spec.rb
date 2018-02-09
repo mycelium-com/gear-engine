@@ -27,7 +27,7 @@ RSpec.describe OrdersController, type: :controller do
   let(:order) { create(:order) }
   let(:order_id) { { order_id: order.payment_id } }
 
-  context "create" do
+  describe "create action" do
 
     it "creates order" do
       expect_order_created build(:params_create_order)
@@ -70,7 +70,7 @@ RSpec.describe OrdersController, type: :controller do
     end
   end
 
-  context "show" do
+  describe "show action" do
 
     it "shows order" do
       get :show, params: order_id
@@ -80,7 +80,7 @@ RSpec.describe OrdersController, type: :controller do
     end
   end
 
-  context "websocket" do
+  describe "websocket action" do
 
     it "creates websocket" do
       expect {
@@ -89,7 +89,7 @@ RSpec.describe OrdersController, type: :controller do
     end
   end
 
-  context "cancel" do
+  describe "cancel action" do
 
     it "cancels new order" do
       expect(order[:status]).to eq 0
@@ -99,7 +99,7 @@ RSpec.describe OrdersController, type: :controller do
     end
   end
 
-  context "invoice" do
+  describe "invoice action" do
 
     it "creates BIP70 invoice" do
       get :invoice, params: order_id

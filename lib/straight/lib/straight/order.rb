@@ -210,6 +210,7 @@ module Straight
         transactions(reload: reload).select { |t| t.block_height.to_i <= 0 || t.block_height > block_height }
       end
 
+=begin
       # Starts a loop which calls #status(reload: true) according to the schedule
       # determined in @status_check_schedule. This method is supposed to be
       # called in a separate thread, for example:
@@ -253,6 +254,7 @@ module Straight
           self.status = STATUSES[:expired]
         end
       end
+=end
 
       def to_json
         to_h.to_json
