@@ -95,7 +95,7 @@ module StraightServer
         @status = self[:status] = result[:status]
         self.amount_paid = result[:amount_paid]
         self.accepted_transactions = result[:accepted_transactions]
-        save
+        save changed: true
 
         Thread.new do
           gateway.order_status_changed(self)
@@ -162,7 +162,7 @@ module StraightServer
 
     def status=(*)
       self[:status] = @status
-      save
+      save changed: true
     end
 
     def amount_paid_in_btc
@@ -194,7 +194,7 @@ module StraightServer
 
     def cancel
       self.status = Straight::Order::STATUSES.fetch(:canceled)
-      save
+      save changed: true
       StraightServer::Thread.interrupt(label: payment_id)
     end
 
@@ -219,6 +219,10 @@ module StraightServer
 
     def to_json
       to_h.to_json
+    end
+
+    def to_s
+      "Order#{id}"
     end
 
     def validate

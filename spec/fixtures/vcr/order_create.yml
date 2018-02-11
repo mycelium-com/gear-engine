@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://test-insight.bitpay.com/api/status
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.14.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 11 Feb 2018 08:41:16 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dc6429de142396d80bc97c001a4e88d2f1518338476; expires=Mon, 11-Feb-19
+        08:41:16 GMT; path=/; domain=.bitpay.com; HttpOnly
+      X-Powered-By:
+      - Express
+      X-Ratelimit-Limit:
+      - '10800'
+      X-Ratelimit-Remaining:
+      - '10799'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, PUT, POST, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Content-Length, Cache-Control,
+        cf-connecting-ip
+      Cache-Control:
+      - public, max-age=30
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - W/"105-68zh1++wKk/GdYZPytGncQ"
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - REVALIDATED
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 3eb602143a706b61-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: '{"info":{"version":120100,"protocolversion":70012,"blocks":1000000,"timeoffset":0,"connections":121,"proxy":"","difficulty":304101.5177101588,"testnet":true,"relayfee":0.00001,"errors":"Warning:
+        unknown new rules activated (versionbit 28)","network":"testnet"}}'
+    http_version: 
+  recorded_at: Sun, 11 Feb 2018 08:41:16 GMT
+recorded_with: VCR 4.0.0

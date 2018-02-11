@@ -73,6 +73,9 @@ module StraightServer
     end
 
     def initialize_callbacks
+      @order_callbacks = []
+      @order_accepted_transactions_updated_callbacks = []
+=begin
       # When the status of an order changes, we send an http request to the callback_url
       # and also notify a websocket client (if present, of course).
       @order_callbacks = [
@@ -97,6 +100,7 @@ module StraightServer
           end
         end
       ]
+=end
     end
 
     def initialize_status_check_schedule

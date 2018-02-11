@@ -1,0 +1,136 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://test-insight.bitpay.com/api/addr/mmbNQZTFZf8XvPSh8faYM5QwtdvodwSRYE
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.14.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 11 Feb 2018 08:46:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d4bad554898212e69a6415eb6c16a32f51518338805; expires=Mon, 11-Feb-19
+        08:46:45 GMT; path=/; domain=.bitpay.com; HttpOnly
+      X-Powered-By:
+      - Express
+      X-Ratelimit-Limit:
+      - '10800'
+      X-Ratelimit-Remaining:
+      - '10795'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, PUT, POST, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Content-Length, Cache-Control,
+        cf-connecting-ip
+      Cache-Control:
+      - public, max-age=30
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - W/"15d-eZJ225pF8/JhdNKHbL95og"
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - MISS
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 3eb60a1c8a2b6b5b-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: '{"addrStr":"mmbNQZTFZf8XvPSh8faYM5QwtdvodwSRYE","balance":0.00039479,"balanceSat":39479,"totalReceived":0.00039479,"totalReceivedSat":39479,"totalSent":0,"totalSentSat":0,"unconfirmedBalance":0,"unconfirmedBalanceSat":0,"unconfirmedTxApperances":0,"txApperances":1,"transactions":["a96fd9c0f9c0c5b23c911e6341602cb8d7bf7ce56d285be2bfb59b481831bbc9"]}'
+    http_version: 
+  recorded_at: Sun, 11 Feb 2018 08:46:45 GMT
+- request:
+    method: get
+    uri: https://test-insight.bitpay.com/api/tx/a96fd9c0f9c0c5b23c911e6341602cb8d7bf7ce56d285be2bfb59b481831bbc9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.14.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 11 Feb 2018 08:46:47 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d6dbaacd1675db015797d78299b2f44be1518338806; expires=Mon, 11-Feb-19
+        08:46:46 GMT; path=/; domain=.bitpay.com; HttpOnly
+      X-Powered-By:
+      - Express
+      X-Ratelimit-Limit:
+      - '10800'
+      X-Ratelimit-Remaining:
+      - '10794'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, PUT, POST, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Content-Length, Cache-Control,
+        cf-connecting-ip
+      Cache-Control:
+      - public, max-age=30
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - W/"68c-J+TVHyrQkYYC0ViVL+yFiQ"
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - MISS
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 3eb60a258eab3560-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: '{"txid":"a96fd9c0f9c0c5b23c911e6341602cb8d7bf7ce56d285be2bfb59b481831bbc9","version":1,"locktime":0,"vin":[{"txid":"369d517599896a3adfa8cfd32348784f34b08e750d19eed5423254d2505e4052","vout":1,"sequence":4294967295,"n":0,"scriptSig":{"hex":"4730440220499dd233092dafe3ab44453787a5695a58caa131e772f9c5002fc06711f328cf02203e18daddf35866ae0b55966336dc80f47025a46274cc31103d4479e82fb06e92012103135c06428aab98978185fc659d9ba1f225ae6080874734061e2d8c25115e41e6","asm":"30440220499dd233092dafe3ab44453787a5695a58caa131e772f9c5002fc06711f328cf02203e18daddf35866ae0b55966336dc80f47025a46274cc31103d4479e82fb06e92[ALL]
+        03135c06428aab98978185fc659d9ba1f225ae6080874734061e2d8c25115e41e6"},"addr":"mrR1EEcNv4PTRD2dpTH4MEdDgQDEtrZu5a","valueSat":2345678,"value":0.02345678,"doubleSpentTxID":null}],"vout":[{"value":"0.02304516","n":0,"scriptPubKey":{"hex":"76a9144b6f96e9daa663cea0b6510545a92b5a3c1fd1bb88ac","asm":"OP_DUP
+        OP_HASH160 4b6f96e9daa663cea0b6510545a92b5a3c1fd1bb OP_EQUALVERIFY OP_CHECKSIG","addresses":["mnPpepHbGqbK3Zp2PouWMvHK8x9haReYm4"],"type":"pubkeyhash"},"spentTxId":null,"spentIndex":null,"spentHeight":null},{"value":"0.00039479","n":1,"scriptPubKey":{"hex":"76a91442a68bdfb726b39a2c613b632166dae9d8d8819d88ac","asm":"OP_DUP
+        OP_HASH160 42a68bdfb726b39a2c613b632166dae9d8d8819d OP_EQUALVERIFY OP_CHECKSIG","addresses":["mmbNQZTFZf8XvPSh8faYM5QwtdvodwSRYE"],"type":"pubkeyhash"},"spentTxId":null,"spentIndex":null,"spentHeight":null}],"blockhash":"000000000000021f20299c936cdd02d60fcf2851ad31e538868066d7c8d0a5d8","blockheight":1152334,"confirmations":128698,"time":1499594772,"blocktime":1499594772,"valueOut":0.02343995,"size":225,"valueIn":0.02345678,"fees":0.00001683}'
+    http_version: 
+  recorded_at: Sun, 11 Feb 2018 08:46:47 GMT
+recorded_with: VCR 4.0.0

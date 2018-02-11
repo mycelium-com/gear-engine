@@ -9,17 +9,11 @@ class OrdersController < ApiController
     begin
       result = OrderCreate.call(gateway: gateway, params: params.permit!.to_hash)
       render json: result.order.to_json
-    rescue Sequel::ValidationFailed => e
-      StraightServer.logger.debug(
-          "VALIDATION ERRORS in order, cannot create it:\n" +
-              "#{e.message.split(",").each_with_index.map { |e, i| "#{i + 1}. #{e.lstrip}" }.join("\n") }\n" +
-              "Order data: #{order_data.inspect}\n"
-      )
-      render status: 409, plain: "Invalid order: #{e.message}"
-    rescue Straight::Gateway::OrderAmountInvalid => e
-      render status: 409, plain: "Invalid order: #{e.message}"
+    rescue Sequel::ValidationFailed => ex
+      render status: 409, plain: "Invalid order: #{ex.message}"
+    rescue Straight::Gateway::OrderAmountInvalid => ex
+      render status: 409, plain: "Invalid order: #{ex.message}"
     rescue StraightServer::GatewayModule::GatewayInactive
-      StraightServer.logger.debug "Order creation attempt on inactive gateway #{gateway.id}"
       render status: 503, plain: "The gateway is inactive, you cannot create order with it"
     end
   end
@@ -32,22 +26,22 @@ class OrdersController < ApiController
     render json: order.to_json
   end
 
-  def websocket
-    ws = Faye::WebSocket.new(request.env)
-    if order.status >= 2
-      # FIXME: due to order.reprocess this branch may have no sense anymore
-      ws.send order.to_json
-      Thread.new do
-        sleep 1
-        ws.close
-      end
-    else
-      order.gateway.add_websocket_for_order(ws, order)
-    end
-
-    self.response = ActionDispatch::Response.new(*ws.rack_response)
-    self.response.close
-  end
+  # def websocket
+  #   ws = Faye::WebSocket.new(request.env)
+  #   if order.status >= 2
+  #     # FIXME: due to order.reprocess this branch may have no sense anymore
+  #     ws.send order.to_json
+  #     Thread.new do
+  #       sleep 1
+  #       ws.close
+  #     end
+  #   else
+  #     order.gateway.add_websocket_for_order(ws, order)
+  #   end
+  #
+  #   self.response = ActionDispatch::Response.new(*ws.rack_response)
+  #   self.response.close
+  # end
 
   def cancel
     # validate_signature(if_unforced: false)

@@ -1,0 +1,14 @@
+@startuml
+[*] -> New : Order created
+New -up-> Timeout_Expired : No TX
+New -up-> Canceled
+New -down-> PartiallyPaid : TX with insufficient amount
+New -down-> Unconfirmed : TX with insufficient confirmations
+New -> Paid_OR_Overpaid
+Unconfirmed -down-> Paid_OR_Overpaid
+Unconfirmed -up-> Timeout_Unconfirmed
+PartiallyPaid -up-> Timeout_Underpaid
+PartiallyPaid -down-> Paid_OR_Overpaid
+PartiallyPaid -> PartiallyPaid : Additional TX with insufficient amount
+PartiallyPaid -left-> Unconfirmed
+@enduml

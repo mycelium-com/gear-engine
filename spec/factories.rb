@@ -28,7 +28,7 @@ FactoryBot.define do
     to_create &:save
     name 'A'
     pubkey 'xpub6AH1Ymkkrwk3TaMrVrXBCpcGajKc9a1dAJBTKr1i4GwYLgLk7WDvPtN1o1cAqS5DZ9CYzn3gZtT7BHEP4Qpsz24UELTncPY1Zsscsm3ajmX'
-    test_pubkey 'tpubDCzMzH5R7dvZAN7jNyZRUXxuo8XdRmMd7gmzvHs9LYG4w2EBvEjQ1Drm8ZXv4uwxrtUh3MqCZQJaq56oPMghsbtFnoLi9JBfG7vRLXLH21r'
+    test_pubkey 'tpubD6NzVbkrYhZ4Xd74t7wGJB1zZsJfsUL3Cf2HMaqLpJ8bHZmN2L5mHEABDyFabGayc6LG24kj1REAjrgq8Hbrf1qJQqj2AxAr4PmbXPCXzKE'
     secret 'secret'
     order_class 'StraightServer::Order'
     default_currency 'BTC'
@@ -42,7 +42,11 @@ FactoryBot.define do
 
   factory :order, class: StraightServer::Order do
     to_create &:save
-    initialize_with { gateway.create_order(attributes.except(:gateway)) }
+    initialize_with {
+      VCR.use_cassette 'order_create' do
+        gateway.create_order(attributes.except(:gateway))
+      end
+    }
     gateway
     sequence :keychain_id
     amount 1

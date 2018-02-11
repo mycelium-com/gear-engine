@@ -30,7 +30,7 @@ gem 'concurrent-ruby'
 
 # straight-server
 # gem 'goliath'
-gem 'faye-websocket'
+# gem 'faye-websocket'
 gem 'socket.io-client-simple'
 gem 'sequel', '~> 4.25'
 gem 'sequel-rails'

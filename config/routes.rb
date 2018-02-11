@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   per_order = -> {
     get :show
     get :invoice
-    get :websocket
+    # get :websocket
     post :cancel
     post :reprocess
   }
@@ -16,6 +16,9 @@ Rails.application.routes.draw do
 
   # new shorter URLs
   resources :orders, only: [], &per_order
+
+  mount ActionCable.server => '/gateways/:gateway_id/orders/:order_id/websocket'
+  mount ActionCable.server => '/orders/:order_id/websocket'
 
   # NOTE: for future API changes, date can be used as version number
   # 1. client specifies Accept-Version header with any or current date

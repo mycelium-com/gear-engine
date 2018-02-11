@@ -9,10 +9,10 @@ RSpec.feature "OrderWebsockets" do
 
     let(:order) { create(:order) }
 
-    it "opens connection", js: true do
+    it "sends order data", js: true do
       visit client_page
       sleep 3
-      expect(log).to eq %([websocket.onopen])
+      expect(log).to eq %([websocket.onopen] [websocket.onmessage] #{order.to_json})
     end
   end
 
@@ -20,10 +20,10 @@ RSpec.feature "OrderWebsockets" do
 
     let(:order) { create(:order, :paid) }
 
-    it "sends order data and closes connection", js: true do
+    it "sends order data", js: true do
       visit client_page
       sleep 3
-      expect(log).to eq %([websocket.onopen] [websocket.onmessage] #{order.to_json} [websocket.onclose])
+      expect(log).to eq %([websocket.onopen] [websocket.onmessage] #{order.to_json})
     end
   end
 end

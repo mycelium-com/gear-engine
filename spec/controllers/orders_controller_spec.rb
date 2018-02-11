@@ -80,14 +80,14 @@ RSpec.describe OrdersController, type: :controller do
     end
   end
 
-  describe "websocket action" do
-
-    it "creates websocket" do
-      expect {
-        get :websocket, params: order_id
-      }.to change { order.gateway.websockets.size }.by 1
-    end
-  end
+  # describe "websocket action" do
+  #
+  #   it "creates websocket" do
+  #     expect {
+  #       get :websocket, params: order_id
+  #     }.to change { order.gateway.websockets.size }.by 1
+  #   end
+  # end
 
   describe "cancel action" do
 
