@@ -188,14 +188,22 @@ module StraightServer
       result.each { |k, v| send :"#{k}=", v }
     end
 
+    def finalized?
+      status >= 2
+    end
+
     def cancelable?
-      status == Straight::Order::STATUSES.fetch(:new)
+      status == STATUSES.fetch(:new)
+    end
+
+    def canceled?
+      status == STATUSES.fetch(:canceled)
     end
 
     def cancel
-      self.status = Straight::Order::STATUSES.fetch(:canceled)
-      save changed: true
-      StraightServer::Thread.interrupt(label: payment_id)
+      self.status = STATUSES.fetch(:canceled)
+      # save changed: true
+      # StraightServer::Thread.interrupt(label: payment_id)
     end
 
     def save(*)
@@ -222,7 +230,7 @@ module StraightServer
     end
 
     def to_s
-      "Order#{id}"
+      "[Order#{id}]"
     end
 
     def validate
@@ -239,20 +247,23 @@ module StraightServer
     end
 
     def to_http_params
-      result = {
-        order_id:                  id,
-        amount:                    amount,
-        amount_in_btc:             amount_in_btc(as: :string),
-        amount_paid_in_btc:        amount_in_btc(field: amount_paid, as: :string),
-        status:                    status,
-        address:                   address,
-        tid:                       tid, # @deprecated
-        transaction_ids:           accepted_transactions.map(&:tid),
-        keychain_id:               keychain_id,
-        last_keychain_id:          gateway.last_keychain_id,
-        after_payment_redirect_to: CGI.escape(after_payment_redirect_to.to_s),
-        auto_redirect:             auto_redirect,
-      }.map { |k, v| "#{k}=#{v}" }.join('&')
+      # :tid param is @deprecated
+      params = {
+          order_id:                  id,
+          amount:                    amount,
+          amount_in_btc:             amount_in_btc(as: :string),
+          amount_paid_in_btc:        amount_in_btc(field: amount_paid, as: :string),
+          status:                    status,
+          address:                   address,
+          tid:                       tid,
+          transaction_ids:           accepted_transactions.map(&:tid),
+          keychain_id:               keychain_id,
+          last_keychain_id:          gateway.last_keychain_id,
+          after_payment_redirect_to: CGI.escape(after_payment_redirect_to.to_s),
+          auto_redirect:             auto_redirect,
+      }
+      params[:callback_data] = CGI.escape(callback_data.to_s) if callback_data
+      result = params.map { |k, v| "#{k}=#{v}" }.join('&')
       if data.respond_to?(:keys)
         keys = data.keys.select { |key| key.kind_of? String }
         if keys.size > 0

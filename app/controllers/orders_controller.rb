@@ -50,6 +50,7 @@ class OrdersController < ApiController
     # order.save if order.status_changed?
     if order.cancelable?
       order.cancel
+      OrderCallbackJob.broadcast_later(order: order)
       render status: 204, plain: ' '
     else
       render status: 409, plain: "Order is not cancelable"

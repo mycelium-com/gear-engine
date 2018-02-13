@@ -1,6 +1,11 @@
 class OrderChannel < ApplicationCable::Channel
+
+  def self.order_stream(order)
+    "order_#{order.payment_id}"
+  end
+
   def subscribed
-    stream_from "order_#{order.payment_id}"
+    stream_from self.class.order_stream(order)
     OrderCallbackWebsocket.call(order: order)
   end
 

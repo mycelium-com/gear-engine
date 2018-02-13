@@ -10,7 +10,11 @@ RSpec.describe OrderStatusCheckJob, type: :job do
 
   let(:of_result_blank) { Interactor::Context.build }
   let(:of_result_changed) { Interactor::Context.build(order_changed: true) }
-  
+
+  def expect_no_status_check
+    expect(OrderStatusCheck).not_to receive(:call)
+  end
+
   def expect_order_not_changed
     expect(OrderStatusCheck).to receive(:call).with(order: order).and_return(osc_result_blank)
   end
@@ -24,15 +28,15 @@ RSpec.describe OrderStatusCheckJob, type: :job do
   end
 
   def expect_no_final
-    expect(OrderFinalize).not_to receive(:call)
+    expect(OrderStatusFinalize).not_to receive(:call)
   end
 
   def expect_final
-    expect(OrderFinalize).to receive(:call).with(order: order).and_return(of_result_blank)
+    expect(OrderStatusFinalize).to receive(:call).with(order: order).and_return(of_result_blank)
   end
 
   def expect_final_change
-    expect(OrderFinalize).to receive(:call).with(order: order).and_return(of_result_changed)
+    expect(OrderStatusFinalize).to receive(:call).with(order: order).and_return(of_result_changed)
   end
 
   def expect_no_callback
@@ -126,6 +130,25 @@ RSpec.describe OrderStatusCheckJob, type: :job do
       expect_final_change
       job_runs
       expect_callback
+    end
+  end
+
+  context "finalized order" do
+
+    before do
+      expect(order).to receive(:finalized?).at_least(:once).and_return(true)
+    end
+
+    def job_runs
+      described_class.perform_now(order: order)
+      described_class.perform_now(order: order, final: true)
+    end
+
+    it "skips everything" do
+      expect_no_status_check
+      expect_no_final
+      job_runs
+      expect_no_callback
     end
   end
 end

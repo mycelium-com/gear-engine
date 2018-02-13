@@ -57,5 +57,17 @@ FactoryBot.define do
         order.update status: 2, amount_paid: order.amount
       }
     end
+
+    trait :partially_paid do
+      after(:create) { |order|
+        order.update status: -3, amount_paid: order.amount / 3.0
+      }
+    end
+
+    trait :unconfirmed do
+      after(:create) { |order|
+        order.update status: 1, amount_paid: order.amount
+      }
+    end
   end
 end

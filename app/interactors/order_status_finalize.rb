@@ -1,4 +1,4 @@
-class OrderFinalize
+class OrderStatusFinalize
   include Interactor
 
   def call
@@ -15,6 +15,6 @@ class OrderFinalize
       # let's keep it unconfirmed, marking as expired makes no sense
       # TODO: if it has at least 1 confirmation, monitor until it's fully confirmed
     end
-    StraightServer.insight_client&.remove_address order.address
+    # StraightServer.insight_client&.remove_address order.address
   end
 end

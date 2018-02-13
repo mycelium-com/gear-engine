@@ -4,6 +4,6 @@ class OrderCallbackWebsocket
   def call
     order = context.order
     Rails.logger.info { "#{order} [#{self.class.name}] #{order.inspect}" }
-    ActionCable.server.broadcast "order_#{order.payment_id}", order.to_h
+    ActionCable.server.broadcast OrderChannel.order_stream(order), order.to_h
   end
 end
