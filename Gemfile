@@ -23,7 +23,7 @@ gem 'interactor-rails', github: 'collectiveidea/interactor-rails'
 
 # straight
 gem 'btcruby' #, '1.1.1'
-gem 'satoshi-unit' #, '0.1.8'
+gem 'satoshi-unit', '0.1.8' # newer version does not like floats: Satoshi::TooManyDigitsAfterDecimalPoint (Too many digits (20) after decimal point used for btc value, while 8 allowed)
 # gem 'httparty', '~> 0.13.5'
 gem 'faraday'
 gem 'concurrent-ruby'

@@ -13,6 +13,10 @@ module ApplicationCable
       # legacy protocol keeps silent
     end
 
+    def receive(*)
+      # legacy protocol does not expect incoming messages
+    end
+
     private
 
     def send_welcome_message

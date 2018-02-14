@@ -20,6 +20,11 @@ Rails.application.routes.draw do
   mount ActionCable.server => '/gateways/:gateway_id/orders/:order_id/websocket'
   mount ActionCable.server => '/orders/:order_id/websocket'
 
+  if Rails.env.development?
+    require 'sidekiq/web'
+    mount Sidekiq::Web => '/sidekiq'
+  end
+
   # NOTE: for future API changes, date can be used as version number
   # 1. client specifies Accept-Version header with any or current date
   # 2. server uses API version that's no newer than the specified by client
