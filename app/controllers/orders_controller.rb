@@ -1,11 +1,11 @@
 class OrdersController < ApiController
 
   before_action :find_gateway, only: %i[create]
-  before_action :find_order, only: %i[show websocket cancel invoice reprocess]
+  before_action :validate_gateway_signature, only: %i[create]
+  before_action :find_order, only: %i[show cancel invoice reprocess]
+  before_action :validate_order_signature, only: %i[show cancel reprocess]
 
   def create
-    # validate_signature || throttle
-
     begin
       result = OrderCreate.call(gateway: gateway, params: params.permit!.to_hash)
       render json: result.order.to_json
@@ -19,35 +19,10 @@ class OrdersController < ApiController
   end
 
   def show
-    # validate_signature(if_unforced: false)
-
-    # order.status(reload: true)
-    # order.save if order.status_changed?
     render json: order.to_json
   end
 
-  # def websocket
-  #   ws = Faye::WebSocket.new(request.env)
-  #   if order.status >= 2
-  #     # FIXME: due to order.reprocess this branch may have no sense anymore
-  #     ws.send order.to_json
-  #     Thread.new do
-  #       sleep 1
-  #       ws.close
-  #     end
-  #   else
-  #     order.gateway.add_websocket_for_order(ws, order)
-  #   end
-  #
-  #   self.response = ActionDispatch::Response.new(*ws.rack_response)
-  #   self.response.close
-  # end
-
   def cancel
-    # validate_signature(if_unforced: false)
-
-    # order.status(reload: true)
-    # order.save if order.status_changed?
     if order.cancelable?
       order.cancel
       OrderCallbackJob.broadcast_later(order: order)
@@ -87,5 +62,33 @@ class OrdersController < ApiController
     # render json: %({"before":#{before},"after":#{after}})
 
     head :not_implemented
+  end
+
+  private
+
+  def validate_gateway_signature
+    validate_signature gateway
+  end
+
+  # `gateway` is not validated to equal `order.gateway`, it's just user input extracted from URL
+  def validate_order_signature
+    validate_signature order.gateway
+  end
+
+  def validate_signature(gateway)
+    if gateway.check_signature
+      data          = signature_validator_params
+      data[:secret] = gateway.secret
+      StraightServer::SignatureValidator.new(**data).validate!
+    end
+  end
+
+  def signature_validator_params
+    {
+        request_signature: request.headers['X-Signature'],
+        request_method:    request.request_method,
+        request_body:      request.body.read,
+        request_uri:       request.fullpath,
+    }
   end
 end

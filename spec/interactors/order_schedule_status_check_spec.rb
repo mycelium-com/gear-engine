@@ -8,7 +8,6 @@ RSpec.describe OrderScheduleStatusCheck, type: :interactor do
 
     it "schedules order status checks" do
       result = described_class.call(order: order)
-      puts order.inspect
       expect(result.schedule).not_to be_empty
       expect(OrderStatusCheckJob).to have_been_enqueued.exactly(result.schedule.size + 1).times.on_queue('default')
       result.schedule.each_with_index do |time, i|

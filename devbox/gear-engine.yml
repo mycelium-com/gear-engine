@@ -1,0 +1,25 @@
+windows:
+
+- name: db
+  root: ~/Projects/gear-engine/devbox
+  panes:
+  - commands:
+    - docker-compose up
+
+- name: guard
+  root: ~/Projects/gear-engine
+  layout: even-vertical
+  panes:
+  - commands:
+    - bin/guard
+  - commands:
+    - less +F log/test.log
+
+- name: engine
+  root: ~/Projects/gear-engine
+  layout: even-vertical
+  panes:
+  - commands:
+    - bin/start
+  - commands:
+    - less +F log/development.log

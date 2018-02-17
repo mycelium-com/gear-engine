@@ -3,7 +3,8 @@ version: '3'
 services:
 
   gear-engine-postgres:
-    image: postgres:latest
+#    image: postgres:latest
+    image: postgres@sha256:709e36b4bc9422935bb3df91966311c078b72ad82c429eb2768097ae1086648d
     ports:
     - 5432:5432
     environment:
@@ -14,7 +15,8 @@ services:
     - gear-engine-pgdata:/var/lib/postgresql/data
 
   gear-engine-redis:
-    image: redis:latest
+#    image: redis:latest
+    image: redis@sha256:fb38b203a9488b10f81740123b2213468afe679d8ee8919429e9c81233a5a111
     ports:
     - 6379:6379
 

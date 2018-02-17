@@ -7,6 +7,10 @@ class ApiController < ActionController::Base
     render status: :not_found, plain: ex.message
   end
 
+  rescue_from StraightServer::SignatureValidator::InvalidSignature do |_ex|
+    render status: :unauthorized, plain: 'X-Signature is invalid'
+  end
+
   private
 
   def find_order

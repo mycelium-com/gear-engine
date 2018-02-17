@@ -5,7 +5,7 @@ RSpec.describe OrderStatusCheck, type: :interactor do
 
     let(:order) { create(:order, keychain_id: 117) }
 
-    it "checks overpaid order status" do
+    it "handles overpaid order" do
       VCR.use_cassette 'order_status_check' do
         chain = []
         chain << -> { @result = described_class.call(order: order) }

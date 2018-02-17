@@ -138,7 +138,7 @@ module StraightServer
 
       raise GatewayInactive unless self.active
 
-      StraightServer.logger.info "Creating new order with attrs: #{attrs}"
+      Rails.logger.info "Creating new order with attrs: #{attrs}"
 
       if attrs[:keychain_id].to_s.empty?
         # If we decide to reuse the order, we simply need to supply the
@@ -174,8 +174,8 @@ module StraightServer
 
       self.update_last_keychain_id(attrs[:keychain_id]) unless order.reused > 0
       self.save
-      StraightServer.insight_client.add_address(order.address) { |data| order.set_data_from_ws(data) } if StraightServer.insight_client
-      StraightServer.logger.info "Order #{order.id} created: #{order.to_h}"
+      # StraightServer.insight_client.add_address(order.address) { |data| order.set_data_from_ws(data) } if StraightServer.insight_client
+      Rails.logger.info "Order #{order.id} created: #{order.to_h}"
       order
     end
 

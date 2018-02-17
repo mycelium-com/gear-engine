@@ -4,7 +4,6 @@ FactoryBot.define do
   end
 
   factory :params_create_order, parent: :params do
-    gateway_id { create(:gateway).hashed_id }
     amount 1
 
     trait :negative_amount do
@@ -38,6 +37,10 @@ FactoryBot.define do
     active true
     test_mode true
     check_signature false
+
+    trait :with_auth do
+      check_signature true
+    end
   end
 
   factory :order, class: StraightServer::Order do

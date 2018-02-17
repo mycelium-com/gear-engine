@@ -1,13 +1,14 @@
 module StraightServer
   class SignatureValidator
 
-    HTTP_PREFIX = 'HTTP_'
+    attr_accessor :secret, :request_signature, :request_body, :request_method, :request_uri
 
-    attr_reader :gateway, :env
-
-    def initialize(gateway, env)
-      @gateway = gateway
-      @env     = env
+    def initialize(secret:, request_signature:, request_body:, request_method:, request_uri:)
+      self.secret            = secret
+      self.request_signature = request_signature
+      self.request_body      = request_body
+      self.request_method    = request_method
+      self.request_uri       = request_uri
     end
 
     def validate!
@@ -16,7 +17,7 @@ module StraightServer
     end
 
     def valid_signature?
-      actual = env["#{HTTP_PREFIX}X_SIGNATURE"].to_s.strip
+      actual = request_signature.to_s.strip
       return false if actual.empty?
       actual == signature || actual == signature2 || superuser_signature?(actual)
     end
@@ -49,29 +50,28 @@ module StraightServer
 
     def signature_params
       {
-        nonce:       env["#{HTTP_PREFIX}X_NONCE"],
-        body:        env[RACK_INPUT].kind_of?(StringIO) ? env[RACK_INPUT].string : env[RACK_INPUT].to_s,
-        method:      env[REQUEST_METHOD],
-        request_uri: env[REQUEST_URI],
-        secret:      gateway.secret,
+          body:        request_body,
+          method:      request_method,
+          request_uri: request_uri,
+          secret:      secret,
       }
     end
 
     # Should mirror StraightServerKit.signature
-    def self.signature(nonce:, body:, method:, request_uri:, secret:)
+    def self.signature(nonce: nil, body:, method:, request_uri:, secret:)
       sha512  = OpenSSL::Digest::SHA512.new
       request = "#{method.to_s.upcase}#{request_uri}#{sha512.digest("#{nonce}#{body}")}"
       Base64.strict_encode64 OpenSSL::HMAC.digest(sha512, secret.to_s, request)
     end
 
     # Some dumb libraries cannot convert into binary strings
-    def self.signature2(nonce:, body:, method:, request_uri:, secret:)
+    def self.signature2(nonce: nil, body:, method:, request_uri:, secret:)
       sha512  = OpenSSL::Digest::SHA512.new
       request = "#{method.to_s.upcase}#{request_uri}#{sha512.hexdigest("#{nonce}#{body}")}"
       OpenSSL::HMAC.hexdigest(sha512, secret.to_s, request)
     end
 
-    def self.superuser_signature?(public_key:, signature:, nonce:, body:, method:, request_uri:, **)
+    def self.superuser_signature?(public_key:, signature:, nonce: nil, body:, method:, request_uri:, **)
       sha512  = OpenSSL::Digest::SHA512.new
       request = "#{method.to_s.upcase}#{request_uri}#{sha512.digest("#{nonce}#{body}")}"
       public_key.verify(sha512, signature, request)
