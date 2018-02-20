@@ -22,6 +22,7 @@ end
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+ENVied.require(*ENV['ENVIED_GROUPS'] || Rails.groups)
 
 module GearEngine
   class Application < Rails::Application
@@ -34,6 +35,7 @@ module GearEngine
     # the framework and any gems in your application.
 
     config.sequel.after_connect = proc do
+      Sequel::Model.require_valid_table = false # ignore warnings after db:schema:load
       Sequel::Model.include GlobalID::Identification
       GlobalID::Locator.use :'gear-engine' do |gid|
         gid.model_class.with_pk!(gid.model_id)
@@ -48,7 +50,7 @@ module GearEngine
         straight_config_dir = "#{Rails.root}/config/straight/#{Rails.env}"
         straight_config_dir = "#{Rails.root}/config/straight" unless File.exists?(straight_config_dir)
         StraightServer::Initializer::ConfigDir.set! straight_config_dir
-        StraightServer::Initializer.new.prepare run_migrations: true
+        StraightServer::Initializer.new.prepare run_migrations: false
       rescue => ex
         Rails.logger.error ex
       end

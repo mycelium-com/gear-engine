@@ -5,7 +5,7 @@ module Straight
   # If all adapters fail it raises an exception.
   class BlockchainAdaptersDispatcher
 
-    class AdaptersTimeoutError < TimeoutError; end
+    class AdaptersTimeoutError < Timeout::Error; end
     class AdaptersError < StraightError; end
 
     TIMEOUT = 8

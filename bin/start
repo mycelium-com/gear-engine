@@ -1,2 +1,0 @@
-#!/bin/sh
-exec foreman start -p 9000

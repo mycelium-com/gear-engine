@@ -25,7 +25,14 @@ RSpec.describe OrderCallbackJob, type: :job do
     expect {
       described_class.broadcast_later(order: order)
     }.to have_enqueued_job(described_class).exactly(2).times
-    expect(described_class).to have_been_enqueued.with(order: order, channel: described_class::HTTP)
-    expect(described_class).to have_been_enqueued.with(order: order, channel: described_class::WEBSOCKET)
+    expect(described_class).to have_been_enqueued.with(order: order, channel: described_class::HTTP).on_queue('urgent')
+    expect(described_class).to have_been_enqueued.with(order: order, channel: described_class::WEBSOCKET).on_queue('urgent')
+  end
+
+  it "retries later if failed" do
+    expect(OrderCallbackHttp).to receive(:call!).and_raise(StandardError)
+    expect {
+      described_class.perform_now(order: order, channel: described_class::HTTP)
+    }.to have_enqueued_job(described_class).with(order: order, channel: described_class::HTTP).on_queue('default')
   end
 end

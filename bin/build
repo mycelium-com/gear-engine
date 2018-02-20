@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+require 'fileutils'
+include FileUtils
+
+# path to your application root.
+APP_ROOT = File.expand_path('..', __dir__)
+
+def system!(*args)
+  system(*args) || abort("\n== Command #{args} failed ==")
+end
+
+chdir APP_ROOT do
+
+  puts '== Caching dependencies =='
+  rm '.bundle/config', force: true
+  system! %(bundle package --no-install --frozen --all)
+
+  puts '== Building Docker image =='
+  OPTIONS = [
+      %(--tag #{(ENV['GEAR_ENGINE_TAG'] || ENV['TAG'] || 'gear-engine').inspect}),
+  ].join(' ')
+  system! %(docker build #{OPTIONS} #{APP_ROOT})
+
+  rm '.bundle/config', force: true
+end

@@ -1,6 +1,6 @@
 class OrderCallbackJob < ApplicationJob
   queue_as :urgent
-  retry_on Exception, wait: :exponentially_longer, attempts: 21, queue: :default
+  retry_on StandardError, wait: :exponentially_longer, attempts: 21, queue: :default
 
   HTTP      = 'Http'
   WEBSOCKET = 'Websocket'

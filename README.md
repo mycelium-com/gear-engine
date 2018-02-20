@@ -4,22 +4,29 @@ Attempt to merge `straight` and `straight-server` gems into single Rails app.
 
 ## Hints
 
-### Credentials decryption
-
-See https://www.engineyard.com/blog/rails-encrypted-credentials-on-rails-5.2
-
-Master key saved to Vault as `secret/gear-engine:RAILS_MASTER_KEY`
-
-### Start
+### Install dependencies
 
 ```bash
-gem install foreman
-bin/start
+bin/setup
 ```
 
-## TODO
+### Start development
 
-* Order monitoring via Sidekiq
-* OrdersController reprocess
-* OrdersController validate_signature
-* OrdersController throttle
+```bash
+devbox/start
+``` 
+
+### Build Docker image
+
+```bash
+bin/build
+```
+
+### Run Docker image
+
+```bash
+docker run --rm -it \
+  -v $(realpath .env.production.sample):/gear-engine/.env.production \
+  -v $(realpath config/straight/production):/gear-engine/config/straight/production \
+  -p 3000:3000 gear-engine:latest bash -c 'bin/bundle exec bin/rails s'
+```

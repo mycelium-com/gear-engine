@@ -1,0 +1,17 @@
+/.bundle
+/devbox
+/docs
+/log
+/spec
+/tmp
+/.byebug_history
+/.env.development
+/.env.test
+/.dockerignore
+/.git*
+/.rspec
+/Dockerfile
+/Guardfile
+
+.DS_Store
+.idea

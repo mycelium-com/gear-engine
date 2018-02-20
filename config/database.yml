@@ -1,4 +1,5 @@
 default: &default
+  adapter: <%= ENVied.DATABASE_URL.scheme %>
   url: <%= ENV['DATABASE_URL'] %>
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide

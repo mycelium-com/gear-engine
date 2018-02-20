@@ -31,3 +31,9 @@
 
 # rspec
 /spec/examples.txt
+
+# dotenv local config
+/.env*.local
+
+# bundler cache
+/vendor/cache

@@ -20,6 +20,6 @@ windows:
   layout: even-vertical
   panes:
   - commands:
-    - bin/start
+    - foreman start -p 9000
   - commands:
     - less +F log/development.log

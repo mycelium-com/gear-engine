@@ -25,6 +25,6 @@ if Rails.env.development?
   rescue Sequel::UniqueConstraintViolation
     # already seeded
   ensure
-    puts "/gateways/#{StraightServer::Gateway.first.hashed_id}/"
+    puts "Seeded:\n/gateways/#{StraightServer::Gateway.first.hashed_id}"
   end
 end

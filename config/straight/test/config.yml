@@ -2,10 +2,6 @@
 # useful when your run many gateways on the same server.
 gateways_source: db
 
-# Used for:
-# - scoping Redis keys
-environment: development
-
 # When you display a payment window to a user, he has some time to pay. But what if a
 # transaction has been made in the last seconds and Straight didn't have time to detect it?
 # This just adds a little bit more time to each expiration period.
@@ -38,12 +34,6 @@ count_orders: true
 ssl_certificate_path: 'bip70.crt'
 private_key_path: 'bip70.key'
 
-redis:
-  host: localhost
-  port: 6379
-  #db:       null # change to 1, 2, 3 etc. or leave as is
-  #password: null # if no password is needed, leave as is
-
 # These adapters are used to query the blockchain. If the first one fails, the second one is tried and
 # so on. The adapters are generally looked up as subclasses of Straight::Blockchain::Adapter
 # but you are free to create your own and put a fully qualified class name below. The order is,
@@ -74,15 +64,3 @@ logmaster:
   #email_config:
     #to: 'me@email.foo'
     #from: "logmaster@yourapp.com"
-
-#db:
-#  adapter: sqlite
-#  name: straight.db # file is always located in ~/.straight
-
-  # No need to set these options for sqlite,
-  # but other DBs may require them.
-  #
-  #user: username
-  #password: password
-  #host: hostname
-  #port: 1234

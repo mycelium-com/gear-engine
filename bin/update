@@ -14,8 +14,9 @@ chdir APP_ROOT do
   # Add necessary update steps to this file.
 
   puts '== Installing dependencies =='
-  system! 'gem install bundler --conservative'
-  system('bundle check') || system!('bundle install')
+  system! 'gem update foreman bundler'
+  # system('bundle check') || system!('bundle install')
+  system! 'bundle update'
 
   # Install JavaScript dependencies if using Yarn
   # system('bin/yarn')

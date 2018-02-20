@@ -50,8 +50,6 @@ class OrdersController < ApiController
   # There may be cases when transaction was broadcasted in time, but our system just failed to detect it.
   # Maybe merchant should see full history of order updates, not just its current state.
   def reprocess
-    # validate_signature || throttle
-    #
     # before = order.to_json
     # begin
     #   order.reprocess!

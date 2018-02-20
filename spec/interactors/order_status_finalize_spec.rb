@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe OrderStatusFinalize, type: :interactor do
   describe '.call' do
 
-
     it "changes new to expired" do
       order = create(:order)
       expect {

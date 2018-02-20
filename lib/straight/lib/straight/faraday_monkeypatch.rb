@@ -1,3 +1,6 @@
+Warning.ignore %r{already initialized constant Faraday::SSLOptions}
+Warning.ignore %r{previous definition of SSLOptions}
+
 Faraday::SSLOptions = Faraday::Options.new(*(Faraday::SSLOptions.members | [:verify_callback])) do
 
   def verify?
