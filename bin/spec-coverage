@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+require 'fileutils'
+include FileUtils
+
+APP_ROOT = File.expand_path('..', __dir__)
+
+chdir APP_ROOT do
+  system %(bin/spring stop)
+  system %(DISABLE_SPRING=1 SPEC_COVERAGE=1 bin/rails spec)
+  system %(open coverage/index.html)
+end

@@ -1,4 +1,11 @@
 /.bundle
+/bin/build
+/bin/guard
+/bin/setup
+/bin/spec-coverage
+/bin/spring
+/bin/update
+/coverage
 /devbox
 /docs
 /log

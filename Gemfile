@@ -57,6 +57,7 @@ group :development do
 end
 
 group :test do
+  gem 'rspec-retry'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.15'
   gem 'selenium-webdriver'
@@ -69,6 +70,7 @@ group :test do
   gem 'factory_bot_rails'
   gem 'database_cleaner'
   gem 'json_matchers'
+  gem 'simplecov', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

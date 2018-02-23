@@ -11,7 +11,7 @@ RSpec.feature "OrderWebsockets" do
 
     it "sends order data", js: true do
       visit client_page
-      sleep 3
+      sleep 0.5
       expect(log).to eq %([websocket.onopen] [websocket.onmessage] #{order.to_json})
     end
   end
@@ -22,7 +22,7 @@ RSpec.feature "OrderWebsockets" do
 
     it "sends order data", js: true do
       visit client_page
-      sleep 3
+      sleep 0.5
       expect(log).to eq %([websocket.onopen] [websocket.onmessage] #{order.to_json})
     end
   end

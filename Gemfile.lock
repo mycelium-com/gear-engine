@@ -81,6 +81,7 @@ GEM
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.3)
+    docile (1.1.5)
     dotenv (2.2.1)
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
@@ -217,6 +218,8 @@ GEM
       rspec-expectations (~> 3.7.0)
       rspec-mocks (~> 3.7.0)
       rspec-support (~> 3.7.0)
+    rspec-retry (0.5.6)
+      rspec-core (> 3.3, < 3.8)
     rspec-support (3.7.1)
     ruby-hmac (0.4.0)
     ruby-protocol-buffers (1.6.1)
@@ -239,6 +242,11 @@ GEM
       connection_pool (~> 2.2, >= 2.2.0)
       rack-protection (>= 1.5.0)
       redis (>= 3.3.5, < 5)
+    simplecov (0.15.1)
+      docile (~> 1.1.0)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.2)
     socket.io-client-simple (1.2.1)
       event_emitter
       httparty
@@ -306,6 +314,7 @@ DEPENDENCIES
   rails (~> 5.2.0.rc1)
   redis (~> 4.0)
   rspec-rails
+  rspec-retry
   ruby-hmac
   ruby-protocol-buffers
   satoshi-unit (= 0.1.8)
@@ -313,6 +322,7 @@ DEPENDENCIES
   sequel (~> 4.25)
   sequel-rails
   sidekiq
+  simplecov
   socket.io-client-simple
   spring
   spring-watcher-listen (~> 2.0.0)

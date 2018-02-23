@@ -42,6 +42,18 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 
+  # rspec-retry
+  config.verbose_retry = true
+  config.display_try_failure_messages = true
+  config.around :each, :js do |ex|
+    ex.run_with_retry retry: 4, retry_wait: 3
+  end
+  # config.retry_callback = proc do |ex|
+  #   if ex.metadata[:js]
+  #     Capybara.reset!
+  #   end
+  # end
+
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   # config.fixture_path = "#{::Rails.root}/spec/fixtures"
 

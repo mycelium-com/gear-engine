@@ -37,3 +37,6 @@
 
 # bundler cache
 /vendor/cache
+
+# bin/spec-coverage output
+/coverage
