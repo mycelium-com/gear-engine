@@ -1,0 +1,118 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://test-insight.bitpay.com/api/status
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.14.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 23 Feb 2018 10:32:46 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d989fe134d35c418c9405f41a49340e501519381966; expires=Sat, 23-Feb-19
+        10:32:46 GMT; path=/; domain=.bitpay.com; HttpOnly
+      X-Powered-By:
+      - Express
+      X-Ratelimit-Limit:
+      - '10800'
+      X-Ratelimit-Remaining:
+      - '10781'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, PUT, POST, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Content-Length, Cache-Control,
+        cf-connecting-ip
+      Cache-Control:
+      - public, max-age=30
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - W/"127-nAh/RsP2Hh0F11ljUa1aCw"
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - HIT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 3f1985ebb9896b4f-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: '{"info":{"version":120100,"protocolversion":70012,"blocks":1284564,"timeoffset":0,"connections":124,"proxy":"","difficulty":1549169.053332807,"testnet":true,"relayfee":0.00001,"errors":"Warning:
+        Unknown block versions being mined! It''s possible unknown rules are in effect","network":"testnet"}}'
+    http_version: 
+  recorded_at: Fri, 23 Feb 2018 10:32:46 GMT
+- request:
+    method: get
+    uri: https://www.okcoin.com/api/ticker.do?ok=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 23 Feb 2018 10:32:49 GMT
+      Content-Type:
+      - text/html;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dbbf7030196ce42de90339ed773b318451519381967; expires=Sat, 23-Feb-19
+        10:32:47 GMT; path=/; domain=.okcoin.com; HttpOnly
+      - coin_session_id_o=4d2627c7-9fdb-4807-8fa3-55f3d9b011ffzTTN; Domain=okcoin.com;
+        Path=/; Secure; HttpOnly
+      - language=1; Expires=Fri, 02-Mar-2018 10:32:49 GMT; Path=/
+      Cache-Control:
+      - no-store
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 3f1985f19d58885a-BOM
+    body:
+      encoding: ASCII-8BIT
+      string: '{"date":"1519381969","ticker":{"high":"10974.02","vol":"174.747","last":"10801.20","low":"10310.0","buy":"10801.24","sell":"10865.52","change":"+76.16","changeRate":"+0.71%"}}'
+    http_version: 
+  recorded_at: Fri, 23 Feb 2018 10:32:49 GMT
+recorded_with: VCR 4.0.0

@@ -263,7 +263,6 @@ module Straight
           ExchangeRate::BitpayAdapter.instance,
           ExchangeRate::CoinbaseAdapter.instance,
           ExchangeRate::BitstampAdapter.instance,
-          ExchangeRate::BtceAdapter.instance,
           ExchangeRate::KrakenAdapter.instance,
           ExchangeRate::OkcoinAdapter.instance
         ]

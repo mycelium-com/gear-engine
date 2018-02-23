@@ -1,0 +1,202 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://test-insight.bitpay.com/api/status
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.14.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 23 Feb 2018 10:31:25 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d52c10c2de5564fa86af22443a6e0f3a51519381885; expires=Sat, 23-Feb-19
+        10:31:25 GMT; path=/; domain=.bitpay.com; HttpOnly
+      X-Powered-By:
+      - Express
+      X-Ratelimit-Limit:
+      - '10800'
+      X-Ratelimit-Remaining:
+      - '10783'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, PUT, POST, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Content-Length, Cache-Control,
+        cf-connecting-ip
+      Cache-Control:
+      - public, max-age=30
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - W/"127-nAh/RsP2Hh0F11ljUa1aCw"
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - HIT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 3f1983eee91d69ef-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: '{"info":{"version":120100,"protocolversion":70012,"blocks":1284564,"timeoffset":0,"connections":124,"proxy":"","difficulty":1549169.053332807,"testnet":true,"relayfee":0.00001,"errors":"Warning:
+        Unknown block versions being mined! It''s possible unknown rules are in effect","network":"testnet"}}'
+    http_version: 
+  recorded_at: Fri, 23 Feb 2018 10:31:25 GMT
+- request:
+    method: get
+    uri: https://api.kraken.com/0/public/Ticker?pair=xbtusd
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 23 Feb 2018 10:31:26 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d11c66b9dfa4d5cac489dbc72872c06351519381885; expires=Sat, 23-Feb-19
+        10:31:25 GMT; path=/; domain=.kraken.com; HttpOnly
+      Cache-Control:
+      - public,max-age=1,smaxage=1
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - EXPIRED
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 3f1983f178518999-MAA
+    body:
+      encoding: ASCII-8BIT
+      string: '{"error":[],"result":{"XXBTZUSD":{"a":["10146.00000","1","1.000"],"b":["10144.90000","4","4.000"],"c":["10143.70000","0.02295083"],"v":["5358.94043749","14021.23410411"],"p":["9830.57345","9905.16218"],"t":[17520,44875],"l":["9550.90000","9550.90000"],"h":["10215.00000","10343.00000"],"o":"9840.20000"}}}'
+    http_version: 
+  recorded_at: Fri, 23 Feb 2018 10:31:26 GMT
+- request:
+    method: get
+    uri: http://api.fixer.io/latest?base=USD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.13.8
+      Date:
+      - Fri, 23 Feb 2018 10:31:27 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '461'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=900
+      Last-Modified:
+      - Thu, 22 Feb 2018 00:00:00 GMT
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: '{"base":"USD","date":"2018-02-22","rates":{"AUD":1.2788,"BGN":1.5932,"BRL":3.2705,"CAD":1.2699,"CHF":0.93744,"CNY":6.3608,"CZK":20.622,"DKK":6.0657,"EUR":0.8146,"GBP":0.71964,"HKD":7.8249,"HRK":6.0643,"HUF":254.72,"IDR":13711.0,"ILS":3.4975,"INR":65.078,"ISK":100.93,"JPY":107.1,"KRW":1084.5,"MXN":18.795,"MYR":3.9192,"NOK":7.8929,"NZD":1.3653,"PHP":52.062,"PLN":3.4066,"RON":3.7924,"RUB":56.755,"SEK":8.143,"SGD":1.3223,"THB":31.575,"TRY":3.7999,"ZAR":11.717}}'
+    http_version: 
+  recorded_at: Fri, 23 Feb 2018 10:31:27 GMT
+- request:
+    method: get
+    uri: https://api.kraken.com/0/public/Ticker?pair=xbtusd
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 23 Feb 2018 10:31:27 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=db09feac1e47a55c89ad2660f15c11e4e1519381887; expires=Sat, 23-Feb-19
+        10:31:27 GMT; path=/; domain=.kraken.com; HttpOnly
+      Cache-Control:
+      - public,max-age=1,smaxage=1
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - HIT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 3f1983fdae852fe1-MAA
+    body:
+      encoding: ASCII-8BIT
+      string: '{"error":[],"result":{"XXBTZUSD":{"a":["10146.00000","1","1.000"],"b":["10144.90000","4","4.000"],"c":["10143.70000","0.02295083"],"v":["5358.94043749","14021.23410411"],"p":["9830.57345","9905.16218"],"t":[17520,44875],"l":["9550.90000","9550.90000"],"h":["10215.00000","10343.00000"],"o":"9840.20000"}}}'
+    http_version: 
+  recorded_at: Fri, 23 Feb 2018 10:31:27 GMT
+recorded_with: VCR 4.0.0

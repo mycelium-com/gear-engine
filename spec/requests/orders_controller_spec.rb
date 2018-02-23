@@ -120,6 +120,21 @@ RSpec.shared_examples "order signed actions" do
   end
 end
 
+RSpec.shared_examples "order create action" do |payment:, price:, rate:|
+
+  let(:gateway) { create(:gateway, default_currency: payment.to_s, exchange_rate_adapter_names: [rate.to_s]) }
+
+  it "creates order with #{price}->#{payment} conversion via #{rate}+Fixer" do
+    order =
+        VCR.use_cassette "order_create_#{price}_#{payment}_#{rate}" do
+          expect_order_create do
+            post url, params: build(:params_create_order, currency: price.to_s)
+          end
+        end
+    expect(order.amount_with_currency).to eq "1.00 #{price}"
+  end
+end
+
 
 RSpec.describe OrdersController, type: :request do
 
@@ -178,6 +193,17 @@ RSpec.describe OrdersController, type: :request do
         }.to change { StraightServer::Order.count }.by 0
         expect(response.status).to eq 404
         expect(response.body).to eq "Gateway not found"
+      end
+
+      context "price in local currency" do
+        %w[USD EUR JPY GBP AUD CAD CHF CNY MXN SEK UAH RUB].each do |price_currency|
+          context price_currency do
+            %w[Bitpay Bitstamp Coinbase Kraken Okcoin].each do |rate|
+              next if 'UAH' == price_currency && %w[Bitstamp Kraken Okcoin].include?(rate)
+              it_behaves_like "order create action", payment: 'BTC', price: price_currency, rate: rate
+            end
+          end
+        end
       end
     end
 

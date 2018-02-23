@@ -18,6 +18,7 @@ module StraightServer
     # #########################################################################################
     #
     def initialize_exchange_rate_adapters
+      @forex_rate_adapters = [Straight::ExchangeRate::FixerAdapter.instance]
       @exchange_rate_adapters ||= []
       if self.exchange_rate_adapter_names.kind_of?(Array) && self.exchange_rate_adapter_names
         self.exchange_rate_adapter_names.each do |adapter|
@@ -123,6 +124,7 @@ module StraightServer
       return []
     end
 
+    # FIXME: consider DB-level locking
     def create_order(attributes = {})
       order_creation_mutex.synchronize do
         create_order_concurrently(attributes)

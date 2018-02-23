@@ -31,7 +31,7 @@ FactoryBot.define do
     secret 'secret'
     order_class 'StraightServer::Order'
     default_currency 'BTC'
-    exchange_rate_adapters %w[Bitpay Coinbase Bitstamp]
+    exchange_rate_adapter_names %w[Bitstamp Bitpay Coinbase]
     confirmations_required 0
     orders_expiration_period 300
     active true

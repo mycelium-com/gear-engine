@@ -6,7 +6,7 @@ module Straight
       class FetchingFailed       < StraightError; end
       class CurrencyNotSupported < StraightError; end
 
-      def initialize(rates_expire_in: 1800)
+      def initialize(rates_expire_in: Rails.application.config.exchange_rates_expire_in)
         @rates_expire_in = rates_expire_in # in seconds
       end
 

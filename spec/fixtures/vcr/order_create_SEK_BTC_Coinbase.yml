@@ -1,0 +1,174 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://test-insight.bitpay.com/api/status
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.14.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 23 Feb 2018 10:31:41 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d49418e93f127f15fdf58d6e2751176a61519381901; expires=Sat, 23-Feb-19
+        10:31:41 GMT; path=/; domain=.bitpay.com; HttpOnly
+      X-Powered-By:
+      - Express
+      X-Ratelimit-Limit:
+      - '10800'
+      X-Ratelimit-Remaining:
+      - '10783'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, PUT, POST, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Content-Length, Cache-Control,
+        cf-connecting-ip
+      Cache-Control:
+      - public, max-age=30
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - W/"127-nAh/RsP2Hh0F11ljUa1aCw"
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - HIT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 3f198454993a6b5b-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: '{"info":{"version":120100,"protocolversion":70012,"blocks":1284564,"timeoffset":0,"connections":124,"proxy":"","difficulty":1549169.053332807,"testnet":true,"relayfee":0.00001,"errors":"Warning:
+        Unknown block versions being mined! It''s possible unknown rules are in effect","network":"testnet"}}'
+    http_version: 
+  recorded_at: Fri, 23 Feb 2018 10:31:41 GMT
+- request:
+    method: get
+    uri: https://coinbase.com/api/v1/currencies/exchange_rates
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 23 Feb 2018 10:31:42 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d4ae22066ee9b30a080b123033781372e1519381902; expires=Sat, 23-Feb-19
+        10:31:42 GMT; path=/; domain=.coinbase.com; HttpOnly
+      Cache-Control:
+      - public, max-age=300
+      Content-Disposition:
+      - attachment; filename=response.json
+      Content-Security-Policy:
+      - 'default-src ''self'' https://www.coinbase.com; child-src ''self'' https://www.coinbase.com
+        https://*.online-metrix.net https://*.wpstn.com https://netverify.com https://platform.twitter.com
+        https://www.google.com/recaptcha/ https://cdn.plaid.com/link/ https://*.doubleclick.net/
+        blob:; connect-src ''self'' https://www.coinbase.com https://api.coinbase.com
+        https://api.mixpanel.com https://*.online-metrix.net https://api.cloudinary.com
+        https://ott9.wpstn.com/live https://api.amplitude.com/ static.coinbase.com
+        wss://ws.coinbase.com wss://ws.coinbase.com:443 https://www.coinbase.com/api;
+        font-src ''self'' https://www.coinbase.com https://assets.coinbase.com/ static.coinbase.com;
+        img-src ''self'' data: https://www.coinbase.com https://images.coinbase.com
+        https://exceptions.coinbase.com https://coinbase-uploads.s3.amazonaws.com
+        https://s3.amazonaws.com/app-public/ https://maps.gstatic.com https://ssl.google-analytics.com
+        https://www.google.com https://maps.googleapis.com https://csi.gstatic.com
+        https://www.google-analytics.com https://res.cloudinary.com https://secure.gravatar.com
+        https://i2.wp.com https://*.online-metrix.net https://assets.coinbase.com/
+        https://hexagon-analytics.com https://api.mixpanel.com https://googleads.g.doubleclick.net
+        blob: static.coinbase.com https://www.facebook.com/tr; media-src ''self''
+        https://www.coinbase.com blob:; object-src ''self'' data: https://www.coinbase.com
+        https://cdn.siftscience.com https://*.online-metrix.net https://www.gstatic.com
+        https://www.google.com/recaptcha/api/; script-src ''self'' ''unsafe-inline''
+        ''unsafe-eval'' https://www.coinbase.com https://cdn.siftscience.com https://*.newrelic.com
+        https://bam.nr-data.net https://*.google-analytics.com https://www.google.com
+        https://www.gstatic.com https://*.online-metrix.net https://code.jquery.com
+        https://chart.googleapis.com https://maps.googleapis.com https://maps.gstatic.com
+        https://netverify.com https://ajax.cloudflare.com https://cdn.plaid.com/link/v2/stable/
+        https://www.googletagmanager.com/gtag/js https://www.googleadservices.com
+        https://googleads.g.doubleclick.net https://assets.coinbase.com/ static.coinbase.com;
+        style-src ''self'' ''unsafe-inline'' https://www.coinbase.com https://assets.coinbase.com/
+        static.coinbase.com; report-uri /csp-report'
+      Etag:
+      - W/"73d38e5de0fbe39d48e0929ed8a448b5"
+      Expect-Ct:
+      - enforce; max-age=86400; report-uri="https://coinbase.report-uri.io/r/default/ct/reportOnly"
+      Public-Key-Pins:
+      - max-age=5184000; pin-sha256="r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E=";
+        pin-sha256="WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18="; pin-sha256="JbQbUG5JMJUoI6brnx0x3vZF6jilxsapbXGVfjhN8Fg=";
+        report-uri="https://coinbase.report-uri.io/r/default/hpkp/enforce"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Powered-By:
+      - Proof-of-Work
+      X-Request-Id:
+      - ebd0b36d-676a-47be-962d-999e69853e1e
+      X-Xss-Protection:
+      - 1; mode=block
+      Cf-Cache-Status:
+      - HIT
+      Expires:
+      - Fri, 23 Feb 2018 10:36:42 GMT
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 3f1984578c358957-MAA
+    body:
+      encoding: ASCII-8BIT
+      string: '{"usd_to_aed":"3.673158","aed_to_usd":"0.272245","usd_to_afn":"69.05565","afn_to_usd":"0.014481","usd_to_all":"107.15","all_to_usd":"0.009333","usd_to_amd":"479.125","amd_to_usd":"0.002087","usd_to_ang":"1.779002","ang_to_usd":"0.562113","usd_to_aoa":"212.5325","aoa_to_usd":"0.004705","usd_to_ars":"19.9475","ars_to_usd":"0.050132","usd_to_aud":"1.278456","aud_to_usd":"0.782194","usd_to_awg":"1.784998","awg_to_usd":"0.560225","usd_to_azn":"1.68825","azn_to_usd":"0.592329","usd_to_bam":"1.5891","bam_to_usd":"0.629287","usd_to_bbd":"2.0","bbd_to_usd":"0.5","usd_to_bdt":"83.163679","bdt_to_usd":"0.012024","usd_to_bgn":"1.588467","bgn_to_usd":"0.629538","usd_to_bhd":"0.376972","bhd_to_usd":"2.652717","usd_to_bif":"1754.926108","bif_to_usd":"0.00057","usd_to_bmd":"1.0","bmd_to_usd":"1.0","usd_to_bnd":"1.322691","bnd_to_usd":"0.756034","usd_to_bob":"6.910011","bob_to_usd":"0.144718","usd_to_brl":"3.2505","brl_to_usd":"0.307645","usd_to_bsd":"1.0","bsd_to_usd":"1.0","usd_to_btn":"64.798162","btn_to_usd":"0.015433","usd_to_bwp":"9.522348","bwp_to_usd":"0.105016","usd_to_byn":"1.957603","byn_to_usd":"0.510829","usd_to_byr":"19576.03","byr_to_usd":"0.000051","usd_to_bzd":"2.003437","bzd_to_usd":"0.499142","usd_to_cad":"1.270872","cad_to_usd":"0.786861","usd_to_cdf":"1613.322925","cdf_to_usd":"0.00062","usd_to_chf":"0.933849","chf_to_usd":"1.070837","usd_to_clf":"0.02255","clf_to_usd":"44.345898","usd_to_clp":"592.23","clp_to_usd":"0.001689","usd_to_cny":"6.339138","cny_to_usd":"0.15775","usd_to_cop":"2859.25","cop_to_usd":"0.00035","usd_to_crc":"569.288642","crc_to_usd":"0.001757","usd_to_cuc":"1.0","cuc_to_usd":"1.0","usd_to_cup":"25.5","cup_to_usd":"0.039216","usd_to_cve":"89.66","cve_to_usd":"0.011153","usd_to_czk":"20.5609","czk_to_usd":"0.048636","usd_to_djf":"177.1","djf_to_usd":"0.005647","usd_to_dkk":"6.047394","dkk_to_usd":"0.16536","usd_to_dop":"49.16","dop_to_usd":"0.020342","usd_to_dzd":"114.25325","dzd_to_usd":"0.008752","usd_to_eek":"14.613691","eek_to_usd":"0.068429","usd_to_egp":"17.6835","egp_to_usd":"0.05655","usd_to_ern":"14.996667","ern_to_usd":"0.066681","usd_to_etb":"27.320607","etb_to_usd":"0.036602","usd_to_eur":"0.812081","eur_to_usd":"1.231404","usd_to_fjd":"2.024752","fjd_to_usd":"0.493888","usd_to_fkp":"0.71533","fkp_to_usd":"1.397956","usd_to_gbp":"0.71533","gbp_to_usd":"1.397956","usd_to_gel":"2.465173","gel_to_usd":"0.405651","usd_to_ggp":"0.71533","ggp_to_usd":"1.397956","usd_to_ghs":"4.4503","ghs_to_usd":"0.224704","usd_to_gip":"0.71533","gip_to_usd":"1.397956","usd_to_gmd":"47.5","gmd_to_usd":"0.021053","usd_to_gnf":"8994.9","gnf_to_usd":"0.000111","usd_to_gtq":"7.340838","gtq_to_usd":"0.136224","usd_to_gyd":"206.721615","gyd_to_usd":"0.004837","usd_to_hkd":"7.823015","hkd_to_usd":"0.127828","usd_to_hnl":"23.608801","hnl_to_usd":"0.042357","usd_to_hrk":"6.0399","hrk_to_usd":"0.165566","usd_to_htg":"64.113051","htg_to_usd":"0.015597","usd_to_huf":"254.205","huf_to_usd":"0.003934","usd_to_idr":"13647.880504","idr_to_usd":"0.000073","usd_to_ils":"3.48713","ils_to_usd":"0.286769","usd_to_imp":"0.71533","imp_to_usd":"1.397956","usd_to_inr":"64.805","inr_to_usd":"0.015431","usd_to_iqd":"1189.650723","iqd_to_usd":"0.000841","usd_to_irr":"37194.927157","irr_to_usd":"0.000027","usd_to_isk":"100.62","isk_to_usd":"0.009938","usd_to_jep":"0.71533","jep_to_usd":"1.397956","usd_to_jmd":"126.32165","jmd_to_usd":"0.007916","usd_to_jod":"0.709302","jod_to_usd":"1.409837","usd_to_jpy":"106.866531","jpy_to_usd":"0.009357","usd_to_kes":"101.845","kes_to_usd":"0.009819","usd_to_kgs":"68.011027","kgs_to_usd":"0.014703","usd_to_khr":"4083.333333","khr_to_usd":"0.000245","usd_to_kmf":"399.875","kmf_to_usd":"0.002501","usd_to_kpw":"900.0","kpw_to_usd":"0.001111","usd_to_krw":"1077.74","krw_to_usd":"0.000928","usd_to_kwd":"0.2999","kwd_to_usd":"3.334445","usd_to_kyd":"0.830574","kyd_to_usd":"1.203987","usd_to_kzt":"320.26","kzt_to_usd":"0.003122","usd_to_lak":"8259.85","lak_to_usd":"0.000121","usd_to_lbp":"1513.5","lbp_to_usd":"0.000661","usd_to_lkr":"155.19","lkr_to_usd":"0.006444","usd_to_lrd":"129.6","lrd_to_usd":"0.007716","usd_to_lsl":"11.662064","lsl_to_usd":"0.085748","usd_to_ltl":"3.224845","ltl_to_usd":"0.310092","usd_to_lvl":"0.656261","lvl_to_usd":"1.523784","usd_to_lyd":"1.327957","lyd_to_usd":"0.753036","usd_to_mad":"9.2086","mad_to_usd":"0.108594","usd_to_mdl":"16.687624","mdl_to_usd":"0.059925","usd_to_mga":"3183.601613","mga_to_usd":"0.000314","usd_to_mkd":"50.017817","mkd_to_usd":"0.019993","usd_to_mmk":"1335.060206","mmk_to_usd":"0.000749","usd_to_mnt":"2395.282939","mnt_to_usd":"0.000417","usd_to_mop":"8.033249","mop_to_usd":"0.124483","usd_to_mro":"356.0","mro_to_usd":"0.002809","usd_to_mtl":"0.683738","mtl_to_usd":"1.462549","usd_to_mur":"32.695436","mur_to_usd":"0.030585","usd_to_mvr":"15.460011","mvr_to_usd":"0.064683","usd_to_mwk":"725.67","mwk_to_usd":"0.001378","usd_to_mxn":"18.58815","mxn_to_usd":"0.053798","usd_to_myr":"3.917883","myr_to_usd":"0.25524","usd_to_mzn":"60.994761","mzn_to_usd":"0.016395","usd_to_nad":"11.5925","nad_to_usd":"0.086263","usd_to_ngn":"359.593899","ngn_to_usd":"0.002781","usd_to_nio":"31.28","nio_to_usd":"0.031969","usd_to_nok":"7.865873","nok_to_usd":"0.127131","usd_to_npr":"103.691541","npr_to_usd":"0.009644","usd_to_nzd":"1.369355","nzd_to_usd":"0.730271","usd_to_omr":"0.38502","omr_to_usd":"2.597268","usd_to_pab":"1.0","pab_to_usd":"1.0","usd_to_pen":"3.246908","pen_to_usd":"0.307985","usd_to_pgk":"3.2264","pgk_to_usd":"0.309943","usd_to_php":"51.719","php_to_usd":"0.019335","usd_to_pkr":"110.6225","pkr_to_usd":"0.00904","usd_to_pln":"3.38786","pln_to_usd":"0.295172","usd_to_pyg":"5565.2","pyg_to_usd":"0.00018","usd_to_qar":"3.641259","qar_to_usd":"0.27463","usd_to_ron":"3.780005","ron_to_usd":"0.26455","usd_to_rsd":"95.82","rsd_to_usd":"0.010436","usd_to_rub":"56.4196","rub_to_usd":"0.017724","usd_to_rwf":"859.578211","rwf_to_usd":"0.001163","usd_to_sar":"3.750391","sar_to_usd":"0.266639","usd_to_sbd":"7.747423","sbd_to_usd":"0.129075","usd_to_scr":"13.47","scr_to_usd":"0.074239","usd_to_sdg":"18.036242","sdg_to_usd":"0.055444","usd_to_sek":"8.155113","sek_to_usd":"0.122622","usd_to_sgd":"1.322427","sgd_to_usd":"0.756185","usd_to_shp":"0.71533","shp_to_usd":"1.397956","usd_to_sll":"7685.264103","sll_to_usd":"0.00013","usd_to_sos":"576.588119","sos_to_usd":"0.001734","usd_to_srd":"7.468","srd_to_usd":"0.133905","usd_to_std":"19911.030764","std_to_usd":"0.00005","usd_to_svc":"8.721184","svc_to_usd":"0.114663","usd_to_syp":"514.98999","syp_to_usd":"0.001942","usd_to_szl":"11.655367","szl_to_usd":"0.085797","usd_to_thb":"31.461","thb_to_usd":"0.031785","usd_to_tjs":"8.795584","tjs_to_usd":"0.113693","usd_to_tmt":"3.50998","tmt_to_usd":"0.284902","usd_to_tnd":"2.390235","tnd_to_usd":"0.418369","usd_to_top":"2.207435","top_to_usd":"0.453014","usd_to_try":"3.784562","try_to_usd":"0.264231","usd_to_ttd":"6.75275","ttd_to_usd":"0.148088","usd_to_twd":"29.277","twd_to_usd":"0.034157","usd_to_tzs":"2251.9","tzs_to_usd":"0.000444","usd_to_uah":"27.17","uah_to_usd":"0.036805","usd_to_ugx":"3640.283069","ugx_to_usd":"0.000275","usd_to_uyu":"28.51","uyu_to_usd":"0.035075","usd_to_uzs":"8195.0","uzs_to_usd":"0.000122","usd_to_vef":"24985.0","vef_to_usd":"0.00004","usd_to_vnd":"22729.928226","vnd_to_usd":"0.000044","usd_to_vuv":"105.763108","vuv_to_usd":"0.009455","usd_to_wst":"2.502018","wst_to_usd":"0.399677","usd_to_xaf":"532.690325","xaf_to_usd":"0.001877","usd_to_xag":"0.060398","xag_to_usd":"16.556977","usd_to_xau":"0.000753","xau_to_usd":"1328.197636","usd_to_xcd":"2.70255","xcd_to_usd":"0.370021","usd_to_xdr":"0.687744","xdr_to_usd":"1.454029","usd_to_xof":"532.690325","xof_to_usd":"0.001877","usd_to_xpf":"96.90706","xpf_to_usd":"0.010319","usd_to_yer":"250.35","yer_to_usd":"0.003994","usd_to_zar":"11.598128","zar_to_usd":"0.086221","usd_to_zmk":"5253.075255","zmk_to_usd":"0.00019","usd_to_zmw":"9.816","zmw_to_usd":"0.101874","usd_to_zwl":"322.355011","zwl_to_usd":"0.003102","usd_to_etc":"0.026725","etc_to_usd":"37.418","btc_to_usd":"10120.425","usd_to_btc":"0.000099","btc_to_eur":"8319.375","eur_to_btc":"0.00012","btc_to_gbp":"7353.35","gbp_to_btc":"0.000136","eth_to_usd":"859.745","usd_to_eth":"0.001163","eth_to_btc":"0.084595","btc_to_eth":"11.82103","ltc_to_usd":"207.28","usd_to_ltc":"0.004824","ltc_to_btc":"0.020475","btc_to_ltc":"48.840049","usd_to_ssp":"130.2634","ssp_to_usd":"0.007677","usd_to_xpd":"0.00096","xpd_to_usd":"1041.992289","usd_to_xpt":"0.001004","xpt_to_usd":"995.59945","eth_to_eur":"701.535","eur_to_eth":"0.001425","usd_to_b2x":"0.000741","b2x_to_usd":"1349.4","ltc_to_eur":"170.075","eur_to_ltc":"0.00588","usd_to_bch":"0.000779","bch_to_usd":"1284.45","bch_to_eur":"1047.73","eur_to_bch":"0.000954","bch_to_btc":"0.126705","btc_to_bch":"7.892348","usd_to_cnh":"6.33282","cnh_to_usd":"0.157908","btc_to_aed":"37173.9","btc_to_afn":"698872.18","btc_to_all":"1084403.0","btc_to_amd":"4848946.23","btc_to_ang":"18004.25","btc_to_aoa":"2150918.16","btc_to_ars":"201877.08","btc_to_aud":"12938.51","btc_to_awg":"18064.93","btc_to_azn":"17085.8","btc_to_bam":"16082.36","btc_to_bbd":"20240.84","btc_to_bdt":"841651.36","btc_to_bgn":"16075.95","btc_to_bhd":"3815.115","btc_to_bif":"17760589.0","btc_to_bmd":"10120.42","btc_to_bnd":"13386.19","btc_to_bob":"69932.21","btc_to_brl":"32896.43","btc_to_bsd":"10120.42","btc_to_btn":"655784.61","btc_to_bwp":"96370.16","btc_to_byn":"19811.76","btc_to_byr":"198117646.0","btc_to_bzd":"20275.62","btc_to_cad":"12861.76","btc_to_cdf":"16327505.6","btc_to_chf":"9450.94","btc_to_clf":"228.2155","btc_to_clp":"5993616.0","btc_to_cny":"64154.74","btc_to_cop":"28936810.88","btc_to_crc":"5761440.16","btc_to_cuc":"10120.42","btc_to_cve":"907396.86","btc_to_czk":"208084.94","btc_to_djf":"1792326.0","btc_to_dkk":"61202.17","btc_to_dop":"497519.85","btc_to_dzd":"1156290.88","btc_to_egp":"178964.45","btc_to_ern":"151772.57","btc_to_etb":"276496.02","btc_to_fjd":"20491.34","btc_to_fkp":"7239.44","btc_to_gel":"24948.59","btc_to_ghs":"45038.91","btc_to_gip":"7239.44","btc_to_gmd":"480719.95","btc_to_gnf":"91032166.0","btc_to_gtq":"74292.36","btc_to_gyd":"2092109.57","btc_to_hkd":"79172.2","btc_to_hnl":"238930.98","btc_to_hrk":"61126.32","btc_to_htg":"648851.0","btc_to_huf":"2572661.0","btc_to_idr":"138122282.81","btc_to_ils":"35291.22","btc_to_inr":"655853.82","btc_to_iqd":"12039764.97","btc_to_isk":"1018317.0","btc_to_jmd":"1278428.15","btc_to_jod":"7178.434","btc_to_jpy":"1081534.0","btc_to_kes":"1030714.17","btc_to_kgs":"688300.16","btc_to_khr":"41325048.33","btc_to_kmf":"4046903.0","btc_to_krw":"10907181.0","btc_to_kwd":"3035.114","btc_to_kyd":"8405.76","btc_to_kzt":"3241165.71","btc_to_lak":"83593151.14","btc_to_lbp":"15317255.67","btc_to_lkr":"1570587.98","btc_to_lrd":"1311606.43","btc_to_lsl":"118024.99","btc_to_ltl":"32636.79","btc_to_lvl":"6641.64","btc_to_lyd":"13439.483","btc_to_mad":"93194.9","btc_to_mdl":"168885.76","btc_to_mga":"32219385.4","btc_to_mkd":"506201.32","btc_to_mmk":"13511370.01","btc_to_mnt":"24241269.36","btc_to_mop":"81299.85","btc_to_mro":"3602869.6","btc_to_mur":"330891.54","btc_to_mvr":"156461.8","btc_to_mwk":"7344085.18","btc_to_mxn":"188119.89","btc_to_myr":"39650.62","btc_to_mzn":"617292.6","btc_to_nad":"117320.97","btc_to_ngn":"3639241.29","btc_to_nio":"316566.74","btc_to_nok":"79605.94","btc_to_npr":"1049401.95","btc_to_nzd":"13858.45","btc_to_omr":"3896.564","btc_to_pab":"10120.42","btc_to_pen":"32860.07","btc_to_pgk":"32652.52","btc_to_php":"523418.0","btc_to_pkr":"1119546.16","btc_to_pln":"34286.57","btc_to_pyg":"56322161.0","btc_to_qar":"36851.07","btc_to_ron":"38255.24","btc_to_rsd":"969738.64","btc_to_rub":"570990.05","btc_to_rwf":"8699293.0","btc_to_sar":"37955.53","btc_to_sbd":"78407.17","btc_to_scr":"136322.06","btc_to_sek":"82533.17","btc_to_shp":"7239.44","btc_to_sll":"77778100.53","btc_to_sos":"5835313.93","btc_to_srd":"75579.3","btc_to_ssp":"1318320.32","btc_to_std":"201507993.96","btc_to_svc":"88262.04","btc_to_szl":"117957.21","btc_to_thb":"318398.53","btc_to_tjs":"89015.0","btc_to_tmt":"35522.47","btc_to_tnd":"24190.182","btc_to_top":"22340.17","btc_to_try":"38301.36","btc_to_ttd":"68340.67","btc_to_twd":"296295.54","btc_to_tzs":"22790173.8","btc_to_uah":"274971.81","btc_to_ugx":"36841194.0","btc_to_uyu":"288533.17","btc_to_uzs":"82936841.9","btc_to_vef":"252858693.7","btc_to_vnd":"230036420.0","btc_to_vuv":"1070367.0","btc_to_wst":"25321.47","btc_to_xaf":"5391050.0","btc_to_xag":"611.0","btc_to_xau":"8.0","btc_to_xcd":"27350.94","btc_to_xdr":"6960.0","btc_to_xof":"5391050.0","btc_to_xpd":"10.0","btc_to_xpf":"980740.0","btc_to_xpt":"10.0","btc_to_yer":"2533647.15","btc_to_zar":"117377.93","btc_to_zmk":"53163327.87","btc_to_zmw":"99342.04","btc_to_jep":"7239.44","btc_to_ggp":"7239.44","btc_to_imp":"7239.44","btc_to_cnh":"64090.8","btc_to_eek":"147896.69","btc_to_mtl":"6919.72","btc_to_zwl":"3262368.1","btc_to_sgd":"13383.52","bch_to_aed":"4717.99","bch_to_afn":"88698.53","bch_to_all":"137628.82","bch_to_amd":"615412.11","bch_to_ang":"2285.04","bch_to_aoa":"272987.37","bch_to_ars":"25621.57","bch_to_aud":"1642.11","bch_to_awg":"2292.74","bch_to_azn":"2168.47","bch_to_bam":"2041.12","bch_to_bbd":"2568.9","bch_to_bdt":"106819.59","bch_to_bgn":"2040.31","bch_to_bhd":"484.202","bch_to_bif":"2254115.0","bch_to_bmd":"1284.45","bch_to_bnd":"1698.93","bch_to_bob":"8875.56","bch_to_brl":"4175.1","bch_to_bsd":"1284.45","bch_to_btn":"83230.0","bch_to_bwp":"12230.98","bch_to_byn":"2514.44","bch_to_byr":"25144432.0","bch_to_bzd":"2573.31","bch_to_cad":"1632.37","bch_to_cdf":"2072232.63","bch_to_chf":"1199.48","bch_to_clf":"28.9643","bch_to_clp":"760690.0","bch_to_cny":"8142.31","bch_to_cop":"3672563.66","bch_to_crc":"731222.8","bch_to_cuc":"1284.45","bch_to_cve":"115163.79","bch_to_czk":"26409.45","bch_to_djf":"227476.0","bch_to_dkk":"7767.58","bch_to_dop":"63143.56","bch_to_dzd":"146752.59","bch_to_egp":"22713.57","bch_to_ern":"19262.47","bch_to_etb":"35091.95","bch_to_fjd":"2600.69","bch_to_fkp":"918.81","bch_to_gbp":"918.81","bch_to_gel":"3166.39","bch_to_ghs":"5716.19","bch_to_gip":"918.81","bch_to_gmd":"61011.38","bch_to_gnf":"11553499.0","bch_to_gtq":"9428.94","bch_to_gyd":"265523.58","bch_to_hkd":"10048.27","bch_to_hnl":"30324.32","bch_to_hrk":"7757.95","bch_to_htg":"82350.01","bch_to_huf":"326514.0","bch_to_idr":"17530020.11","bch_to_ils":"4479.04","bch_to_inr":"83238.78","bch_to_iqd":"1528046.871","bch_to_isk":"129241.0","bch_to_jmd":"162253.84","bch_to_jod":"911.063","bch_to_jpy":"137265.0","bch_to_kes":"130814.81","bch_to_kgs":"87356.76","bch_to_khr":"5244837.5","bch_to_kmf":"513619.0","bch_to_krw":"1384303.0","bch_to_kwd":"385.207","bch_to_kyd":"1066.83","bch_to_kzt":"411357.96","bch_to_lak":"10609364.33","bch_to_lbp":"1944015.08","bch_to_lkr":"199333.8","bch_to_lrd":"166464.72","bch_to_lsl":"14979.34","bch_to_ltl":"4142.15","bch_to_lvl":"842.93","bch_to_lyd":"1705.694","bch_to_mad":"11827.99","bch_to_mdl":"21434.42","bch_to_mga":"4089177.0","bch_to_mkd":"64245.39","bch_to_mmk":"1714818.08","bch_to_mnt":"3076621.17","bch_to_mop":"10318.31","bch_to_mro":"457264.2","bch_to_mur":"41995.65","bch_to_mvr":"19857.61","bch_to_mwk":"932086.83","bch_to_mxn":"23875.55","bch_to_myr":"5032.32","bch_to_mzn":"78344.72","bch_to_nad":"14889.99","bch_to_ngn":"461880.38","bch_to_nio":"40177.6","bch_to_nok":"10103.32","bch_to_npr":"133186.6","bch_to_nzd":"1758.87","bch_to_omr":"494.539","bch_to_pab":"1284.45","bch_to_pen":"4170.49","bch_to_pgk":"4144.15","bch_to_php":"66430.47","bch_to_pkr":"142089.07","bch_to_pln":"4351.54","bch_to_pyg":"7148221.0","bch_to_qar":"4677.02","bch_to_ron":"4855.23","bch_to_rsd":"123076.0","bch_to_rub":"72468.16","bch_to_rwf":"1104085.0","bch_to_sar":"4817.19","bch_to_sbd":"9951.18","bch_to_scr":"17301.54","bch_to_sek":"10474.83","bch_to_shp":"918.81","bch_to_sll":"9871337.48","bch_to_sos":"740598.61","bch_to_srd":"9592.27","bch_to_ssp":"167316.82","bch_to_std":"25574723.46","bch_to_svc":"11201.92","bch_to_szl":"14970.74","bch_to_thb":"40410.08","bch_to_tjs":"11297.49","bch_to_tmt":"4508.39","bch_to_tnd":"3070.137","bch_to_top":"2835.34","bch_to_try":"4861.08","bch_to_ttd":"8673.57","bch_to_twd":"37604.84","bch_to_tzs":"2892452.96","bch_to_uah":"34898.51","bch_to_ugx":"4675762.0","bch_to_uyu":"36619.67","bch_to_uzs":"10526067.75","bch_to_vef":"32091983.25","bch_to_vnd":"29195456.0","bch_to_vuv":"135847.0","bch_to_wst":"3213.72","bch_to_xaf":"684214.0","bch_to_xag":"78.0","bch_to_xau":"1.0","bch_to_xcd":"3471.29","bch_to_xdr":"883.0","bch_to_xof":"684214.0","bch_to_xpd":"1.0","bch_to_xpf":"124472.0","bch_to_xpt":"1.0","bch_to_yer":"321562.06","bch_to_zar":"14897.22","bch_to_zmk":"6747312.51","bch_to_zmw":"12608.16","bch_to_jep":"918.81","bch_to_ggp":"918.81","bch_to_imp":"918.81","bch_to_cnh":"8134.19","bch_to_eek":"18770.56","bch_to_mtl":"878.23","bch_to_zwl":"414048.89","bch_to_sgd":"1698.59","eth_to_aed":"3157.96","eth_to_afn":"59369.9","eth_to_all":"92121.14","eth_to_amd":"411922.93","eth_to_ang":"1529.48","eth_to_aoa":"182722.69","eth_to_ars":"17149.66","eth_to_aud":"1099.14","eth_to_awg":"1534.63","eth_to_azn":"1451.46","eth_to_bam":"1366.21","eth_to_bbd":"1719.48","eth_to_bdt":"71499.14","eth_to_bgn":"1365.67","eth_to_bhd":"324.098","eth_to_bif":"1508780.0","eth_to_bmd":"859.74","eth_to_bnd":"1137.17","eth_to_bob":"5940.81","eth_to_brl":"2794.58","eth_to_bsd":"859.74","eth_to_btn":"55709.57","eth_to_bwp":"8186.74","eth_to_byn":"1683.03","eth_to_byr":"16830296.0","eth_to_bzd":"1722.43","eth_to_cad":"1092.62","eth_to_cdf":"1387038.25","eth_to_chf":"802.87","eth_to_clf":"19.3871","eth_to_clp":"509164.0","eth_to_cny":"5450.01","eth_to_cop":"2458211.6","eth_to_crc":"489440.22","eth_to_cuc":"859.74","eth_to_cve":"77084.29","eth_to_czk":"17677.03","eth_to_djf":"152260.0","eth_to_dkk":"5199.19","eth_to_dop":"42264.82","eth_to_dzd":"98228.09","eth_to_egp":"15203.21","eth_to_ern":"12893.23","eth_to_etb":"23488.62","eth_to_fjd":"1740.76","eth_to_fkp":"615.0","eth_to_gbp":"615.0","eth_to_gel":"2119.41","eth_to_ghs":"3826.1","eth_to_gip":"615.0","eth_to_gmd":"40837.65","eth_to_gnf":"7733275.0","eth_to_gtq":"6311.21","eth_to_gyd":"177726.84","eth_to_hkd":"6725.76","eth_to_hnl":"20297.43","eth_to_hrk":"5192.74","eth_to_htg":"55120.55","eth_to_huf":"218550.0","eth_to_idr":"11733628.78","eth_to_ils":"2998.03","eth_to_inr":"55715.45","eth_to_iqd":"1022790.313","eth_to_isk":"86507.0","eth_to_jmd":"108603.78","eth_to_jod":"609.815","eth_to_jpy":"91877.0","eth_to_kes":"87560.22","eth_to_kgs":"58471.8","eth_to_khr":"3510605.0","eth_to_kmf":"343789.0","eth_to_krw":"926576.0","eth_to_kwd":"257.836","eth_to_kyd":"714.08","eth_to_kzt":"275340.33","eth_to_lak":"7101323.44","eth_to_lbp":"1301216.49","eth_to_lkr":"133423.05","eth_to_lrd":"111422.3","eth_to_lsl":"10026.34","eth_to_ltl":"2772.53","eth_to_lvl":"564.21","eth_to_lyd":"1141.698","eth_to_mad":"7917.0","eth_to_mdl":"14347.02","eth_to_mga":"2737069.6","eth_to_mkd":"43002.32","eth_to_mmk":"1147804.66","eth_to_mnt":"2059320.55","eth_to_mop":"6906.51","eth_to_mro":"306067.4","eth_to_mur":"28109.57","eth_to_mvr":"13291.59","eth_to_mwk":"623887.53","eth_to_mxn":"15980.98","eth_to_myr":"3368.36","eth_to_mzn":"52439.64","eth_to_nad":"9966.54","eth_to_ngn":"309157.26","eth_to_nio":"26892.67","eth_to_nok":"6762.61","eth_to_npr":"89147.77","eth_to_nzd":"1177.29","eth_to_omr":"331.017","eth_to_pab":"859.74","eth_to_pen":"2791.5","eth_to_pgk":"2773.87","eth_to_php":"44464.89","eth_to_pkr":"95106.59","eth_to_pln":"2912.68","eth_to_pyg":"4784625.0","eth_to_qar":"3130.54","eth_to_ron":"3249.82","eth_to_rsd":"82380.29","eth_to_rub":"48506.19","eth_to_rwf":"739014.0","eth_to_sar":"3224.36","eth_to_sbd":"6660.77","eth_to_scr":"11580.7","eth_to_sek":"7011.28","eth_to_shp":"615.0","eth_to_sll":"6607328.96","eth_to_sos":"495715.87","eth_to_srd":"6420.54","eth_to_ssp":"111992.66","eth_to_std":"17118309.59","eth_to_svc":"7497.95","eth_to_szl":"10020.59","eth_to_thb":"27048.28","eth_to_tjs":"7561.92","eth_to_tmt":"3017.67","eth_to_tnd":"2054.981","eth_to_top":"1897.82","eth_to_try":"3253.74","eth_to_ttd":"5805.61","eth_to_twd":"25170.61","eth_to_tzs":"1936048.51","eth_to_uah":"23359.14","eth_to_ugx":"3129697.0","eth_to_uyu":"24511.19","eth_to_uzs":"7045569.3","eth_to_vef":"21480603.9","eth_to_vnd":"19541828.0","eth_to_vuv":"90929.0","eth_to_wst":"2151.08","eth_to_xaf":"457975.0","eth_to_xag":"52.0","eth_to_xau":"1.0","eth_to_xcd":"2323.49","eth_to_xdr":"591.0","eth_to_xof":"457975.0","eth_to_xpd":"1.0","eth_to_xpf":"83315.0","eth_to_xpt":"1.0","eth_to_yer":"215235.91","eth_to_zar":"9971.37","eth_to_zmk":"4516278.92","eth_to_zmw":"8439.21","eth_to_jep":"615.0","eth_to_ggp":"615.0","eth_to_imp":"615.0","eth_to_cnh":"5444.58","eth_to_eek":"12563.97","eth_to_mtl":"587.84","eth_to_zwl":"277141.5","eth_to_sgd":"1136.94","ltc_to_aed":"761.37","ltc_to_afn":"14313.86","ltc_to_all":"22210.05","ltc_to_amd":"99313.03","ltc_to_ang":"368.75","ltc_to_aoa":"44053.74","ltc_to_ars":"4134.72","ltc_to_aud":"265.0","ltc_to_awg":"369.99","ltc_to_azn":"349.94","ltc_to_bam":"329.39","ltc_to_bbd":"414.56","ltc_to_bdt":"17238.17","ltc_to_bgn":"329.26","ltc_to_bhd":"78.139","ltc_to_bif":"363761.0","ltc_to_bmd":"207.28","ltc_to_bnd":"274.17","ltc_to_bob":"1432.31","ltc_to_brl":"673.76","ltc_to_bsd":"207.28","ltc_to_btn":"13431.36","ltc_to_bwp":"1973.79","ltc_to_byn":"405.77","ltc_to_byr":"4057719.0","ltc_to_bzd":"415.27","ltc_to_cad":"263.43","ltc_to_cdf":"334409.58","ltc_to_chf":"193.57","ltc_to_clf":"4.6742","ltc_to_clp":"122757.0","ltc_to_cny":"1313.98","ltc_to_cop":"592665.34","ltc_to_crc":"118002.15","ltc_to_cuc":"207.28","ltc_to_cve":"18584.72","ltc_to_czk":"4261.86","ltc_to_djf":"36709.0","ltc_to_dkk":"1253.5","ltc_to_dop":"10189.88","ltc_to_dzd":"23682.41","ltc_to_egp":"3665.44","ltc_to_ern":"3108.51","ltc_to_etb":"5663.02","ltc_to_fjd":"419.69","ltc_to_fkp":"148.27","ltc_to_gbp":"148.27","ltc_to_gel":"510.98","ltc_to_ghs":"922.46","ltc_to_gip":"148.27","ltc_to_gmd":"9845.8","ltc_to_gnf":"1864463.0","ltc_to_gtq":"1521.61","ltc_to_gyd":"42849.26","ltc_to_hkd":"1621.55","ltc_to_hnl":"4893.63","ltc_to_hrk":"1251.95","ltc_to_htg":"13289.35","ltc_to_huf":"52692.0","ltc_to_idr":"2828932.67","ltc_to_ils":"722.81","ltc_to_inr":"13432.78","ltc_to_iqd":"246590.802","ltc_to_isk":"20857.0","ltc_to_jmd":"26183.95","ltc_to_jod":"147.024","ltc_to_jpy":"22151.0","ltc_to_kes":"21110.43","ltc_to_kgs":"14097.33","ltc_to_khr":"846393.33","ltc_to_kmf":"82886.0","ltc_to_krw":"223394.0","ltc_to_kwd":"62.163","ltc_to_kyd":"172.16","ltc_to_kzt":"66383.49","ltc_to_lak":"1712101.71","ltc_to_lbp":"313718.28","ltc_to_lkr":"32167.78","ltc_to_lrd":"26863.49","ltc_to_lsl":"2417.31","ltc_to_ltl":"668.45","ltc_to_lvl":"136.03","ltc_to_lyd":"275.259","ltc_to_mad":"1908.76","ltc_to_mdl":"3459.01","ltc_to_mga":"659897.0","ltc_to_mkd":"10367.69","ltc_to_mmk":"276731.28","ltc_to_mnt":"496494.25","ltc_to_mop":"1665.13","ltc_to_mro":"73791.6","ltc_to_mur":"6777.11","ltc_to_mvr":"3204.55","ltc_to_mwk":"150416.88","ltc_to_mxn":"3852.95","ltc_to_myr":"812.1","ltc_to_mzn":"12642.99","ltc_to_nad":"2402.89","ltc_to_ngn":"74536.62","ltc_to_nio":"6483.72","ltc_to_nok":"1630.44","ltc_to_npr":"21493.18","ltc_to_nzd":"283.84","ltc_to_omr":"79.807","ltc_to_pab":"207.28","ltc_to_pen":"673.02","ltc_to_pgk":"668.77","ltc_to_php":"10720.31","ltc_to_pkr":"22929.83","ltc_to_pln":"702.24","ltc_to_pyg":"1153555.0","ltc_to_qar":"754.76","ltc_to_ron":"783.52","ltc_to_rsd":"19861.57","ltc_to_rub":"11694.65","ltc_to_rwf":"178173.0","ltc_to_sar":"777.38","ltc_to_sbd":"1605.89","ltc_to_scr":"2792.06","ltc_to_sek":"1690.39","ltc_to_shp":"148.27","ltc_to_sll":"1593001.54","ltc_to_sos":"119515.19","ltc_to_srd":"1547.97","ltc_to_ssp":"27001.0","ltc_to_std":"4127158.46","ltc_to_svc":"1807.73","ltc_to_szl":"2415.92","ltc_to_thb":"6521.24","ltc_to_tjs":"1823.15","ltc_to_tmt":"727.55","ltc_to_tnd":"495.448","ltc_to_top":"457.56","ltc_to_try":"784.46","ltc_to_ttd":"1399.71","ltc_to_twd":"6068.54","ltc_to_tzs":"466773.83","ltc_to_uah":"5631.8","ltc_to_ugx":"754558.0","ltc_to_uyu":"5909.55","ltc_to_uzs":"1698659.6","ltc_to_vef":"5178890.8","ltc_to_vnd":"4711460.0","ltc_to_vuv":"21923.0","ltc_to_wst":"518.62","ltc_to_xaf":"110416.0","ltc_to_xag":"13.0","ltc_to_xau":"0.0","ltc_to_xcd":"560.18","ltc_to_xdr":"143.0","ltc_to_xof":"110416.0","ltc_to_xpd":"0.0","ltc_to_xpf":"20087.0","ltc_to_xpt":"0.0","ltc_to_yer":"51892.55","ltc_to_zar":"2404.06","ltc_to_zmk":"1088857.44","ltc_to_zmw":"2034.66","ltc_to_jep":"148.27","ltc_to_ggp":"148.27","ltc_to_imp":"148.27","ltc_to_cnh":"1312.67","ltc_to_eek":"3029.13","ltc_to_mtl":"141.73","ltc_to_zwl":"66817.75","ltc_to_sgd":"274.11"}
+
+'
+    http_version: 
+  recorded_at: Fri, 23 Feb 2018 10:31:42 GMT
+recorded_with: VCR 4.0.0

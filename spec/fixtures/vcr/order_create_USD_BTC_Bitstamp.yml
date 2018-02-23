@@ -1,0 +1,128 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://test-insight.bitpay.com/api/status
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.14.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 23 Feb 2018 10:32:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d2a55c78901c8580f1848b1c5e57d2c411519381964; expires=Sat, 23-Feb-19
+        10:32:44 GMT; path=/; domain=.bitpay.com; HttpOnly
+      X-Powered-By:
+      - Express
+      X-Ratelimit-Limit:
+      - '10800'
+      X-Ratelimit-Remaining:
+      - '10781'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, PUT, POST, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Content-Length, Cache-Control,
+        cf-connecting-ip
+      Cache-Control:
+      - public, max-age=30
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - W/"127-nAh/RsP2Hh0F11ljUa1aCw"
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - HIT
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 3f1985dea8cf69e9-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: '{"info":{"version":120100,"protocolversion":70012,"blocks":1284564,"timeoffset":0,"connections":124,"proxy":"","difficulty":1549169.053332807,"testnet":true,"relayfee":0.00001,"errors":"Warning:
+        Unknown block versions being mined! It''s possible unknown rules are in effect","network":"testnet"}}'
+    http_version: 
+  recorded_at: Fri, 23 Feb 2018 10:32:44 GMT
+- request:
+    method: get
+    uri: https://www.bitstamp.net/api/ticker/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Headers:
+      - x-requested-with, Content-Type, origin, accept, cache-control
+      Access-Control-Allow-Methods:
+      - POST, GET
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 23 Feb 2018 10:32:45 GMT
+      Etag:
+      - '"6192b-c7-565deae423a85"'
+      Last-Modified:
+      - Fri, 23 Feb 2018 10:32:44 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - incap_ses_709_99025=UoFKHQzV6w9MRKzXD+DWCcztj1oAAAAArfXURjeKecnQcPncDru7Aw==;
+        path=/; Domain=.bitstamp.net
+      - nlbi_99025=Ok1TDvOpXS3RqnzN8F1n9AAAAACtjy+LSYhfxXOnJl6v2d0o; path=/; Domain=.bitstamp.net
+      - visid_incap_99025=nuYL1jNjQheK/xZOdSqd/sztj1oAAAAAQUIPAAAAAAC1zP9dVDNPjoaJWU/K7HqA;
+        expires=Sat, 23 Feb 2019 09:07:58 GMT; path=/; Domain=.bitstamp.net
+      X-Iinfo:
+      - 13-4562642-4546302 2NNN RT(1519381964172 409) q(0 0 0 0) r(2 2)
+      X-Cdn:
+      - Incapsula
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"high": "10330.49000000", "last": "10140.01", "timestamp": "1519381963",
+        "bid": "10142.77", "vwap": "9924.51", "volume": "18910.76308101", "low": "9600.00000000",
+        "ask": "10150.00", "open": 9843.33}'
+    http_version: 
+  recorded_at: Fri, 23 Feb 2018 10:32:45 GMT
+recorded_with: VCR 4.0.0

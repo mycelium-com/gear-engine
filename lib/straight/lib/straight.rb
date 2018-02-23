@@ -39,7 +39,6 @@ require_relative 'straight/exchange_rate_adapters/btc_adapters/coinbase_adapter'
 require_relative 'straight/exchange_rate_adapters/btc_adapters/bitstamp_adapter'
 require_relative 'straight/exchange_rate_adapters/btc_adapters/localbitcoins_adapter'
 require_relative 'straight/exchange_rate_adapters/btc_adapters/okcoin_adapter'
-require_relative 'straight/exchange_rate_adapters/btc_adapters/btce_adapter'
 require_relative 'straight/exchange_rate_adapters/btc_adapters/kraken_adapter'
 require_relative 'straight/exchange_rate_adapters/btc_adapters/average_rate_adapter'
 

@@ -66,4 +66,6 @@ Rails.application.configure do
   config.generators do |g|
     g.test_framework :rspec
   end
+
+  config.exchange_rates_expire_in = 1800
 end
