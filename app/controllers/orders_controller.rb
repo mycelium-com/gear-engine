@@ -7,7 +7,7 @@ class OrdersController < ApiController
 
   def create
     begin
-      result = OrderCreate.call(gateway: gateway, params: params.permit!.to_hash)
+      result = OrderCreate.call!(gateway: gateway, params: params.permit!.to_hash)
       render json: result.order.to_json
     rescue Sequel::ValidationFailed => ex
       render status: 409, plain: "Invalid order: #{ex.message}"
@@ -23,12 +23,11 @@ class OrdersController < ApiController
   end
 
   def cancel
-    if order.cancelable?
-      order.cancel
-      OrderCallbackJob.broadcast_later(order: order)
+    result = OrderCancel.call(order: order)
+    if result.success?
       render status: 204, plain: ' '
     else
-      render status: 409, plain: "Order is not cancelable"
+      render status: 409, plain: result.error
     end
   end
 

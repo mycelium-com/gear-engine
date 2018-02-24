@@ -2,7 +2,6 @@
 /bin/build
 /bin/guard
 /bin/setup
-/bin/spec-coverage
 /bin/spring
 /bin/update
 /coverage
@@ -12,13 +11,14 @@
 /spec
 /tmp
 /.byebug_history
+/.dockerignore
 /.env.development
 /.env.test
-/.dockerignore
 /.git*
 /.rspec
 /Dockerfile
 /Guardfile
+/README.md
 
 .DS_Store
 .idea

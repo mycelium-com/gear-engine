@@ -1,0 +1,37 @@
+@startuml
+
+entity Client
+boundary "Pull\nWebserver" as Webserver
+boundary "PubSub\nWebsocket" as Websocket
+control Worker
+database Redis
+database Postgres
+collections "ExchangeRate\nAdapters" as ERA
+collections "Pull\nBlockchain\nAdapters" as BAP
+collections "PubSub\nBlockchain\nAdapters" as BAPS
+
+Websocket -> Redis : subscribe
+Worker -> Redis : subscribe
+
+== OrdersController#create ==
+Client -> Webserver : OrderCreate
+Webserver -> ERA : pull and cache
+Webserver -> Postgres : OrderPersist
+Webserver ->> Redis : OrderScheduleStatusCheck
+Webserver -> Client : done
+Client -> Websocket : subscribe
+Redis ->o Worker : OrderStatusCheckJob
+Worker -> Postgres : pull order
+Worker -> BAP : pull transactions
+Worker -> Postgres : save
+Worker ->> Redis : OrderCallbackJob/Websocket enqueue
+Worker ->> Redis : OrderCallbackJob/HTTP enqueue
+Redis ->o Worker : OrderCallbackJob/Websocket
+Worker -> Postgres : pull order
+Worker ->> Redis : Websocket broadcast order
+Redis ->> Websocket : broadcast order
+Websocket -> Client : order data to live channel
+Redis ->o Worker : OrderCallbackJob/HTTP
+Worker -> Postgres : pull order
+Worker -> Client : order data to order.callback_url or order.gateway.callback_url
+@enduml
