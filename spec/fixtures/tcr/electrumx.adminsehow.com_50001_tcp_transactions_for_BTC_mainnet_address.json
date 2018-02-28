@@ -1,0 +1,42 @@
+[
+  [
+    [
+      "write",
+      "{\"id\":43452000000,\"method\":\"blockchain.address.get_history\",\"params\":[\"1EDt8oNqgEP356FiAD1SeWJYjXkXgZeJhP\"]}\n"
+    ],
+    [
+      "read",
+      "{\"jsonrpc\": \"2.0\", \"id\": 43452000000, \"result\": [{\"tx_hash\": \"ff13743933b367b8b27bbbebfc5361754642a231f9032115d333652937d79d78\", \"height\": 510487}, {\"tx_hash\": \"d6531a8f900cc7123a763ca5ce7e7409b81612c8ee4623b52382a113819ac55b\", \"height\": 511322}]}\n"
+    ]
+  ],
+  [
+    [
+      "write",
+      "{\"id\":43452000000,\"method\":\"blockchain.headers.subscribe\",\"params\":[]}\n"
+    ],
+    [
+      "read",
+      "{\"jsonrpc\": \"2.0\", \"id\": 43452000000, \"result\": {\"block_height\": 511331, \"version\": 536870912, \"prev_block_hash\": \"0000000000000000003e430a62501382a2a283a110f3a3ebf73a7f4b02af0da7\", \"merkle_root\": \"80eb3cfcdd8294b87f76f5c4c5770e1943188592c9b6f45a388b7e0126a9cffc\", \"timestamp\": 1519827244, \"bits\": 392009692, \"nonce\": 886437486}}\n"
+    ]
+  ],
+  [
+    [
+      "write",
+      "{\"id\":43452000000,\"method\":\"blockchain.transaction.get\",\"params\":[\"ff13743933b367b8b27bbbebfc5361754642a231f9032115d333652937d79d78\"]}\n"
+    ],
+    [
+      "read",
+      "{\"jsonrpc\": \"2.0\", \"id\": 43452000000, \"result\": \"0100000001e8dba11293bea4c23d43e5ed805119aad8676b37a1a0c63cbd3d7e82bd7dc437010000006b48304502210086a9a409c35e5fa395c51f0cb5095e851c2c9bd16f508dc7eafba59fdd4048e402205573f7e5f00e45ccc5f9443f1dc931f116dabe800aaf8d5e3c230407e1bcc3b70121024a89728359788949ec69c5d5846d069704d20a84d2ece5984a4246fdbe5a2eb3ffffffff02c0c62d00000000001976a91491094fc7ba8bf942838960908092b8eb20a062e088ac465d1700000000001976a914adb7777c06f8cac5138c7df97a2a5f42be94131888ac00000000\"}\n"
+    ]
+  ],
+  [
+    [
+      "write",
+      "{\"id\":43452000000,\"method\":\"blockchain.transaction.get\",\"params\":[\"d6531a8f900cc7123a763ca5ce7e7409b81612c8ee4623b52382a113819ac55b\"]}\n"
+    ],
+    [
+      "read",
+      "{\"jsonrpc\": \"2.0\", \"id\": 43452000000, \"result\": \"010000000001018f8b78ca86d6e8ad90562ad22024a3ea3bbcce8f7048700c9f237815039b4da2000000002322002086d6b832428ecb4f4b3ba6d15246f01ddb6f74fb12c3ad61f225ea2f253e669ffeffffff015a831e00000000001976a91491094fc7ba8bf942838960908092b8eb20a062e088ac0400483045022100c2f5294dd7d376527f55e371c0cecde92c289762c8c43c409c7c4c710e857b1802204b03102a4958c8ea7503ae469f031e9c4f897a2ff6786528c51173c77d8b2fd201483045022100e69e326a5db80541f3d9477ed8449d60db55271b98b3d5401b86202d7ab3ba7502201a8fae8927599e5c22013c8746447838b4808af0d16da16547f0bf01f607bbee01475221030d9ca815ef1bc459b1eed2bf1537b0e0c907c1971e8facd7837b0eb59b463eb52102b5e8d2dca74e9a34a30356268ca00309700335b1ad1c20819d6cf7ee6edb01ba52ae55cd0700\"}\n"
+    ]
+  ]
+]

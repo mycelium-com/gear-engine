@@ -8,7 +8,7 @@ require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 require 'json_matchers/rspec'
 require 'capybara/rspec'
-require 'webmock/rspec'
+require 'network_helper'
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
@@ -81,12 +81,6 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
-end
-
-VCR.configure do |config|
-  config.hook_into :webmock
-  config.ignore_localhost     = true
-  config.cassette_library_dir = "#{::Rails.root}/spec/fixtures/vcr"
 end
 
 Capybara.configure do |config|

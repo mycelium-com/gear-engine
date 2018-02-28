@@ -66,6 +66,7 @@ group :test do
   # Currently using: https://github.com/mozilla/geckodriver/releases
   gem 'webmock'
   gem 'vcr'
+  gem 'tcr'
   gem 'timecop'
   gem 'factory_bot_rails'
   gem 'database_cleaner'
