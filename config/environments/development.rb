@@ -17,9 +17,9 @@ Rails.application.configure do
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
     config.action_controller.perform_caching = true
 
-    config.cache_store = :memory_store
+    config.cache_store                = :memory_store
     config.public_file_server.headers = {
-      'Cache-Control' => "public, max-age=#{2.days.to_i}"
+        'Cache-Control' => "public, max-age=#{2.days.to_i}"
     }
   else
     config.action_controller.perform_caching = false
@@ -28,7 +28,7 @@ Rails.application.configure do
   end
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
-  config.active_job.queue_adapter     = :sidekiq
+  config.active_job.queue_adapter = :sidekiq
   # config.active_job.queue_name_prefix = "gear-engine-#{Rails.env}"
 
   # Store uploaded files on the local file system (see config/storage.yml for options)
@@ -68,4 +68,10 @@ Rails.application.configure do
   end
 
   config.exchange_rates_expire_in = 1800
+
+  config.pubsub_blockchain_adapters = {
+      electrum: [
+                    { server: 'tcp://electrumx.soon.it:50001', currency: 'BTC' }
+                ]
+  }
 end

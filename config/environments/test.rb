@@ -48,4 +48,10 @@ Rails.application.configure do
 
   # Disable exchange rates caching
   config.exchange_rates_expire_in = -1
+
+  config.pubsub_blockchain_adapters = {
+      electrum: [
+                    { server: 'tcp://electrumx.soon.it:50001', currency: 'BTC' }
+                ]
+  }
 end
