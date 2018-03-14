@@ -3,17 +3,29 @@ require 'celluloid/io'
 
 module PubSubBlockchainAdapters
 
+  class OrderActor
+    include Celluloid
+
+    def status_check_stimulus(address:, currency:)
+      OrderStimulateStatusCheck.call!(address: address, currency: currency)
+    end
+
+    def self.id
+      :OrderActor
+    end
+  end
+
+
   class ElectrumRootActor
     include Celluloid
     include Celluloid::Notifications
 
-    attr_accessor :currency, :address_status_history
+    attr_accessor :currency, :address_status_changed_at
+    DEBOUNCE_ADDRESS_STATUS_CHANGE = 42.seconds
 
-    # TODO: move address_status_history to Redis with TTL for each address
-    # then it could be used to restore subscriptions after restart
     def initialize(currency:)
-      self.currency               = currency
-      self.address_status_history = Hash.new { |h, k| h[k] = Set.new }
+      self.currency                  = currency
+      self.address_status_changed_at = {}
       subscribe ElectrumActor.address_status_changed_topic(currency: currency), :address_status_changed
     end
 
@@ -21,14 +33,16 @@ module PubSubBlockchainAdapters
       publish ElectrumActor.address_subscribe_topic(currency: currency), address: address
     end
 
-    def address_status_changed(_, address:, status:)
-      history = address_status_history[address]
-      changed = !history.include?(status)
-      history << status
+    # different servers seems to return different status strings nearly at the same time,
+    # so the evidence of change is message itself, not its content
+    def address_status_changed(_, address:, **)
+      changed = !address_status_changed_at.has_key?(address) || (Time.now - address_status_changed_at[address]) > DEBOUNCE_ADDRESS_STATUS_CHANGE
       if changed
-        Celluloid.logger.info { "[Electrum#{currency}] #{address} new status #{status}" }
+        address_status_changed_at[address] = Time.now
+        Actor[OrderActor.id].async.status_check_stimulus address: address, currency: currency
+        Celluloid.logger.info { "[Electrum#{currency}] #{address} signal accepted at #{address_status_changed_at[address]}" }
       else
-        Celluloid.logger.debug { "[Electrum#{currency}] #{address} ignoring status #{status}" }
+        Celluloid.logger.debug { "[Electrum#{currency}] #{address} signal ignored" }
       end
     end
 
@@ -40,6 +54,7 @@ module PubSubBlockchainAdapters
       hash.each_char.each_slice(2).reverse_each.to_a.join
     end
   end
+
 
   class ElectrumActor
     include Celluloid::IO
@@ -60,15 +75,15 @@ module PubSubBlockchainAdapters
     end
 
     def address_subscribe(_, address:)
-      Celluloid.logger.info { "[Electrum#{currency}] blockchain.address.subscribe(#{address}) via #{server}" }
       connection.write JSON(id: Time.now.to_i, method: 'blockchain.address.subscribe', params: Array.wrap(address)).concat("\n")
+      Celluloid.logger.info { "[Electrum#{currency}] blockchain.address.subscribe(#{address}) via #{server}" }
     end
 
     def event_loop
       loop do
         result = connection.gets
-        raise CommunicationError if result.nil?
         Rails.logger.debug { "[Electrum#{currency}] message from #{server}\n#{result.inspect}" }
+        raise CommunicationError if result.nil?
         parsed = JSON(result)
         if 'blockchain.address.subscribe' == parsed['method']
           data = {
@@ -85,8 +100,8 @@ module PubSubBlockchainAdapters
         tcp_socket = TCPSocket.open server.host, server.port
         if 'tcp-tls' == server.scheme
           ssl_context = OpenSSL::SSL::SSLContext.new
-          ssl_context.set_params
-          socket = OpenSSL::SSL::SSLSocket.new(tcp_socket, ssl_context)
+          ssl_context.set_params verify_mode: OpenSSL::SSL::VERIFY_NONE
+          socket = SSLSocket.new(tcp_socket, ssl_context)
           socket.connect
           socket.sync_close = true
           socket
@@ -100,6 +115,7 @@ module PubSubBlockchainAdapters
       @connection&.close
     end
 
+    # TODO: when/if single process would be unable to handle all orders consider sharding strategy
     def resume_monitoring
       # TODO: limit scope by currency
       StraightServer::Order.where('status < 2').select(:address).paged_each do |order|
@@ -117,7 +133,8 @@ module PubSubBlockchainAdapters
 
   end
 
-  class ElectrumSuperviser < Celluloid::Supervision::Container
+
+  class Supervisor < Celluloid::Supervision::Container
 
     def self.servers
       Rails.application.config.pubsub_blockchain_adapters[:electrum]
@@ -127,6 +144,7 @@ module PubSubBlockchainAdapters
       servers.map { |item| item[:currency] }.uniq
     end
 
+    supervise type: OrderActor, as: OrderActor.id
     currencies.each do |currency|
       supervise type: ElectrumRootActor, as: :"Electrum#{currency}", args: [currency: currency]
     end
@@ -138,4 +156,4 @@ end
 
 Celluloid.logger = Rails.logger
 Celluloid.boot
-PubSubBlockchainAdapters::ElectrumSuperviser.run!
+PubSubBlockchainAdapters::Supervisor.run!

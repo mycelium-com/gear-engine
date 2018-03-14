@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'ElectrumPubSub' do
 
   it "subscribes to address status changes" do
-    Celluloid::Actor[:ElectrumBTC].address_subscribe address: '1PRqwjFrZMDDNExQE1rbXLNQpNsCGukQwc'
+    Celluloid::Actor[:ElectrumBTC].address_subscribe address: '1NDyJtNTjmwk5xPNhjgAMu4HDHigtobu1s'
   end
 
   it "converts address to lockscripthash" do

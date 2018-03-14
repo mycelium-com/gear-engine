@@ -71,7 +71,8 @@ Rails.application.configure do
 
   config.pubsub_blockchain_adapters = {
       electrum: [
-                    { server: 'tcp://electrumx.soon.it:50001', currency: 'BTC' }
+                    { server: 'tcp://electrumx.soon.it:50001', currency: :BTC },
+                    { server: 'tcp-tls://electrumx.bot.nu:50002', currency: :BTC }
                 ]
   }
 end
