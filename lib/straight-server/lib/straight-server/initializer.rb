@@ -37,9 +37,11 @@ module StraightServer
     end
 
     def prepare(run_migrations: true)
-      ConfigDir.set!
-      create_config_files
-      read_config_file
+      # ConfigDir.set!
+      # create_config_files
+      # read_config_file
+      StraightServer::Config.count_orders = true
+      StraightServer::Config.server_secret = ENV.fetch('STRAIGHT_SERVER_SECRET')
       yield StraightServer::Config if block_given?
       create_logger
       # connect_to_db
@@ -128,17 +130,7 @@ module StraightServer
     end
 
     def create_logger
-      # TODO: logging to STDOUT by default
-      return unless Config.logmaster
-      require_relative 'logger'
-      Straight.logger = StraightServer.logger = StraightServer::Logger.new(
-        log_level:       ::Logger.const_get(Config.logmaster['log_level'].upcase),
-        file:            Config.logmaster['file'] && File.absolute_path(Config.logmaster['file'], ConfigDir.path),
-        raise_exception: Config.logmaster['raise_exception'],
-        name:            Config.logmaster['name'],
-        email_config:    Config.logmaster['email_config'],
-        logstash_config: Config.logmaster['logstash_config'],
-      )
+      Straight.logger = StraightServer.logger = Rails.logger
     end
 
     def initialize_routes

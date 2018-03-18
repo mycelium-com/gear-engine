@@ -54,13 +54,13 @@ Rails.application.configure do
   config.log_level = :debug
 
   # Prepend all log lines with the following tags.
-  config.log_tags = [ :request_id ]
+  config.log_tags = [:request_id]
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
-  config.active_job.queue_adapter     = :sidekiq
+  config.active_job.queue_adapter = :sidekiq
   # config.active_job.queue_name_prefix = "gear-engine-#{Rails.env}"
 
   config.action_mailer.perform_caching = false
@@ -93,4 +93,14 @@ Rails.application.configure do
   # config.active_record.dump_schema_after_migration = false
 
   config.exchange_rates_expire_in = 1800
+
+  config.blockchain_adapters = {
+  }
+
+  config.pubsub_blockchain_adapters = {
+      electrum: [
+                    { server: 'tcp://electrumx.soon.it:50001', currency: :BTC },
+                    { server: 'tcp-tls://electrumx.bot.nu:50002', currency: :BTC }
+                ]
+  }
 end

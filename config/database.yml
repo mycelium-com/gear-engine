@@ -1,6 +1,6 @@
 default: &default
   adapter: <%= ENVied.DATABASE_URL.scheme %>
-  url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV.fetch('DATABASE_URL') %>
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling

@@ -33,7 +33,7 @@ module StraightServer
 
     def initialize_blockchain_adapters
       all_instances = {main: [], test: []}
-      StraightServer::Config.blockchain_adapters.each do |name, params|
+      Rails.application.config.blockchain_adapters.each do |name, params|
         begin
           adapter = Straight::Blockchain.const_get("#{name}Adapter") rescue Kernel.const_get(name)
         rescue NameError
@@ -41,7 +41,7 @@ module StraightServer
           next
         end
         adapter_args = {main: [], test: []}
-        if name == 'Insight'
+        if name.to_s == 'Insight'
           adapter_args.each do |k, v|
             [params["#{k}net_url"]].flatten.compact.each do |url|
               v << [{url: url}]
@@ -666,14 +666,6 @@ module StraightServer
     end
   end
 
-  # It may not be a perfect way to implement such a thing, but it gives enough flexibility to people
-  # so they can simply start using a single gateway on their machines, a gateway which attributes are defined
-  # in a config file instead of a DB. That way they don't need special tools to access the DB and create
-  # a gateway, but can simply edit the config file.
-  Gateway = if StraightServer::Config.gateways_source == 'config'
-    GatewayOnConfig
-  else
-    GatewayOnDB
-  end
+  Gateway = GatewayOnDB
 
 end

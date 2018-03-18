@@ -50,34 +50,27 @@ module StraightServer
         end
 
         def create_pk_infrastructure
-          if Config.ssl_certificate_path
-            pki_data = create_pki_data
-            ['x509+sha256', pki_data.to_s]
-          else
-            ['none', '']
-          end
+          ['x509+sha256', create_pki_data.to_s]
+        rescue => ex
+          Rails.logger.error ex.inspect
+          ['none', '']
         end
 
         def create_pki_data
           pki_data = Payments::X509Certificates.new
 
-          certificates = File.read(absolute_path Config.ssl_certificate_path)
-          certificates.each_line("-----END CERTIFICATE-----\n") do |cert|
-            pki_data.certificate << OpenSSL::X509::Certificate.new(cert).to_der
+          Rails.application.config.bip70_certs_chain.each do |cert|
+            pki_data.certificate << cert.to_der
           end
 
           pki_data
         end
 
         def create_signature(data)
-          if Config.private_key_path.nil?
-            raise PaymentRequestError.new('No private key was found! Please provide it in config file')
-          end
-
-          key = File.read(absolute_path Config.private_key_path)
-
-          private_key = OpenSSL::PKey::RSA.new(key)
-          private_key.sign(OpenSSL::Digest::SHA256.new, data)
+          Rails.application.config.bip70_key.sign(OpenSSL::Digest::SHA256.new, data)
+        rescue => ex
+          Rails.logger.error ex.inspect
+          ''
         end
 
         def absolute_path(target)

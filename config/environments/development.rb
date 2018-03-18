@@ -69,6 +69,9 @@ Rails.application.configure do
 
   config.exchange_rates_expire_in = 1800
 
+  config.blockchain_adapters = {
+  }
+
   config.pubsub_blockchain_adapters = {
       electrum: [
                     { server: 'tcp://electrumx.soon.it:50001', currency: :BTC },

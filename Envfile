@@ -1,5 +1,6 @@
 variable :DATABASE_URL, :uri
 variable :REDIS_URL, :uri
+variable :STRAIGHT_SERVER_SECRET
 
 group :production do
   variable :SECRET_KEY_BASE
