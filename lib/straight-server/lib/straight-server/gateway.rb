@@ -109,7 +109,8 @@ module StraightServer
     end
 
     def initialize_network
-      BTC::Network.default = test_mode ? BTC::Network.testnet : BTC::Network.mainnet
+      # FIXME: global state? how it's possible to rely on it
+      # BTC::Network.default = test_mode ? BTC::Network.testnet : BTC::Network.mainnet
     end
     #
     ############# END OF Initializers methods ##################################################

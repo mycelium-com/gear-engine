@@ -70,7 +70,7 @@ group :test do
   gem 'vcr'
   gem 'tcr'
   gem 'timecop'
-  gem 'factory_bot_rails'
+  gem 'factory_bot_rails', require: false
   gem 'database_cleaner'
   gem 'json_matchers'
   gem 'simplecov', require: false

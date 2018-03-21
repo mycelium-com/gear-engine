@@ -50,6 +50,14 @@ Rails.application.configure do
   config.exchange_rates_expire_in = -1
 
   config.blockchain_adapters = {
+      'Insight' => {
+          'mainnet_url' => [
+              'https://insight.bitpay.com/api'
+          ],
+          'testnet_url' => [
+              'https://test-insight.bitpay.com/api'
+          ]
+      }
   }
 
   config.pubsub_blockchain_adapters = {

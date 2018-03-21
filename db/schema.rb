@@ -1,5 +1,35 @@
 Sequel.migration do
   change do
+    create_table(:cashila) do
+      primary_key :id
+      column :gateway_id, "integer", :null=>false
+      column :credentials, "text"
+      column :created_at, "timestamp without time zone", :null=>false
+      column :updated_at, "timestamp without time zone"
+      
+      index [:gateway_id], :unique=>true
+      index [:id], :unique=>true
+    end
+    
+    create_table(:cashila_schema_info) do
+      column :version, "integer", :default=>0, :null=>false
+    end
+    
+    create_table(:gatecoin) do
+      primary_key :id
+      column :gateway_id, "integer", :null=>false
+      column :credentials, "text"
+      column :created_at, "timestamp without time zone", :null=>false
+      column :updated_at, "timestamp without time zone"
+      
+      index [:gateway_id], :unique=>true
+      index [:id], :unique=>true
+    end
+    
+    create_table(:gatecoin_schema_info) do
+      column :version, "integer", :default=>0, :null=>false
+    end
+    
     create_table(:gateways) do
       primary_key :id
       column :confirmations_required, "integer", :default=>0, :null=>false
@@ -53,7 +83,7 @@ Sequel.migration do
       column :description, "text"
       column :reused, "integer", :default=>0
       column :callback_data, "text"
-      column :amount_paid, "integer"
+      column :amount_paid, "bigint"
       column :callback_url, "text"
       column :title, "text"
       column :test_mode, "boolean", :default=>false
