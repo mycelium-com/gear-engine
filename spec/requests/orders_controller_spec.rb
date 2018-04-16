@@ -52,6 +52,12 @@ RSpec.shared_examples "order actions" do
         get show_path
       end
     end
+
+    it "shows order by id" do
+      expect_order_show do
+        get legacy_show_path
+      end
+    end
   end
 
   describe "cancel action" do
@@ -78,6 +84,23 @@ RSpec.shared_examples "order signed actions" do
   describe "show action" do
 
     let(:url) { show_path }
+    let(:request_method) { 'GET' }
+
+    it "does not show order without signature" do
+      get url
+      expect_request_unauthorized
+    end
+
+    it "shows order" do
+      expect_order_show do
+        get url, params: params, headers: signature_header
+      end
+    end
+  end
+
+  describe "legacy show action" do
+
+    let(:url) { legacy_show_path }
     let(:request_method) { 'GET' }
 
     it "does not show order without signature" do
@@ -140,6 +163,8 @@ RSpec.describe OrdersController, type: :request do
 
   let(:order_id) { { order_id: order.payment_id } }
   let(:gateway_order_id) { { gateway_id: order.gateway.hashed_id, order_id: order.payment_id } }
+  let(:legacy_order_id) { { order_id: order.id } }
+  let(:legacy_gateway_order_id) { { gateway_id: order.gateway.hashed_id, order_id: order.id } }
 
   context "gateway without signature checking" do
 
@@ -209,6 +234,7 @@ RSpec.describe OrdersController, type: :request do
 
     context "short URLs" do
 
+      let(:legacy_show_path) { order_path(legacy_order_id) }
       let(:show_path) { order_path(order_id) }
       let(:cancel_path) { order_cancel_path(order_id) }
       let(:invoice_path) { order_invoice_path(order_id) }
@@ -218,6 +244,7 @@ RSpec.describe OrdersController, type: :request do
 
     context "legacy URLs" do
 
+      let(:legacy_show_path) { gateway_order_path(legacy_gateway_order_id) }
       let(:show_path) { gateway_order_path(gateway_order_id) }
       let(:cancel_path) { gateway_order_cancel_path(gateway_order_id) }
       let(:invoice_path) { gateway_order_invoice_path(gateway_order_id) }
@@ -281,6 +308,7 @@ RSpec.describe OrdersController, type: :request do
 
     context "short URLs" do
 
+      let(:legacy_show_path) { order_path(legacy_order_id) }
       let(:show_path) { order_path(order_id) }
       let(:cancel_path) { order_cancel_path(order_id) }
       let(:invoice_path) { order_invoice_path(order_id) }
@@ -290,6 +318,7 @@ RSpec.describe OrdersController, type: :request do
 
     context "legacy URLs" do
 
+      let(:legacy_show_path) { gateway_order_path(legacy_gateway_order_id) }
       let(:show_path) { gateway_order_path(gateway_order_id) }
       let(:cancel_path) { gateway_order_cancel_path(gateway_order_id) }
       let(:invoice_path) { gateway_order_invoice_path(gateway_order_id) }

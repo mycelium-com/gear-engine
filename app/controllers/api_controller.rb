@@ -21,8 +21,12 @@ class ApiController < ActionController::Base
     gateway || raise(RecordNotFound, "Gateway not found")
   end
 
+  # FIXME: selection by id allows to enumerate all orders on public gateway
+  # it would be more private to allow only selection by payment_id
+  # order.id observed to be used in:
+  # - invoice link in widget QR code
   def order
-    @order ||= StraightServer::Order[payment_id: params[:order_id]]
+    @order ||= StraightServer::Order[payment_id: params[:order_id]] || StraightServer::Order[id: params[:order_id]]
   end
 
   def gateway
