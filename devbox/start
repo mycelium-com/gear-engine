@@ -1,2 +1,3 @@
-#!/bin/sh
-itermocil --layout devbox/gear-engine.yml
+#!/usr/bin/env ruby
+
+system %(itermocil --layout #{__dir__}/gear-engine.yml)

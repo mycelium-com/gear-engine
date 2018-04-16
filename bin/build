@@ -15,8 +15,6 @@ chdir APP_ROOT do
 
   puts '== Caching dependencies =='
   system! 'gem install bundler --conservative'
-  # we don't need all those gems with native extensions on CI server
-  # FIXME: somehow just download them without compilation
   system %(sudo apt-get install -y --fix-missing --no-install-recommends build-essential libpq-dev) # BUILD_PACKAGES from Dockerfile
   system('bundle check') || system!('bundle install')
   system! %(bundle package --no-install --frozen --all)

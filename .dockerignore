@@ -12,12 +12,12 @@
 /tmp
 /.byebug_history
 /.dockerignore
-/.env.development
-/.env.test
+/.env*
 /.git*
 /.rspec
 /Dockerfile
 /Guardfile
+/Procfile
 /README.md
 
 .DS_Store
