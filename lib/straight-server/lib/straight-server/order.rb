@@ -58,7 +58,7 @@ module StraightServer
             end
           end
         rescue => ex
-          StraightServer.logger.warn "Error during accepted transaction save: #{item.inspect} #{transaction.inspect} #{ex.inspect}"
+          StraightServer.logger.warn "Error during accepted transaction save: #{item.inspect} #{transaction.inspect} #{ex.full_message}"
         end
         transaction
       end

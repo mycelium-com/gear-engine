@@ -42,6 +42,7 @@ RSpec.configure do |config|
     ActiveJob::Base.queue_adapter.enqueued_jobs.clear
     ActiveJob::Base.queue_adapter.performed_jobs.clear
     DatabaseCleaner.clean
+    allow_any_instance_of(Straight::Blockchain::ElectrumAdapter).to receive(:latest_block_height).and_return(42)
   end
 
   # rspec-retry

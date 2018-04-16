@@ -62,13 +62,13 @@ module PubSubBlockchainAdapters
 
     CommunicationError = Class.new(RuntimeError)
 
-    attr_accessor :server, :currency
+    attr_accessor :url, :currency
 
     finalizer :shutdown
 
-    def initialize(server:, currency:)
+    def initialize(url:, currency:)
       self.currency = currency
-      self.server   = URI(server)
+      self.url      = URI(url)
       subscribe ElectrumActor.address_subscribe_topic(currency: currency), :address_subscribe
       async.event_loop
       async.resume_monitoring
@@ -76,13 +76,13 @@ module PubSubBlockchainAdapters
 
     def address_subscribe(_, address:)
       connection.write JSON(id: Time.now.to_i, method: 'blockchain.address.subscribe', params: Array.wrap(address)).concat("\n")
-      Celluloid.logger.info { "[Electrum#{currency}] blockchain.address.subscribe(#{address}) via #{server}" }
+      Celluloid.logger.info { "[Electrum#{currency}] blockchain.address.subscribe(#{address}) via #{url}" }
     end
 
     def event_loop
       loop do
         result = connection.gets
-        Rails.logger.debug { "[Electrum#{currency}] message from #{server}\n#{result.inspect}" }
+        Rails.logger.debug { "[Electrum#{currency}] message from #{url}\n#{result.inspect}" }
         raise CommunicationError if result.nil?
         parsed = JSON(result)
         if 'blockchain.address.subscribe' == parsed['method']
@@ -97,8 +97,8 @@ module PubSubBlockchainAdapters
 
     def connection
       @connection ||= begin
-        tcp_socket = TCPSocket.open server.host, server.port
-        if 'tcp-tls' == server.scheme
+        tcp_socket = TCPSocket.open url.host, url.port
+        if 'tcp-tls' == url.scheme
           ssl_context = OpenSSL::SSL::SSLContext.new
           ssl_context.set_params verify_mode: OpenSSL::SSL::VERIFY_NONE
           socket = SSLSocket.new(tcp_socket, ssl_context)
@@ -137,7 +137,7 @@ module PubSubBlockchainAdapters
   class Supervisor < Celluloid::Supervision::Container
 
     def self.servers
-      Rails.application.config.pubsub_blockchain_adapters[:electrum]
+      Rails.application.config.pubsub_blockchain_adapters[:Electrum]
     end
 
     def self.currencies

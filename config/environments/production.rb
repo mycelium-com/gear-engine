@@ -95,12 +95,15 @@ Rails.application.configure do
   config.exchange_rates_expire_in = 1800
 
   config.blockchain_adapters = {
+      Electrum: [
+                    { url: 'tcp://node.arihanc.com:50001', currency: :BTC },
+                    { url: 'tcp-tls://node.arihanc.com:50002', currency: :BTC },
+                    { url: 'tcp://testnetnode.arihanc.com:51001', currency: :BTC_TEST },
+                    { url: 'tcp-tls://testnetnode.arihanc.com:51002', currency: :BTC_TEST },
+                ]
   }
 
   config.pubsub_blockchain_adapters = {
-      electrum: [
-                    { server: 'tcp://electrumx.soon.it:50001', currency: :BTC },
-                    { server: 'tcp-tls://electrumx.bot.nu:50002', currency: :BTC }
-                ]
+      Electrum: config.blockchain_adapters[:Electrum]
   }
 end

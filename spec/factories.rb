@@ -46,9 +46,7 @@ FactoryBot.define do
   factory :order, class: StraightServer::Order do
     to_create &:save
     initialize_with {
-      VCR.use_cassette 'order_create' do
-        gateway.create_order(attributes.except(:gateway))
-      end
+      gateway.create_order(attributes.except(:gateway))
     }
     gateway
     sequence :keychain_id

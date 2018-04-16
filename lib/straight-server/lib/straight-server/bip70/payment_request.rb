@@ -52,7 +52,7 @@ module StraightServer
         def create_pk_infrastructure
           ['x509+sha256', create_pki_data.to_s]
         rescue => ex
-          Rails.logger.error ex.inspect
+          Rails.logger.error ex.full_message
           ['none', '']
         end
 
@@ -69,7 +69,7 @@ module StraightServer
         def create_signature(data)
           Rails.application.config.bip70_key.sign(OpenSSL::Digest::SHA256.new, data)
         rescue => ex
-          Rails.logger.error ex.inspect
+          Rails.logger.error ex.full_message
           ''
         end
 

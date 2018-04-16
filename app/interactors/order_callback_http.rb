@@ -41,7 +41,7 @@ class OrderCallbackHttp
       end
       context.parsed_url = uri
     rescue => ex
-      Rails.logger.info { "#{order} [#{self.class.name}AddressParsingFailed] #{raw_uri.inspect}\n#{ex.inspect}" }
+      Rails.logger.info { "#{order} [#{self.class.name}AddressParsingFailed] #{raw_uri.inspect}\n#{ex.full_message}" }
       handle_error :invalid_url
     end
   end

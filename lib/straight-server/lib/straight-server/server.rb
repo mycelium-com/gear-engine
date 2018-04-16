@@ -1,3 +1,4 @@
+=begin
 require_relative 'orders_controller'
 
 module StraightServer
@@ -87,3 +88,4 @@ module StraightServer
 
   end
 end
+=end

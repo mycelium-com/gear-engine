@@ -6,7 +6,7 @@
     ],
     [
       "read",
-      "{\"jsonrpc\": \"2.0\", \"id\": 43452000000, \"error\": {\"message\": \"response too large (at least 1021286 bytes)\", \"code\": -32600}}\n"
+      "{\"jsonrpc\": \"2.0\", \"id\": 43452000000, \"error\": {\"message\": \"response too large (at least 1024779 bytes)\", \"code\": -32600}}\n"
     ]
   ]
 ]

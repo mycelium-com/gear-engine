@@ -1,13 +1,12 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-#ruby=ruby-2.5.0
-ruby '~> 2.5.0'
+ruby '2.5.1'
 
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'envied'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.0.rc1'
+gem 'rails', '~> 5.2.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Redis adapter to run Action Cable in production
@@ -19,7 +18,8 @@ gem 'sidekiq'
 gem 'celluloid', '0.18.0.pre', require: false
 gem 'celluloid-io', require: false
 # Business logic encapsulation
-gem 'interactor-rails', github: 'collectiveidea/interactor-rails'
+# gem 'interactor-rails', github: 'collectiveidea/interactor-rails'
+gem 'interactor-rails', github: 'Tyralion/interactor-rails', ref: '3e586166e86130001e4c71129ea10c645a929b26'
 
 # Straight
 gem 'btcruby' #, '1.1.1'

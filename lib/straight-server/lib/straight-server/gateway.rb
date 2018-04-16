@@ -31,7 +31,9 @@ module StraightServer
       end
     end
 
+
     def initialize_blockchain_adapters
+=begin
       all_instances = {main: [], test: []}
       Rails.application.config.blockchain_adapters.each do |name, params|
         begin
@@ -62,9 +64,10 @@ module StraightServer
           end
         end
       end
-      @blockchain_adapters      = all_instances[:main]
-      @test_blockchain_adapters = all_instances[:test]
-      if all_instances.values.all?(&:empty?)
+=end
+      @blockchain_adapters      = Rails.application.config.blockchain_adapters_factory.fetch(:BTC).map(&:call)
+      @test_blockchain_adapters = Rails.application.config.blockchain_adapters_factory.fetch(:BTC_TEST).map(&:call)
+      if [@blockchain_adapters, @test_blockchain_adapters].all?(&:empty?)
         raise NoBlockchainAdapters
       elsif @blockchain_adapters.empty?
         StraightServer.logger.warn "No mainnet blockchain adapters are configured"
@@ -121,7 +124,7 @@ module StraightServer
       StraightServer.logger.warn "Address #{address} seems to be invalid, ignoring it. #{e.message}"
       return []
     rescue => ex
-      StraightServer.logger.debug "fetch_transactions_for #{address} failed: #{ex.inspect}"
+      StraightServer.logger.debug "fetch_transactions_for #{address} failed: #{ex.full_message}"
       return []
     end
 
@@ -317,7 +320,7 @@ module StraightServer
           callback_data = order.callback_data ? "&callback_data=#{CGI.escape(order.callback_data.to_s)}" : ''
           uri = URI.parse("#{url}#{url.include?('?') ? '&' : '?'}#{order.to_http_params}#{callback_data}")
         rescue => ex
-          StraightServer.logger.warn "Parsing callback URI for gateway #{id} failed with #{ex.inspect}"
+          StraightServer.logger.warn "Parsing callback URI for gateway #{id} failed with #{ex.full_message}"
           return
         end
 
@@ -340,7 +343,7 @@ module StraightServer
             sleep(delay)
             send_callback_http_request(order, delay: delay*2)
           else
-            StraightServer.logger.info "Callback request for order #{order.id} failed with #{ex.inspect}, see order's #callback_response field for details"
+            StraightServer.logger.info "Callback request for order #{order.id} failed with #{ex.full_message}, see order's #callback_response field for details"
           end
         end
 

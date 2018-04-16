@@ -4,57 +4,24 @@ require 'json'
 require 'uri'
 
 module Straight
-
   module Blockchain
-    # A base class, providing guidance for the interfaces of
-    # all blockchain adapters as well as supplying some useful methods.
-    class Electrum
-
-      # Raised when blockchain data cannot be retrived for any reason.
-      # We're not really intereste in the precise reason, although it is
-      # stored in the message.
-      class RequestError < StraightError;
-      end
-
-      # Raised when an invalid address is used, for example a mainnet address
-      # is used on testnet and vice versa.
-      class BitcoinAddressInvalid < StraightError;
-      end
-
-      # How much times try to connect to servers if ReadTimeout error appears
-      MAX_TRIES = 5
-
-      def self.support_mainnet?
-        true
-      end
-
-      def self.support_testnet?
-        true
-      end
-
-      def self.mainnet_adapter(url:)
-        new(url)
-      end
-
-      def self.testnet_adapter(url:)
-        new(url)
-      end
+    class ElectrumAdapter < Adapter
 
       attr_accessor :url
 
-      def initialize(url)
+      def initialize(url:)
         self.url = URI(url)
       end
 
       def fetch_transactions_for(address)
-        history = api_request('blockchain.address.get_history', address)
+        history                    = api_request('blockchain.address.get_history', address)
         cached_latest_block_height = latest_block_height
-        result  = []
+        result                     = []
         (history || []).each do |item|
           raw_tx_hex = api_request('blockchain.transaction.get', item['tx_hash'])
           result << straighten_transaction(raw_tx_hex, address: address, height: item['height'], latest_block_height: cached_latest_block_height)
         rescue => ex
-          Rails.logger.error "[ElectrumBlockchainAdapter] [TransactionFetchFailed] #{ex.inspect}\nAddress: #{address.inspect}\nTX: #{item.inspect}"
+          Rails.logger.error "[ElectrumBlockchainAdapter] [TransactionFetchFailed] #{ex.full_message}\nAddress: #{address.inspect}\nTX: #{item.inspect}"
           next
         end
         result
@@ -69,7 +36,7 @@ module Straight
         tcp_socket = TCPSocket.open url.host, url.port
         if 'tcp-tls' == url.scheme
           ssl_context = OpenSSL::SSL::SSLContext.new
-          ssl_context.set_params
+          ssl_context.set_params verify_mode: OpenSSL::SSL::VERIFY_NONE
           socket = OpenSSL::SSL::SSLSocket.new(tcp_socket, ssl_context)
           socket.connect
           socket.sync_close = true
@@ -94,9 +61,10 @@ module Straight
       end
 
       private def straighten_transaction(raw_tx_hex, address: nil, height: nil, latest_block_height: nil)
+        network       = address.nil? ? nil : BTC::Address.parse(address).network
         transaction   = BTC::Transaction.new(hex: raw_tx_hex)
         confirmations =
-            if height.to_i > 0 && latest_block_height.to_i > 0
+            if height.to_i > 0 && latest_block_height.to_i > 0 && latest_block_height >= height
               latest_block_height - height + 1
             else
               0
@@ -107,7 +75,7 @@ module Straight
 
         transaction.outputs.each do |out|
           amount            = out.value
-          receiving_address = out.script.standard_address
+          receiving_address = out.script.standard_address(network: network)
           total_amount      += amount if address.nil? || receiving_address.to_s == address
           outs << { amount: amount, receiving_address: receiving_address }
         end
