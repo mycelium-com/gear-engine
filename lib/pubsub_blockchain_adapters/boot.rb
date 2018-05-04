@@ -137,9 +137,17 @@ module PubSubBlockchainAdapters
 
     # TODO: when/if single process would be unable to handle all orders consider sharding strategy
     def resume_monitoring
-      # TODO: limit scope by currency
+      scope = StraightServer::Order.where('status < 2')
+      if :BTC == currency
+        scope = scope.where(test_mode: false)
+      elsif :BTC_TEST == currency
+        scope = scope.where(test_mode: true)
+      else
+        logger { error "[UnexpectedCurrency] #{currency}" }
+        return
+      end
       resumed = []
-      StraightServer::Order.where('status < 2').select(:address).paged_each do |order|
+      scope.select(:address).paged_each do |order|
         async.address_subscribe address: order.address
         resumed << order.id
       end
