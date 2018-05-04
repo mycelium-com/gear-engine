@@ -3,6 +3,27 @@ require 'celluloid/io'
 
 module PubSubBlockchainAdapters
 
+  module Logging
+    extend ActiveSupport::Concern
+
+    def logger(item)
+      self.class.logger(item, logger_tags)
+    end
+
+    def logger_tags
+      []
+    end
+
+    class_methods do
+      def logger(item, tags = name)
+        Celluloid.logger.tagged(tags) do |logger|
+          logger.send item.keys[0], item.values[0]
+        end
+      end
+    end
+  end
+
+
   class OrderActor
     include Celluloid
 
@@ -19,6 +40,7 @@ module PubSubBlockchainAdapters
   class ElectrumRootActor
     include Celluloid
     include Celluloid::Notifications
+    include Logging
 
     attr_accessor :currency, :address_status_changed_at
     DEBOUNCE_ADDRESS_STATUS_CHANGE = 42.seconds
@@ -40,10 +62,14 @@ module PubSubBlockchainAdapters
       if changed
         address_status_changed_at[address] = Time.now
         Actor[OrderActor.id].async.status_check_stimulus address: address, currency: currency
-        logger { info "[SignalAccepted] #{address} at #{address_status_changed_at[address]}" }
+        logger info: "[SignalAccepted] #{address} at #{address_status_changed_at[address]}"
       else
-        logger { debug "[SignalIgnored] #{address}" }
+        logger debug: "[SignalIgnored] #{address}"
       end
+    end
+
+    def logger_tags
+      "Electrum#{currency}"
     end
 
     # https://electrumx.readthedocs.io/en/latest/protocol-basics.html#script-hashes
@@ -59,6 +85,7 @@ module PubSubBlockchainAdapters
   class ElectrumActor
     include Celluloid::IO
     include Celluloid::Notifications
+    include Logging
 
     attr_accessor :url, :currency
 
@@ -67,14 +94,18 @@ module PubSubBlockchainAdapters
     def initialize(url:, currency:)
       self.currency = currency
       self.url      = URI(url)
-      subscribe ElectrumActor.address_subscribe_topic(currency: currency), :address_subscribe
+      subscribe ElectrumActor.address_subscribe_topic(currency: currency), :address_subscribe_callback
       async.event_loop
       async.resume_monitoring
     end
 
-    def address_subscribe(_, address:)
+    def address_subscribe(address:)
       connection.write JSON(id: Time.now.to_i, method: 'blockchain.address.subscribe', params: Array.wrap(address)).concat("\n")
-      logger { info "blockchain.address.subscribe(#{address}) via #{url}" }
+      logger info: "blockchain.address.subscribe(#{address}) via #{url}"
+    end
+
+    def address_subscribe_callback(_, **args)
+      address_subscribe(**args)
     end
 
     def event_loop
@@ -86,11 +117,11 @@ module PubSubBlockchainAdapters
           next
         end
         if result.nil?
-          logger { warn "[CommunicationError] empty message from #{url}" }
+          logger warn: "[CommunicationError] empty message from #{url}"
           reconnect
           next
         else
-          logger { debug "message from #{url}\n#{result.inspect}" }
+          logger debug: "message from #{url}\n#{result.inspect}"
         end
         parsed = JSON(result)
         if 'blockchain.address.subscribe' == parsed['method']
@@ -105,7 +136,7 @@ module PubSubBlockchainAdapters
 
     def connection
       @connection ||= begin
-        logger { info "[Connecting] #{url}" }
+        logger info: "[Connecting] #{url}"
         tcp_socket = TCPSocket.open url.host, url.port
         if 'tcp-tls' == url.scheme
           ssl_context = OpenSSL::SSL::SSLContext.new
@@ -125,7 +156,7 @@ module PubSubBlockchainAdapters
     end
 
     def reconnect
-      logger { debug "[Reconnecting] #{url}" }
+      logger debug: "[Reconnecting] #{url}"
       shutdown
       resume_monitoring
     end
@@ -143,19 +174,19 @@ module PubSubBlockchainAdapters
       elsif :BTC_TEST == currency
         scope = scope.where(test_mode: true)
       else
-        logger { error "[UnexpectedCurrency] #{currency}" }
+        logger error: "[UnexpectedCurrency] #{currency}"
         return
       end
       resumed = []
-      scope.select(:address).paged_each do |order|
-        async.address_subscribe address: order.address
+      scope.select(:id, :address).paged_each do |order|
         resumed << order.id
+        async.address_subscribe address: order.address
       end
-      logger { debug "[MonitoringResumed] #{resumed.size} orders: #{resumed.inspect}" }
+      logger debug: "[MonitoringResumed] #{resumed.size} orders: #{resumed.inspect}"
     end
 
-    def logger(&block)
-      Celluloid.logger.tagged("Electrum#{currency}") { |logger| logger.instance_exec(&block) }
+    def logger_tags
+      "Electrum#{currency}"
     end
 
     def self.address_subscribe_topic(currency:)
