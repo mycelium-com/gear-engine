@@ -43,8 +43,8 @@ Rails.application.configure do
   config.active_support.deprecation = :log
 
   require 'json_log_formatter'
-  # config.log_formatter = JsonLogFormatter.new
   config.log_formatter = ::Logger::Formatter.new
+  # config.log_formatter = JsonLogFormatter.new
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)

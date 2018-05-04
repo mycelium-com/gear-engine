@@ -1,7 +1,9 @@
 class JsonLogFormatter
 
   def call(severity, _time, _progname, msg)
-    JSON.dump(severity: severity, message: clean(msg)).concat("\n")
+    clock     = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+    timestamp = Time.now.utc.iso8601(3)
+    JSON.dump(severity: severity, message: clean(msg), timestamp: timestamp, clock: clock).concat("\n")
   end
 
   # from Logger::Formatter
