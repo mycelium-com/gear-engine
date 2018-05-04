@@ -40,9 +40,9 @@ module PubSubBlockchainAdapters
       if changed
         address_status_changed_at[address] = Time.now
         Actor[OrderActor.id].async.status_check_stimulus address: address, currency: currency
-        Celluloid.logger.info { "[Electrum#{currency}] #{address} signal accepted at #{address_status_changed_at[address]}" }
+        logger { info "[SignalAccepted] #{address} at #{address_status_changed_at[address]}" }
       else
-        Celluloid.logger.debug { "[Electrum#{currency}] #{address} signal ignored" }
+        logger { debug "[SignalIgnored] #{address}" }
       end
     end
 
@@ -60,8 +60,6 @@ module PubSubBlockchainAdapters
     include Celluloid::IO
     include Celluloid::Notifications
 
-    CommunicationError = Class.new(RuntimeError)
-
     attr_accessor :url, :currency
 
     finalizer :shutdown
@@ -76,14 +74,24 @@ module PubSubBlockchainAdapters
 
     def address_subscribe(_, address:)
       connection.write JSON(id: Time.now.to_i, method: 'blockchain.address.subscribe', params: Array.wrap(address)).concat("\n")
-      Celluloid.logger.info { "[Electrum#{currency}] blockchain.address.subscribe(#{address}) via #{url}" }
+      logger { info "blockchain.address.subscribe(#{address}) via #{url}" }
     end
 
     def event_loop
       loop do
-        result = connection.gets
-        Rails.logger.debug { "[Electrum#{currency}] message from #{url}\n#{result.inspect}" }
-        raise CommunicationError if result.nil?
+        if connected?
+          result = connection.gets
+        else
+          sleep 4
+          next
+        end
+        if result.nil?
+          logger { warn "[CommunicationError] empty message from #{url}" }
+          reconnect
+          next
+        else
+          logger { debug "message from #{url}\n#{result.inspect}" }
+        end
         parsed = JSON(result)
         if 'blockchain.address.subscribe' == parsed['method']
           data = {
@@ -97,6 +105,7 @@ module PubSubBlockchainAdapters
 
     def connection
       @connection ||= begin
+        logger { info "[Connecting] #{url}" }
         tcp_socket = TCPSocket.open url.host, url.port
         if 'tcp-tls' == url.scheme
           ssl_context = OpenSSL::SSL::SSLContext.new
@@ -111,16 +120,34 @@ module PubSubBlockchainAdapters
       end
     end
 
+    def connected?
+      !@connection.nil?
+    end
+
+    def reconnect
+      logger { debug "[Reconnecting] #{url}" }
+      shutdown
+      resume_monitoring
+    end
+
     def shutdown
       @connection&.close
+      @connection = nil
     end
 
     # TODO: when/if single process would be unable to handle all orders consider sharding strategy
     def resume_monitoring
       # TODO: limit scope by currency
+      resumed = []
       StraightServer::Order.where('status < 2').select(:address).paged_each do |order|
         async.address_subscribe address: order.address
+        resumed << order.id
       end
+      logger { debug "[MonitoringResumed] #{resumed.size} orders: #{resumed.inspect}" }
+    end
+
+    def logger(&block)
+      Celluloid.logger.tagged("Electrum#{currency}") { |logger| logger.instance_exec(&block) }
     end
 
     def self.address_subscribe_topic(currency:)
@@ -130,7 +157,6 @@ module PubSubBlockchainAdapters
     def self.address_status_changed_topic(currency:)
       "ElectrumActor_address_status_changed_#{currency}"
     end
-
   end
 
 

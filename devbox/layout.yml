@@ -22,5 +22,3 @@ windows:
   - commands:
     - sleep 8
     - foreman start -p 9000
-  - commands:
-    - less +F log/development.log
