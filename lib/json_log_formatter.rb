@@ -6,12 +6,12 @@ class JsonLogFormatter
     pid       = Process.pid
     tid       = Thread.current.object_id.to_s(36)
     JSON.dump(
-        severity:  severity,
-        message:   clean(msg),
-        timestamp: timestamp,
-        clock:     clock,
-        pid:       pid,
-        tid:       tid
+        severity_label: severity,
+        message:        clean(msg),
+        timestamp:      timestamp,
+        clock:          clock,
+        pid:            pid,
+        tid:            tid
     ).concat("\n")
   end
 
