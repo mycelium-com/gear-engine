@@ -1,11 +1,10 @@
 GIT
-  remote: https://github.com/Tyralion/interactor-rails.git
-  revision: 3e586166e86130001e4c71129ea10c645a929b26
-  ref: 3e586166e86130001e4c71129ea10c645a929b26
+  remote: https://github.com/collectiveidea/interactor-rails.git
+  revision: 8167518ede971b2718220e2db110e393c6764956
   specs:
-    interactor-rails (2.1.2)
+    interactor-rails (2.2.0)
       interactor (~> 3.0)
-      rails (>= 4.2, < 6.0)
+      rails (>= 4.2, < 5.3)
 
 GEM
   remote: https://rubygems.org/
@@ -144,7 +143,7 @@ GEM
       multi_xml (>= 0.5.2)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
-    interactor (3.1.0)
+    interactor (3.1.1)
     json (2.1.0)
     json-schema (2.8.0)
       addressable (>= 2.4)

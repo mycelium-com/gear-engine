@@ -34,6 +34,8 @@ module GearEngine
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
+    config.action_cable.disable_request_forgery_protection = true
+
     config.sequel.after_connect = proc do
       Sequel::Model.require_valid_table = false # ignore warnings after db:schema:load
       Sequel::Model.include GlobalID::Identification

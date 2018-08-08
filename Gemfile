@@ -18,8 +18,7 @@ gem 'sidekiq'
 gem 'celluloid', '0.18.0.pre', require: false
 gem 'celluloid-io', require: false
 # Business logic encapsulation
-# gem 'interactor-rails', github: 'collectiveidea/interactor-rails'
-gem 'interactor-rails', github: 'Tyralion/interactor-rails', ref: '3e586166e86130001e4c71129ea10c645a929b26'
+gem 'interactor-rails', github: 'collectiveidea/interactor-rails'
 
 # Straight
 gem 'btcruby' #, '1.1.1'
