@@ -51,8 +51,8 @@ Rails.application.configure do
 
   config.blockchain_adapters = {
       Electrum: [
-                    { url: 'tcp-tls://electrumx-1.mycelium.com:50002', currency: :BTC },
-                    { url: 'tcp-tls://electrumx-1.mycelium.com:50012', currency: :BTC_TEST },
+                    { url: 'tcp-tls://electrumx-b.mycelium.com:4431', currency: :BTC },
+                    { url: 'tcp-tls://electrumx-b.mycelium.com:4432', currency: :BTC_TEST },
                 ]
   }
 

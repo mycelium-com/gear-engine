@@ -82,8 +82,8 @@ Rails.application.configure do
   # https://1209k.com/bitcoin-eye/ele.php?chain=btc
   config.blockchain_adapters = {
       Electrum: [
-                    { url: 'tcp-tls://electrumx.mycelium.com:4431', currency: :BTC },
-                    { url: 'tcp-tls://electrumx.mycelium.com:4432', currency: :BTC_TEST },
+                    { url: 'tcp-tls://electrumx-b.mycelium.com:4431', currency: :BTC },
+                    { url: 'tcp-tls://electrumx-b.mycelium.com:4432', currency: :BTC_TEST },
                 ]
   }
 
