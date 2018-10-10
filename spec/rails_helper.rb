@@ -1,7 +1,7 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
-ENV['RAILS_ENV'] ||= 'test'
-ENV['ENABLE_PUBSUB_BLOCKCHAIN_ADAPTERS'] = 'yes'
+ENV['RAILS_ENV']        ||= 'test'
+ENV['ENABLE_CELLULOID'] = 'yes'
 require File.expand_path('../../config/environment', __FILE__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
@@ -35,27 +35,38 @@ RSpec.configure do |config|
 
   config.include FactoryBot::Syntax::Methods
 
-  DatabaseCleaner[:sequel].strategy = :truncation
-  DatabaseCleaner[:redis].strategy  = :truncation
+  DatabaseCleaner.allow_remote_database_url = true
+  DatabaseCleaner[:sequel].strategy         = :truncation
+  DatabaseCleaner[:redis].strategy          = :truncation
 
   config.before :each do
     ActiveJob::Base.queue_adapter.enqueued_jobs.clear
     ActiveJob::Base.queue_adapter.performed_jobs.clear
     DatabaseCleaner.clean
-    allow_any_instance_of(Straight::Blockchain::ElectrumAdapter).to receive(:latest_block_height).and_return(42)
+    allow_any_instance_of(ElectrumAPI).to receive(:latest_block_height).and_return(42)
   end
 
   # rspec-retry
-  config.verbose_retry = true
+  config.verbose_retry                = true
   config.display_try_failure_messages = true
   config.around :each, :js do |ex|
-    ex.run_with_retry retry: 4, retry_wait: 3
+    TCR.turned_off do
+      ex.run_with_retry retry: 4, retry_wait: 3
+    end
   end
   # config.retry_callback = proc do |ex|
   #   if ex.metadata[:js]
   #     Capybara.reset!
   #   end
   # end
+
+  config.before :each do |x|
+    Rails.logger.debug "\n\n\nSPEC BEGIN at #{Time.now}\n#{x.metadata[:full_description]}\n"
+  end
+
+  config.after :each do |x|
+    Rails.logger.debug "\nSPEC END at #{Time.now}\n#{x.metadata[:full_description]}\n\n\n"
+  end
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   # config.fixture_path = "#{::Rails.root}/spec/fixtures"
@@ -86,6 +97,19 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 end
 
+Capybara.register_driver :firefox_headless do |app|
+  options = ::Selenium::WebDriver::Firefox::Options.new
+  options.args << '--headless'
+
+  Capybara::Selenium::Driver.new(app, browser: :firefox, options: options)
+end
+
+# From https://github.com/mattheworiordan/capybara-screenshot/issues/84#issuecomment-41219326
+# Capybara::Screenshot.register_driver(:firefox_headless) do |driver, path|
+#   driver.browser.save_screenshot(path)
+# end
+
 Capybara.configure do |config|
-  config.server = :puma
+  config.server            = :puma
+  config.javascript_driver = :firefox_headless
 end

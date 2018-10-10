@@ -1,0 +1,7 @@
+en:
+  enumerations:
+    blockchain_network:
+      BTC: "BTC"
+      BTC_TEST: "BTC TEST"
+      BCH: "BCH"
+      BCH_TEST: "BCH TEST"

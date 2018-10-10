@@ -4,8 +4,8 @@ class OrderStatusCheckJob < ApplicationJob
 
   def perform(order:, final: false)
     # if order.time_left_before_expiration <= 0
-    if order.finalized?
-      Rails.logger.info "#{order} [OrderStatusCheckJobSkipped] final status: #{order.status}"
+    if OrderStatus.immutable?(order.status)
+      Rails.logger.debug "Ignoring #{order} with status '#{OrderStatus.key_for(order.status)}'"
       return
     end
 

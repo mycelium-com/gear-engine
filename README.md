@@ -14,7 +14,15 @@ bin/setup
 
 ```bash
 devbox/start
-``` 
+```
+
+Following processes will be started:
+* Postgres
+* Redis
+* `bin/guard` which runs tasks like RSpec when files are changed (see `Guardfile`)
+* Rails server
+* Sidekiq
+* Logs output
 
 ### Build Docker image
 

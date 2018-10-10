@@ -136,7 +136,7 @@ RSpec.describe OrderStatusCheckJob, type: :job do
   context "finalized order" do
 
     before do
-      expect(order).to receive(:finalized?).at_least(:once).and_return(true)
+      order.status = OrderStatus::CANCELED
     end
 
     def job_runs

@@ -1,5 +1,5 @@
 class OrderCreate
   include Interactor::Organizer
 
-  organize OrderPersist, OrderScheduleStatusCheck, OrderSubscribeToStatusChange
+  organize OrderParamsValidate, OrderPersist, OrderScheduleStatusCheck, OrderSubscribeToStatusChange
 end

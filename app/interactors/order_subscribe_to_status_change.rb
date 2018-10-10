@@ -1,19 +1,16 @@
 class OrderSubscribeToStatusChange
   include Interactor
+  include InteractorLogs
+
+  delegate :order, to: :context
 
   def call
-    currency =
-        if context.order.test_mode
-          :BTC_TEST
-        else
-          :BTC
-        end
-    address  = context.order.address
-    actor    = Celluloid::Actor[:"Electrum#{currency}"]
+    name    = :"Electrum#{order.gateway.blockchain_network}"
+    actor   = Celluloid::Actor[name]
     if actor
-      actor.address_subscribe address: address
+      actor.address_subscribe address: order.address
     else
-      Rails.logger.warn { "[OrderSubscribeToStatusChange] No actor for #{currency.inspect} currency" }
+      Rails.logger.warn { "[OrderSubscribeToStatusChange] Missing actor #{name}" }
     end
   end
 end

@@ -33,6 +33,7 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
+  config.cache_store = :redis_store, ENVied.REDIS_URL.to_s
   config.active_job.queue_adapter = :test
 
   # Tell Action Mailer not to deliver emails to the real world.
@@ -48,15 +49,4 @@ Rails.application.configure do
 
   # Disable exchange rates caching
   config.exchange_rates_expire_in = -1
-
-  config.blockchain_adapters = {
-      Electrum: [
-                    { url: 'tcp-tls://electrumx-b.mycelium.com:4431', currency: :BTC },
-                    { url: 'tcp-tls://electrumx-b.mycelium.com:4432', currency: :BTC_TEST },
-                ]
-  }
-
-  config.pubsub_blockchain_adapters = {
-      Electrum: config.blockchain_adapters[:Electrum]
-  }
 end

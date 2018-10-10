@@ -57,7 +57,7 @@ Rails.application.configure do
   config.log_tags = [:request_id]
 
   # Use a different cache store in production.
-  # config.cache_store = :mem_cache_store
+  config.cache_store = :redis_store, ENVied.REDIS_URL
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
   config.active_job.queue_adapter = :sidekiq
@@ -83,7 +83,6 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  require 'json_log_formatter'
   config.log_formatter = JsonLogFormatter.new
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
@@ -96,15 +95,4 @@ Rails.application.configure do
   # config.active_record.dump_schema_after_migration = false
 
   config.exchange_rates_expire_in = 1800
-
-  config.blockchain_adapters = {
-      Electrum: [
-                    { url: 'tcp-tls://electrumx-b.mycelium.com:4431', currency: :BTC },
-                    { url: 'tcp-tls://electrumx-b.mycelium.com:4432', currency: :BTC_TEST },
-                ]
-  }
-
-  config.pubsub_blockchain_adapters = {
-      Electrum: config.blockchain_adapters[:Electrum]
-  }
 end

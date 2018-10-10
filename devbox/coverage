@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+Dir.chdir __dir__
+system %(docker-compose exec gear-engine-specs /gear-engine/spec/coverage)
+system %(open ../coverage/index.html; true)
