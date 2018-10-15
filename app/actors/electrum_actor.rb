@@ -1,3 +1,6 @@
+# trying to prevent "undefined method `each_pending' for Order:Class"
+require_dependency 'order'
+
 class ElectrumActor
   include Celluloid::IO
   include Celluloid::Notifications
@@ -9,7 +12,7 @@ class ElectrumActor
 
   def initialize(url:, network:)
     self.network = network
-    self.url      = URI(url)
+    self.url     = URI(url)
     subscribe ElectrumActor.address_subscribe_topic(network: network), :address_subscribe_callback
     async.event_loop
     async.resume_monitoring

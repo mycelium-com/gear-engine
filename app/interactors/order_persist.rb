@@ -22,7 +22,9 @@ class OrderPersist
   def order_build
     order             = Order.new # Kernel.const_get(gateway.order_class).new
     order.gateway     = gateway
-    order.keychain_id = order_params[:keychain_id]
+    order_data.each do |k, v|
+      order.public_send "#{k}=", v
+    end
     order.address     = gateway.new_address(order.keychain_id)
     order.amount      = order_amount(
       **order_params.slice(:amount, :currency, :btc_denomination)
@@ -37,11 +39,8 @@ class OrderPersist
         src:  rate.src
       }
     end
-    unless Currency[order_params[:currency]] == Currency[gateway.blockchain_currency]
-      order.amount_with_currency = format("%.2f %s", order_params[:amount], order_params[:currency])
-    end
-    order_params.except(:currency).compact.each do |k, v|
-      order.public_send "#{k}=", v
+    unless Currency[order_params.fetch(:currency)] == Currency[gateway.blockchain_currency]
+      order.amount_with_currency = format("%.2f %s", order_params.fetch(:amount), order_params.fetch(:currency))
     end
     # previously: gateway.sign_with_secret("#{keychain_id}#{amount}#{created_at}#{(Order.max(:id) || 0)+1}")
     # this probably can be just UUID without any HMAC logic
@@ -74,5 +73,16 @@ class OrderPersist
       yield rate if block_given?
       (rate[amount.to_d] * (10 ** Currency.precision(to))).to_i
     end
+  end
+
+  def order_data
+    order_params.slice(
+      :keychain_id,
+      :callback_data,
+      :data,
+      :description,
+      :after_payment_redirect_to,
+      :auto_redirect
+    ).compact
   end
 end

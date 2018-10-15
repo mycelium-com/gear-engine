@@ -21,6 +21,10 @@ FactoryBot.define do
     trait :with_callback_data do
       callback_data { 'some random data' }
     end
+
+    trait :USD do
+      currency { 'USD' }
+    end
   end
 
   factory :gateway, class: Gateway do

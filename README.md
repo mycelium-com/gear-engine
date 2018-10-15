@@ -24,7 +24,11 @@ Following processes will be started:
 * Sidekiq
 * Logs output
 
-### Build Docker image
+#### BIP70 payment requests
+
+`devbox/bip70-cert` may be used to generate certificate and private key for testing. 
+
+### Build production-ready Docker image
 
 ```bash
 bin/build

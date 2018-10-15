@@ -35,7 +35,7 @@ Sequel.migration do
       column :confirmations_required, "integer", :default=>0, :null=>false
       column :last_keychain_id, "integer", :default=>0, :null=>false
       column :pubkey, "text"
-      column :order_class, "text", :null=>false
+      column :order_class, "text"
       column :secret, "text", :null=>false
       column :name, "text", :null=>false
       column :default_currency, "text"
