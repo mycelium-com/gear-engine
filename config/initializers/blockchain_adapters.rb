@@ -1,19 +1,21 @@
-unless Rails.application.config.respond_to?(:blockchain_adapters_factory)
-  Rails.application.config.blockchain_adapters_factory = {}
-end
+# frozen_string_literal: true
 
-Rails.application.config.blockchain_adapters.each do |name, params|
-  begin
-    klass = Straight::Blockchain.const_get("#{name}Adapter") rescue Kernel.const_get(name)
-  rescue NameError
-    Rails.logger.warn "No blockchain adapter with the name #{name.inspect} was found!"
-    next
-  end
-  params.each do |item|
-    currency = item.fetch(:currency)
-    url      = item.fetch(:url)
-    (Rails.application.config.blockchain_adapters_factory[currency] ||= []) << -> {
-      klass.new(url: url)
-    }
-  end
-end
+# Public servers: https://1209k.com/bitcoin-eye/ele.php?chain=btc
+Rails.application.config.blockchain_adapters = {
+  BTC:
+    [
+      ElectrumAPI['tcp-tls://electrumx-b.mycelium.com:4431'],
+    ],
+  BTC_TEST:
+    [
+      ElectrumAPI['tcp-tls://electrumx-b.mycelium.com:4432'],
+    ],
+  BCH:
+    [
+      ElectrumAPI['tcp-tls://electrumx-bch.mycelium.com:4433'],
+    ],
+  BCH_TEST:
+    [
+      ElectrumAPI['tcp-tls://electrumx-bch.mycelium.com:4434'],
+    ],
+}.with_indifferent_access

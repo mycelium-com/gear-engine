@@ -1,24 +1,22 @@
 windows:
 
-- name: db
+- name: docker-compose
   root: ~/Projects/gear-engine/devbox
   panes:
   - commands:
     - docker-compose up
 
-- name: guard
+- name: test.log
   root: ~/Projects/gear-engine
   layout: even-vertical
   panes:
   - commands:
-    - bin/guard
-  - commands:
     - less +F log/test.log
 
-- name: engine
+- name: gear-engine
   root: ~/Projects/gear-engine
   layout: even-vertical
   panes:
   - commands:
     - sleep 8
-    - foreman start -p 9000
+    - ENABLE_CELLULOID=yes bin/foreman start -p 9000

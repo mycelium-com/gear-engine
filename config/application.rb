@@ -29,6 +29,8 @@ module GearEngine
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
+    config.time_zone = 'UTC'
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
@@ -37,22 +39,27 @@ module GearEngine
     config.action_cable.disable_request_forgery_protection = true
 
     config.sequel.after_connect = proc do
+      Sequel.default_timezone           = :utc
       Sequel::Model.require_valid_table = false # ignore warnings after db:schema:load
       Sequel::Model.include GlobalID::Identification
       GlobalID::Locator.use :'gear-engine' do |gid|
         gid.model_class.with_pk!(gid.model_id)
       end
-      require 'straight/lib/straight'
-      require 'straight-server/lib/straight-server'
+      Sequel::Model.db.extension :auto_literal_strings
+      Sequel::Model.db.extension :connection_validator
+      Sequel::Model.db.pool.connection_validation_timeout = 600
       begin
-        StraightServer.db_connection = Sequel::Model.db
-        StraightServer.db_connection.extension :connection_validator
-        StraightServer.db_connection.pool.connection_validation_timeout = 600
-        StraightServer.db_connection.extension :auto_literal_strings
-        straight_config_dir = "#{Rails.root}/config/straight/#{Rails.env}"
-        straight_config_dir = "#{Rails.root}/config/straight" unless File.exists?(straight_config_dir)
-        StraightServer::Initializer::ConfigDir.set! straight_config_dir
-        StraightServer::Initializer.new.prepare run_migrations: false
+        require 'straight/lib/straight'
+        require 'straight-server/lib/straight-server'
+        StraightServer::Config.count_orders  = true
+        StraightServer::Config.server_secret = ENV.fetch('STRAIGHT_SERVER_SECRET')
+        StraightServer::Config.redis         = { prefix: "StraightServer:#{Rails.env}" }
+        StraightServer.logger                = Straight.logger = Rails.logger
+        StraightServer.db_connection         = Sequel::Model.db
+        StraightServer.redis_connection      = Redis.current
+        require 'straight-server/lib/straight-server/gateway'
+        require 'straight-server/lib/straight-server/order'
+        require 'straight-server/lib/straight-server/transaction'
       rescue => ex
         Rails.logger.error ex
       end

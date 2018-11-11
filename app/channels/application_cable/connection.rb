@@ -24,7 +24,7 @@ module ApplicationCable
     end
 
     def find_order
-      StraightServer::Order[payment_id: request.params[:order_id]] || reject_unauthorized_connection
+      Order.find_by_uid(request.params[:order_id]) || reject_unauthorized_connection
     end
   end
 end

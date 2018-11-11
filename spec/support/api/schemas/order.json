@@ -20,7 +20,8 @@
     },
     "amount": {
       "type": "integer",
-      "exclusiveMinimum": 0
+      "minimum": 0,
+      "exclusiveMinimum": true
     },
     "amount_in_btc": {
       "type": "string"

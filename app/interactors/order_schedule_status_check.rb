@@ -1,5 +1,6 @@
 class OrderScheduleStatusCheck
   include Interactor
+  include InteractorLogs
 
   def call
     OrderStatusCheckJob.new(order: context.order, final: false).enqueue

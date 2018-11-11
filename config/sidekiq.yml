@@ -8,3 +8,7 @@ development:
 
 production:
   :concurrency: 8
+
+:schedule:
+  ExchangeRateCacheUpdateJob:
+    interval: 1m

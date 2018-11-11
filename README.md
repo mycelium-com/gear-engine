@@ -14,9 +14,21 @@ bin/setup
 
 ```bash
 devbox/start
-``` 
+```
 
-### Build Docker image
+Following processes will be started:
+* Postgres
+* Redis
+* `bin/guard` which runs tasks like RSpec when files are changed (see `Guardfile`)
+* Rails server
+* Sidekiq
+* Logs output
+
+#### BIP70 payment requests
+
+`devbox/bip70-cert` may be used to generate certificate and private key for testing. 
+
+### Build production-ready Docker image
 
 ```bash
 bin/build

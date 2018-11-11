@@ -6,16 +6,8 @@ class OrdersController < ApiController
   before_action :validate_order_signature, only: %i[show cancel reprocess]
 
   def create
-    begin
-      result = OrderCreate.call!(gateway: gateway, params: params.permit!.to_hash)
-      render json: result.order.to_json
-    rescue Sequel::ValidationFailed => ex
-      render status: 409, plain: "Invalid order: #{ex.message}"
-    rescue Straight::Gateway::OrderAmountInvalid => ex
-      render status: 409, plain: "Invalid order: #{ex.message}"
-    rescue StraightServer::GatewayModule::GatewayInactive
-      render status: 503, plain: "The gateway is inactive, you cannot create order with it"
-    end
+    result = OrderCreate.call!(gateway: gateway, params: params.permit!.to_hash)
+    render json: result.order.to_json
   end
 
   def show
@@ -23,12 +15,8 @@ class OrdersController < ApiController
   end
 
   def cancel
-    result = OrderCancel.call(order: order)
-    if result.success?
-      render status: 204, plain: ' '
-    else
-      render status: 409, plain: result.error
-    end
+    OrderCancel.call!(order: order)
+    head :ok
   end
 
   def invoice
@@ -82,10 +70,10 @@ class OrdersController < ApiController
 
   def signature_validator_params
     {
-        request_signature: request.headers['X-Signature'],
-        request_method:    request.request_method,
-        request_body:      request.body.read,
-        request_uri:       request.fullpath,
+      request_signature: request.headers['X-Signature'],
+      request_method:    request.request_method,
+      request_body:      request.body.read,
+      request_uri:       request.fullpath,
     }
   end
 end

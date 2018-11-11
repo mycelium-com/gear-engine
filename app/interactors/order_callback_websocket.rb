@@ -1,5 +1,6 @@
 class OrderCallbackWebsocket
   include Interactor
+  include InteractorLogs
 
   def call
     order = context.order

@@ -35,10 +35,10 @@ Sequel.migration do
       column :confirmations_required, "integer", :default=>0, :null=>false
       column :last_keychain_id, "integer", :default=>0, :null=>false
       column :pubkey, "text"
-      column :order_class, "text", :null=>false
+      column :order_class, "text"
       column :secret, "text", :null=>false
       column :name, "text", :null=>false
-      column :default_currency, "text", :default=>"BTC"
+      column :default_currency, "text"
       column :callback_url, "text"
       column :check_signature, "boolean", :default=>false, :null=>false
       column :exchange_rate_adapter_names, "text"
@@ -51,7 +51,7 @@ Sequel.migration do
       column :hashed_id, "text"
       column :address_provider, "text", :default=>"Bip32", :null=>false
       column :address_derivation_scheme, "text"
-      column :test_mode, "boolean", :default=>false
+      column :test_mode, "boolean"
       column :test_last_keychain_id, "integer", :default=>0, :null=>false
       column :test_pubkey, "text"
       column :after_payment_redirect_to, "text"
@@ -61,6 +61,7 @@ Sequel.migration do
       column :back_url, "text"
       column :custom_css_url, "text"
       column :donation_mode, "boolean", :default=>false
+      column :blockchain_network, "text"
       
       index [:hashed_id]
       index [:id], :unique=>true
@@ -86,7 +87,7 @@ Sequel.migration do
       column :amount_paid, "bigint"
       column :callback_url, "text"
       column :title, "text"
-      column :test_mode, "boolean", :default=>false
+      column :test_mode, "boolean"
       column :after_payment_redirect_to, "text"
       column :auto_redirect, "boolean", :default=>false
       column :block_height_created_at, "integer"
@@ -124,9 +125,10 @@ Sequel.migration do
     end
   end
 end
-Sequel.migration do
-  change do
-    self << "SET search_path TO \"$user\", public"
-    self << "INSERT INTO \"schema_migrations\" (\"filename\") VALUES ('20180220100705_init.rb')"
-  end
-end
+              Sequel.migration do
+                change do
+                  self << "SET search_path TO \"$user\", public"
+                  self << "INSERT INTO \"schema_migrations\" (\"filename\") VALUES ('20180220100705_init.rb')"
+self << "INSERT INTO \"schema_migrations\" (\"filename\") VALUES ('20180904084300_add_blockchain_network_to_gateways.rb')"
+                end
+              end

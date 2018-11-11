@@ -1,0 +1,12 @@
+[
+  [
+    [
+      "write",
+      "{\"id\":43452000000,\"method\":\"blockchain.address.get_history\",\"params\":[\"1DcKsGnjpD38bfj6RMxz945YwohZUTVLby\"]}\n"
+    ],
+    [
+      "read",
+      "{\"jsonrpc\": \"2.0\", \"error\": {\"code\": -32600, \"message\": \"response too large (over 10,000,000 bytes\"}, \"id\": 43452000000}\n"
+    ]
+  ]
+]

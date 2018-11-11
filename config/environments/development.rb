@@ -17,15 +17,16 @@ Rails.application.configure do
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
     config.action_controller.perform_caching = true
 
-    config.cache_store                = :memory_store
     config.public_file_server.headers = {
-        'Cache-Control' => "public, max-age=#{2.days.to_i}"
+      'Cache-Control' => "public, max-age=#{2.days.to_i}"
     }
   else
     config.action_controller.perform_caching = false
 
-    config.cache_store = :null_store
+    # config.cache_store = :null_store
   end
+
+  config.cache_store = :redis_store, ENVied.REDIS_URL.to_s
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
   config.active_job.queue_adapter = :sidekiq
@@ -42,7 +43,6 @@ Rails.application.configure do
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
-  require 'json_log_formatter'
   config.log_formatter = ::Logger::Formatter.new
   # config.log_formatter = JsonLogFormatter.new
 
@@ -78,16 +78,4 @@ Rails.application.configure do
   end
 
   config.exchange_rates_expire_in = 1800
-
-  # https://1209k.com/bitcoin-eye/ele.php?chain=btc
-  config.blockchain_adapters = {
-      Electrum: [
-                    { url: 'tcp-tls://electrumx-b.mycelium.com:4431', currency: :BTC },
-                    { url: 'tcp-tls://electrumx-b.mycelium.com:4432', currency: :BTC_TEST },
-                ]
-  }
-
-  config.pubsub_blockchain_adapters = {
-      Electrum: config.blockchain_adapters[:Electrum]
-  }
 end

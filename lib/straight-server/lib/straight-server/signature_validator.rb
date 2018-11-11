@@ -1,6 +1,8 @@
 module StraightServer
   class SignatureValidator
 
+    InvalidSignature = Class.new(RuntimeError)
+
     attr_accessor :secret, :request_signature, :request_body, :request_method, :request_uri
 
     def initialize(secret:, request_signature:, request_body:, request_method:, request_uri:)

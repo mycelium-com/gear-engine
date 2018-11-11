@@ -72,11 +72,6 @@ module StraightServer
           Rails.logger.error ex.full_message
           ''
         end
-
-        def absolute_path(target)
-          File.expand_path(target, StraightServer::Initializer::ConfigDir.path)
-        end
-
     end
   end
 end

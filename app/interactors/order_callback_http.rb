@@ -1,5 +1,8 @@
+require 'net/http'
+
 class OrderCallbackHttp
   include Interactor
+  include InteractorLogs
 
   delegate :order, :parsed_url, :request, :response, to: :context
 

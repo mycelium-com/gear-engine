@@ -4,11 +4,20 @@ class ApiController < ActionController::Base
   RecordNotFound = Class.new(RuntimeError)
 
   rescue_from RecordNotFound do |ex|
-    render status: :not_found, plain: ex.message
+    render status: :not_found, json: { error: ex.message }
   end
 
   rescue_from StraightServer::SignatureValidator::InvalidSignature do |_ex|
-    render status: :unauthorized, plain: 'X-Signature is invalid'
+    render status: :unauthorized, json: { error: 'X-Signature is invalid' }
+  end
+
+  rescue_from Interactor::Failure do |ex|
+    response = ex.context&.response
+    if response.present?
+      render response
+    else
+      raise ex
+    end
   end
 
   private
@@ -26,10 +35,10 @@ class ApiController < ActionController::Base
   # order.id observed to be used in:
   # - invoice link in widget QR code
   def order
-    @order ||= StraightServer::Order[payment_id: params[:order_id]] || StraightServer::Order[id: params[:order_id]]
+    @order ||= Order.find_by_uid(params[:order_id]) || Order.find_by_id(params[:order_id])
   end
 
   def gateway
-    @gateway ||= StraightServer::Gateway[hashed_id: params[:gateway_id]]
+    @gateway ||= Gateway.find_by_uid(params[:gateway_id])
   end
 end

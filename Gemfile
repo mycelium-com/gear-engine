@@ -10,33 +10,41 @@ gem 'rails', '~> 5.2.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Redis adapter to run Action Cable in production
-gem 'redis', '~> 4.0'
+gem 'redis-rails'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
+gem 'rack-cors', require: 'rack/cors'
 # Background processing
 gem 'sidekiq'
-gem 'celluloid', '0.18.0.pre', require: false
+gem 'sidekiq-scheduler'
+gem 'celluloid', '~> 0.18.0.pre', require: false
 gem 'celluloid-io', require: false
 # Business logic encapsulation
-gem 'interactor-rails', github: 'collectiveidea/interactor-rails'
+gem 'interactor-rails'
+gem 'enumerate_it'
+gem 'dry-struct'
+gem 'dry-validation'
 
 # Straight
 gem 'btcruby' #, '1.1.1'
 gem 'satoshi-unit', '0.1.8' # newer version does not like floats: Satoshi::TooManyDigitsAfterDecimalPoint (Too many digits (20) after decimal point used for btc value, while 8 allowed)
 # gem 'httparty', '~> 0.13.5'
-gem 'faraday'
+# gem 'faraday'
 gem 'concurrent-ruby'
 # Suppress some warnings
-gem 'warning'
+# gem 'warning'
 
 # Straight Server
-gem 'socket.io-client-simple'
+# gem 'socket.io-client-simple'
 gem 'sequel', '~> 4.25'
 gem 'sequel-rails'
-gem 'logmaster', '~> 0.2.0'
-gem 'ruby-hmac'
+# gem 'logmaster', '~> 0.2.0'
+# gem 'ruby-hmac'
 gem 'ruby-protocol-buffers'
 # gem 'rbtrace'
+
+# Utils
+# gem 'ice_nine', require: %w[ice_nine ice_nine/core_ext/object]
 
 
 group :development, :test do
@@ -45,6 +53,7 @@ group :development, :test do
   gem 'rspec-rails'
   # Reduces boot times through caching; required in config/boot.rb
   gem 'bootsnap', '>= 1.1.0', require: false
+  gem 'rubocop-rspec'
 end
 
 group :development do
@@ -55,16 +64,15 @@ group :development do
   # gem 'spring'
   # gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'guard-rspec', require: false
+  gem 'guard-bundler', require: false
+  gem 'foreman'
 end
 
 group :test do
   gem 'rspec-retry'
-  # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.15'
+  gem 'geckodriver-helper'
   gem 'selenium-webdriver'
-  # Easy installation and use of chromedriver to run system tests with Chrome
-  # gem 'chromedriver-helper'
-  # Currently using: https://github.com/mozilla/geckodriver/releases
   gem 'webmock'
   gem 'vcr'
   gem 'tcr'

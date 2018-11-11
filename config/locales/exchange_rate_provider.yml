@@ -1,0 +1,8 @@
+en:
+  enumerations:
+    exchange_rate_provider:
+      bitpay: "Bitpay"
+      bitstamp: "Bitstamp"
+      coinbase: "Coinbase"
+      kraken: "Kraken"
+      okcoin: "Okcoin"

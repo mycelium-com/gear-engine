@@ -25,6 +25,9 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
+# BIP70 credentials
+/config/bip70.*
+
 # straight-server
 /config/straight/*/straight.log
 /config/straight/*/server_secret

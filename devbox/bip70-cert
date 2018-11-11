@@ -1,0 +1,38 @@
+#!/usr/bin/env ruby
+
+# brew install certbot
+# brew cask install ngrok
+# ngrok http --bind-tls false 80
+
+require 'fileutils'
+require 'open-uri'
+require 'json'
+
+# ngrok API
+tunnels = open('http://localhost:4040/api/tunnels').read
+domain  = URI(JSON(tunnels)['tunnels'][0]['public_url']).host
+
+app_dir = File.method(:join).curry(2)[File.expand_path('../config', __dir__)]
+
+le_dir  = File.method(:join).curry(2)[File.expand_path('~/.letsencrypt')]
+le_dirs = {
+  config: le_dir['config'],
+  work:   le_dir['work'],
+  logs:   le_dir['logs']
+}
+le_args = le_dirs.map { |k, v| "--#{k}-dir #{v.inspect}" }.join(' ')
+le_out  = "#{le_dir['config']}/live/#{domain}"
+
+unless le_dirs.each_value.all?(File.method(:directory?))
+  FileUtils.mkdir_p(le_dirs.values)
+  system %(certbot register --agree-tos --register-unsafely-without-email #{le_args})
+end
+
+puts "sudo password is needed for binding to port 80"
+system %(sudo bash -c "\
+  certbot certonly --standalone -d #{domain} #{le_args}; \
+  chown -R $(whoami) #{le_dir['']}"
+)
+
+FileUtils.cp "#{le_out}/fullchain.pem", app_dir['bip70.crt']
+FileUtils.cp "#{le_out}/privkey.pem", app_dir['bip70.key']
