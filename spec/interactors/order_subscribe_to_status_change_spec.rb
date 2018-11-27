@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe OrderSubscribeToStatusChange, type: :interactor do
   describe '.call' do

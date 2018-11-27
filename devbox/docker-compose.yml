@@ -20,16 +20,6 @@ services:
     ports:
     - 6379:6379
 
-  gear-engine-specs:
-    build: specs
-    volumes:
-    - ../:/gear-engine
-    - gear-engine-specs-bundle:/usr/local/bundle
-    command: /gear-engine/devbox/specs/guard
-    stdin_open: true
-    tty: true
-
 volumes:
 
   gear-engine-pgdata:
-  gear-engine-specs-bundle:

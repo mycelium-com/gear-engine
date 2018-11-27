@@ -6,16 +6,21 @@ windows:
   - commands:
     - docker-compose up
 
+- name: gear-engine-specs
+  root: ~/Projects/gear-engine/devbox
+  panes:
+  - commands:
+    - docker-compose -f docker-compose-specs.yml up -d
+    - docker attach devbox_gear-engine-specs_1
+
 - name: test.log
   root: ~/Projects/gear-engine
-  layout: even-vertical
   panes:
   - commands:
     - less +F log/test.log
 
 - name: gear-engine
   root: ~/Projects/gear-engine
-  layout: even-vertical
   panes:
   - commands:
     - sleep 8
