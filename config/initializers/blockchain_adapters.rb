@@ -12,10 +12,10 @@ Rails.application.config.blockchain_adapters = {
     ],
   BCH:
     [
-      ElectrumAPI['tcp-tls://bch0.kister.net:50002'],
+      ElectrumAPI['tcp-tls://bch.imaginary.cash:50002'],
     ],
   BCH_TEST:
     [
-      ElectrumAPI['tcp-tls://bch0.kister.net:51002'],
+      ElectrumAPI['tcp-tls://testnet.imaginary.cash:50002'],
     ],
 }.with_indifferent_access

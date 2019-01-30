@@ -54,6 +54,7 @@ group :development, :test do
   # Reduces boot times through caching; required in config/boot.rb
   gem 'bootsnap', '>= 1.1.0', require: false
   gem 'rubocop-rspec'
+  gem 'rb-readline'
 end
 
 group :development do
