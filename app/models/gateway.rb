@@ -38,6 +38,7 @@ class Gateway < SimpleDelegator
     blockchain_network&.gsub(/_TEST\z/, '')
   end
 
+  # TODO: remove DB field
   def default_currency
     result = __getobj__.default_currency
     if result.nil? # new gateway
