@@ -92,12 +92,13 @@ module ExchangeRate
     select_median(results)
   end
 
-  def self.direct_rates(*args)
-    self[*args]
+  def self.direct_rates(**args)
+    send(:[], **args)
   end
 
-  def self.reversed_rates(*args)
-    self[*args].map(&:reverse)
+  def self.reversed_rates(**args)
+    args[:from], args[:to] = args[:to], args[:from]
+    send(:[], **args).map(&:reverse)
   end
 
   def self.cross_rates(from:, to:, via:, provider: :*)
@@ -161,12 +162,17 @@ module ExchangeRate
     ]
   end
 
-  def self.fetch_coinbase
-    data   = open('https://coinbase.com/api/v1/currencies/exchange_rates').read
+  def self.fetch_coinbase(currency: nil)
+    if currency.nil?
+      return %i[BTC BCH USD].map { |e| fetch_coinbase(currency: e) }.reduce(:concat)
+    end
+
+    data   = open("https://api.coinbase.com/v2/exchange-rates?currency=#{currency}").read
     time   = Time.now.utc
     parsed = JSON(data)
-    parsed.map do |key, value|
-      pair = Currency[key.split('_to_', 2)]
+    from   = parsed['data']['currency']
+    parsed['data']['rates'].map do |key, value|
+      pair = Currency[[from, key]]
       Pair.new(
         src:  'coinbase',
         pair: pair,

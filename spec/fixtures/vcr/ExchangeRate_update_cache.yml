@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 07 Oct 2018 20:41:57 GMT
+      - Sat, 16 Feb 2019 12:04:56 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -27,8 +27,8 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=dc882ebb6b12b0d4ea3d5d5e10987b94d1538944917; expires=Mon, 07-Oct-19
-        20:41:57 GMT; path=/; domain=.bitpay.com; HttpOnly
+      - __cfduid=df95d5dc8f395d8e85d27b643bae0abce1550318696; expires=Sun, 16-Feb-20
+        12:04:56 GMT; path=/; domain=.bitpay.com; HttpOnly
       Strict-Transport-Security:
       - max-age=31536000
       X-Download-Options:
@@ -40,7 +40,7 @@ http_interactions:
       Cache-Control:
       - public, max-age=60, s-maxage=60
       Expires:
-      - Sun, 07 Oct 2018 20:41:34 GMT
+      - Sat, 16 Feb 2019 12:05:43 GMT
       Cf-Cache-Status:
       - HIT
       Expect-Ct:
@@ -50,13 +50,13 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 46633106bbba3e6e-ZRH
+      - 4a9fe12cc944cc64-ZRH
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        W3siY29kZSI6IkJUQyIsIm5hbWUiOiJCaXRjb2luIiwicmF0ZSI6MX0seyJjb2RlIjoiQkNIIiwibmFtZSI6IkJpdGNvaW4gQ2FzaCIsInJhdGUiOjEyLjc3OTA3Mn0seyJjb2RlIjoiVVNEIiwibmFtZSI6IlVTIERvbGxhciIsInJhdGUiOjY1MjcuNTV9LHsiY29kZSI6IkVVUiIsIm5hbWUiOiJFdXJvem9uZSBFdXJvIiwicmF0ZSI6NTY3OC4xNH0seyJjb2RlIjoiR0JQIiwibmFtZSI6IlBvdW5kIFN0ZXJsaW5nIiwicmF0ZSI6NDk3My4zNzI5ODN9LHsiY29kZSI6IkpQWSIsIm5hbWUiOiJKYXBhbmVzZSBZZW4iLCJyYXRlIjo3NDMwNzEuNjYwMzU1fSx7ImNvZGUiOiJDQUQiLCJuYW1lIjoiQ2FuYWRpYW4gRG9sbGFyIiwicmF0ZSI6ODQ1NC40NDM1OTV9LHsiY29kZSI6IkFVRCIsIm5hbWUiOiJBdXN0cmFsaWFuIERvbGxhciIsInJhdGUiOjkyNDQuOTI5OX0seyJjb2RlIjoiQ05ZIiwibmFtZSI6IkNoaW5lc2UgWXVhbiIsInJhdGUiOjQ0ODM3LjA4ODE5NX0seyJjb2RlIjoiQ0hGIiwibmFtZSI6IlN3aXNzIEZyYW5jIiwicmF0ZSI6NjQ4MC4yNzA5NTV9LHsiY29kZSI6IlNFSyIsIm5hbWUiOiJTd2VkaXNoIEtyb25hIiwicmF0ZSI6NTkxODcuOTk4MjU2fSx7ImNvZGUiOiJOWkQiLCJuYW1lIjoiTmV3IFplYWxhbmQgRG9sbGFyIiwicmF0ZSI6MTAxMjkuNzc4NDY4fSx7ImNvZGUiOiJLUlciLCJuYW1lIjoiU291dGggS29yZWFuIFdvbiIsInJhdGUiOjczNTgxODAuNzM3NX0seyJjb2RlIjoiQUVEIiwibmFtZSI6IlVBRSBEaXJoYW0iLCJyYXRlIjoyMzk3NS43MzAzMTV9LHsiY29kZSI6IkFGTiIsIm5hbWUiOiJBZmdoYW4gQWZnaGFuaSIsInJhdGUiOjQ5NDIxMy44NjU2fSx7ImNvZGUiOiJBTEwiLCJuYW1lIjoiQWxiYW5pYW4gTGVrIiwicmF0ZSI6NzExMDEzLjk3Nzc1N30seyJjb2RlIjoiQU1EIiwibmFtZSI6IkFybWVuaWFuIERyYW0iLCJyYXRlIjozMTU5MDUzLjk1OTIyM30seyJjb2RlIjoiQU5HIiwibmFtZSI6Ik5ldGhlcmxhbmRzIEFudGlsbGVhbiBHdWlsZGVyIiwicmF0ZSI6MTE1NDkuNjY0MTk5fSx7ImNvZGUiOiJBT0EiLCJuYW1lIjoiQW5nb2xhbiBLd2FuemEiLCJyYXRlIjoxOTY2MTk5LjIzNzAyNX0seyJjb2RlIjoiQVJTIiwibmFtZSI6IkFyZ2VudGluZSBQZXNvIiwicmF0ZSI6MjQ2OTM3LjQzODQzN30seyJjb2RlIjoiQVdHIiwibmFtZSI6IkFydWJhbiBGbG9yaW4iLCJyYXRlIjoxMTc0OS41NjM4OX0seyJjb2RlIjoiQVpOIiwibmFtZSI6IkF6ZXJiYWlqYW5pIE1hbmF0IiwicmF0ZSI6MTExMTMuMTUzODc1fSx7ImNvZGUiOiJCQU0iLCJuYW1lIjoiQm9zbmlhLUhlcnplZ292aW5hIENvbnZlcnRpYmxlIE1hcmsiLCJyYXRlIjoxMTA2OC4xMzMzNjN9LHsiY29kZSI6IkJCRCIsIm5hbWUiOiJCYXJiYWRpYW4gRG9sbGFyIiwicmF0ZSI6MTMwNTUuMX0seyJjb2RlIjoiQkRUIiwibmFtZSI6IkJhbmdsYWRlc2hpIFRha2EiLCJyYXRlIjo1NDUyNDMuMTcwNDk2fSx7ImNvZGUiOiJCR04iLCJuYW1lIjoiQnVsZ2FyaWFuIExldiIsInJhdGUiOjExMDY4LjE3OTA1Nn0seyJjb2RlIjoiQkhEIiwibmFtZSI6IkJhaHJhaW5pIERpbmFyIiwicmF0ZSI6MjQ1Mi42NjgxNjV9LHsiY29kZSI6IkJJRiIsIm5hbWUiOiJCdXJ1bmRpYW4gRnJhbmMiLCJyYXRlIjoxMTU1MzExMC4zMDc2NTR9LHsiY29kZSI6IkJNRCIsIm5hbWUiOiJCZXJtdWRhbiBEb2xsYXIiLCJyYXRlIjo2NTI3LjU1fSx7ImNvZGUiOiJCTkQiLCJuYW1lIjoiQnJ1bmVpIERvbGxhciIsInJhdGUiOjg5OTQuMDM2OTg4fSx7ImNvZGUiOiJCT0IiLCJuYW1lIjoiQm9saXZpYW4gQm9saXZpYW5vIiwicmF0ZSI6NDQ5NjIuNDM2NzM4fSx7ImNvZGUiOiJCUkwiLCJuYW1lIjoiQnJhemlsaWFuIFJlYWwiLCJyYXRlIjoyNTEwMC4xMzM0NDF9LHsiY29kZSI6IkJTRCIsIm5hbWUiOiJCYWhhbWlhbiBEb2xsYXIiLCJyYXRlIjo2NTI3LjU1fSx7ImNvZGUiOiJCVE4iLCJuYW1lIjoiQmh1dGFuZXNlIE5ndWx0cnVtIiwicmF0ZSI6NDgwNDkyLjc3MjcyOX0seyJjb2RlIjoiQldQIiwibmFtZSI6IkJvdHN3YW5hbiBQdWxhIiwicmF0ZSI6Njk0NjMuMDAxNjU2fSx7ImNvZGUiOiJCWkQiLCJuYW1lIjoiQmVsaXplIERvbGxhciIsInJhdGUiOjEzMTE4LjcxMDk3NX0seyJjb2RlIjoiQ0RGIiwibmFtZSI6IkNvbmdvbGVzZSBGcmFuYyIsInJhdGUiOjEwNjEzNzk2LjN9LHsiY29kZSI6IkNMRiIsIm5hbWUiOiJDaGlsZWFuIFVuaXQgb2YgQWNjb3VudCAoVUYpIiwicmF0ZSI6MTUwLjA0ODc5Mn0seyJjb2RlIjoiQ0xQIiwibmFtZSI6IkNoaWxlYW4gUGVzbyIsInJhdGUiOjQzNzkxMDQuODMwNzV9LHsiY29kZSI6IkNPUCIsIm5hbWUiOiJDb2xvbWJpYW4gUGVzbyIsInJhdGUiOjE5NzU1MTkwLjgxMDA1fSx7ImNvZGUiOiJDUkMiLCJuYW1lIjoiQ29zdGEgUmljYW4gQ29sw7NuIiwicmF0ZSI6MzgwMjI2NC4zMDM4MX0seyJjb2RlIjoiQ1VQIiwibmFtZSI6IkN1YmFuIFBlc28iLCJyYXRlIjoxNjgwODQuNDEyNX0seyJjb2RlIjoiQ1ZFIiwibmFtZSI6IkNhcGUgVmVyZGVhbiBFc2N1ZG8iLCJyYXRlIjo2Mjc2MjMuOTMyNX0seyJjb2RlIjoiQ1pLIiwibmFtZSI6IkN6ZWNoIEtvcnVuYSIsInJhdGUiOjE0NTk2OS41NzU3MjF9LHsiY29kZSI6IkRKRiIsIm5hbWUiOiJEamlib3V0aWFuIEZyYW5jIiwicmF0ZSI6MTE2MjIzMC4yNzc1fSx7ImNvZGUiOiJES0siLCJuYW1lIjoiRGFuaXNoIEtyb25lIiwicmF0ZSI6NDIyNTQuODQxNjM1fSx7ImNvZGUiOiJET1AiLCJuYW1lIjoiRG9taW5pY2FuIFBlc28iLCJyYXRlIjozMjQ5NTQuMjUyNTgxfSx7ImNvZGUiOiJEWkQiLCJuYW1lIjoiQWxnZXJpYW4gRGluYXIiLCJyYXRlIjo3NzM1MTQuNjc1fSx7ImNvZGUiOiJFR1AiLCJuYW1lIjoiRWd5cHRpYW4gUG91bmQiLCJyYXRlIjoxMTY3NjEuNTUwNjI1fSx7ImNvZGUiOiJFVEIiLCJuYW1lIjoiRXRoaW9waWFuIEJpcnIiLCJyYXRlIjoxNzk3MTguMDQ3MTAyfSx7ImNvZGUiOiJGSkQiLCJuYW1lIjoiRmlqaWFuIERvbGxhciIsInJhdGUiOjE0MDExLjcwNTkyNX0seyJjb2RlIjoiRktQIiwibmFtZSI6IkZhbGtsYW5kIElzbGFuZHMgUG91bmQiLCJyYXRlIjo0OTczLjM3Mjk4M30seyJjb2RlIjoiR0VMIiwibmFtZSI6Ikdlb3JnaWFuIExhcmkiLCJyYXRlIjoxNTk3Mi44NDk1NzV9LHsiY29kZSI6IkdIUyIsIm5hbWUiOiJHaGFuYWlhbiBDZWRpIiwicmF0ZSI6MzEyNDguNjYxMjV9LHsiY29kZSI6IkdJUCIsIm5hbWUiOiJHaWJyYWx0YXIgUG91bmQiLCJyYXRlIjo0OTczLjM3Mjk4M30seyJjb2RlIjoiR01EIiwibmFtZSI6IkdhbWJpYW4gRGFsYXNpIiwicmF0ZSI6MzIzNDQwLjEwMjV9LHsiY29kZSI6IkdORiIsIm5hbWUiOiJHdWluZWFuIEZyYW5jIiwicmF0ZSI6NTg4Njk5MjIuNjExMjg2fSx7ImNvZGUiOiJHVFEiLCJuYW1lIjoiR3VhdGVtYWxhbiBRdWV0emFsIiwicmF0ZSI6NTAxMzQuMTE2Njg5fSx7ImNvZGUiOiJHWUQiLCJuYW1lIjoiR3V5YW5hZXNlIERvbGxhciIsInJhdGUiOjEzNjA2NzguMzk4MjQxfSx7ImNvZGUiOiJIS0QiLCJuYW1lIjoiSG9uZyBLb25nIERvbGxhciIsInJhdGUiOjUxMTQ1Ljk2NTI3fSx7ImNvZGUiOiJITkwiLCJuYW1lIjoiSG9uZHVyYW4gTGVtcGlyYSIsInJhdGUiOjE1NjQxNy40MDI1MzV9LHsiY29kZSI6IkhSSyIsIm5hbWUiOiJDcm9hdGlhbiBLdW5hIiwicmF0ZSI6NDIwNjMuNTMyMn0seyJjb2RlIjoiSFRHIiwibmFtZSI6IkhhaXRpYW4gR291cmRlIiwicmF0ZSI6NDU1NTU2LjMwNDU0OX0seyJjb2RlIjoiSFVGIiwibmFtZSI6Ikh1bmdhcmlhbiBGb3JpbnQiLCJyYXRlIjoxODM5NTYxLjUwMzI1fSx7ImNvZGUiOiJJRFIiLCJuYW1lIjoiSW5kb25lc2lhbiBSdXBpYWgiLCJyYXRlIjo5OTA3NzA0Ni44ODk1fSx7ImNvZGUiOiJJTFMiLCJuYW1lIjoiSXNyYWVsaSBTaGVrZWwiLCJyYXRlIjoyMzY5MC44OTQxNDR9LHsiY29kZSI6IklOUiIsIm5hbWUiOiJJbmRpYW4gUnVwZWUiLCJyYXRlIjo0ODE1NDAuNjI3Mjc1fSx7ImNvZGUiOiJJUUQiLCJuYW1lIjoiSXJhcWkgRGluYXIiLCJyYXRlIjo3NzY0NDM1LjAzMTMyNH0seyJjb2RlIjoiSVJSIiwibmFtZSI6IklyYW5pYW4gUmlhbCIsInJhdGUiOjI3NzM3MDQwOC40Mjg2NjJ9LHsiY29kZSI6IklTSyIsIm5hbWUiOiJJY2VsYW5kaWMgS3LDs25hIiwicmF0ZSI6NzQ0NDY2LjYzMzYyN30seyJjb2RlIjoiSkVQIiwibmFtZSI6IkplcnNleSBQb3VuZCIsInJhdGUiOjQ5NzMuMzcyOTgzfSx7ImNvZGUiOiJKTUQiLCJuYW1lIjoiSmFtYWljYW4gRG9sbGFyIiwicmF0ZSI6ODY4MzUwLjUxMTU1M30seyJjb2RlIjoiSk9EIiwibmFtZSI6IkpvcmRhbmlhbiBEaW5hciIsInJhdGUiOjQ2MzEuMzE2MzA4fSx7ImNvZGUiOiJLRVMiLCJuYW1lIjoiS2VueWFuIFNoaWxsaW5nIiwicmF0ZSI6NjU2NTIxLjE2MTM1OH0seyJjb2RlIjoiS0dTIiwibmFtZSI6Ikt5cmd5c3RhbmkgU29tIiwicmF0ZSI6NDQ3MTA1LjA5ODYxOX0seyJjb2RlIjoiS0hSIiwibmFtZSI6IkNhbWJvZGlhbiBSaWVsIiwicmF0ZSI6MjY1NDc0NTQuOTc5OTc2fSx7ImNvZGUiOiJLTUYiLCJuYW1lIjoiQ29tb3JpYW4gRnJhbmMiLCJyYXRlIjoyNzkwMjA1LjcwNTgxN30seyJjb2RlIjoiS1BXIiwibmFtZSI6Ik5vcnRoIEtvcmVhbiBXb24iLCJyYXRlIjo1ODc0Nzk1fSx7ImNvZGUiOiJLV0QiLCJuYW1lIjoiS3V3YWl0aSBEaW5hciIsInJhdGUiOjE5NzYuNzQ0NDk0fSx7ImNvZGUiOiJLWUQiLCJuYW1lIjoiQ2F5bWFuIElzbGFuZHMgRG9sbGFyIiwicmF0ZSI6NTQyMi41NzkzOTF9LHsiY29kZSI6IktaVCIsIm5hbWUiOiJLYXpha2hzdGFuaSBUZW5nZSIsInJhdGUiOjI0MTg0MjkuNjYzNDY0fSx7ImNvZGUiOiJMQUsiLCJuYW1lIjoiTGFvdGlhbiBLaXAiLCJyYXRlIjo1NTUwOTY5OC43MjU3NDN9LHsiY29kZSI6IkxCUCIsIm5hbWUiOiJMZWJhbmVzZSBQb3VuZCIsInJhdGUiOjk4NDQ1OTcuMzQwNzkzfSx7ImNvZGUiOiJMS1IiLCJuYW1lIjoiU3JpIExhbmthbiBSdXBlZSIsInJhdGUiOjExMDc0MzYuMjczNDE3fSx7ImNvZGUiOiJMUkQiLCJuYW1lIjoiTGliZXJpYW4gRG9sbGFyIiwicmF0ZSI6MTAyMzg0NC45MDU0NjJ9LHsiY29kZSI6IkxTTCIsIm5hbWUiOiJMZXNvdGhvIExvdGkiLCJyYXRlIjo5NjE0My4xODA3OTR9LHsiY29kZSI6IkxZRCIsIm5hbWUiOiJMaWJ5YW4gRGluYXIiLCJyYXRlIjo5MDQ3LjI0OTU3Nn0seyJjb2RlIjoiTUFEIiwibmFtZSI6Ik1vcm9jY2FuIERpcmhhbSIsInJhdGUiOjYxNzY0LjA0MzY0M30seyJjb2RlIjoiTURMIiwibmFtZSI6Ik1vbGRvdmFuIExldSIsInJhdGUiOjExMDc1OS4wNDQxMDl9LHsiY29kZSI6Ik1HQSIsIm5hbWUiOiJNYWxhZ2FzeSBBcmlhcnkiLCJyYXRlIjoyMjYxNzk2MC43NX0seyJjb2RlIjoiTUtEIiwibmFtZSI6Ik1hY2Vkb25pYW4gRGVuYXIiLCJyYXRlIjozNDg5MzAuMTg1MjV9LHsiY29kZSI6Ik1NSyIsIm5hbWUiOiJNeWFubWEgS3lhdCIsInJhdGUiOjk5NTU1MzYuNTI1Njk5fSx7ImNvZGUiOiJNTlQiLCJuYW1lIjoiTW9uZ29saWFuIFR1Z3JpayIsInJhdGUiOjE2MjIxNTk2LjMzODgyOH0seyJjb2RlIjoiTU9QIiwibmFtZSI6Ik1hY2FuZXNlIFBhdGFjYSIsInJhdGUiOjUyNTA1LjAwMTE4fSx7ImNvZGUiOiJNUlUiLCJuYW1lIjoiTWF1cml0YW5pYW4gT3VndWl5YSIsInJhdGUiOjIzNDAxMi42Njc1fSx7ImNvZGUiOiJNVVIiLCJuYW1lIjoiTWF1cml0aWFuIFJ1cGVlIiwicmF0ZSI6MjI0ODc0LjA5NzV9LHsiY29kZSI6Ik1WUiIsIm5hbWUiOiJNYWxkaXZpYW4gUnVmaXlhYSIsInJhdGUiOjEwMDUyNC4yNzY1Mjh9LHsiY29kZSI6Ik1XSyIsIm5hbWUiOiJNYWxhd2lhbiBLd2FjaGEiLCJyYXRlIjo0NzMyMTU0Ljg3OTE4M30seyJjb2RlIjoiTVhOIiwibmFtZSI6Ik1leGljYW4gUGVzbyIsInJhdGUiOjEyMjkxMy4xODU1NDh9LHsiY29kZSI6Ik1ZUiIsIm5hbWUiOiJNYWxheXNpYW4gUmluZ2dpdCIsInJhdGUiOjI3MDcwLjExNTM5M30seyJjb2RlIjoiTVpOIiwibmFtZSI6Ik1vemFtYmljYW4gTWV0aWNhbCIsInJhdGUiOjM5NTg5NS4wNDU4NjN9LHsiY29kZSI6Ik5BRCIsIm5hbWUiOiJOYW1pYmlhbiBEb2xsYXIiLCJyYXRlIjo5NjE0My4xODA3OTR9LHsiY29kZSI6Ik5HTiIsIm5hbWUiOiJOaWdlcmlhbiBOYWlyYSIsInJhdGUiOjIzNjY4OTAuNzk4NDMxfSx7ImNvZGUiOiJOSU8iLCJuYW1lIjoiTmljYXJhZ3VhbiBDw7NyZG9iYSIsInJhdGUiOjIwODkwMy44NDU4OX0seyJjb2RlIjoiTk9LIiwibmFtZSI6Ik5vcndlZ2lhbiBLcm9uZSIsInJhdGUiOjUzOTIyLjI0MzI1M30seyJjb2RlIjoiTlBSIiwibmFtZSI6Ik5lcGFsZXNlIFJ1cGVlIiwicmF0ZSI6NzcxMTM1LjIwNjc4MX0seyJjb2RlIjoiT01SIiwibmFtZSI6Ik9tYW5pIFJpYWwiLCJyYXRlIjoyNTEzLjEwNjc1fSx7ImNvZGUiOiJQQUIiLCJuYW1lIjoiUGFuYW1hbmlhbiBCYWxib2EiLCJyYXRlIjo2NTI3LjU1fSx7ImNvZGUiOiJQRU4iLCJuYW1lIjoiUGVydXZpYW4gTnVldm8gU29sIiwicmF0ZSI6MjE2NTguMTc1OTA4fSx7ImNvZGUiOiJQR0siLCJuYW1lIjoiUGFwdWEgTmV3IEd1aW5lYW4gS2luYSIsInJhdGUiOjIxODM0LjY1NDc1fSx7ImNvZGUiOiJQSFAiLCJuYW1lIjoiUGhpbGlwcGluZSBQZXNvIiwicmF0ZSI6MzU0MDg0LjYzMjQ3fSx7ImNvZGUiOiJQS1IiLCJuYW1lIjoiUGFraXN0YW5pIFJ1cGVlIiwicmF0ZSI6ODAxODQ0LjY0MDE4MX0seyJjb2RlIjoiUExOIiwibmFtZSI6IlBvbGlzaCBabG90eSIsInJhdGUiOjI0Mzk5LjAwMjc2OH0seyJjb2RlIjoiUFlHIiwibmFtZSI6IlBhcmFndWF5YW4gR3VhcmFuaSIsInJhdGUiOjM4NTM2OTMxLjU2MTI1N30seyJjb2RlIjoiUUFSIiwibmFtZSI6IlFhdGFyaSBSaWFsIiwicmF0ZSI6MjM2OTEuNDE2MzQ4fSx7ImNvZGUiOiJST04iLCJuYW1lIjoiUm9tYW5pYW4gTGV1IiwicmF0ZSI6MjY0NjUuOTM4NDJ9LHsiY29kZSI6IlJTRCIsIm5hbWUiOiJTZXJiaWFuIERpbmFyIiwicmF0ZSI6NjcyMzM3LjY1fSx7ImNvZGUiOiJSVUIiLCJuYW1lIjoiUnVzc2lhbiBSdWJsZSIsInJhdGUiOjQzNDkzMC4wMDM3NDV9LHsiY29kZSI6IlJXRiIsIm5hbWUiOiJSd2FuZGFuIEZyYW5jIiwicmF0ZSI6NTY2MjY0OS42MjV9LHsiY29kZSI6IlNBUiIsIm5hbWUiOiJTYXVkaSBSaXlhbCIsInJhdGUiOjI0NDYwLjAzNTM2fSx7ImNvZGUiOiJTQkQiLCJuYW1lIjoiU29sb21vbiBJc2xhbmRzIERvbGxhciIsInJhdGUiOjUxODE2LjUwMTMxNn0seyJjb2RlIjoiU0NSIiwibmFtZSI6IlNleWNoZWxsb2lzIFJ1cGVlIiwicmF0ZSI6ODg5MDUuMjMxfSx7ImNvZGUiOiJTREciLCJuYW1lIjoiU3VkYW5lc2UgUG91bmQiLCJyYXRlIjoxMTc2NTkuMDg4NzV9LHsiY29kZSI6IlNHRCIsIm5hbWUiOiJTaW5nYXBvcmUgRG9sbGFyIiwicmF0ZSI6OTAyNy4yNzUyNzN9LHsiY29kZSI6IlNIUCIsIm5hbWUiOiJTYWludCBIZWxlbmEgUG91bmQiLCJyYXRlIjo0OTczLjM3Mjk4M30seyJjb2RlIjoiU0xMIiwibmFtZSI6IlNpZXJyYSBMZW9uZWFuIExlb25lIiwicmF0ZSI6NTQ3NjYxNDQuNX0seyJjb2RlIjoiU09TIiwibmFtZSI6IlNvbWFsaSBTaGlsbGluZyIsInJhdGUiOjM3ODU5Nzl9LHsiY29kZSI6IlNSRCIsIm5hbWUiOiJTdXJpbmFtZXNlIERvbGxhciIsInJhdGUiOjQ4NjgyLjQ2Nzl9LHsiY29kZSI6IlNUTiIsIm5hbWUiOiJTw6NvIFRvbcOpIGFuZCBQcsOtbmNpcGUgRG9icmEiLCJyYXRlIjoxMzkyMDAuMDAzNzV9LHsiY29kZSI6IlNWQyIsIm5hbWUiOiJTYWx2YWRvcmFuIENvbMOzbiIsInJhdGUiOjU2OTM3LjA4MzYwN30seyJjb2RlIjoiU1lQIiwibmFtZSI6IlN5cmlhbiBQb3VuZCIsInJhdGUiOjMzNjEzODQuMjI5MzU5fSx7ImNvZGUiOiJTWkwiLCJuYW1lIjoiU3dhemkgTGlsYW5nZW5pIiwicmF0ZSI6OTYwOTguNTcxNTE3fSx7ImNvZGUiOiJUSEIiLCJuYW1lIjoiVGhhaSBCYWh0IiwicmF0ZSI6MjE0MjA0LjgxNzAyNX0seyJjb2RlIjoiVEpTIiwibmFtZSI6IlRhamlraXN0YW5pIFNvbW9uaSIsInJhdGUiOjYxMzA1LjYyNjg2MX0seyJjb2RlIjoiVE1UIiwibmFtZSI6IlR1cmttZW5pc3RhbmkgTWFuYXQiLCJyYXRlIjoyMjkxMS41Njk5NDl9LHsiY29kZSI6IlRORCIsIm5hbWUiOiJUdW5pc2lhbiBEaW5hciIsInJhdGUiOjE4MzU0LjkwMjcwM30seyJjb2RlIjoiVE9QIiwibmFtZSI6IlRvbmdhbiBQYcq7YW5nYSIsInJhdGUiOjE1MDQ5LjQyOTcxNH0seyJjb2RlIjoiVFJZIiwibmFtZSI6IlR1cmtpc2ggTGlyYSIsInJhdGUiOjQwMTY2LjkxMzM4Mn0seyJjb2RlIjoiVFREIiwibmFtZSI6IlRyaW5pZGFkIGFuZCBUb2JhZ28gRG9sbGFyIiwicmF0ZSI6NDM4NTYuMzY5NX0seyJjb2RlIjoiVFdEIiwibmFtZSI6Ik5ldyBUYWl3YW4gRG9sbGFyIiwicmF0ZSI6MjAxMTgzLjE5NjgyOX0seyJjb2RlIjoiVFpTIiwibmFtZSI6IlRhbnphbmlhbiBTaGlsbGluZyIsInJhdGUiOjE0ODY4MTI3LjAxMjV9LHsiY29kZSI6IlVBSCIsIm5hbWUiOiJVa3JhaW5pYW4gSHJ5dm5pYSIsInJhdGUiOjE4Mjc0NS4xOTg0MTR9LHsiY29kZSI6IlVHWCIsIm5hbWUiOiJVZ2FuZGFuIFNoaWxsaW5nIiwicmF0ZSI6MjQ2MDg2NDkuNzg4MDEzfSx7ImNvZGUiOiJVWVUiLCJuYW1lIjoiVXJ1Z3VheWFuIFBlc28iLCJyYXRlIjoyMTMzOTAuMDAyNTQxfSx7ImNvZGUiOiJVWlMiLCJuYW1lIjoiVXpiZWtpc3RhbiBTb20iLCJyYXRlIjo1MzIyMzkzMy41MDAxOTh9LHsiY29kZSI6IlZFRiIsIm5hbWUiOiJWZW5lenVlbGFuIEJvbMOtdmFyIEZ1ZXJ0ZSIsInJhdGUiOjE2MjE5MTE1MDMuNDc1ODg4fSx7ImNvZGUiOiJWTkQiLCJuYW1lIjoiVmlldG5hbWVzZSBEb25nIiwicmF0ZSI6MTUxNjAyNDk2Ljc0MjYxNH0seyJjb2RlIjoiVlVWIiwibmFtZSI6IlZhbnVhdHUgVmF0dSIsInJhdGUiOjcyMDgxMS4zNjY4NTF9LHsiY29kZSI6IldTVCIsIm5hbWUiOiJTYW1vYW4gVGFsYSIsInJhdGUiOjE3MTcwLjA4NzEwM30seyJjb2RlIjoiWEFGIiwibmFtZSI6IkNGQSBGcmFuYyBCRUFDIiwicmF0ZSI6MzcxNTY5Ni4zNzk1ODR9LHsiY29kZSI6IlhDRCIsIm5hbWUiOiJFYXN0IENhcmliYmVhbiBEb2xsYXIiLCJyYXRlIjoxNzY0MS4wMzAyNTN9LHsiY29kZSI6IlhPRiIsIm5hbWUiOiJDRkEgRnJhbmMgQkNFQU8iLCJyYXRlIjozNzE1Njk2LjM3OTU4NH0seyJjb2RlIjoiWFBGIiwibmFtZSI6IkNGUCBGcmFuYyIsInJhdGUiOjY3NTk1OS43NDE4MDJ9LHsiY29kZSI6IllFUiIsIm5hbWUiOiJZZW1lbmkgUmlhbCIsInJhdGUiOjE2MzQxNzcuMDE4NTh9LHsiY29kZSI6IlpBUiIsIm5hbWUiOiJTb3V0aCBBZnJpY2FuIFJhbmQiLCJyYXRlIjo5Njg3Ni43NjY0NDZ9LHsiY29kZSI6IlpNVyIsIm5hbWUiOiJaYW1iaWFuIEt3YWNoYSIsInJhdGUiOjc1NTQ2LjU5OTkyNX0seyJjb2RlIjoiWldMIiwibmFtZSI6IlppbWJhYndlYW4gRG9sbGFyIiwicmF0ZSI6MjEwNDE4OC40NTIwNTN9LHsiY29kZSI6IlhBRyIsIm5hbWUiOiJTaWx2ZXIgKHRyb3kgb3VuY2UpIiwicmF0ZSI6NDQ1Ljk5Mjg5NX0seyJjb2RlIjoiWEFVIiwibmFtZSI6IkdvbGQgKHRyb3kgb3VuY2UpIiwicmF0ZSI6NS40MjY0ODN9XQ==
+        W3siY29kZSI6IkJUQyIsIm5hbWUiOiJCaXRjb2luIiwicmF0ZSI6MX0seyJjb2RlIjoiQkNIIiwibmFtZSI6IkJpdGNvaW4gQ2FzaCIsInJhdGUiOjI5LjU5MzUwNX0seyJjb2RlIjoiVVNEIiwibmFtZSI6IlVTIERvbGxhciIsInJhdGUiOjM1OTAuNTh9LHsiY29kZSI6IkVVUiIsIm5hbWUiOiJFdXJvem9uZSBFdXJvIiwicmF0ZSI6MzE3OC40ODkxMzN9LHsiY29kZSI6IkdCUCIsIm5hbWUiOiJQb3VuZCBTdGVybGluZyIsInJhdGUiOjI3ODZ9LHsiY29kZSI6IkpQWSIsIm5hbWUiOiJKYXBhbmVzZSBZZW4iLCJyYXRlIjozOTY3NDAuNDA0Mjk5fSx7ImNvZGUiOiJDQUQiLCJuYW1lIjoiQ2FuYWRpYW4gRG9sbGFyIiwicmF0ZSI6NDc1NS45MDI3Mzl9LHsiY29kZSI6IkFVRCIsIm5hbWUiOiJBdXN0cmFsaWFuIERvbGxhciIsInJhdGUiOjUwMjQuNjAzNzkzfSx7ImNvZGUiOiJDTlkiLCJuYW1lIjoiQ2hpbmVzZSBZdWFuIiwicmF0ZSI6MjQzMTkuMzU3Mzk4fSx7ImNvZGUiOiJDSEYiLCJuYW1lIjoiU3dpc3MgRnJhbmMiLCJyYXRlIjozNjA5Ljk2OTEzMn0seyJjb2RlIjoiU0VLIiwibmFtZSI6IlN3ZWRpc2ggS3JvbmEiLCJyYXRlIjozMzI5Ny4xNTM4NjV9LHsiY29kZSI6Ik5aRCIsIm5hbWUiOiJOZXcgWmVhbGFuZCBEb2xsYXIiLCJyYXRlIjo1MjI5LjUwNzQyMn0seyJjb2RlIjoiS1JXIiwibmFtZSI6IlNvdXRoIEtvcmVhbiBXb24iLCJyYXRlIjo0MDQzNjc5LjI4MjkyNX0seyJjb2RlIjoiQUVEIiwibmFtZSI6IlVBRSBEaXJoYW0iLCJyYXRlIjoxMzE4OC4yNTA2MDh9LHsiY29kZSI6IkFGTiIsIm5hbWUiOiJBZmdoYW4gQWZnaGFuaSIsInJhdGUiOjI2NzUwMi4xMjM3MzJ9LHsiY29kZSI6IkFMTCIsIm5hbWUiOiJBbGJhbmlhbiBMZWsiLCJyYXRlIjozOTUzMjIuODU4fSx7ImNvZGUiOiJBTUQiLCJuYW1lIjoiQXJtZW5pYW4gRHJhbSIsInJhdGUiOjE3NDgxNjkuNzY2NjJ9LHsiY29kZSI6IkFORyIsIm5hbWUiOiJOZXRoZXJsYW5kcyBBbnRpbGxlYW4gR3VpbGRlciIsInJhdGUiOjY0NzkuMzQ4ODI0fSx7ImNvZGUiOiJBT0EiLCJuYW1lIjoiQW5nb2xhbiBLd2FuemEiLCJyYXRlIjoxMTI4MTM1LjEwMTk0fSx7ImNvZGUiOiJBUlMiLCJuYW1lIjoiQXJnZW50aW5lIFBlc28iLCJyYXRlIjoxMzg2MDMuNTY5MTZ9LHsiY29kZSI6IkFXRyIsIm5hbWUiOiJBcnViYW4gRmxvcmluIiwicmF0ZSI6NjQ2NC44NTM2NTJ9LHsiY29kZSI6IkFaTiIsIm5hbWUiOiJBemVyYmFpamFuaSBNYW5hdCIsInJhdGUiOjYxMTIuOTYyNDV9LHsiY29kZSI6IkJBTSIsIm5hbWUiOiJCb3NuaWEtSGVyemVnb3ZpbmEgQ29udmVydGlibGUgTWFyayIsInJhdGUiOjYyMjcuODM1ODc2fSx7ImNvZGUiOiJCQkQiLCJuYW1lIjoiQmFyYmFkaWFuIERvbGxhciIsInJhdGUiOjcxODEuMTZ9LHsiY29kZSI6IkJEVCIsIm5hbWUiOiJCYW5nbGFkZXNoaSBUYWthIiwicmF0ZSI6MzAxNzIzLjYxODU2fSx7ImNvZGUiOiJCR04iLCJuYW1lIjoiQnVsZ2FyaWFuIExldiIsInJhdGUiOjYyMjEuNDY5Nzc4fSx7ImNvZGUiOiJCSEQiLCJuYW1lIjoiQmFocmFpbmkgRGluYXIiLCJyYXRlIjoxMzUzLjQzNjgxNn0seyJjb2RlIjoiQklGIiwibmFtZSI6IkJ1cnVuZGlhbiBGcmFuYyIsInJhdGUiOjY1NzQzNTEuOTh9LHsiY29kZSI6IkJNRCIsIm5hbWUiOiJCZXJtdWRhbiBEb2xsYXIiLCJyYXRlIjozNTkwLjU4fSx7ImNvZGUiOiJCTkQiLCJuYW1lIjoiQnJ1bmVpIERvbGxhciIsInJhdGUiOjQ4NDkuOTkwMjk3fSx7ImNvZGUiOiJCT0IiLCJuYW1lIjoiQm9saXZpYW4gQm9saXZpYW5vIiwicmF0ZSI6MjQ4MjQuMzk0MDE4fSx7ImNvZGUiOiJCUkwiLCJuYW1lIjoiQnJhemlsaWFuIFJlYWwiLCJyYXRlIjoxMzI5My43NjMzOTJ9LHsiY29kZSI6IkJTRCIsIm5hbWUiOiJCYWhhbWlhbiBEb2xsYXIiLCJyYXRlIjozNTkwLjU4fSx7ImNvZGUiOiJCVE4iLCJuYW1lIjoiQmh1dGFuZXNlIE5ndWx0cnVtIiwicmF0ZSI6MjU1MDQzLjM0OTcxOX0seyJjb2RlIjoiQldQIiwibmFtZSI6IkJvdHN3YW5hbiBQdWxhIiwicmF0ZSI6Mzc4NTEuNzk3NDE0fSx7ImNvZGUiOiJCWkQiLCJuYW1lIjoiQmVsaXplIERvbGxhciIsInJhdGUiOjcyMzUuNTY0NDY4fSx7ImNvZGUiOiJDREYiLCJuYW1lIjoiQ29uZ29sZXNlIEZyYW5jIiwicmF0ZSI6NTg2NzAwNy43Mn0seyJjb2RlIjoiQ0xGIiwibmFtZSI6IkNoaWxlYW4gVW5pdCBvZiBBY2NvdW50IChVRikiLCJyYXRlIjo4Ni45NDIzMDR9LHsiY29kZSI6IkNMUCIsIm5hbWUiOiJDaGlsZWFuIFBlc28iLCJyYXRlIjoyMzc2Mjk0LjAxMTYzMX0seyJjb2RlIjoiQ09QIiwibmFtZSI6IkNvbG9tYmlhbiBQZXNvIiwicmF0ZSI6MTEyOTA3MDQuNTQ4NTIxfSx7ImNvZGUiOiJDUkMiLCJuYW1lIjoiQ29zdGEgUmljYW4gQ29sw7NuIiwicmF0ZSI6MjE4NTk2MS4wOTY0NDN9LHsiY29kZSI6IkNVUCIsIm5hbWUiOiJDdWJhbiBQZXNvIiwicmF0ZSI6OTI0NTcuNDM1fSx7ImNvZGUiOiJDVkUiLCJuYW1lIjoiQ2FwZSBWZXJkZWFuIEVzY3VkbyIsInJhdGUiOjM1MTE2Ny43MDA0NX0seyJjb2RlIjoiQ1pLIiwibmFtZSI6IkN6ZWNoIEtvcnVuYSIsInJhdGUiOjgxNTk4Ljk4MjQ5M30seyJjb2RlIjoiREpGIiwibmFtZSI6IkRqaWJvdXRpYW4gRnJhbmMiLCJyYXRlIjo2MzkxMjMuMjR9LHsiY29kZSI6IkRLSyIsIm5hbWUiOiJEYW5pc2ggS3JvbmUiLCJyYXRlIjoyMzcxMi41NDkzNzh9LHsiY29kZSI6IkRPUCIsIm5hbWUiOiJEb21pbmljYW4gUGVzbyIsInJhdGUiOjE4MTY4My4zNDh9LHsiY29kZSI6IkRaRCIsIm5hbWUiOiJBbGdlcmlhbiBEaW5hciIsInJhdGUiOjQyNzM4Ni45ODE1NTl9LHsiY29kZSI6IkVHUCIsIm5hbWUiOiJFZ3lwdGlhbiBQb3VuZCIsInJhdGUiOjYyOTY2LjIwNjE3fSx7ImNvZGUiOiJFVEIiLCJuYW1lIjoiRXRoaW9waWFuIEJpcnIiLCJyYXRlIjoxMDI2OTAuNTg4fSx7ImNvZGUiOiJGSkQiLCJuYW1lIjoiRmlqaWFuIERvbGxhciIsInJhdGUiOjc2MTYuNTQ2NTV9LHsiY29kZSI6IkZLUCIsIm5hbWUiOiJGYWxrbGFuZCBJc2xhbmRzIFBvdW5kIiwicmF0ZSI6Mjc4NC44ODk3NTR9LHsiY29kZSI6IkdFTCIsIm5hbWUiOiJHZW9yZ2lhbiBMYXJpIiwicmF0ZSI6OTQ2MS4xNzgzfSx7ImNvZGUiOiJHSFMiLCJuYW1lIjoiR2hhbmFpYW4gQ2VkaSIsInJhdGUiOjE4OTIyLjM1NjZ9LHsiY29kZSI6IkdJUCIsIm5hbWUiOiJHaWJyYWx0YXIgUG91bmQiLCJyYXRlIjoyNzg0Ljg4OTc1NH0seyJjb2RlIjoiR01EIiwibmFtZSI6IkdhbWJpYW4gRGFsYXNpIiwicmF0ZSI6MTc3OTEzLjIzOX0seyJjb2RlIjoiR05GIiwibmFtZSI6Ikd1aW5lYW4gRnJhbmMiLCJyYXRlIjozMzEwNTE0Ny42fSx7ImNvZGUiOiJHVFEiLCJuYW1lIjoiR3VhdGVtYWxhbiBRdWV0emFsIiwicmF0ZSI6Mjc4MzMuNTE5MDg0fSx7ImNvZGUiOiJHVVNEIiwibmFtZSI6IkdlbWluaSBVUyBEb2xsYXIiLCJyYXRlIjozNTkwLjU4fSx7ImNvZGUiOiJHWUQiLCJuYW1lIjoiR3V5YW5hZXNlIERvbGxhciIsInJhdGUiOjc0ODk2NS4wMDMwNjZ9LHsiY29kZSI6IkhLRCIsIm5hbWUiOiJIb25nIEtvbmcgRG9sbGFyIiwicmF0ZSI6MjgxNzguMzMzMjUzfSx7ImNvZGUiOiJITkwiLCJuYW1lIjoiSG9uZHVyYW4gTGVtcGlyYSIsInJhdGUiOjg4MzI4LjM5MDA4fSx7ImNvZGUiOiJIUksiLCJuYW1lIjoiQ3JvYXRpYW4gS3VuYSIsInJhdGUiOjIzNTU3LjExMzE3fSx7ImNvZGUiOiJIVEciLCJuYW1lIjoiSGFpdGlhbiBHb3VyZGUiLCJyYXRlIjoyOTY5MDguMDk3ODMxfSx7ImNvZGUiOiJIVUYiLCJuYW1lIjoiSHVuZ2FyaWFuIEZvcmludCIsInJhdGUiOjEwMTE5MzMuMTYxNH0seyJjb2RlIjoiSURSIiwibmFtZSI6IkluZG9uZXNpYW4gUnVwaWFoIiwicmF0ZSI6NTA2ODExMjUuNTYzMjY0fSx7ImNvZGUiOiJJTFMiLCJuYW1lIjoiSXNyYWVsaSBTaGVrZWwiLCJyYXRlIjoxMjk5OC43MjU0MzN9LHsiY29kZSI6IklOUiIsIm5hbWUiOiJJbmRpYW4gUnVwZWUiLCJyYXRlIjoyNTYxMzQuMDI0M30seyJjb2RlIjoiSVFEIiwibmFtZSI6IklyYXFpIERpbmFyIiwicmF0ZSI6NDI3NjM4MC43OH0seyJjb2RlIjoiSVJSIiwibmFtZSI6IklyYW5pYW4gUmlhbCIsInJhdGUiOjE1MTE4MTM3MC45fSx7ImNvZGUiOiJJU0siLCJuYW1lIjoiSWNlbGFuZGljIEtyw7NuYSIsInJhdGUiOjQyNjYzMi41OTM1Mn0seyJjb2RlIjoiSkVQIiwibmFtZSI6IkplcnNleSBQb3VuZCIsInJhdGUiOjI3ODQuODg5NzU0fSx7ImNvZGUiOiJKTUQiLCJuYW1lIjoiSmFtYWljYW4gRG9sbGFyIiwicmF0ZSI6NDgzMTQ4LjQ0NDh9LHsiY29kZSI6IkpPRCIsIm5hbWUiOiJKb3JkYW5pYW4gRGluYXIiLCJyYXRlIjoyNTQ3LjUyNzI4Mn0seyJjb2RlIjoiS0VTIiwibmFtZSI6IktlbnlhbiBTaGlsbGluZyIsInJhdGUiOjM1OTQ4OC44Njk2fSx7ImNvZGUiOiJLR1MiLCJuYW1lIjoiS3lyZ3lzdGFuaSBTb20iLCJyYXRlIjoyNDY1OTYuMDg2NTgxfSx7ImNvZGUiOiJLSFIiLCJuYW1lIjoiQ2FtYm9kaWFuIFJpZWwiLCJyYXRlIjoxNDM0NDM2Ny4xfSx7ImNvZGUiOiJLTUYiLCJuYW1lIjoiQ29tb3JpYW4gRnJhbmMiLCJyYXRlIjoxNTY2Mzk1Ljk5NzA0NH0seyJjb2RlIjoiS1BXIiwibmFtZSI6Ik5vcnRoIEtvcmVhbiBXb24iLCJyYXRlIjozMjMxNTIyfSx7ImNvZGUiOiJLV0QiLCJuYW1lIjoiS3V3YWl0aSBEaW5hciIsInJhdGUiOjEwOTEuNTY4NjM1fSx7ImNvZGUiOiJLWUQiLCJuYW1lIjoiQ2F5bWFuIElzbGFuZHMgRG9sbGFyIiwicmF0ZSI6Mjk5MS4yNzk4ODN9LHsiY29kZSI6IktaVCIsIm5hbWUiOiJLYXpha2hzdGFuaSBUZW5nZSIsInJhdGUiOjEzNTQxMTUuNDM1NH0seyJjb2RlIjoiTEFLIiwibmFtZSI6Ikxhb3RpYW4gS2lwIiwicmF0ZSI6MzA4MDcxNzYuNH0seyJjb2RlIjoiTEJQIiwibmFtZSI6IkxlYmFuZXNlIFBvdW5kIiwicmF0ZSI6NTQxNDU5NC42NH0seyJjb2RlIjoiTEtSIiwibmFtZSI6IlNyaSBMYW5rYW4gUnVwZWUiLCJyYXRlIjo2NDEyNzYuOTU2MDU4fSx7ImNvZGUiOiJMUkQiLCJuYW1lIjoiTGliZXJpYW4gRG9sbGFyIiwicmF0ZSI6NTc4MDg0LjA1ODYyfSx7ImNvZGUiOiJMU0wiLCJuYW1lIjoiTGVzb3RobyBMb3RpIiwicmF0ZSI6NTA1NTUuMzY2NH0seyJjb2RlIjoiTFlEIiwibmFtZSI6IkxpYnlhbiBEaW5hciIsInJhdGUiOjQ5NzIuOTUzM30seyJjb2RlIjoiTUFEIiwibmFtZSI6Ik1vcm9jY2FuIERpcmhhbSIsInJhdGUiOjM0MjQ1LjE1Njc1fSx7ImNvZGUiOiJNREwiLCJuYW1lIjoiTW9sZG92YW4gTGV1IiwicmF0ZSI6NjE0NDAuODA1NzA2fSx7ImNvZGUiOiJNR0EiLCJuYW1lIjoiTWFsYWdhc3kgQXJpYXJ5IiwicmF0ZSI6MTI4MzYzMjMuNX0seyJjb2RlIjoiTUtEIiwibmFtZSI6Ik1hY2Vkb25pYW4gRGVuYXIiLCJyYXRlIjoxOTY1NTguOTk4ODZ9LHsiY29kZSI6Ik1NSyIsIm5hbWUiOiJNeWFubWEgS3lhdCIsInJhdGUiOjU0OTcyMzYuMTcyNTN9LHsiY29kZSI6Ik1OVCIsIm5hbWUiOiJNb25nb2xpYW4gVHVncmlrIiwicmF0ZSI6ODk5OTE2My4yOTgxNDV9LHsiY29kZSI6Ik1PUCIsIm5hbWUiOiJNYWNhbmVzZSBQYXRhY2EiLCJyYXRlIjoyOTAxNy4yNjUwODl9LHsiY29kZSI6Ik1SVSIsIm5hbWUiOiJNYXVyaXRhbmlhbiBPdWd1aXlhIiwicmF0ZSI6MTMxMDU2LjE3fSx7ImNvZGUiOiJNVVIiLCJuYW1lIjoiTWF1cml0aWFuIFJ1cGVlIiwicmF0ZSI6MTIzMzQ4Ljk5MDAzfSx7ImNvZGUiOiJNVlIiLCJuYW1lIjoiTWFsZGl2aWFuIFJ1Zml5YWEiLCJyYXRlIjo1NTQ3NC4zOTI3Nzl9LHsiY29kZSI6Ik1XSyIsIm5hbWUiOiJNYWxhd2lhbiBLd2FjaGEiLCJyYXRlIjoyNjE5NzQ2LjA4MjIzN30seyJjb2RlIjoiTVhOIiwibmFtZSI6Ik1leGljYW4gUGVzbyIsInJhdGUiOjY5MDkyLjg0MTU0OX0seyJjb2RlIjoiTVlSIiwibmFtZSI6Ik1hbGF5c2lhbiBSaW5nZ2l0IiwicmF0ZSI6MTQ2NjUuNzI0MDF9LHsiY29kZSI6Ik1aTiIsIm5hbWUiOiJNb3phbWJpY2FuIE1ldGljYWwiLCJyYXRlIjoyMjMxNTMuMjQwMDI5fSx7ImNvZGUiOiJOQUQiLCJuYW1lIjoiTmFtaWJpYW4gRG9sbGFyIiwicmF0ZSI6NTA1NTUuMzY2NH0seyJjb2RlIjoiTkdOIiwibmFtZSI6Ik5pZ2VyaWFuIE5haXJhIiwicmF0ZSI6MTI5Nzk5NC42N30seyJjb2RlIjoiTklPIiwibmFtZSI6Ik5pY2FyYWd1YW4gQ8OzcmRvYmEiLCJyYXRlIjoxMTcyODYuMjk1N30seyJjb2RlIjoiTk9LIiwibmFtZSI6Ik5vcndlZ2lhbiBLcm9uZSIsInJhdGUiOjMxMDEwLjA0NDE3fSx7ImNvZGUiOiJOUFIiLCJuYW1lIjoiTmVwYWxlc2UgUnVwZWUiLCJyYXRlIjo0MDgwNjUuNzc2MTUyfSx7ImNvZGUiOiJPTVIiLCJuYW1lIjoiT21hbmkgUmlhbCIsInJhdGUiOjEzODIuNDc3NDI3fSx7ImNvZGUiOiJQQUIiLCJuYW1lIjoiUGFuYW1hbmlhbiBCYWxib2EiLCJyYXRlIjozNTkwLjU4fSx7ImNvZGUiOiJQQVgiLCJuYW1lIjoiUGF4b3MgU3RhbmRhcmQgVVNEIiwicmF0ZSI6MzU5MC41OH0seyJjb2RlIjoiUEVOIiwibmFtZSI6IlBlcnV2aWFuIE51ZXZvIFNvbCIsInJhdGUiOjExOTUxLjI0NTUzfSx7ImNvZGUiOiJQR0siLCJuYW1lIjoiUGFwdWEgTmV3IEd1aW5lYW4gS2luYSIsInJhdGUiOjEyMDY0LjM0ODh9LHsiY29kZSI6IlBIUCIsIm5hbWUiOiJQaGlsaXBwaW5lIFBlc28iLCJyYXRlIjoxODc5ODguNDg1NDczfSx7ImNvZGUiOiJQS1IiLCJuYW1lIjoiUGFraXN0YW5pIFJ1cGVlIiwicmF0ZSI6NDk5NjI5LjIwN30seyJjb2RlIjoiUExOIiwibmFtZSI6IlBvbGlzaCBabG90eSIsInJhdGUiOjEzNzc5LjIwOTgwOH0seyJjb2RlIjoiUFlHIiwibmFtZSI6IlBhcmFndWF5YW4gR3VhcmFuaSIsInJhdGUiOjIxNzQwNjI2LjYzNjc3NH0seyJjb2RlIjoiUUFSIiwibmFtZSI6IlFhdGFyaSBSaWFsIiwicmF0ZSI6MTMwNzMuNjYwODM4fSx7ImNvZGUiOiJST04iLCJuYW1lIjoiUm9tYW5pYW4gTGV1IiwicmF0ZSI6MTUwNzEuNTM0OTUyfSx7ImNvZGUiOiJSU0QiLCJuYW1lIjoiU2VyYmlhbiBEaW5hciIsInJhdGUiOjM3NTIxOS4zMDgyOTd9LHsiY29kZSI6IlJVQiIsIm5hbWUiOiJSdXNzaWFuIFJ1YmxlIiwicmF0ZSI6MjM4MDA5Ljg1MzYzNH0seyJjb2RlIjoiUldGIiwibmFtZSI6IlJ3YW5kYW4gRnJhbmMiLCJyYXRlIjozMTc3NjYzLjN9LHsiY29kZSI6IlNBUiIsIm5hbWUiOiJTYXVkaSBSaXlhbCIsInJhdGUiOjEzNDY2LjY0OTgxOX0seyJjb2RlIjoiU0JEIiwibmFtZSI6IlNvbG9tb24gSXNsYW5kcyBEb2xsYXIiLCJyYXRlIjoyOTMwNi45OTk3NjF9LHsiY29kZSI6IlNDUiIsIm5hbWUiOiJTZXljaGVsbG9pcyBSdXBlZSIsInJhdGUiOjQ5MDU5Ljk2ODgyM30seyJjb2RlIjoiU0RHIiwibmFtZSI6IlN1ZGFuZXNlIFBvdW5kIiwicmF0ZSI6MTcxMDkxLjEzN30seyJjb2RlIjoiU0dEIiwibmFtZSI6IlNpbmdhcG9yZSBEb2xsYXIiLCJyYXRlIjo0ODcxLjY5ODk0NH0seyJjb2RlIjoiU0hQIiwibmFtZSI6IlNhaW50IEhlbGVuYSBQb3VuZCIsInJhdGUiOjI3ODQuODg5NzU0fSx7ImNvZGUiOiJTTEwiLCJuYW1lIjoiU2llcnJhIExlb25lYW4gTGVvbmUiLCJyYXRlIjozMDEyNDk2Ni4yfSx7ImNvZGUiOiJTT1MiLCJuYW1lIjoiU29tYWxpIFNoaWxsaW5nIiwicmF0ZSI6MjA4MjUzNi40fSx7ImNvZGUiOiJTUkQiLCJuYW1lIjoiU3VyaW5hbWVzZSBEb2xsYXIiLCJyYXRlIjoyNjc3OC41NDU2NH0seyJjb2RlIjoiU1ROIiwibmFtZSI6IlPDo28gVG9tw6kgYW5kIFByw61uY2lwZSBEb2JyYSIsInJhdGUiOjc4Mjc0LjY0NH0seyJjb2RlIjoiU1ZDIiwibmFtZSI6IlNhbHZhZG9yYW4gQ29sw7NuIiwicmF0ZSI6MzE0MDkuMjA4OTQ5fSx7ImNvZGUiOiJTWVAiLCJuYW1lIjoiU3lyaWFuIFBvdW5kIiwicmF0ZSI6MTg0OTIwOC45MjQ3OTh9LHsiY29kZSI6IlNaTCIsIm5hbWUiOiJTd2F6aSBMaWxhbmdlbmkiLCJyYXRlIjo1MDU1NS4zNjY0fSx7ImNvZGUiOiJUSEIiLCJuYW1lIjoiVGhhaSBCYWh0IiwicmF0ZSI6MTEyMjU1Ljg5MzEyfSx7ImNvZGUiOiJUSlMiLCJuYW1lIjoiVGFqaWtpc3RhbmkgU29tb25pIiwicmF0ZSI6MzM4NzcuMDY0ODUxfSx7ImNvZGUiOiJUTVQiLCJuYW1lIjoiVHVya21lbmlzdGFuaSBNYW5hdCIsInJhdGUiOjEyNTY2Ljk3OTczMn0seyJjb2RlIjoiVE5EIiwibmFtZSI6IlR1bmlzaWFuIERpbmFyIiwicmF0ZSI6MTA3MjMuMDEyMjM5fSx7ImNvZGUiOiJUT1AiLCJuYW1lIjoiVG9uZ2FuIFBhyrthbmdhIiwicmF0ZSI6ODEyOC40NTE5NX0seyJjb2RlIjoiVFJZIiwibmFtZSI6IlR1cmtpc2ggTGlyYSIsInJhdGUiOjE4OTI2LjI0MTYwOH0seyJjb2RlIjoiVFREIiwibmFtZSI6IlRyaW5pZGFkIGFuZCBUb2JhZ28gRG9sbGFyIiwicmF0ZSI6MjQzMjkuNTkwNTUxfSx7ImNvZGUiOiJUV0QiLCJuYW1lIjoiTmV3IFRhaXdhbiBEb2xsYXIiLCJyYXRlIjoxMTA2OTUuNzA3MTE3fSx7ImNvZGUiOiJUWlMiLCJuYW1lIjoiVGFuemFuaWFuIFNoaWxsaW5nIiwicmF0ZSI6ODM2NzMzMC43OTE4NzV9LHsiY29kZSI6IlVBSCIsIm5hbWUiOiJVa3JhaW5pYW4gSHJ5dm5pYSIsInJhdGUiOjk3NzkzLjAzNjg4fSx7ImNvZGUiOiJVR1giLCJuYW1lIjoiVWdhbmRhbiBTaGlsbGluZyIsInJhdGUiOjEzMTczODY0LjEzNzg3OX0seyJjb2RlIjoiVVNEQyIsIm5hbWUiOiJDaXJjbGUgVVNEIENvaW4iLCJyYXRlIjozNTkwLjU4fSx7ImNvZGUiOiJVWVUiLCJuYW1lIjoiVXJ1Z3VheWFuIFBlc28iLCJyYXRlIjoxMTcwNjAuNzE3NTEyfSx7ImNvZGUiOiJVWlMiLCJuYW1lIjoiVXpiZWtpc3RhbiBTb20iLCJyYXRlIjozMDE2MDg3Mn0seyJjb2RlIjoiVkVGIiwibmFtZSI6IlZlbmV6dWVsYW4gQm9sw612YXIgRnVlcnRlIiwicmF0ZSI6ODkyMjE0NzU4LjQ3NzY5fSx7ImNvZGUiOiJWRVMiLCJuYW1lIjoiVmVuZXp1ZWxhbiBCb2zDrXZhciBTb2JlcmFubyIsInJhdGUiOjExODIwNjUyLjcyNDM0OX0seyJjb2RlIjoiVk5EIiwibmFtZSI6IlZpZXRuYW1lc2UgRG9uZyIsInJhdGUiOjgzMTMzNzQ5LjA1NjQ2Mn0seyJjb2RlIjoiVlVWIiwibmFtZSI6IlZhbnVhdHUgVmF0dSIsInJhdGUiOjM5OTE4NC45ODYzODR9LHsiY29kZSI6IldTVCIsIm5hbWUiOiJTYW1vYW4gVGFsYSIsInJhdGUiOjkzOTkuMTg2OTM2fSx7ImNvZGUiOiJYQUYiLCJuYW1lIjoiQ0ZBIEZyYW5jIEJFQUMiLCJyYXRlIjoyMDg0OTUyLjA4ODM2NX0seyJjb2RlIjoiWENEIiwibmFtZSI6IkVhc3QgQ2FyaWJiZWFuIERvbGxhciIsInJhdGUiOjk3MDMuNzIxOTc5fSx7ImNvZGUiOiJYT0YiLCJuYW1lIjoiQ0ZBIEZyYW5jIEJDRUFPIiwicmF0ZSI6MjA4NDk1Mi4wODgzNjV9LHsiY29kZSI6IlhQRiIsIm5hbWUiOiJDRlAgRnJhbmMiLCJyYXRlIjozNzkyOTQuNjI3MzY5fSx7ImNvZGUiOiJZRVIiLCJuYW1lIjoiWWVtZW5pIFJpYWwiLCJyYXRlIjo4OTg3MjQuNjIyNzc2fSx7ImNvZGUiOiJaQVIiLCJuYW1lIjoiU291dGggQWZyaWNhbiBSYW5kIiwicmF0ZSI6NTA1NDEuMTY1NjU2fSx7ImNvZGUiOiJaTVciLCJuYW1lIjoiWmFtYmlhbiBLd2FjaGEiLCJyYXRlIjo0MjYyNy40ODc4NH0seyJjb2RlIjoiWldMIiwibmFtZSI6IlppbWJhYndlYW4gRG9sbGFyIiwicmF0ZSI6MTE1NzQ0MS40NTUzOTZ9LHsiY29kZSI6IlhBRyIsIm5hbWUiOiJTaWx2ZXIgKHRyb3kgb3VuY2UpIiwicmF0ZSI6MjI3LjQ3NTA1Nn0seyJjb2RlIjoiWEFVIiwibmFtZSI6IkdvbGQgKHRyb3kgb3VuY2UpIiwicmF0ZSI6Mi43MTczNTF9XQ==
     http_version: 
-  recorded_at: Sun, 07 Oct 2018 20:41:57 GMT
+  recorded_at: Sat, 16 Feb 2019 12:04:56 GMT
 - request:
     method: get
     uri: https://www.bitstamp.net/api/ticker/
@@ -76,40 +76,40 @@ http_interactions:
       message: OK
     headers:
       Etag:
-      - '"61fa5-c2-577a989114ba1"'
+      - W/"616f8-c2-58201b32acacb"
       Last-Modified:
-      - Sun, 07 Oct 2018 20:41:56 GMT
+      - Sat, 16 Feb 2019 12:04:56 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '143'
+      - '146'
       Connection:
-      - Close
+      - keep-alive
       Cache-Control:
       - max-age=2, public
       Expires:
-      - Sun, 07 Oct 2018 20:42:01 GMT
+      - Sat, 16 Feb 2019 12:04:58 GMT
       Date:
-      - Sun, 07 Oct 2018 20:41:59 GMT
+      - Sat, 16 Feb 2019 12:04:56 GMT
       Set-Cookie:
-      - incap_ses_876_99025=TRtZfJZ1bDDgGviq2S0oDJdvulsAAAAAYiSO9WSDm3LZoBdnQi3v3Q==;
+      - incap_ses_86_99025=KNCqNb5K8hE1i7wGLIkxAWj8Z1wAAAAAIY51LY4ya/8H4fIb6KPICw==;
         path=/; Domain=.bitstamp.net
-      - visid_incap_99025=VXlIfLHGQIqFiXTD6FSNHpdvulsAAAAAQUIPAAAAAAD2qKDASjuqKIsmBA9Z5qoT;
-        expires=Mon, 07 Oct 2019 11:03:25 GMT; path=/; Domain=.bitstamp.net
+      - visid_incap_99025=ScjKqXZNSguaThdItmQTtmj8Z1wAAAAAQUIPAAAAAACM2zUmb87gLmpbLor6c1Zf;
+        expires=Sun, 16 Feb 2020 07:30:06 GMT; path=/; Domain=.bitstamp.net
       X-Iinfo:
-      - 10-84138851-84134031 2CNN RT(1538944919060 498) q(0 0 0 0) r(0 0)
+      - 9-36126639-36126381 2CNN RT(1550318696135 148) q(0 0 0 0) r(0 0)
       X-Cdn:
       - Incapsula
     body:
       encoding: ASCII-8BIT
-      string: '{"high": "6561.25000000", "last": "6527.55", "timestamp": "1538944915",
-        "bid": "6527.05", "vwap": "6530.73", "volume": "1439.36028185", "low": "6493.92000000",
-        "ask": "6527.55", "open": 6547.93}'
+      string: '{"high": "3620.53000000", "last": "3593.00", "timestamp": "1550318695",
+        "bid": "3589.20", "vwap": "3574.08", "volume": "5362.64850707", "low": "3544.88000000",
+        "ask": "3589.63", "open": 3566.29}'
     http_version: 
-  recorded_at: Sun, 07 Oct 2018 20:42:00 GMT
+  recorded_at: Sat, 16 Feb 2019 12:04:57 GMT
 - request:
     method: get
-    uri: https://coinbase.com/api/v1/currencies/exchange_rates
+    uri: https://api.coinbase.com/v2/exchange-rates?currency=BTC
     body:
       encoding: US-ASCII
       string: ''
@@ -126,31 +126,33 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 07 Oct 2018 20:42:04 GMT
+      - Sat, 16 Feb 2019 12:04:57 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '2061'
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d5346e053b4532346b1c463ace3ef28901538944924; expires=Mon, 07-Oct-19
-        20:42:04 GMT; path=/; domain=.coinbase.com; HttpOnly
+      - __cfduid=d61423c3707157943722b818a621d07411550318697; expires=Sun, 16-Feb-20
+        12:04:57 GMT; path=/; domain=.coinbase.com; HttpOnly
       Cache-Control:
-      - public, max-age=300
+      - public, max-age=30
       Content-Disposition:
       - attachment; filename=response.json
       Content-Security-Policy:
       - 'default-src ''self'' https://www.coinbase.com; child-src ''self'' https://www.coinbase.com
-        https://*.online-metrix.net https://*.wpstn.com https://netverify.com https://platform.twitter.com
-        https://www.google.com/recaptcha/ https://cdn.plaid.com/link/ https://*.doubleclick.net/
-        blob: https://coinbase.ada.support; connect-src ''self'' https://www.coinbase.com
-        https://api.coinbase.com https://api.mixpanel.com https://*.online-metrix.net
-        https://api.cloudinary.com https://ott9.wpstn.com/live https://api.amplitude.com/
+        https://fast.wistia.net https://*.online-metrix.net https://*.wpstn.com https://netverify.com
+        https://platform.twitter.com https://www.google.com/recaptcha/ https://cdn.plaid.com/link/
+        https://*.doubleclick.net/ blob: https://coinbase.ada.support; connect-src
+        ''self'' https://www.coinbase.com https://api.coinbase.com https://api.mixpanel.com
+        https://*.online-metrix.net https://api.cloudinary.com https://ott9.wpstn.com/live
+        https://api.amplitude.com/ https://d3907m2cqladbn.cloudfront.net/ https://exceptions.coinbase.com
         static.coinbase.com wss://ws.coinbase.com wss://ws.coinbase.com:443 https://www.coinbase.com/api
         https://coinbase.ada.support/api/; font-src ''self'' https://www.coinbase.com
         https://assets.coinbase.com/ static.coinbase.com; img-src ''self'' data: https://www.coinbase.com
-        https://images.coinbase.com https://exceptions.coinbase.com https://coinbase-uploads.s3.amazonaws.com
+        https://images.coinbase.com https://d3907m2cqladbn.cloudfront.net/ https://static-assets.coinbase.com/
+        https://dynamic-assets.coinbase.com https://exceptions.coinbase.com https://coinbase-uploads.s3.amazonaws.com
         https://s3.amazonaws.com/app-public/ https://maps.gstatic.com https://ssl.google-analytics.com
         https://www.google.com https://maps.googleapis.com https://csi.gstatic.com
         https://www.google-analytics.com https://res.cloudinary.com https://secure.gravatar.com
@@ -161,18 +163,17 @@ http_interactions:
         media-src ''self'' https://www.coinbase.com blob:; object-src ''self'' data:
         blob: https://www.coinbase.com https://cdn.siftscience.com https://*.online-metrix.net
         https://www.gstatic.com https://www.google.com/recaptcha/api/; script-src
-        ''self'' ''unsafe-inline'' ''unsafe-eval'' https://www.coinbase.com https://cdn.siftscience.com
-        https://*.newrelic.com https://bam.nr-data.net https://*.google-analytics.com
-        https://www.google.com https://www.gstatic.com https://*.online-metrix.net
-        https://code.jquery.com https://chart.googleapis.com https://maps.googleapis.com
-        https://maps.gstatic.com https://netverify.com https://ajax.cloudflare.com
-        https://cdn.plaid.com/link/v2/stable/ https://www.googletagmanager.com/gtag/js
-        https://www.googletagmanager.com/gtm.js https://www.googleadservices.com https://googleads.g.doubleclick.net
-        https://assets.coinbase.com/ static.coinbase.com; style-src ''self'' ''unsafe-inline''
-        https://www.coinbase.com https://assets.coinbase.com/ static.coinbase.com;
-        report-uri /csp-report'
+        ''self'' ''unsafe-inline'' ''unsafe-eval'' https://www.coinbase.com https://fast.wistia.com/assets/external/E-v1.js
+        https://cdn.siftscience.com https://*.google-analytics.com https://www.google.com
+        https://www.gstatic.com https://*.online-metrix.net https://code.jquery.com
+        https://chart.googleapis.com https://maps.googleapis.com https://maps.gstatic.com
+        https://netverify.com https://ajax.cloudflare.com https://cdn.plaid.com/link/v2/stable/
+        https://www.googletagmanager.com/gtag/js https://www.googletagmanager.com/gtm.js
+        https://www.googleadservices.com https://googleads.g.doubleclick.net https://assets.coinbase.com/
+        static.coinbase.com; style-src ''self'' ''unsafe-inline'' https://www.coinbase.com
+        https://assets.coinbase.com/ static.coinbase.com; report-uri /csp-report'
       Etag:
-      - W/"0a7911ffe814a13f1e179ee2ff96adf8"
+      - W/"ac173e62527ab17828fec1e02fdac107"
       Expect-Ct:
       - enforce; max-age=86400; report-uri="https://coinbase.report-uri.io/r/default/ct/reportOnly"
       Referrer-Policy:
@@ -180,7 +181,7 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
-      - Accept-Encoding
+      - Origin,Accept-Encoding
       X-Content-Type-Options:
       - nosniff
       X-Download-Options:
@@ -192,24 +193,232 @@ http_interactions:
       X-Powered-By:
       - Proof-of-Work
       X-Request-Id:
-      - ecd2ff86-b3a5-42a5-8018-c76c7bd4ef92
+      - 4330e3ee-1c9a-4998-8de7-adb126af993c
       X-Xss-Protection:
       - 1; mode=block
       Cf-Cache-Status:
       - HIT
       Expires:
-      - Sun, 07 Oct 2018 20:47:04 GMT
+      - Sat, 16 Feb 2019 12:05:27 GMT
+      Accept-Ranges:
+      - bytes
       Server:
       - cloudflare
       Cf-Ray:
-      - 466331331d093e9e-ZRH
+      - 4a9fe1339f1fcc3c-ZRH
     body:
       encoding: ASCII-8BIT
-      string: '{"usd_to_aed":"3.673006","aed_to_usd":"0.272257","usd_to_afn":"75.712","afn_to_usd":"0.013208","usd_to_all":"108.925091","all_to_usd":"0.009181","usd_to_amd":"483.957068","amd_to_usd":"0.002066","usd_to_ang":"1.769372","ang_to_usd":"0.565172","usd_to_aoa":"301.2155","aoa_to_usd":"0.00332","usd_to_ars":"37.830034","ars_to_usd":"0.026434","usd_to_aud":"1.417568","aud_to_usd":"0.705434","usd_to_awg":"1.799996","awg_to_usd":"0.555557","usd_to_azn":"1.7025","azn_to_usd":"0.587372","usd_to_bam":"1.695603","bam_to_usd":"0.589761","usd_to_bbd":"2.0","bbd_to_usd":"0.5","usd_to_bdt":"83.529528","bdt_to_usd":"0.011972","usd_to_bgn":"1.69561","bgn_to_usd":"0.589758","usd_to_bhd":"0.375741","bhd_to_usd":"2.661408","usd_to_bif":"1769.899933","bif_to_usd":"0.000565","usd_to_bmd":"1.0","bmd_to_usd":"1.0","usd_to_bnd":"1.377858","bnd_to_usd":"0.725764","usd_to_bob":"6.888103","bob_to_usd":"0.145178","usd_to_brl":"3.845261","brl_to_usd":"0.26006","usd_to_bsd":"1.0","bsd_to_usd":"1.0","usd_to_btn":"73.609972","btn_to_usd":"0.013585","usd_to_bwp":"10.641512","bwp_to_usd":"0.093972","usd_to_byn":"2.14714","byn_to_usd":"0.465736","usd_to_byr":"21471.4","byr_to_usd":"0.000047","usd_to_bzd":"2.009745","bzd_to_usd":"0.497576","usd_to_cad":"1.295043","cad_to_usd":"0.772175","usd_to_cdf":"1626.0","cdf_to_usd":"0.000615","usd_to_chf":"0.992803","chf_to_usd":"1.007249","usd_to_clf":"0.022992","clf_to_usd":"43.493389","usd_to_clp":"670.865","clp_to_usd":"0.001491","usd_to_cny":"6.8689","cny_to_usd":"0.145584","usd_to_cop":"3026.432706","cop_to_usd":"0.00033","usd_to_crc":"582.494857","crc_to_usd":"0.001717","usd_to_cuc":"1.0","cuc_to_usd":"1.0","usd_to_cup":"25.75","cup_to_usd":"0.038835","usd_to_cve":"96.15","cve_to_usd":"0.0104","usd_to_czk":"22.362854","czk_to_usd":"0.044717","usd_to_djf":"178.05","djf_to_usd":"0.005616","usd_to_dkk":"6.473288","dkk_to_usd":"0.154481","usd_to_dop":"49.781963","dop_to_usd":"0.020088","usd_to_dzd":"118.5","dzd_to_usd":"0.008439","usd_to_eek":"14.613691","eek_to_usd":"0.068429","usd_to_egp":"17.8875","egp_to_usd":"0.055905","usd_to_ern":"14.996607","ern_to_usd":"0.066682","usd_to_etb":"27.532236","etb_to_usd":"0.036321","usd_to_eur":"0.867795","eur_to_usd":"1.152346","usd_to_fjd":"2.146549","fjd_to_usd":"0.465864","usd_to_fkp":"0.761905","fkp_to_usd":"1.3125","usd_to_gbp":"0.761905","gbp_to_usd":"1.3125","usd_to_gel":"2.44699","gel_to_usd":"0.408665","usd_to_ggp":"0.761905","ggp_to_usd":"1.3125","usd_to_ghs":"4.787196","ghs_to_usd":"0.208891","usd_to_gip":"0.761905","gip_to_usd":"1.3125","usd_to_gmd":"49.55","gmd_to_usd":"0.020182","usd_to_gnf":"9018.685818","gnf_to_usd":"0.000111","usd_to_gtq":"7.680388","gtq_to_usd":"0.130202","usd_to_gyd":"208.451624","gyd_to_usd":"0.004797","usd_to_hkd":"7.8353","hkd_to_usd":"0.127628","usd_to_hnl":"23.962651","hnl_to_usd":"0.041732","usd_to_hrk":"6.444","hrk_to_usd":"0.155183","usd_to_htg":"69.789784","htg_to_usd":"0.014329","usd_to_huf":"281.817936","huf_to_usd":"0.003548","usd_to_idr":"15178.29","idr_to_usd":"0.000066","usd_to_ils":"3.62937","ils_to_usd":"0.27553","usd_to_imp":"0.761905","imp_to_usd":"1.3125","usd_to_inr":"73.7705","inr_to_usd":"0.013556","usd_to_iqd":"1189.486872","iqd_to_usd":"0.000841","usd_to_irr":"42492.268644","irr_to_usd":"0.000024","usd_to_isk":"114.049932","isk_to_usd":"0.008768","usd_to_jep":"0.761905","jep_to_usd":"1.3125","usd_to_jmd":"133.02855","jmd_to_usd":"0.007517","usd_to_jod":"0.709503","jod_to_usd":"1.409437","usd_to_jpy":"113.8","jpy_to_usd":"0.008787","usd_to_kes":"100.576964","kes_to_usd":"0.009943","usd_to_kgs":"68.495086","kgs_to_usd":"0.0146","usd_to_khr":"4066.986079","khr_to_usd":"0.000246","usd_to_kmf":"427.450683","kmf_to_usd":"0.002339","usd_to_kpw":"900.0","kpw_to_usd":"0.001111","usd_to_krw":"1127.25","krw_to_usd":"0.000887","usd_to_kwd":"0.302831","kwd_to_usd":"3.302172","usd_to_kyd":"0.830722","kyd_to_usd":"1.203772","usd_to_kzt":"370.49577","kzt_to_usd":"0.002699","usd_to_lak":"8503.910154","lak_to_usd":"0.000118","usd_to_lbp":"1508.161154","lbp_to_usd":"0.000663","usd_to_lkr":"169.655732","lkr_to_usd":"0.005894","usd_to_lrd":"156.849799","lrd_to_usd":"0.006376","usd_to_lsl":"14.728831","lsl_to_usd":"0.067894","usd_to_ltl":"3.224845","ltl_to_usd":"0.310092","usd_to_lvl":"0.656261","lvl_to_usd":"1.523784","usd_to_lyd":"1.38601","lyd_to_usd":"0.721496","usd_to_mad":"9.462056","mad_to_usd":"0.105685","usd_to_mdl":"16.967935","mdl_to_usd":"0.058935","usd_to_mga":"3465.0","mga_to_usd":"0.000289","usd_to_mkd":"53.455","mkd_to_usd":"0.018707","usd_to_mmk":"1525.156686","mmk_to_usd":"0.000656","usd_to_mnt":"2485.006396","mnt_to_usd":"0.000402","usd_to_mop":"8.0436","mop_to_usd":"0.124322","usd_to_mro":"208.0","mro_to_usd":"0.004808","usd_to_mtl":"0.683738","mtl_to_usd":"1.462549","usd_to_mur":"34.45","mur_to_usd":"0.029028","usd_to_mvr":"15.400001","mvr_to_usd":"0.064935","usd_to_mwk":"724.95115","mwk_to_usd":"0.001379","usd_to_mxn":"18.816452","mxn_to_usd":"0.053145","usd_to_myr":"4.147056","myr_to_usd":"0.241135","usd_to_mzn":"60.649868","mzn_to_usd":"0.016488","usd_to_nad":"14.728831","nad_to_usd":"0.067894","usd_to_ngn":"362.600179","ngn_to_usd":"0.002758","usd_to_nio":"32.003408","nio_to_usd":"0.031247","usd_to_nok":"8.260718","nok_to_usd":"0.121055","usd_to_npr":"118.135473","npr_to_usd":"0.008465","usd_to_nzd":"1.5523","nzd_to_usd":"0.644205","usd_to_omr":"0.385","omr_to_usd":"2.597403","usd_to_pab":"1.0","pab_to_usd":"1.0","usd_to_pen":"3.317964","pen_to_usd":"0.30139","usd_to_pgk":"3.345","pgk_to_usd":"0.298954","usd_to_php":"54.244645","php_to_usd":"0.018435","usd_to_pkr":"122.840061","pkr_to_usd":"0.008141","usd_to_pln":"3.73955","pln_to_usd":"0.267412","usd_to_pyg":"5903.735944","pyg_to_usd":"0.000169","usd_to_qar":"3.62945","qar_to_usd":"0.275524","usd_to_ron":"4.054498","ron_to_usd":"0.24664","usd_to_rsd":"103.0","rsd_to_usd":"0.009709","usd_to_rub":"66.6299","rub_to_usd":"0.015008","usd_to_rwf":"867.5","rwf_to_usd":"0.001153","usd_to_sar":"3.7472","sar_to_usd":"0.266866","usd_to_sbd":"7.938124","sbd_to_usd":"0.125974","usd_to_scr":"13.62","scr_to_usd":"0.073421","usd_to_sdg":"18.025","sdg_to_usd":"0.055479","usd_to_sek":"9.068589","sek_to_usd":"0.110271","usd_to_sgd":"1.383009","sgd_to_usd":"0.723061","usd_to_shp":"0.761905","shp_to_usd":"1.3125","usd_to_sll":"8390.0","sll_to_usd":"0.000119","usd_to_sos":"580.0","sos_to_usd":"0.001724","usd_to_srd":"7.458","srd_to_usd":"0.134084","usd_to_std":"21138.521174","std_to_usd":"0.000047","usd_to_svc":"8.722581","svc_to_usd":"0.114645","usd_to_syp":"514.95341","syp_to_usd":"0.001942","usd_to_szl":"14.721997","szl_to_usd":"0.067926","usd_to_thb":"32.8155","thb_to_usd":"0.030473","usd_to_tjs":"9.391828","tjs_to_usd":"0.106476","usd_to_tmt":"3.50998","tmt_to_usd":"0.284902","usd_to_tnd":"2.811913","tnd_to_usd":"0.35563","usd_to_top":"2.305525","top_to_usd":"0.433741","usd_to_try":"6.16221","try_to_usd":"0.162279","usd_to_ttd":"6.718657","ttd_to_usd":"0.148839","usd_to_twd":"30.820629","twd_to_usd":"0.032446","usd_to_tzs":"2277.75","tzs_to_usd":"0.000439","usd_to_uah":"27.995986","uah_to_usd":"0.035719","usd_to_ugx":"3769.96726","ugx_to_usd":"0.000265","usd_to_uyu":"32.690673","uyu_to_usd":"0.03059","usd_to_uzs":"8153.738156","uzs_to_usd":"0.000123","usd_to_vef":"248471.708907","vef_to_usd":"0.000004","usd_to_vnd":"23225.022672","vnd_to_usd":"0.000043","usd_to_vuv":"110.383591","vuv_to_usd":"0.009059","usd_to_wst":"2.630465","wst_to_usd":"0.380161","usd_to_xaf":"569.236205","xaf_to_usd":"0.001757","usd_to_xag":"0.068325","xag_to_usd":"14.635995","usd_to_xau":"0.000831","xau_to_usd":"1202.906221","usd_to_xcd":"2.70255","xcd_to_usd":"0.370021","usd_to_xdr":"0.716776","xdr_to_usd":"1.395136","usd_to_xof":"569.236205","xof_to_usd":"0.001757","usd_to_xpf":"103.555489","xpf_to_usd":"0.009657","usd_to_yer":"250.350747","yer_to_usd":"0.003994","usd_to_zar":"14.829911","zar_to_usd":"0.067431","usd_to_zmk":"5253.075255","zmk_to_usd":"0.00019","usd_to_zmw":"11.5735","zmw_to_usd":"0.086404","usd_to_zwl":"322.355011","zwl_to_usd":"0.003102","usd_to_etc":"0.092336","etc_to_usd":"10.83","btc_to_usd":"6533.51","usd_to_btc":"0.000153","btc_to_eur":"5692.27","eur_to_btc":"0.000176","btc_to_gbp":"5030.02","gbp_to_btc":"0.000199","eth_to_usd":"222.72","usd_to_eth":"0.00449","eth_to_btc":"0.034045","btc_to_eth":"29.372889","ltc_to_usd":"57.28","usd_to_ltc":"0.017458","ltc_to_btc":"0.008765","btc_to_ltc":"114.090131","usd_to_ssp":"130.2634","ssp_to_usd":"0.007677","usd_to_xpd":"0.000932","xpd_to_usd":"1073.214707","usd_to_xpt":"0.001216","xpt_to_usd":"822.618724","eth_to_eur":"193.53","eur_to_eth":"0.005167","usd_to_b2x":"0.000741","b2x_to_usd":"1349.4","ltc_to_eur":"49.86","eur_to_ltc":"0.020056","usd_to_bch":"0.001958","bch_to_usd":"510.73","bch_to_eur":"445.12","eur_to_bch":"0.002247","bch_to_btc":"0.078225","btc_to_bch":"12.783637","usd_to_cnh":"6.90407","cnh_to_usd":"0.144842","usd_to_stn":"20.94","stn_to_usd":"0.047755","etc_to_btc":"0.001655","btc_to_etc":"604.229607","etc_to_eur":"9.4","eur_to_etc":"0.106383","usd_to_zrx":"1.327347","zrx_to_usd":"0.753382","eth_to_gbp":"172.55","gbp_to_eth":"0.005795","ltc_to_gbp":"44.36","gbp_to_ltc":"0.022543","bch_to_gbp":"394.47","gbp_to_bch":"0.002535","etc_to_gbp":"8.34","gbp_to_etc":"0.119904","btc_to_aed":"23997.62","btc_to_afn":"494665.11","btc_to_all":"711663.17","btc_to_amd":"3161938.34","btc_to_ang":"11560.21","btc_to_aoa":"1967994.481405","btc_to_ars":"247162.91","btc_to_aud":"9261.69","btc_to_awg":"11760.29","btc_to_azn":"11123.3","btc_to_bam":"11078.24","btc_to_bbd":"13067.02","btc_to_bdt":"545741.01","btc_to_bgn":"11078.28","btc_to_bhd":"2454.908","btc_to_bif":"11563659.0","btc_to_bmd":"6533.51","btc_to_bnd":"9002.25","btc_to_bob":"45003.49","btc_to_brl":"25123.05","btc_to_bsd":"6533.51","btc_to_btn":"480931.49","btc_to_bwp":"69526.43","btc_to_byn":"14028.36","btc_to_byr":"140283607.0","btc_to_bzd":"13130.69","btc_to_cad":"8461.18","btc_to_cdf":"10623487.26","btc_to_chf":"6486.49","btc_to_clf":"150.2185","btc_to_clp":"4383103.0","btc_to_cny":"44878.03","btc_to_cop":"19773228.35","btc_to_crc":"3805735.97","btc_to_cuc":"6533.51","btc_to_cve":"628196.99","btc_to_czk":"146107.93","btc_to_djf":"1163291.0","btc_to_dkk":"42293.29","btc_to_dop":"325250.95","btc_to_dzd":"774220.94","btc_to_egp":"116868.16","btc_to_ern":"97980.48","btc_to_etb":"179882.14","btc_to_fjd":"14024.5","btc_to_fkp":"4977.91","btc_to_gel":"15987.43","btc_to_ghs":"31277.19","btc_to_gip":"4977.91","btc_to_gmd":"323735.42","btc_to_gnf":"58923674.0","btc_to_gtq":"50179.89","btc_to_gyd":"1361920.77","btc_to_hkd":"51192.01","btc_to_hnl":"156560.22","btc_to_hrk":"42101.94","btc_to_htg":"455972.25","btc_to_huf":"1841260.0","btc_to_idr":"99167509.5","btc_to_ils":"23712.53","btc_to_inr":"481980.3","btc_to_iqd":"7771524.373","btc_to_isk":"745146.0","btc_to_jmd":"869143.36","btc_to_jod":"4635.545","btc_to_jpy":"743513.0","btc_to_kes":"657120.6","btc_to_kgs":"447513.33","btc_to_khr":"26571694.22","btc_to_kmf":"2792753.0","btc_to_krw":"7364899.0","btc_to_kwd":"1978.549","btc_to_kyd":"5427.53","btc_to_kzt":"2420637.82","btc_to_lak":"55560382.03","btc_to_lbp":"9853585.98","btc_to_lkr":"1108447.42","btc_to_lrd":"1024779.73","btc_to_lsl":"96230.96","btc_to_ltl":"21069.56","btc_to_lvl":"4287.69","btc_to_lyd":"9055.51","btc_to_mad":"61820.44","btc_to_mdl":"110860.17","btc_to_mga":"22638612.2","btc_to_mkd":"349248.78","btc_to_mmk":"9964626.46","btc_to_mnt":"16235814.14","btc_to_mop":"52552.94","btc_to_mro":"1358970.0","btc_to_mur":"225079.42","btc_to_mvr":"100616.06","btc_to_mwk":"4736475.59","btc_to_mxn":"122937.48","btc_to_myr":"27094.83","btc_to_mzn":"396256.52","btc_to_nad":"96230.96","btc_to_ngn":"2369051.9","btc_to_nio":"209094.59","btc_to_nok":"53971.48","btc_to_npr":"771839.29","btc_to_nzd":"10141.97","btc_to_omr":"2515.401","btc_to_pab":"6533.51","btc_to_pen":"21677.95","btc_to_pgk":"21854.59","btc_to_php":"354407.93","btc_to_pkr":"802576.77","btc_to_pln":"24432.39","btc_to_pyg":"38572118.0","btc_to_qar":"23713.05","btc_to_ron":"26490.1","btc_to_rsd":"672951.53","btc_to_rub":"435327.12","btc_to_rwf":"5667820.0","btc_to_sar":"24482.37","btc_to_sbd":"51863.81","btc_to_scr":"88986.41","btc_to_sek":"59249.72","btc_to_shp":"4977.91","btc_to_sll":"54816148.9","btc_to_sos":"3789435.8","btc_to_srd":"48726.92","btc_to_ssp":"851077.23","btc_to_std":"138108739.48","btc_to_svc":"56989.07","btc_to_szl":"96186.31","btc_to_thb":"214400.4","btc_to_tjs":"61361.6","btc_to_tmt":"22932.49","btc_to_tnd":"18371.662","btc_to_top":"15063.17","btc_to_try":"40260.86","btc_to_ttd":"43896.41","btc_to_twd":"201366.89","btc_to_tzs":"14881702.4","btc_to_uah":"182912.05","btc_to_ugx":"24631119.0","btc_to_uyu":"213584.84","btc_to_uzs":"53272529.78","btc_to_vef":"1623392394.86","btc_to_vnd":"151740918.0","btc_to_vuv":"721192.0","btc_to_wst":"17186.17","btc_to_xaf":"3719110.0","btc_to_xag":"446.0","btc_to_xau":"5.0","btc_to_xcd":"17657.14","btc_to_xdr":"4683.0","btc_to_xof":"3719110.0","btc_to_xpd":"6.0","btc_to_xpf":"676581.0","btc_to_xpt":"8.0","btc_to_yer":"1635669.11","btc_to_zar":"96891.37","btc_to_zmk":"34321019.71","btc_to_zmw":"75615.58","btc_to_jep":"4977.91","btc_to_ggp":"4977.91","btc_to_imp":"4977.91","btc_to_cnh":"45107.81","btc_to_eek":"95478.7","btc_to_mtl":"4467.21","btc_to_zwl":"2106109.69","btc_to_sgd":"9035.9","bch_to_aed":"1875.91","bch_to_afn":"38668.39","bch_to_all":"55631.31","bch_to_amd":"247171.39","bch_to_ang":"903.67","bch_to_aoa":"153839.792315","bch_to_ars":"19320.93","bch_to_aud":"723.99","bch_to_awg":"919.31","bch_to_azn":"869.52","bch_to_bam":"866.0","bch_to_bbd":"1021.46","bch_to_bdt":"42661.04","bch_to_bgn":"866.0","bch_to_bhd":"191.902","bch_to_bif":"903941.0","bch_to_bmd":"510.73","bch_to_bnd":"703.71","bch_to_bob":"3517.96","bch_to_brl":"1963.89","bch_to_bsd":"510.73","bch_to_btn":"37594.82","bch_to_bwp":"5434.94","bch_to_byn":"1096.61","bch_to_byr":"10966088.0","bch_to_bzd":"1026.44","bch_to_cad":"661.42","bch_to_cdf":"830446.98","bch_to_chf":"507.05","bch_to_clf":"11.7427","bch_to_clp":"342631.0","bch_to_cny":"3508.15","bch_to_cop":"1545689.98","bch_to_crc":"297497.6","bch_to_cuc":"510.73","bch_to_cve":"49106.69","bch_to_czk":"11421.38","bch_to_djf":"90935.0","bch_to_dkk":"3306.1","bch_to_dop":"25425.14","bch_to_dzd":"60521.5","bch_to_egp":"9135.68","bch_to_ern":"7659.22","bch_to_etb":"14061.54","bch_to_fjd":"1096.31","bch_to_fkp":"389.13","bch_to_gel":"1249.75","bch_to_ghs":"2444.96","bch_to_gip":"389.13","bch_to_gmd":"25306.67","bch_to_gnf":"4606113.0","bch_to_gtq":"3922.6","bch_to_gyd":"106462.5","bch_to_hkd":"4001.72","bch_to_hnl":"12238.44","bch_to_hrk":"3291.14","bch_to_htg":"35643.74","bch_to_huf":"143933.0","bch_to_idr":"7752008.05","bch_to_ils":"1853.63","bch_to_inr":"37676.81","bch_to_iqd":"607506.63","bch_to_isk":"58249.0","bch_to_jmd":"67941.67","bch_to_jod":"362.364","bch_to_jpy":"58121.0","bch_to_kes":"51367.67","bch_to_kgs":"34982.5","bch_to_khr":"2077131.8","bch_to_kmf":"218312.0","bch_to_krw":"575720.0","bch_to_kwd":"154.665","bch_to_kyd":"424.27","bch_to_kzt":"189223.3","bch_to_lak":"4343202.03","bch_to_lbp":"770263.15","bch_to_lkr":"86648.27","bch_to_lrd":"80107.9","bch_to_lsl":"7522.46","bch_to_ltl":"1647.03","bch_to_lvl":"335.17","bch_to_lyd":"707.877","bch_to_mad":"4832.56","bch_to_mdl":"8666.03","bch_to_mga":"1769679.4","bch_to_mkd":"27301.07","bch_to_mmk":"778943.27","bch_to_mnt":"1269167.32","bch_to_mop":"4108.11","bch_to_mro":"106231.8","bch_to_mur":"17594.65","bch_to_mvr":"7865.24","bch_to_mwk":"370254.3","bch_to_mxn":"9610.13","bch_to_myr":"2118.03","bch_to_mzn":"30975.71","bch_to_nad":"7522.46","bch_to_ngn":"185190.79","bch_to_nio":"16345.1","bch_to_nok":"4219.0","bch_to_npr":"60335.33","bch_to_nzd":"792.81","bch_to_omr":"196.631","bch_to_pab":"510.73","bch_to_pen":"1694.58","bch_to_pgk":"1708.39","bch_to_php":"27704.37","bch_to_pkr":"62738.1","bch_to_pln":"1909.9","bch_to_pyg":"3015215.0","bch_to_qar":"1853.67","bch_to_ron":"2070.75","bch_to_rsd":"52605.19","bch_to_rub":"34029.89","bch_to_rwf":"443058.0","bch_to_sar":"1913.81","bch_to_sbd":"4054.24","bch_to_scr":"6956.14","bch_to_sek":"4631.6","bch_to_shp":"389.13","bch_to_sll":"4285024.7","bch_to_sos":"296223.4","bch_to_srd":"3809.02","bch_to_ssp":"66529.43","bch_to_std":"10796076.92","bch_to_svc":"4454.88","bch_to_szl":"7518.97","bch_to_thb":"16759.86","bch_to_tjs":"4796.69","bch_to_tmt":"1792.65","bch_to_tnd":"1436.128","bch_to_top":"1177.5","bch_to_try":"3147.23","bch_to_ttd":"3431.42","bch_to_twd":"15741.02","bch_to_tzs":"1163315.26","bch_to_uah":"14298.39","bch_to_ugx":"1925435.0","bch_to_uyu":"16696.11","bch_to_uzs":"4164358.69","bch_to_vef":"126901955.89","bch_to_vnd":"11861716.0","bch_to_vuv":"56376.0","bch_to_wst":"1343.46","bch_to_xaf":"290726.0","bch_to_xag":"35.0","bch_to_xau":"0.0","bch_to_xcd":"1380.27","bch_to_xdr":"366.0","bch_to_xof":"290726.0","bch_to_xpd":"0.0","bch_to_xpf":"52889.0","bch_to_xpt":"1.0","bch_to_yer":"127861.64","bch_to_zar":"7574.08","bch_to_zmk":"2682903.12","bch_to_zmw":"5910.93","bch_to_jep":"389.13","bch_to_ggp":"389.13","bch_to_imp":"389.13","bch_to_cnh":"3526.12","bch_to_eek":"7463.65","bch_to_mtl":"349.21","bch_to_zwl":"164636.37","bch_to_sgd":"706.34","eth_to_aed":"818.05","eth_to_afn":"16862.58","eth_to_all":"24259.8","eth_to_amd":"107786.92","eth_to_ang":"394.07","eth_to_aoa":"67086.71616","eth_to_ars":"8425.51","eth_to_aud":"315.72","eth_to_awg":"400.9","eth_to_azn":"379.18","eth_to_bam":"377.64","eth_to_bbd":"445.44","eth_to_bdt":"18603.7","eth_to_bgn":"377.65","eth_to_bhd":"83.685","eth_to_bif":"394192.0","eth_to_bmd":"222.72","eth_to_bnd":"306.88","eth_to_bob":"1534.12","eth_to_brl":"856.42","eth_to_bsd":"222.72","eth_to_btn":"16394.41","eth_to_bwp":"2370.08","eth_to_byn":"478.21","eth_to_byr":"4782110.0","eth_to_bzd":"447.61","eth_to_cad":"288.43","eth_to_cdf":"362142.72","eth_to_chf":"221.12","eth_to_clf":"5.1208","eth_to_clp":"149415.0","eth_to_cny":"1529.84","eth_to_cop":"674047.09","eth_to_crc":"129733.25","eth_to_cuc":"222.72","eth_to_cve":"21414.53","eth_to_czk":"4980.65","eth_to_djf":"39655.0","eth_to_dkk":"1441.73","eth_to_dop":"11087.44","eth_to_dzd":"26392.32","eth_to_egp":"3983.9","eth_to_ern":"3340.04","eth_to_etb":"6131.98","eth_to_fjd":"478.08","eth_to_fkp":"169.69","eth_to_gel":"544.99","eth_to_ghs":"1066.2","eth_to_gip":"169.69","eth_to_gmd":"11035.78","eth_to_gnf":"2008642.0","eth_to_gtq":"1710.58","eth_to_gyd":"46426.35","eth_to_hkd":"1745.08","eth_to_hnl":"5336.96","eth_to_hrk":"1435.21","eth_to_htg":"15543.58","eth_to_huf":"62766.0","eth_to_idr":"3380508.75","eth_to_ils":"808.33","eth_to_inr":"16430.17","eth_to_iqd":"264922.516","eth_to_isk":"25401.0","eth_to_jmd":"29628.12","eth_to_jod":"158.021","eth_to_jpy":"25346.0","eth_to_kes":"22400.5","eth_to_kgs":"15255.23","eth_to_khr":"905799.14","eth_to_kmf":"95202.0","eth_to_krw":"251061.0","eth_to_kwd":"67.447","eth_to_kyd":"185.02","eth_to_kzt":"82516.82","eth_to_lak":"1893990.87","eth_to_lbp":"335897.65","eth_to_lkr":"37785.72","eth_to_lrd":"34933.59","eth_to_lsl":"3280.41","eth_to_ltl":"718.24","eth_to_lvl":"146.16","eth_to_lyd":"308.692","eth_to_mad":"2107.39","eth_to_mdl":"3779.1","eth_to_mga":"771724.8","eth_to_mkd":"11905.5","eth_to_mmk":"339682.9","eth_to_mnt":"553460.62","eth_to_mop":"1791.47","eth_to_mro":"46325.8","eth_to_mur":"7672.7","eth_to_mvr":"3429.89","eth_to_mwk":"161461.12","eth_to_mxn":"4190.8","eth_to_myr":"923.63","eth_to_mzn":"13507.94","eth_to_nad":"3280.41","eth_to_ngn":"80758.31","eth_to_nio":"7127.8","eth_to_nok":"1839.83","eth_to_npr":"26311.13","eth_to_nzd":"345.73","eth_to_omr":"85.747","eth_to_pab":"222.72","eth_to_pen":"738.98","eth_to_pgk":"745.0","eth_to_php":"12081.37","eth_to_pkr":"27358.94","eth_to_pln":"832.87","eth_to_pyg":"1314880.0","eth_to_qar":"808.35","eth_to_ron":"903.02","eth_to_rsd":"22940.16","eth_to_rub":"14839.81","eth_to_rwf":"193210.0","eth_to_sar":"834.58","eth_to_sbd":"1767.98","eth_to_scr":"3033.45","eth_to_sek":"2019.76","eth_to_shp":"169.69","eth_to_sll":"1868620.8","eth_to_sos":"129177.6","eth_to_srd":"1661.05","eth_to_ssp":"29012.26","eth_to_std":"4707971.44","eth_to_svc":"1942.69","eth_to_szl":"3278.88","eth_to_thb":"7308.67","eth_to_tjs":"2091.75","eth_to_tmt":"781.74","eth_to_tnd":"626.269","eth_to_top":"513.49","eth_to_try":"1372.45","eth_to_ttd":"1496.38","eth_to_twd":"6864.37","eth_to_tzs":"507300.48","eth_to_uah":"6235.27","eth_to_ugx":"839647.0","eth_to_uyu":"7280.87","eth_to_uzs":"1816000.56","eth_to_vef":"55339619.01","eth_to_vnd":"5172677.0","eth_to_vuv":"24585.0","eth_to_wst":"585.86","eth_to_xaf":"126780.0","eth_to_xag":"15.0","eth_to_xau":"0.0","eth_to_xcd":"601.91","eth_to_xdr":"160.0","eth_to_xof":"126780.0","eth_to_xpd":"0.0","eth_to_xpf":"23064.0","eth_to_xpt":"0.0","eth_to_yer":"55758.12","eth_to_zar":"3302.92","eth_to_zmk":"1169964.92","eth_to_zmw":"2577.65","eth_to_jep":"169.69","eth_to_ggp":"169.69","eth_to_imp":"169.69","eth_to_cnh":"1537.67","eth_to_eek":"3254.76","eth_to_mtl":"152.28","eth_to_zwl":"71794.91","eth_to_sgd":"308.02","etc_to_aed":"39.78","etc_to_afn":"819.96","etc_to_all":"1179.66","etc_to_amd":"5241.26","etc_to_ang":"19.16","etc_to_aoa":"3262.163865","etc_to_ars":"409.7","etc_to_aud":"15.35","etc_to_awg":"19.49","etc_to_azn":"18.44","etc_to_bam":"18.36","etc_to_bbd":"21.66","etc_to_bdt":"904.62","etc_to_bgn":"18.36","etc_to_bhd":"4.069","etc_to_bif":"19168.0","etc_to_bmd":"10.83","etc_to_bnd":"14.92","etc_to_bob":"74.6","etc_to_brl":"41.64","etc_to_bsd":"10.83","etc_to_btn":"797.2","etc_to_bwp":"115.25","etc_to_byn":"23.25","etc_to_byr":"232535.0","etc_to_bzd":"21.77","etc_to_cad":"14.03","etc_to_cdf":"17609.58","etc_to_chf":"10.75","etc_to_clf":"0.249","etc_to_clp":"7265.0","etc_to_cny":"74.39","etc_to_cop":"32776.27","etc_to_crc":"6308.42","etc_to_cuc":"10.83","etc_to_cve":"1041.3","etc_to_czk":"242.19","etc_to_djf":"1928.0","etc_to_dkk":"70.11","etc_to_dop":"539.14","etc_to_dzd":"1283.36","etc_to_egp":"193.72","etc_to_ern":"162.41","etc_to_etb":"298.17","etc_to_fjd":"23.25","etc_to_fkp":"8.25","etc_to_gel":"26.5","etc_to_ghs":"51.85","etc_to_gip":"8.25","etc_to_gmd":"536.63","etc_to_gnf":"97672.0","etc_to_gtq":"83.18","etc_to_gyd":"2257.53","etc_to_hkd":"84.86","etc_to_hnl":"259.52","etc_to_hrk":"69.79","etc_to_htg":"755.82","etc_to_huf":"3052.0","etc_to_idr":"164380.88","etc_to_ils":"39.31","etc_to_inr":"798.93","etc_to_iqd":"12882.143","etc_to_isk":"1235.0","etc_to_jmd":"1440.7","etc_to_jod":"7.684","etc_to_jpy":"1232.0","etc_to_kes":"1089.25","etc_to_kgs":"741.8","etc_to_khr":"44045.46","etc_to_kmf":"4629.0","etc_to_krw":"12208.0","etc_to_kwd":"3.28","etc_to_kyd":"9.0","etc_to_kzt":"4012.47","etc_to_lak":"92097.35","etc_to_lbp":"16333.39","etc_to_lkr":"1837.37","etc_to_lrd":"1698.68","etc_to_lsl":"159.51","etc_to_ltl":"34.93","etc_to_lvl":"7.11","etc_to_lyd":"15.01","etc_to_mad":"102.47","etc_to_mdl":"183.76","etc_to_mga":"37526.0","etc_to_mkd":"578.92","etc_to_mmk":"16517.45","etc_to_mnt":"26912.62","etc_to_mop":"87.11","etc_to_mro":"2252.6","etc_to_mur":"373.09","etc_to_mvr":"166.78","etc_to_mwk":"7851.22","etc_to_mxn":"203.78","etc_to_myr":"44.91","etc_to_mzn":"656.84","etc_to_nad":"159.51","etc_to_ngn":"3926.96","etc_to_nio":"346.6","etc_to_nok":"89.46","etc_to_npr":"1279.41","etc_to_nzd":"16.81","etc_to_omr":"4.17","etc_to_pab":"10.83","etc_to_pen":"35.93","etc_to_pgk":"36.23","etc_to_php":"587.47","etc_to_pkr":"1330.36","etc_to_pln":"40.5","etc_to_pyg":"63937.0","etc_to_qar":"39.31","etc_to_ron":"43.91","etc_to_rsd":"1115.49","etc_to_rub":"721.6","etc_to_rwf":"9395.0","etc_to_sar":"40.58","etc_to_sbd":"85.97","etc_to_scr":"147.5","etc_to_sek":"98.21","etc_to_shp":"8.25","etc_to_sll":"90863.7","etc_to_sos":"6281.4","etc_to_srd":"80.77","etc_to_ssp":"1410.75","etc_to_std":"228930.18","etc_to_svc":"94.47","etc_to_szl":"159.44","etc_to_thb":"355.39","etc_to_tjs":"101.71","etc_to_tmt":"38.01","etc_to_tnd":"30.453","etc_to_top":"24.97","etc_to_try":"66.74","etc_to_ttd":"72.76","etc_to_twd":"333.79","etc_to_tzs":"24668.03","etc_to_uah":"303.2","etc_to_ugx":"40829.0","etc_to_uyu":"354.04","etc_to_uzs":"88304.98","etc_to_vef":"2690948.61","etc_to_vnd":"251527.0","etc_to_vuv":"1195.0","etc_to_wst":"28.49","etc_to_xaf":"6165.0","etc_to_xag":"1.0","etc_to_xau":"0.0","etc_to_xcd":"29.27","etc_to_xdr":"8.0","etc_to_xof":"6165.0","etc_to_xpd":"0.0","etc_to_xpf":"1122.0","etc_to_xpt":"0.0","etc_to_yer":"2711.3","etc_to_zar":"160.61","etc_to_zmk":"56890.81","etc_to_zmw":"125.34","etc_to_jep":"8.25","etc_to_ggp":"8.25","etc_to_imp":"8.25","etc_to_cnh":"74.77","etc_to_eek":"158.27","etc_to_mtl":"7.4","etc_to_zwl":"3491.1","etc_to_sgd":"14.98","ltc_to_aed":"210.39","ltc_to_afn":"4336.78","ltc_to_all":"6239.23","ltc_to_amd":"27721.06","ltc_to_ang":"101.35","ltc_to_aoa":"17253.62384","ltc_to_ars":"2166.9","ltc_to_aud":"81.2","ltc_to_awg":"103.1","ltc_to_azn":"97.52","ltc_to_bam":"97.12","ltc_to_bbd":"114.56","ltc_to_bdt":"4784.57","ltc_to_bgn":"97.12","ltc_to_bhd":"21.522","ltc_to_bif":"101380.0","ltc_to_bmd":"57.28","ltc_to_bnd":"78.92","ltc_to_bob":"394.55","ltc_to_brl":"220.26","ltc_to_bsd":"57.28","ltc_to_btn":"4216.38","ltc_to_bwp":"609.55","ltc_to_byn":"122.99","ltc_to_byr":"1229882.0","ltc_to_bzd":"115.12","ltc_to_cad":"74.18","ltc_to_cdf":"93137.28","ltc_to_chf":"56.87","ltc_to_clf":"1.317","ltc_to_clp":"38427.0","ltc_to_cny":"393.45","ltc_to_cop":"173354.07","ltc_to_crc":"33365.31","ltc_to_cuc":"57.28","ltc_to_cve":"5507.47","ltc_to_czk":"1280.94","ltc_to_djf":"10199.0","ltc_to_dkk":"370.79","ltc_to_dop":"2851.51","ltc_to_dzd":"6787.68","ltc_to_egp":"1024.6","ltc_to_ern":"859.01","ltc_to_etb":"1577.05","ltc_to_fjd":"122.95","ltc_to_fkp":"43.64","ltc_to_gel":"140.16","ltc_to_ghs":"274.21","ltc_to_gip":"43.64","ltc_to_gmd":"2838.22","ltc_to_gnf":"516590.0","ltc_to_gtq":"439.93","ltc_to_gyd":"11940.11","ltc_to_hkd":"448.81","ltc_to_hnl":"1372.58","ltc_to_hrk":"369.11","ltc_to_htg":"3997.56","ltc_to_huf":"16143.0","ltc_to_idr":"869412.45","ltc_to_ils":"207.89","ltc_to_inr":"4225.57","ltc_to_iqd":"68133.808","ltc_to_isk":"6533.0","ltc_to_jmd":"7619.88","ltc_to_jod":"40.64","ltc_to_jpy":"6518.0","ltc_to_kes":"5761.05","ltc_to_kgs":"3923.4","ltc_to_khr":"232956.96","ltc_to_kmf":"24484.0","ltc_to_krw":"64569.0","ltc_to_kwd":"17.346","ltc_to_kyd":"47.58","ltc_to_kzt":"21222.0","ltc_to_lak":"487103.97","ltc_to_lbp":"86387.47","ltc_to_lkr":"9717.88","ltc_to_lrd":"8984.36","ltc_to_lsl":"843.67","ltc_to_ltl":"184.72","ltc_to_lvl":"37.59","ltc_to_lyd":"79.391","ltc_to_mad":"541.99","ltc_to_mdl":"971.92","ltc_to_mga":"198475.2","ltc_to_mkd":"3061.9","ltc_to_mmk":"87360.97","ltc_to_mnt":"142341.17","ltc_to_mop":"460.74","ltc_to_mro":"11914.2","ltc_to_mur":"1973.3","ltc_to_mvr":"882.11","ltc_to_mwk":"41525.2","ltc_to_mxn":"1077.81","ltc_to_myr":"237.54","ltc_to_mzn":"3474.02","ltc_to_nad":"843.67","ltc_to_ngn":"20769.74","ltc_to_nio":"1833.16","ltc_to_nok":"473.17","ltc_to_npr":"6766.8","ltc_to_nzd":"88.92","ltc_to_omr":"22.053","ltc_to_pab":"57.28","ltc_to_pen":"190.05","ltc_to_pgk":"191.6","ltc_to_php":"3107.13","ltc_to_pkr":"7036.28","ltc_to_pln":"214.2","ltc_to_pyg":"338166.0","ltc_to_qar":"207.89","ltc_to_ron":"232.24","ltc_to_rsd":"5899.84","ltc_to_rub":"3816.56","ltc_to_rwf":"49690.0","ltc_to_sar":"214.64","ltc_to_sbd":"454.7","ltc_to_scr":"780.15","ltc_to_sek":"519.45","ltc_to_shp":"43.64","ltc_to_sll":"480579.2","ltc_to_sos":"33222.4","ltc_to_srd":"427.19","ltc_to_ssp":"7461.49","ltc_to_std":"1210814.49","ltc_to_svc":"499.63","ltc_to_szl":"843.28","ltc_to_thb":"1879.67","ltc_to_tjs":"537.96","ltc_to_tmt":"201.05","ltc_to_tnd":"161.066","ltc_to_top":"132.06","ltc_to_try":"352.97","ltc_to_ttd":"384.84","ltc_to_twd":"1765.41","ltc_to_tzs":"130469.52","ltc_to_uah":"1603.61","ltc_to_ugx":"215944.0","ltc_to_uyu":"1872.52","ltc_to_uzs":"467046.12","ltc_to_vef":"14232459.49","ltc_to_vnd":"1330329.0","ltc_to_vuv":"6323.0","ltc_to_wst":"150.67","ltc_to_xaf":"32606.0","ltc_to_xag":"4.0","ltc_to_xau":"0.0","ltc_to_xcd":"154.8","ltc_to_xdr":"41.0","ltc_to_xof":"32606.0","ltc_to_xpd":"0.0","ltc_to_xpf":"5932.0","ltc_to_xpt":"0.0","ltc_to_yer":"14340.09","ltc_to_zar":"849.46","ltc_to_zmk":"300896.15","ltc_to_zmw":"662.93","ltc_to_jep":"43.64","ltc_to_ggp":"43.64","ltc_to_imp":"43.64","ltc_to_cnh":"395.47","ltc_to_eek":"837.07","ltc_to_mtl":"39.16","ltc_to_zwl":"18464.5","ltc_to_sgd":"79.22"}
-
-'
+      string: '{"data":{"currency":"BTC","rates":{"AED":"13186.46919633","AFN":"267465.99070355","ALL":"395269.4595","AMD":"1747933.631417165","ANG":"6478.473621395","AOA":"1127982.718335","ARS":"138584.84719","AUD":"5023.925091575","AWG":"6463.98040788","AZN":"6112.1367375","BAM":"6226.994646835","BAT":"28022.659506377130479015","BBD":"7180.19","BCH":"29.655990510083036","BDT":"301682.86304","BGN":"6220.6294084","BHD":"1353.253999395","BIF":"6573463.945","BMD":"3590.095","BND":"4849.33518163","BOB":"24821.04084682","BRL":"13291.967728","BSD":"3590.095","BSV":"57.979448686557994586885","BTC":"1.0","BTN":"255008.8995678","BWP":"37846.684557435","BYN":"7777.427433915","BYR":"77774274.33915","BZD":"7234.58711944","CAD":"4755.26033225","CDF":"5866215.23","CHF":"3609.481513","CLF":"86.93056033","CLP":"2375973.032124425","CNH":"24306.5227918","CNY":"24316.0724445","COP":"11289179.449036805","CRC":"2185665.82628313","CUC":"3590.095","CVE":"351120.2662375","CZK":"81587.96045575","DJF":"639036.91","DKK":"23709.3463895","DOP":"181658.807","DZD":"427329.25197646","EEK":"52464.538990645","EGP":"62957.7009675","ERN":"53844.56791855","ETB":"102676.717","ETC":"865.8008658008658","ETH":"29.563932002956392","EUR":"3182.685","FJD":"7615.51773951","FKP":"2784.51358295","GBP":"2805.095","GEL":"9459.900325","GGP":"2784.51358295","GHS":"18919.80065","GIP":"2784.51358295","GMD":"177889.20725","GNF":"33100675.9","GTQ":"27829.759452615","GYD":"748863.836116655","HKD":"28174.52704575","HNL":"88316.45906323","HRK":"23553.93117695","HTG":"296867.99277037","HUF":"1011796.47385","IDR":"50674279.776261155","ILS":"12996.96962185","IMP":"2784.51358295","INR":"256099.426825","IQD":"4275803.145","ISK":"426574.96583677","JEP":"2784.51358295","JMD":"483083.1832","JOD":"2547.183172785","JPY":"396686.81432251145","KES":"359440.3114","KGS":"246562.77744909","KHR":"14342429.525","KMF":"1566184.41505478","KRW":"4043677.10169137","KWD":"1091.421190855","KYD":"2990.875833645","KZT":"1353932.52735","LAK":"30803015.1","LBP":"5413863.26","LKR":"641190.33514328","LRD":"578005.973527955","LSL":"50548.5376","LTC":"82.98755186721992","LTL":"11577.499910275","LVL":"2356.039334795","LYD":"4972.281575","MAD":"34240.5310625","MDL":"61432.50654827","MGA":"12834589.625","MKD":"196532.44852177","MMK":"5496493.629669665","MNT":"8997947.73013119","MOP":"29013.34556231","MRO":"1281663.915","MTL":"2454.68437511","MUR":"123332.3285825","MVR":"55466.899538195","MWK":"2619392.21827876","MXN":"69083.50878676","MYR":"14663.7430275","MZN":"223123.09745542","NAD":"50548.5376","NGN":"1297819.3425","NIO":"117270.453175","NOK":"31005.8554675","NPR":"408010.65639367","NZD":"5228.80104294","OMR":"1382.290687755","PAB":"3590.095","PEN":"11949.6312075","PGK":"12062.7192","PHP":"187963.09280209","PKR":"499561.71925","PLN":"13777.348572","PYG":"21737690.007059565","QAR":"13071.8949045","RON":"15069.499154495","RSD":"375168.62529785","RUB":"237977.7042935","RWF":"3177234.075","SAR":"13464.83080225","SBD":"29303.041098145","SCR":"49053.34201459","SEK":"33292.656230125","SGD":"4871.040896","SHP":"2784.51358295","SLL":"30120897.05","SOS":"2082255.1","SRD":"26774.92851","SSP":"467657.981023","STD":"75573652.40686295","SVC":"31404.96632865","SZL":"50548.5376","THB":"112238.9350325","TJS":"33872.48888348","TMT":"12565.28223867","TND":"10721.563820755","TOP":"8127.353993565","TRY":"18923.68513279","TTD":"24326.30421525","TWD":"110680.75482041","TZS":"8366200.569060305","UAH":"97779.82742","UGX":"13172084.66935103","USD":"3590.095","USDC":"3587.98","UYU":"117044.905456625","UZS":"30156798.0","VEF":"892094241.971202895","VND":"83122519.7095894","VUV":"399131.06620466","WST":"9397.917334825","XAF":"2084670.462064575","XAG":"227.44432966255","XAU":"2.716983896","XCD":"9702.41124225","XDR":"2579.02372534","XOF":"2084670.462064575","XPD":"2.50226031405","XPF":"379243.393893135","XPT":"4.445973648","YER":"898603.22694479","ZAR":"50534.338774275","ZEC":"71.217913112477690195975","ZMK":"18859039.207599225","ZMW":"42621.72990323","ZRX":"15766.653527788727","ZWL":"1157285.113216045"}}}'
     http_version: 
-  recorded_at: Sun, 07 Oct 2018 20:42:04 GMT
+  recorded_at: Sat, 16 Feb 2019 12:04:58 GMT
+- request:
+    method: get
+    uri: https://api.coinbase.com/v2/exchange-rates?currency=BCH
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 16 Feb 2019 12:04:58 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1923'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d944fe876b764e8dc4903d965b7e2a8941550318698; expires=Sun, 16-Feb-20
+        12:04:58 GMT; path=/; domain=.coinbase.com; HttpOnly
+      Cache-Control:
+      - public, max-age=30
+      Content-Disposition:
+      - attachment; filename=response.json
+      Content-Security-Policy:
+      - 'default-src ''self'' https://www.coinbase.com; child-src ''self'' https://www.coinbase.com
+        https://fast.wistia.net https://*.online-metrix.net https://*.wpstn.com https://netverify.com
+        https://platform.twitter.com https://www.google.com/recaptcha/ https://cdn.plaid.com/link/
+        https://*.doubleclick.net/ blob: https://coinbase.ada.support; connect-src
+        ''self'' https://www.coinbase.com https://api.coinbase.com https://api.mixpanel.com
+        https://*.online-metrix.net https://api.cloudinary.com https://ott9.wpstn.com/live
+        https://api.amplitude.com/ https://d3907m2cqladbn.cloudfront.net/ https://exceptions.coinbase.com
+        static.coinbase.com wss://ws.coinbase.com wss://ws.coinbase.com:443 https://www.coinbase.com/api
+        https://coinbase.ada.support/api/; font-src ''self'' https://www.coinbase.com
+        https://assets.coinbase.com/ static.coinbase.com; img-src ''self'' data: https://www.coinbase.com
+        https://images.coinbase.com https://d3907m2cqladbn.cloudfront.net/ https://static-assets.coinbase.com/
+        https://dynamic-assets.coinbase.com https://exceptions.coinbase.com https://coinbase-uploads.s3.amazonaws.com
+        https://s3.amazonaws.com/app-public/ https://maps.gstatic.com https://ssl.google-analytics.com
+        https://www.google.com https://maps.googleapis.com https://csi.gstatic.com
+        https://www.google-analytics.com https://res.cloudinary.com https://secure.gravatar.com
+        https://i2.wp.com https://*.online-metrix.net https://assets.coinbase.com/
+        https://hexagon-analytics.com https://api.mixpanel.com https://cb-brand.s3.amazonaws.com
+        https://googleads.g.doubleclick.net https://stats.g.doubleclick.net/r/collect
+        blob: static.coinbase.com https://d124s1zbdqkqqe.cloudfront.net https://www.facebook.com/tr;
+        media-src ''self'' https://www.coinbase.com blob:; object-src ''self'' data:
+        blob: https://www.coinbase.com https://cdn.siftscience.com https://*.online-metrix.net
+        https://www.gstatic.com https://www.google.com/recaptcha/api/; script-src
+        ''self'' ''unsafe-inline'' ''unsafe-eval'' https://www.coinbase.com https://fast.wistia.com/assets/external/E-v1.js
+        https://cdn.siftscience.com https://*.google-analytics.com https://www.google.com
+        https://www.gstatic.com https://*.online-metrix.net https://code.jquery.com
+        https://chart.googleapis.com https://maps.googleapis.com https://maps.gstatic.com
+        https://netverify.com https://ajax.cloudflare.com https://cdn.plaid.com/link/v2/stable/
+        https://www.googletagmanager.com/gtag/js https://www.googletagmanager.com/gtm.js
+        https://www.googleadservices.com https://googleads.g.doubleclick.net https://assets.coinbase.com/
+        static.coinbase.com; style-src ''self'' ''unsafe-inline'' https://www.coinbase.com
+        https://assets.coinbase.com/ static.coinbase.com; report-uri /csp-report'
+      Etag:
+      - W/"27fc44581aa1e2365245556ca1aa13ed"
+      Expect-Ct:
+      - enforce; max-age=86400; report-uri="https://coinbase.report-uri.io/r/default/ct/reportOnly"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Origin,Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Powered-By:
+      - Proof-of-Work
+      X-Request-Id:
+      - b79dd94f-80c7-4baf-a2be-1abb4e1f2147
+      X-Xss-Protection:
+      - 1; mode=block
+      Cf-Cache-Status:
+      - HIT
+      Expires:
+      - Sat, 16 Feb 2019 12:05:28 GMT
+      Accept-Ranges:
+      - bytes
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4a9fe1384e483e50-ZRH
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"currency":"BCH","rates":{"AED":"444.63670977","AFN":"9018.72944995","ALL":"13328.1555","AMD":"58938.859765885","ANG":"218.448710755","AOA":"38034.633615","ARS":"4672.96511","AUD":"169.402551175","AWG":"217.96001172","AZN":"206.0961375","BAM":"209.969050115","BAT":"944.900635371622068535","BBD":"242.11","BCH":"1.0","BDT":"10172.49376","BGN":"209.7544196","BHD":"45.630592755","BIF":"221651.705","BMD":"121.055","BND":"163.51552547","BOB":"836.94473258","BRL":"448.194032","BSD":"121.055","BSV":"1.955018505290605968565","BTC":"0.03372","BTN":"8598.6867582","BWP":"1276.158541515","BYN":"262.248346635","BYR":"2622483.46635","BZD":"243.94422536","CAD":"160.34340025","CDF":"197803.87","CHF":"121.708697","CLF":"2.93122577","CLP":"80115.822952825","CNH":"819.5956142","CNY":"819.9176205","COP":"380661.686725045","CRC":"73698.82317897","CUC":"121.055","CVE":"11839.4816375","CZK":"2751.07777175","DJF":"21547.79","DKK":"799.4593255","DOP":"6125.383","DZD":"14409.18488174","EEK":"1769.060364005","EGP":"2122.8810075","ERN":"1815.59378495","ETB":"3462.173","ETC":"29.2756952841596146255","ETH":"0.99621445912027306421","EUR":"107.41","FJD":"256.78888719","FKP":"93.89146855","GBP":"94.25","GEL":"318.979925","GGP":"93.89146855","GHS":"637.95985","GIP":"93.89146855","GMD":"5998.27525","GNF":"1116127.1","GTQ":"938.396206935","GYD":"25251.062069695","HKD":"950.02148175","HNL":"2977.95711587","HRK":"794.21885455","HTG":"10010.14036253","HUF":"34116.93065","IDR":"1708694.320990195","ILS":"438.24694265","IMP":"93.89146855","INR":"8635.458425","IQD":"144176.505","ISK":"14383.75098413","JEP":"93.89146855","JMD":"16289.1608","JOD":"85.888885665","JPY":"13375.94751888505","KES":"12120.0266","KGS":"8313.89058621","KHR":"483614.725","KMF":"52810.42823782","KRW":"136349.40901153","KWD":"36.801809495","KYD":"100.849831005","KZT":"45653.47215","LAK":"1038651.9","LBP":"182550.94","LKR":"21620.40169432","LRD":"19489.877879395","LSL":"1704.4544","LTC":"2.79346948194300229804","LTL":"390.383611475","LVL":"79.443675355","LYD":"167.661175","MAD":"1154.5620625","MDL":"2071.45272763","MGA":"432771.625","MKD":"6626.90974913","MMK":"185337.166938385","MNT":"303403.26996111","MOP":"978.30574039","MRO":"43216.635","MTL":"82.76990359","MUR":"4158.6629425","MVR":"1870.297449955","MWK":"88323.71427044","MXN":"2329.43812244","MYR":"494.4491475","MZN":"7523.52418598","NAD":"1704.4544","NGN":"43761.3825","NIO":"3954.261575","NOK":"1045.4915075","NPR":"13757.77800023","NZD":"176.31079686","OMR":"46.609685595","PAB":"121.055","PEN":"402.9315675","PGK":"406.7448","PHP":"6337.95824321","PKR":"16844.80325","PLN":"464.560668","PYG":"732976.721731485","QAR":"440.7733605","RON":"508.130904655","RSD":"12650.37218665","RUB":"8024.4091015","RWF":"107133.675","SAR":"454.02283025","SBD":"988.074031505","SCR":"1654.03765571","SEK":"1122.600516125","SGD":"164.247424","SHP":"93.89146855","SLL":"1015651.45","SOS":"70211.9","SRD":"902.82819","SSP":"15769.035887","STD":"2548280.33578855","SVC":"1058.94919185","SZL":"1704.4544","THB":"3784.6029925","TJS":"1142.15198812","TMT":"423.69080523","TND":"361.522162595","TOP":"274.047577485","TRY":"638.09083151","TTD":"820.26262725","TWD":"3732.06245929","TZS":"282101.284196545","UAH":"3297.05398","UGX":"444151.67555407","USD":"121.055","USDC":"121.055","UYU":"3946.656294625","UZS":"1016862.0","VEF":"30080671.531484255","VND":"2802821.8260086","VUV":"13458.36564754","WST":"316.889910425","XAF":"70293.343988175","XAG":"7.66923252095","XAU":"0.091614424","XCD":"327.15719025","XDR":"86.96252246","XOF":"70293.343988175","XPD":"0.08437412445","XPF":"12787.769974815","XPT":"0.149914512","YER":"30300.14905951","ZAR":"1703.975627475","ZEC":"2.401408450704225594775","ZMK":"635911.024994025","ZMW":"1437.16907587","ZRX":"530.47067742317142406","ZWL":"39022.685856605"}}}'
+    http_version: 
+  recorded_at: Sat, 16 Feb 2019 12:04:58 GMT
+- request:
+    method: get
+    uri: https://api.coinbase.com/v2/exchange-rates?currency=USD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 16 Feb 2019 12:04:59 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1143'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dfeed37be20e0458c49fa7a03b8102a161550318699; expires=Sun, 16-Feb-20
+        12:04:59 GMT; path=/; domain=.coinbase.com; HttpOnly
+      Cache-Control:
+      - public, max-age=30
+      Content-Disposition:
+      - attachment; filename=response.json
+      Content-Security-Policy:
+      - 'default-src ''self'' https://www.coinbase.com; child-src ''self'' https://www.coinbase.com
+        https://fast.wistia.net https://*.online-metrix.net https://*.wpstn.com https://netverify.com
+        https://platform.twitter.com https://www.google.com/recaptcha/ https://cdn.plaid.com/link/
+        https://*.doubleclick.net/ blob: https://coinbase.ada.support; connect-src
+        ''self'' https://www.coinbase.com https://api.coinbase.com https://api.mixpanel.com
+        https://*.online-metrix.net https://api.cloudinary.com https://ott9.wpstn.com/live
+        https://api.amplitude.com/ https://d3907m2cqladbn.cloudfront.net/ https://exceptions.coinbase.com
+        static.coinbase.com wss://ws.coinbase.com wss://ws.coinbase.com:443 https://www.coinbase.com/api
+        https://coinbase.ada.support/api/; font-src ''self'' https://www.coinbase.com
+        https://assets.coinbase.com/ static.coinbase.com; img-src ''self'' data: https://www.coinbase.com
+        https://images.coinbase.com https://d3907m2cqladbn.cloudfront.net/ https://static-assets.coinbase.com/
+        https://dynamic-assets.coinbase.com https://exceptions.coinbase.com https://coinbase-uploads.s3.amazonaws.com
+        https://s3.amazonaws.com/app-public/ https://maps.gstatic.com https://ssl.google-analytics.com
+        https://www.google.com https://maps.googleapis.com https://csi.gstatic.com
+        https://www.google-analytics.com https://res.cloudinary.com https://secure.gravatar.com
+        https://i2.wp.com https://*.online-metrix.net https://assets.coinbase.com/
+        https://hexagon-analytics.com https://api.mixpanel.com https://cb-brand.s3.amazonaws.com
+        https://googleads.g.doubleclick.net https://stats.g.doubleclick.net/r/collect
+        blob: static.coinbase.com https://d124s1zbdqkqqe.cloudfront.net https://www.facebook.com/tr;
+        media-src ''self'' https://www.coinbase.com blob:; object-src ''self'' data:
+        blob: https://www.coinbase.com https://cdn.siftscience.com https://*.online-metrix.net
+        https://www.gstatic.com https://www.google.com/recaptcha/api/; script-src
+        ''self'' ''unsafe-inline'' ''unsafe-eval'' https://www.coinbase.com https://fast.wistia.com/assets/external/E-v1.js
+        https://cdn.siftscience.com https://*.google-analytics.com https://www.google.com
+        https://www.gstatic.com https://*.online-metrix.net https://code.jquery.com
+        https://chart.googleapis.com https://maps.googleapis.com https://maps.gstatic.com
+        https://netverify.com https://ajax.cloudflare.com https://cdn.plaid.com/link/v2/stable/
+        https://www.googletagmanager.com/gtag/js https://www.googletagmanager.com/gtm.js
+        https://www.googleadservices.com https://googleads.g.doubleclick.net https://assets.coinbase.com/
+        static.coinbase.com; style-src ''self'' ''unsafe-inline'' https://www.coinbase.com
+        https://assets.coinbase.com/ static.coinbase.com; report-uri /csp-report'
+      Etag:
+      - W/"bc520c947bb4e742cb3c51c4c7b30cd6"
+      Expect-Ct:
+      - enforce; max-age=86400; report-uri="https://coinbase.report-uri.io/r/default/ct/reportOnly"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Origin,Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - DENY
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Powered-By:
+      - Proof-of-Work
+      X-Request-Id:
+      - f3ccaf4a-bcfd-4182-8087-d6b8e41b0603
+      X-Xss-Protection:
+      - 1; mode=block
+      Cf-Cache-Status:
+      - HIT
+      Expires:
+      - Sat, 16 Feb 2019 12:05:29 GMT
+      Accept-Ranges:
+      - bytes
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4a9fe13ccc61cc48-ZRH
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"currency":"USD","rates":{"AED":"3.67","AFN":"74.50","ALL":"110.10","AMD":"486.88","ANG":"1.80","AOA":"314.19","ARS":"38.60","AUD":"1.40","AWG":"1.80","AZN":"1.70","BAM":"1.73","BAT":"7.80554818","BBD":"2.00","BCH":"0.00826071","BDT":"84.03","BGN":"1.73","BHD":"0.377","BIF":"1831","BMD":"1.00","BND":"1.35","BOB":"6.91","BRL":"3.70","BSD":"1.00","BSV":"0.01614984","BTC":"0.00027900","BTN":"71.03","BWP":"10.54","BYN":"2.17","BYR":"21664","BZD":"2.02","CAD":"1.32","CDF":"1634.00","CHF":"1.01","CLF":"0.0242","CLP":"662","CNH":"6.77","CNY":"6.77","COP":"3144.54","CRC":"608.80","CUC":"1.00","CVE":"97.80","CZK":"22.73","DJF":"178","DKK":"6.60","DOP":"50.60","DZD":"119.03","EEK":"14.61","EGP":"17.54","ERN":"15.00","ETB":"28.60","ETC":"0.24183797","ETH":"0.00822944","EUR":"0.89","FJD":"2.12","FKP":"0.78","GBP":"0.78","GEL":"2.64","GGP":"0.78","GHS":"5.27","GIP":"0.78","GMD":"49.55","GNF":"9220","GTQ":"7.75","GYD":"208.59","HKD":"7.85","HNL":"24.60","HRK":"6.56","HTG":"82.69","HUF":"282","IDR":"14115.02","ILS":"3.62","IMP":"0.78","INR":"71.34","IQD":"1191.000","ISK":"119","JEP":"0.78","JMD":"134.56","JOD":"0.710","JPY":"110","KES":"100.12","KGS":"68.68","KHR":"3995.00","KMF":"436","KRW":"1126","KWD":"0.304","KYD":"0.83","KZT":"377.13","LAK":"8580.00","LBP":"1508.00","LKR":"178.60","LRD":"161.00","LSL":"14.08","LTC":"0.02307604","LTL":"3.22","LVL":"0.66","LYD":"1.385","MAD":"9.54","MDL":"17.11","MGA":"3575.0","MKD":"54.74","MMK":"1531.02","MNT":"2506.33","MOP":"8.08","MRO":"357.0","MTL":"0.68","MUR":"34.35","MVR":"15.45","MWK":"729.62","MXN":"19.24","MYR":"4.08","MZN":"62.15","NAD":"14.08","NGN":"361.50","NIO":"32.66","NOK":"8.64","NPR":"113.65","NZD":"1.46","OMR":"0.385","PAB":"1.00","PEN":"3.33","PGK":"3.36","PHP":"52.36","PKR":"139.15","PLN":"3.84","PYG":"6055","QAR":"3.64","RON":"4.20","RSD":"104.50","RUB":"66.29","RWF":"885","SAR":"3.75","SBD":"8.16","SCR":"13.66","SEK":"9.27","SGD":"1.36","SHP":"0.78","SLL":"8390.00","SOS":"580.00","SRD":"7.46","SSP":"130.26","STD":"21050.60","SVC":"8.75","SZL":"14.08","THB":"31.26","TJS":"9.43","TMT":"3.50","TND":"2.986","TOP":"2.26","TRY":"5.27","TTD":"6.78","TWD":"30.83","TZS":"2330.36","UAH":"27.24","UGX":"3669","USD":"1.00","USDC":"1.000000","UYU":"32.60","UZS":"8400.00","VEF":"248487.64","VND":"23153","VUV":"111","WST":"2.62","XAF":"581","XAG":"0","XAU":"0","XCD":"2.70","XDR":"1","XOF":"581","XPD":"0","XPF":"106","XPT":"0","YER":"250.30","ZAR":"14.08","ZEC":"0.01983733","ZMK":"5253.08","ZMW":"11.87","ZRX":"4.38206334","ZWL":"322.36"}}}'
+    http_version: 
+  recorded_at: Sat, 16 Feb 2019 12:04:59 GMT
 - request:
     method: get
     uri: https://api.kraken.com/0/public/Ticker?pair=BCHEUR,BCHUSD,BCHXBT,XBTCAD,XBTEUR,XBTGBP,XBTJPY,XBTUSD
@@ -229,7 +438,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 07 Oct 2018 20:42:07 GMT
+      - Sat, 16 Feb 2019 12:05:00 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -237,8 +446,8 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=dda348a7086a8f3aa35935910e3ee964c1538944926; expires=Mon, 07-Oct-19
-        20:42:06 GMT; path=/; domain=.kraken.com; HttpOnly
+      - __cfduid=d3bcd9fc5013f14986f8530128ed04d571550318699; expires=Sun, 16-Feb-20
+        12:04:59 GMT; path=/; domain=.kraken.com; HttpOnly
       Cache-Control:
       - public,max-age=2,smaxage=2
       Vary:
@@ -250,12 +459,12 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 46633140981e3e4a-ZRH
+      - 4a9fe142efcacc58-ZRH
     body:
       encoding: ASCII-8BIT
-      string: '{"error":[],"result":{"BCHEUR":{"a":["443.600000","1","1.000"],"b":["443.000000","7","7.000"],"c":["444.000000","0.35000000"],"v":["755.52473932","788.14240022"],"p":["441.016359","440.961534"],"t":[803,849],"l":["436.600000","436.600000"],"h":["447.100000","447.100000"],"o":"441.300000"},"BCHUSD":{"a":["511.100000","2","2.000"],"b":["510.000000","3","3.000"],"c":["510.900000","0.17050325"],"v":["756.82423005","793.37289351"],"p":["509.286436","509.146247"],"t":[577,608],"l":["503.400000","503.400000"],"h":["514.800000","514.800000"],"o":"508.100000"},"BCHXBT":{"a":["0.07823000","1","1.000"],"b":["0.07812000","9","9.000"],"c":["0.07828000","0.17050325"],"v":["201.82762471","203.30157118"],"p":["0.07820323","0.07819537"],"t":[331,353],"l":["0.07722000","0.07699000"],"h":["0.07871000","0.07871000"],"o":"0.07754000"},"XXBTZCAD":{"a":["8282.80000","1","1.000"],"b":["8255.00000","1","1.000"],"c":["8282.30000","0.21803956"],"v":["4.90505645","5.21352345"],"p":["8181.92412","8184.27118"],"t":[92,98],"l":["8100.10000","8100.10000"],"h":["8298.80000","8298.80000"],"o":"8278.00000"},"XXBTZEUR":{"a":["5672.40000","1","1.000"],"b":["5672.30000","2","2.000"],"c":["5672.30000","0.00463650"],"v":["1419.66002889","1517.20315132"],"p":["5670.07060","5671.30567"],"t":[10696,12149],"l":["5626.40000","5626.40000"],"h":["5708.20000","5708.20000"],"o":"5691.90000"},"XXBTZGBP":{"a":["5037.60000","1","1.000"],"b":["5006.10000","1","1.000"],"c":["5051.60000","0.31700275"],"v":["3.82754846","3.82754846"],"p":["5012.92642","5012.92638"],"t":[44,44],"l":["4952.60000","4952.60000"],"h":["5053.50000","5053.50000"],"o":"5049.90000"},"XXBTZJPY":{"a":["733054.000","1","1.000"],"b":["718001.000","1","1.000"],"c":["712212.000","0.00200000"],"v":["6.82510757","7.17831106"],"p":["720285.509","719789.920"],"t":[497,598],"l":["692465.000","692465.000"],"h":["739110.000","739110.000"],"o":"703010.000"},"XXBTZUSD":{"a":["6532.70000","1","1.000"],"b":["6530.90000","2","2.000"],"c":["6532.70000","0.01533169"],"v":["706.53389720","797.15049240"],"p":["6526.25021","6528.98603"],"t":[1936,2221],"l":["6488.30000","6488.30000"],"h":["6569.50000","6569.50000"],"o":"6550.00000"}}}'
+      string: '{"error":[],"result":{"BCHEUR":{"a":["107.500000","4","4.000"],"b":["107.400000","29","29.000"],"c":["107.300000","1.15267486"],"v":["829.00916052","3288.78749132"],"p":["106.975642","107.044804"],"t":[656,2569],"l":["106.200000","105.800000"],"h":["107.600000","109.100000"],"o":"106.300000"},"BCHUSD":{"a":["121.300000","9","9.000"],"b":["121.200000","11","11.000"],"c":["121.100000","2.46527351"],"v":["1243.67901249","2396.56662774"],"p":["120.725716","120.450973"],"t":[407,947],"l":["119.900000","119.200000"],"h":["121.400000","123.000000"],"o":"120.000000"},"BCHXBT":{"a":["0.03375000","1","1.000"],"b":["0.03370000","4","4.000"],"c":["0.03372000","0.00000081"],"v":["101.88079261","322.60981509"],"p":["0.03368603","0.03362937"],"t":[82,254],"l":["0.03352000","0.03352000"],"h":["0.03382000","0.03395000"],"o":"0.03364000"},"XXBTZCAD":{"a":["4744.50000","29","29.000"],"b":["4737.50000","1","1.000"],"c":["4744.50000","0.00600000"],"v":["18.64454082","70.21536264"],"p":["4741.45659","4738.09370"],"t":[165,553],"l":["4724.10000","4712.00000"],"h":["4744.50000","4757.90000"],"o":"4729.90000"},"XXBTZEUR":{"a":["3183.90000","1","1.000"],"b":["3183.80000","6","6.000"],"c":["3183.90000","0.02305202"],"v":["760.78621806","3393.94661491"],"p":["3178.60858","3172.60223"],"t":[4334,12941],"l":["3163.70000","3152.80000"],"h":["3187.00000","3209.90000"],"o":"3166.00000"},"XXBTZGBP":{"a":["2901.00000","1","1.000"],"b":["2875.50000","1","1.000"],"c":["2875.70000","0.02568176"],"v":["1.18847633","1.36296833"],"p":["2876.23164","2880.94893"],"t":[6,9],"l":["2850.80000","2850.80000"],"h":["2877.00000","2938.10000"],"o":"2850.80000"},"XXBTZJPY":{"a":["399343.000","1","1.000"],"b":["395547.000","1","1.000"],"c":["392099.000","0.31667362"],"v":["0.00000000","0.44607176"],"p":["0.000","393706.054"],"t":[0,4],"l":["392099.000","392099.000"],"h":["392099.000","401044.000"],"o":"392099.000"},"XXBTZUSD":{"a":["3591.60000","2","2.000"],"b":["3589.70000","1","1.000"],"c":["3590.70000","0.00400000"],"v":["868.70734497","3361.48386381"],"p":["3582.17238","3572.82278"],"t":[1750,5381],"l":["3562.70000","3546.80000"],"h":["3599.90000","3616.10000"],"o":"3567.40000"}}}'
     http_version: 
-  recorded_at: Sun, 07 Oct 2018 20:42:07 GMT
+  recorded_at: Sat, 16 Feb 2019 12:05:00 GMT
 - request:
     method: get
     uri: https://www.okcoin.com/api/v1/ticker.do?symbol=btc_usd
@@ -275,7 +484,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sun, 07 Oct 2018 20:42:10 GMT
+      - Sat, 16 Feb 2019 12:05:02 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -283,9 +492,9 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d2e39cdfc7f279466c7e4f41aed0219ce1538944929; expires=Mon, 07-Oct-19
-        20:42:09 GMT; path=/; domain=.okcoin.com; HttpOnly
-      - locale=en_US; Max-Age=604800; Expires=Sun, 14-Oct-2018 20:42:09 GMT; Path=/
+      - __cfduid=d493ff70d450471dbb9eacd81b7b5895d1550318701; expires=Sun, 16-Feb-20
+        12:05:01 GMT; path=/; domain=.okcoin.com; HttpOnly
+      - locale=en_US; Max-Age=604800; Expires=Sat, 23-Feb-2019 12:05:02 GMT; Path=/
       X-Content-Type-Options:
       - nosniff
       X-Xss-Protection:
@@ -305,9 +514,9 @@ http_interactions:
       X-Ratelimit-Used:
       - '1'
       X-Ratelimit-Reset:
-      - '1538944931948'
+      - '1550318704205'
       X-Kong-Upstream-Latency:
-      - '25'
+      - '10'
       X-Kong-Proxy-Latency:
       - '0'
       Via:
@@ -317,12 +526,12 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 466331534ec13e7a-ZRH
+      - 4a9fe14afa13cc4c-ZRH
     body:
       encoding: ASCII-8BIT
-      string: '{"date":"1538944929","ticker":{"high":"6577.50","vol":"26.00","last":"6551.37","low":"6487.53","buy":"6542.11","sell":"6554.99"}}'
+      string: '{"date":"1550318702","ticker":{"high":"3627.09","vol":"152.2433","last":"3590.25","low":"3542.01","buy":"3588.97","sell":"3592.56"}}'
     http_version: 
-  recorded_at: Sun, 07 Oct 2018 20:42:10 GMT
+  recorded_at: Sat, 16 Feb 2019 12:05:02 GMT
 - request:
     method: get
     uri: https://www.okcoin.com/api/v1/ticker.do?symbol=bch_usd
@@ -342,7 +551,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sun, 07 Oct 2018 20:42:11 GMT
+      - Sat, 16 Feb 2019 12:05:02 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -350,9 +559,9 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d54a6eac515c47761639764e7cfea9f561538944931; expires=Mon, 07-Oct-19
-        20:42:11 GMT; path=/; domain=.okcoin.com; HttpOnly
-      - locale=en_US; Max-Age=604800; Expires=Sun, 14-Oct-2018 20:42:11 GMT; Path=/
+      - __cfduid=d19c9e48f7216a689897b79bfb80da4081550318702; expires=Sun, 16-Feb-20
+        12:05:02 GMT; path=/; domain=.okcoin.com; HttpOnly
+      - locale=en_US; Max-Age=604800; Expires=Sat, 23-Feb-2019 12:05:02 GMT; Path=/
       X-Content-Type-Options:
       - nosniff
       X-Xss-Protection:
@@ -372,9 +581,9 @@ http_interactions:
       X-Ratelimit-Used:
       - '1'
       X-Ratelimit-Reset:
-      - '1538944933207'
+      - '1550318704720'
       X-Kong-Upstream-Latency:
-      - '21'
+      - '3'
       X-Kong-Proxy-Latency:
       - '0'
       Via:
@@ -384,10 +593,10 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 4663315b1f4f3e80-ZRH
+      - 4a9fe1536943cc4c-ZRH
     body:
       encoding: ASCII-8BIT
-      string: '{"date":"1538944931","ticker":{"high":"516.69","vol":"95.00","last":"513.10","low":"502.28","buy":"512.09","sell":"512.23"}}'
+      string: '{"date":"1550318702","ticker":{"high":"121.64","vol":"50.0729","last":"121.06","low":"119.50","buy":"121.06","sell":"121.23"}}'
     http_version: 
-  recorded_at: Sun, 07 Oct 2018 20:42:11 GMT
+  recorded_at: Sat, 16 Feb 2019 12:05:02 GMT
 recorded_with: VCR 4.0.0
