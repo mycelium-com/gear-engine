@@ -7,8 +7,7 @@ class BlockchainTransactionsFetch
   delegate :address, to: :context
 
   def call
-    result               = concurrently(&:fetch_transactions_for.(address))
-    context.transactions = Straight::Transaction.from_hashes(result)
+    context.transactions = concurrently(&:fetch_transactions_for.(address))
   end
 
   def blockchain_adapters

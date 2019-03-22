@@ -47,6 +47,7 @@ class OrderStatusCheck
     }
   end
 
+  # TODO: fetch only what's needed - https://electrumx.readthedocs.io/en/latest/protocol-methods.html#blockchain-scripthash-history
   def transactions_since
     transactions = BlockchainTransactionsFetch.call!(address: order.address, network: gateway.blockchain_network).transactions
     transactions.select { |t| t.block_height.to_i <= 0 || t.block_height > order.block_height_created_at.to_i }

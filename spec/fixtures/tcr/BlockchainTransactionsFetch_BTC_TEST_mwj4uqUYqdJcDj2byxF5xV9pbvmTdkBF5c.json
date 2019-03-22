@@ -2,31 +2,35 @@
   [
     [
       "write",
-      "{\"id\":17150652000000,\"method\":\"blockchain.address.get_history\",\"params\":[\"mwj4uqUYqdJcDj2byxF5xV9pbvmTdkBF5c\"]}\n"
+      "{\"jsonrpc\":\"2.0\",\"method\":\"server.version\",\"params\":[\"\",\"1.4\"],\"id\":0}\n"
     ],
     [
       "read",
-      "{\"jsonrpc\": \"2.0\", \"result\": [{\"tx_hash\": \"68f5064c8f9ecf4ddbc7692371a4edaaefd6466a96f7f8694e518972c180b3af\", \"height\": 1413492}, {\"tx_hash\": \"faa514e8cd3428b0f05e3a611f0ad1e0ded57bf7894ef0f7a3c47a3653c68d89\", \"height\": 1413492}], \"id\": 17150652000000}\n"
-    ]
-  ],
-  [
+      "{\"jsonrpc\": \"2.0\", \"result\": [\"ElectrumX 1.9.5\", \"1.4\"], \"id\": 0}\n"
+    ],
     [
       "write",
-      "{\"id\":17150652000000,\"method\":\"blockchain.transaction.get\",\"params\":[\"68f5064c8f9ecf4ddbc7692371a4edaaefd6466a96f7f8694e518972c180b3af\"]}\n"
+      "{\"jsonrpc\":\"2.0\",\"method\":\"blockchain.scripthash.get_history\",\"params\":[\"f80820a184a13fa7d627bfe9985d2e3c004a1f3f99a97fe3ee882850ac179f80\"],\"id\":1}\n"
     ],
     [
       "read",
-      "{\"jsonrpc\": \"2.0\", \"result\": \"010000000186c5e6f9c560f5d12a9df44c31a30d3ed9a84332333b5ca0e322263a8bf447f4010000006b483045022100b16a96b374eeb37611d9357791781697f7a1fd6c3023e789d64034f59d008d1002201b95e9849727a915bc58a5817bce22fc70dacb7bce4606e7e58ac65102937ef8012103bfe8fcb7e5bd8f6825ed839aa47d8c0da2f45ca1b12b971715c0c4899626fccaffffffff0278452414000000001976a914b1cc87127f55f978a6281e52d64063cc6cb5992f88ac0000000000000000026a0000000000\", \"id\": 17150652000000}\n"
-    ]
-  ],
-  [
+      "{\"jsonrpc\": \"2.0\", \"result\": [{\"tx_hash\": \"68f5064c8f9ecf4ddbc7692371a4edaaefd6466a96f7f8694e518972c180b3af\", \"height\": 1413492}, {\"tx_hash\": \"faa514e8cd3428b0f05e3a611f0ad1e0ded57bf7894ef0f7a3c47a3653c68d89\", \"height\": 1413492}], \"id\": 1}\n"
+    ],
     [
       "write",
-      "{\"id\":17150652000000,\"method\":\"blockchain.transaction.get\",\"params\":[\"faa514e8cd3428b0f05e3a611f0ad1e0ded57bf7894ef0f7a3c47a3653c68d89\"]}\n"
+      "{\"jsonrpc\":\"2.0\",\"method\":\"blockchain.transaction.get\",\"params\":[\"68f5064c8f9ecf4ddbc7692371a4edaaefd6466a96f7f8694e518972c180b3af\",true],\"id\":2}\n"
     ],
     [
       "read",
-      "{\"jsonrpc\": \"2.0\", \"result\": \"0100000001afb380c17289514e69f8f7966a46d6efaaeda4712369c7db4dcf9e8f4c06f568000000006b483045022100dc6535cdfdbd43ebbff50360813efd5604f0fd4623e9bbb2a2507a41c98cd42002203d478368ee3f22fa95dbd39694bc7f61cb79dc1613b42a3615dc4c925fe9dfa10121038169259c6922746032f3176ecba9067bbe46a6d592fdd87712165e3af4d35c14ffffffff02789f1514000000001976a914cc782010ed1a670e361aa24067936116f78b52c988ac0000000000000000026a0000000000\", \"id\": 17150652000000}\n"
+      "{\"jsonrpc\": \"2.0\", \"result\": {\"txid\": \"68f5064c8f9ecf4ddbc7692371a4edaaefd6466a96f7f8694e518972c180b3af\", \"hash\": \"68f5064c8f9ecf4ddbc7692371a4edaaefd6466a96f7f8694e518972c180b3af\", \"version\": 1, \"size\": 203, \"vsize\": 203, \"weight\": 812, \"locktime\": 0, \"vin\": [{\"txid\": \"f447f48b3a2622e3a05c3b333243a8d93e0da3314cf49d2ad1f560c5f9e6c586\", \"vout\": 1, \"scriptSig\": {\"asm\": \"3045022100b16a96b374eeb37611d9357791781697f7a1fd6c3023e789d64034f59d008d1002201b95e9849727a915bc58a5817bce22fc70dacb7bce4606e7e58ac65102937ef8[ALL] 03bfe8fcb7e5bd8f6825ed839aa47d8c0da2f45ca1b12b971715c0c4899626fcca\", \"hex\": \"483045022100b16a96b374eeb37611d9357791781697f7a1fd6c3023e789d64034f59d008d1002201b95e9849727a915bc58a5817bce22fc70dacb7bce4606e7e58ac65102937ef8012103bfe8fcb7e5bd8f6825ed839aa47d8c0da2f45ca1b12b971715c0c4899626fcca\"}, \"sequence\": 4294967295}], \"vout\": [{\"value\": 3.379214, \"n\": 0, \"scriptPubKey\": {\"asm\": \"OP_DUP OP_HASH160 b1cc87127f55f978a6281e52d64063cc6cb5992f OP_EQUALVERIFY OP_CHECKSIG\", \"hex\": \"76a914b1cc87127f55f978a6281e52d64063cc6cb5992f88ac\", \"reqSigs\": 1, \"type\": \"pubkeyhash\", \"addresses\": [\"mwj4uqUYqdJcDj2byxF5xV9pbvmTdkBF5c\"]}}, {\"value\": 0.0, \"n\": 1, \"scriptPubKey\": {\"asm\": \"OP_RETURN 0\", \"hex\": \"6a00\", \"type\": \"nulldata\"}}], \"hex\": \"010000000186c5e6f9c560f5d12a9df44c31a30d3ed9a84332333b5ca0e322263a8bf447f4010000006b483045022100b16a96b374eeb37611d9357791781697f7a1fd6c3023e789d64034f59d008d1002201b95e9849727a915bc58a5817bce22fc70dacb7bce4606e7e58ac65102937ef8012103bfe8fcb7e5bd8f6825ed839aa47d8c0da2f45ca1b12b971715c0c4899626fccaffffffff0278452414000000001976a914b1cc87127f55f978a6281e52d64063cc6cb5992f88ac0000000000000000026a0000000000\", \"blockhash\": \"00000000d7113c0748cb1df00fe06dc2ec83e5ce15a89a46f8c23ed0e8b660f3\", \"confirmations\": 72122, \"time\": 1536990571, \"blocktime\": 1536990571}, \"id\": 2}\n"
+    ],
+    [
+      "write",
+      "{\"jsonrpc\":\"2.0\",\"method\":\"blockchain.transaction.get\",\"params\":[\"faa514e8cd3428b0f05e3a611f0ad1e0ded57bf7894ef0f7a3c47a3653c68d89\",true],\"id\":3}\n"
+    ],
+    [
+      "read",
+      "{\"jsonrpc\": \"2.0\", \"result\": {\"txid\": \"faa514e8cd3428b0f05e3a611f0ad1e0ded57bf7894ef0f7a3c47a3653c68d89\", \"hash\": \"faa514e8cd3428b0f05e3a611f0ad1e0ded57bf7894ef0f7a3c47a3653c68d89\", \"version\": 1, \"size\": 203, \"vsize\": 203, \"weight\": 812, \"locktime\": 0, \"vin\": [{\"txid\": \"68f5064c8f9ecf4ddbc7692371a4edaaefd6466a96f7f8694e518972c180b3af\", \"vout\": 0, \"scriptSig\": {\"asm\": \"3045022100dc6535cdfdbd43ebbff50360813efd5604f0fd4623e9bbb2a2507a41c98cd42002203d478368ee3f22fa95dbd39694bc7f61cb79dc1613b42a3615dc4c925fe9dfa1[ALL] 038169259c6922746032f3176ecba9067bbe46a6d592fdd87712165e3af4d35c14\", \"hex\": \"483045022100dc6535cdfdbd43ebbff50360813efd5604f0fd4623e9bbb2a2507a41c98cd42002203d478368ee3f22fa95dbd39694bc7f61cb79dc1613b42a3615dc4c925fe9dfa10121038169259c6922746032f3176ecba9067bbe46a6d592fdd87712165e3af4d35c14\"}, \"sequence\": 4294967295}], \"vout\": [{\"value\": 3.369614, \"n\": 0, \"scriptPubKey\": {\"asm\": \"OP_DUP OP_HASH160 cc782010ed1a670e361aa24067936116f78b52c9 OP_EQUALVERIFY OP_CHECKSIG\", \"hex\": \"76a914cc782010ed1a670e361aa24067936116f78b52c988ac\", \"reqSigs\": 1, \"type\": \"pubkeyhash\", \"addresses\": [\"mzA63dt6QQ2nCJogf26AzKNSsm42X1ExGa\"]}}, {\"value\": 0.0, \"n\": 1, \"scriptPubKey\": {\"asm\": \"OP_RETURN 0\", \"hex\": \"6a00\", \"type\": \"nulldata\"}}], \"hex\": \"0100000001afb380c17289514e69f8f7966a46d6efaaeda4712369c7db4dcf9e8f4c06f568000000006b483045022100dc6535cdfdbd43ebbff50360813efd5604f0fd4623e9bbb2a2507a41c98cd42002203d478368ee3f22fa95dbd39694bc7f61cb79dc1613b42a3615dc4c925fe9dfa10121038169259c6922746032f3176ecba9067bbe46a6d592fdd87712165e3af4d35c14ffffffff02789f1514000000001976a914cc782010ed1a670e361aa24067936116f78b52c988ac0000000000000000026a0000000000\", \"blockhash\": \"00000000d7113c0748cb1df00fe06dc2ec83e5ce15a89a46f8c23ed0e8b660f3\", \"confirmations\": 72122, \"time\": 1536990571, \"blocktime\": 1536990571}, \"id\": 3}\n"
     ]
   ]
 ]

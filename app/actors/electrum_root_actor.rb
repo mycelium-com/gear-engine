@@ -32,12 +32,4 @@ class ElectrumRootActor
   def logger_tags
     "Electrum#{network}"
   end
-
-  # https://electrumx.readthedocs.io/en/latest/protocol-basics.html#script-hashes
-  def self.address_to_scripthash(address)
-    script = BTC::Address.parse(address).script.to_hex
-    binary = [script].pack('H*')
-    hash   = Digest::SHA256.hexdigest(binary)
-    hash.each_char.each_slice(2).reverse_each.to_a.join
-  end
 end

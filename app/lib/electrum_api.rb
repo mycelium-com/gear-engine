@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'uri'
 require 'socket'
 require 'openssl'
@@ -11,86 +13,126 @@ class ElectrumAPI
     new(url: url)
   end
 
+  # https://electrumx.readthedocs.io/en/latest/protocol-basics.html#script-hashes
+  def self.address_to_scripthash(address)
+    script = BTC::Address.parse(address).script.to_hex
+    binary = [script].pack('H*')
+    hash   = Digest::SHA256.hexdigest(binary)
+    hash.each_char.each_slice(2).reverse_each.to_a.join
+  end
+
   def initialize(url:)
     self.url = URI(url)
   end
 
   def fetch_transactions_for(address)
-    history                    = api_request('blockchain.address.get_history', address)
-    cached_latest_block_height = latest_block_height
-    result                     = []
-    (history || []).each do |item|
-      raw_tx_hex = api_request('blockchain.transaction.get', item['tx_hash'])
-      result << straighten_transaction(raw_tx_hex, address: address, height: item['height'], latest_block_height: cached_latest_block_height)
-    rescue => ex
-      Rails.logger.error "[ElectrumBlockchainAdapter] [TransactionFetchFailed] #{ex.full_message}\nAddress: #{address.inspect}\nTX: #{item.inspect}"
-      next
+    scripthash = self.class.address_to_scripthash(address)
+    result  = []
+    new_session do |client|
+      history = client.request(method: 'blockchain.scripthash.get_history', params: scripthash)
+      history&.each do |item|
+        begin
+          response = client.request(method: 'blockchain.transaction.get', params: [item['tx_hash'], true]) # true means verbose
+        rescue => ex
+          Rails.logger.error "[ElectrumAPI] [TransactionFetchFailed] #{ex.message}\nAddress: #{address.inspect}\nTX: #{item.inspect}"
+          next
+        end
+        begin
+          raise if response['txid'] != item['tx_hash']
+          tx               = Straight::Transaction.new
+          tx.tid           = item['tx_hash']
+          tx.block_height  = item['height']
+          tx.confirmations = response['confirmations']
+          tx.amount        = response['vout'].map { |out|
+            if out.dig('scriptPubKey', 'addresses') == [address]
+              # TODO: when/if more currencies are supported, this assumption may break
+              (out['value'] * (10 ** Currency.precision(:BTC))).to_i
+            else
+              0
+            end
+          }.reduce(:+)
+          result << tx
+        rescue => ex
+          Rails.logger.error "[ElectrumAPI] [UnexpectedResponse] #{item.inspect} =>\n#{response.inspect}\n#{ex.full_message}"
+          next
+        end
+      end
     end
     result
   end
 
   def latest_block_height(**)
-    api_request('blockchain.headers.subscribe')['block_height']
+    new_session do |client|
+      client.request(method: 'blockchain.headers.subscribe')['height']
+    end
   end
 
-  private def api_request(place, val = [])
-    id         = ((Time.now.to_f - 1519818948) * 1000000).to_i
-    tcp_socket = TCPSocket.open url.host, url.port
-    if 'tcp-tls' == url.scheme
-      ssl_context = OpenSSL::SSL::SSLContext.new
-      ssl_context.set_params verify_mode: OpenSSL::SSL::VERIFY_NONE
-      socket = OpenSSL::SSL::SSLSocket.new(tcp_socket, ssl_context)
-      socket.connect
-      socket.sync_close = true
-    else
-      socket = tcp_socket
-    end
-
-    socket.write JSON(id: id, method: place, params: Array.wrap(val)).concat("\n")
-    result = socket.gets
-    parsed = JSON(result)
-
-    if parsed['id'] != id
-      Rails.logger.warn { "[ElectrumBlockchainAdapter] [UnexpectedResponse] #{[place, val].inspect}:\n#{result.inspect}" }
-      raise
-    elsif parsed['error']
-      raise parsed['error'].inspect
-    else
-      parsed['result']
-    end
+  def new_session(protocol_version: '1.4')
+    client = Client.new(url: url)
+    client.set_protocol_version protocol_version
+    yield client
   ensure
-    socket&.close
+    client&.disconnect
   end
 
-  private def straighten_transaction(raw_tx_hex, address: nil, height: nil, latest_block_height: nil)
-    network       = address.nil? ? nil : BTC::Address.parse(address).network
-    transaction   = BTC::Transaction.new(hex: raw_tx_hex)
-    confirmations =
-        if height.to_i > 0 && latest_block_height.to_i > 0 && latest_block_height >= height
-          latest_block_height - height + 1
+
+  class Client
+
+    attr_accessor :socket, :mutex, :request_id
+
+    def initialize(url:)
+      tcp_socket      = TCPSocket.open url.host, url.port
+      self.socket     =
+        if url.scheme == 'tcp-tls'
+          ssl_context = OpenSSL::SSL::SSLContext.new
+          ssl_context.set_params verify_mode: OpenSSL::SSL::VERIFY_NONE # TODO: configurable
+          ssl_socket = OpenSSL::SSL::SSLSocket.new(tcp_socket, ssl_context)
+          ssl_socket.connect
+          ssl_socket.sync_close = true
+          ssl_socket
         else
-          0
+          tcp_socket
         end
-
-    outs         = []
-    total_amount = 0
-
-    transaction.outputs.each do |out|
-      amount            = out.value
-      receiving_address = out.script.standard_address(network: network)
-      total_amount      += amount if address.nil? || receiving_address.to_s == address
-      outs << { amount: amount, receiving_address: receiving_address }
+      self.mutex      = Mutex.new
+      self.request_id = 0
     end
 
-    {
-        tid:           transaction.transaction_id,
-        total_amount:  total_amount.to_i,
-        confirmations: confirmations,
-        block_height:  height,
-        outs:          outs,
-        meta:          {
-            fetched_via: self,
-        },
-    }
+    def set_protocol_version(version)
+      request method: 'server.version', params: ['', version]
+    end
+
+    def request(method:, params: [])
+      mutex.synchronize do
+        begin
+          message = JSON(jsonrpc: '2.0', method: method, params: Array.wrap(params), id: request_id).concat("\n")
+          socket.write message
+          parse_response(socket.gets)
+        ensure
+          self.request_id += 1
+        end
+      end
+    end
+
+    def disconnect
+      return if socket.closed?
+      mutex.synchronize do
+        socket.close
+      end
+    rescue => ex
+      Rails.logger.debug ex.full_message
+    end
+
+    def parse_response(response)
+      parsed = JSON(response)
+      if parsed['id'] != request_id
+        Rails.logger.warn "[ElectrumAPI] [UnexpectedResponse] #{response.inspect}"
+        raise
+      elsif parsed['error']
+        Rails.logger.error "[ElectrumAPI] [RequestFailed] #{parsed.inspect}"
+        raise parsed['error'].inspect
+      else
+        parsed['result']
+      end
+    end
   end
 end

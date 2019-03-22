@@ -2,11 +2,19 @@
   [
     [
       "write",
-      "{\"id\":43452000000,\"method\":\"blockchain.address.get_history\",\"params\":[\"1DcKsGnjpD38bfj6RMxz945YwohZUTVLby\"]}\n"
+      "{\"jsonrpc\":\"2.0\",\"method\":\"server.version\",\"params\":[\"\",\"1.4\"],\"id\":0}\n"
     ],
     [
       "read",
-      "{\"jsonrpc\": \"2.0\", \"error\": {\"code\": -32600, \"message\": \"response too large (over 10,000,000 bytes\"}, \"id\": 43452000000}\n"
+      "{\"jsonrpc\": \"2.0\", \"result\": [\"ElectrumX 1.9.5\", \"1.4\"], \"id\": 0}\n"
+    ],
+    [
+      "write",
+      "{\"jsonrpc\":\"2.0\",\"method\":\"blockchain.scripthash.get_history\",\"params\":[\"c6658b6a5e288d0af42dfa6b162bf4dffee3bd41ed59e75d72493a1440f4c494\"],\"id\":1}\n"
+    ],
+    [
+      "read",
+      "{\"jsonrpc\": \"2.0\", \"error\": {\"code\": -32600, \"message\": \"response too large (over 10,000,000 bytes\"}, \"id\": 1}\n"
     ]
   ]
 ]
