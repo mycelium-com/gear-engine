@@ -8,7 +8,7 @@ Rails.application.config.blockchain_adapters = {
     ],
   BTC_TEST:
     [
-      ElectrumAPI['tcp-tls://electrumx-c.mycelium.com:19333'],
+      ElectrumAPI['tcp-tls://testnet.qtornado.com:51002'],
     ],
   BCH:
     [
