@@ -4,18 +4,18 @@
 Rails.application.config.blockchain_adapters = {
   BTC:
     [
-      ElectrumAPI['tcp-tls://electrumx-c.mycelium.com:9333'],
+      ElectrumAPI['tcp-tls://electrumx-lan.gear.mycelium.com:9333'],
     ],
   BTC_TEST:
     [
-      ElectrumAPI['tcp-tls://testnet.qtornado.com:51002'],
+      ElectrumAPI['tcp-tls://electrumx-test-lan.gear.mycelium.com:19333'],
     ],
-  BCH:
-    [
-      ElectrumAPI['tcp-tls://electrumx-bch.mycelium.com:9334'],
-    ],
-  BCH_TEST:
-    [
-      ElectrumAPI['tcp-tls://electrumx-bch.mycelium.com:19334'],
-    ],
+  # BCH:
+  #   [
+  #     ElectrumAPI['tcp-tls://electrumx-bch.mycelium.com:9334'],
+  #   ],
+  # BCH_TEST:
+  #   [
+  #     ElectrumAPI['tcp-tls://electrumx-bch.mycelium.com:19334'],
+  #   ],
 }.with_indifferent_access
