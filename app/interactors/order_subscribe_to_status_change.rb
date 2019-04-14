@@ -5,7 +5,7 @@ class OrderSubscribeToStatusChange
   delegate :order, to: :context
 
   def call
-    unless defined? Celluloid
+    unless defined?(Celluloid) && Celluloid.running?
       Rails.logger.debug "Skipping: Celluloid not enabled"
       return
     end
