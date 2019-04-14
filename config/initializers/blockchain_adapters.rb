@@ -17,4 +17,4 @@ Rails.application.config.blockchain_adapters =
     result[network] = servers.map { |url| ElectrumAPI[url] }
   end
 
-Rails.logger.debug Rails.application.config.blockchain_adapters.pretty_inspect
+Rails.logger.debug Rails.application.config.blockchain_adapters.inspect

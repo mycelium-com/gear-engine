@@ -20,12 +20,12 @@ RSpec.describe BlockchainTransactionsFetch, type: :interactor do
     include_examples "blockchain transactions fetch",
                     address: 'mwj4uqUYqdJcDj2byxF5xV9pbvmTdkBF5c',
                     network: BlockchainNetwork::BTC_TEST
-    include_examples "blockchain transactions fetch",
-                    address: '1MUALS11V4SrXa2Dz5xZMYyW8Fyzy9Sj4w',
-                    network: BlockchainNetwork::BCH
-    include_examples "blockchain transactions fetch",
-                    address: 'mo8WkAVuD4zpmBQTQqZZAx7Ch4nEipMpn3',
-                    network: BlockchainNetwork::BCH_TEST
+    # include_examples "blockchain transactions fetch",
+    #                 address: '1MUALS11V4SrXa2Dz5xZMYyW8Fyzy9Sj4w',
+    #                 network: BlockchainNetwork::BCH
+    # include_examples "blockchain transactions fetch",
+    #                 address: 'mo8WkAVuD4zpmBQTQqZZAx7Ch4nEipMpn3',
+    #                 network: BlockchainNetwork::BCH_TEST
   end
 end
 

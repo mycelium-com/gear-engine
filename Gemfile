@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.1'
+ruby '2.6.2'
 
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'envied'
@@ -11,13 +11,13 @@ gem 'rails', '~> 5.2.0'
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Redis adapter to run Action Cable in production
 gem 'redis-rails'
-# Use Puma as the app server
-gem 'puma', '~> 3.11'
+# Use Iodine as the app server
+gem 'iodine', '~> 0.7'
 gem 'rack-cors', require: 'rack/cors'
 # Background processing
 gem 'sidekiq'
 gem 'sidekiq-scheduler'
-gem 'celluloid', '~> 0.18.0.pre', require: false
+gem 'celluloid', '~> 0.18.0.pre2', require: false
 gem 'celluloid-io', require: false
 # Business logic encapsulation
 gem 'interactor-rails'
@@ -36,7 +36,7 @@ gem 'concurrent-ruby'
 
 # Straight Server
 # gem 'socket.io-client-simple'
-gem 'sequel', '~> 4.25'
+gem 'sequel', '~> 4.25' # TODO: upgrade?
 gem 'sequel-rails'
 # gem 'logmaster', '~> 0.2.0'
 # gem 'ruby-hmac'

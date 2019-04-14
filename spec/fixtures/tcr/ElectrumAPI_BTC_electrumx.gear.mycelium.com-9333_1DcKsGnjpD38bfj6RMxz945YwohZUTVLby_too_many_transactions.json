@@ -6,7 +6,7 @@
     ],
     [
       "read",
-      "{\"jsonrpc\": \"2.0\", \"result\": [\"ElectrumX 1.9.5\", \"1.4\"], \"id\": 0}\n"
+      "{\"jsonrpc\": \"2.0\", \"result\": [\"ElectrumX 1.10.0\", \"1.4\"], \"id\": 0}\n"
     ],
     [
       "write",

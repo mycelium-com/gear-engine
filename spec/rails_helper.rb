@@ -10,6 +10,7 @@ require 'rspec/rails'
 require 'factory_bot_rails'
 require 'json_matchers/rspec'
 require 'capybara/rspec'
+require 'rack/handler/iodine'
 require 'network_helper'
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -109,7 +110,13 @@ end
 #   driver.browser.save_screenshot(path)
 # end
 
+Capybara.register_server :iodine do |app, port, host|
+  Iodine.workers = 1
+  Iodine.threads = 1
+  Iodine::Rack.run(app, Port: port, Address: host)
+end
+
 Capybara.configure do |config|
-  config.server            = :puma
+  config.server            = :iodine
   config.javascript_driver = :firefox_headless
 end
