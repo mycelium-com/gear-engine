@@ -130,5 +130,6 @@ end
                   self << "SET search_path TO \"$user\", public"
                   self << "INSERT INTO \"schema_migrations\" (\"filename\") VALUES ('20180220100705_init.rb')"
 self << "INSERT INTO \"schema_migrations\" (\"filename\") VALUES ('20180904084300_add_blockchain_network_to_gateways.rb')"
+self << "INSERT INTO \"schema_migrations\" (\"filename\") VALUES ('20190414124746_sets_blockchain_network_from_test_mode.rb')"
                 end
               end
