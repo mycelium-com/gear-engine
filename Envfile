@@ -1,6 +1,8 @@
 variable :DATABASE_URL, :uri
 variable :REDIS_URL, :uri
 variable :STRAIGHT_SERVER_SECRET
+variable :ELECTRUMX_BTC
+variable :ELECTRUMX_BTC_TEST
 
 group :production do
   variable :SECRET_KEY_BASE
