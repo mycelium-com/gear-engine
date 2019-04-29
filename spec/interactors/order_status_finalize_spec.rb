@@ -26,5 +26,11 @@ RSpec.describe OrderStatusFinalize, type: :interactor do
         expect(result.order_changed).to be_nil
       }.not_to change { order.status }
     end
+
+    it "saves the order" do
+      order = create(:order)
+      described_class.call(order: order)
+      expect(order.reload.status).to eq 5
+    end
   end
 end

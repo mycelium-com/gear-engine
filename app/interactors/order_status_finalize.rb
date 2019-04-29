@@ -16,5 +16,6 @@ class OrderStatusFinalize
       # let's keep it unconfirmed, marking as expired makes no sense
       # TODO: if it has at least 1 confirmation, monitor until it's fully confirmed
     end
+    order.save_changed
   end
 end
