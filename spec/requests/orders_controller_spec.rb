@@ -271,6 +271,7 @@ RSpec.describe OrdersController, type: :request do
 
     let(:gateway) { create(:gateway, :with_auth) }
     let(:order) { create(:order, gateway: gateway) }
+    let(:signature_nonce) { 1442214027577 }
     let(:signature_header) { {
       'X-Signature' => StraightServer::SignatureValidator.signature(**signature_params)
     } }
@@ -280,12 +281,19 @@ RSpec.describe OrdersController, type: :request do
     let(:invalid_signature_header) { {
       'X-Signature' => 'blablabla'
     } }
+    let(:signature_header_with_nonce) { {
+      'X-Nonce' => signature_nonce,
+      'X-Signature' => StraightServer::SignatureValidator.signature(**signature_params_with_nonce)
+    } }
     let(:signature_params) { {
       body:        params.to_param,
       method:      request_method,
       request_uri: url,
       secret:      gateway.secret
     } }
+    let(:signature_params_with_nonce) {
+      signature_params.merge(nonce: signature_nonce)
+    }
 
     describe "create action" do
 
@@ -316,6 +324,12 @@ RSpec.describe OrdersController, type: :request do
       it "creates order" do
         expect_order_create do
           post url, params: params, headers: signature_header_hex
+        end
+      end
+
+      it "creates order with nonce in signature" do
+        expect_order_create do
+          post url, params: params, headers: signature_header_with_nonce
         end
       end
     end

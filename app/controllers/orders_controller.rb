@@ -70,6 +70,7 @@ class OrdersController < ApiController
 
   def signature_validator_params
     {
+      request_nonce:     request.headers['X-Nonce'],
       request_signature: request.headers['X-Signature'],
       request_method:    request.request_method,
       request_body:      request.body.read,
