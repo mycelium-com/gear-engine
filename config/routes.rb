@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   # new shorter URLs
   resources :orders, only: [], &per_order
 
+  resources :exchange_rates, only: %i[index]
+
   mount ActionCable.server => '/gateways/:gateway_id/orders/:order_id/websocket'
   mount ActionCable.server => '/orders/:order_id/websocket'
 

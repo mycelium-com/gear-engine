@@ -23,10 +23,6 @@ module ExchangeRate
       )
     end
 
-    def [](amount)
-      amount * rate
-    end
-
     def from
       pair[0]
     end

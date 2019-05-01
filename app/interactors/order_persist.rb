@@ -64,14 +64,14 @@ class OrderPersist
       end
     else
       rate = ExchangeRate.convert(from: from, to: to)
-      if rate.nil?
+      if rate&.rate.nil?
         context.fail!(response: {
           status: :unprocessable_entity,
           json:   { error: { currency: ["#{from}->#{to} exchange rate unknown"] } }
         })
       end
       yield rate if block_given?
-      (rate[amount.to_d] * (10 ** Currency.precision(to))).to_i
+      (amount.to_d * rate.rate * (10 ** Currency.precision(to))).to_i
     end
   end
 
