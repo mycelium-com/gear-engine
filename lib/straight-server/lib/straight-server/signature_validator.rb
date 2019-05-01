@@ -3,10 +3,11 @@ module StraightServer
 
     InvalidSignature = Class.new(RuntimeError)
 
-    attr_accessor :secret, :request_signature, :request_body, :request_method, :request_uri
+    attr_accessor :secret, :request_nonce, :request_signature, :request_body, :request_method, :request_uri
 
-    def initialize(secret:, request_signature:, request_body:, request_method:, request_uri:)
+    def initialize(secret:, request_nonce:, request_signature:, request_body:, request_method:, request_uri:)
       self.secret            = secret
+      self.request_nonce     = request_nonce
       self.request_signature = request_signature
       self.request_body      = request_body
       self.request_method    = request_method
@@ -52,10 +53,11 @@ module StraightServer
 
     def signature_params
       {
-          body:        request_body,
-          method:      request_method,
-          request_uri: request_uri,
-          secret:      secret,
+        nonce:       request_nonce,
+        body:        request_body,
+        method:      request_method,
+        request_uri: request_uri,
+        secret:      secret,
       }
     end
 
