@@ -62,6 +62,7 @@ Sequel.migration do
       column :custom_css_url, "text"
       column :donation_mode, "boolean", :default=>false
       column :blockchain_network, "text"
+      column :removed, "boolean", :default=>false, :null=>false
       
       index [:hashed_id]
       index [:id], :unique=>true
@@ -131,5 +132,6 @@ end
                   self << "INSERT INTO \"schema_migrations\" (\"filename\") VALUES ('20180220100705_init.rb')"
 self << "INSERT INTO \"schema_migrations\" (\"filename\") VALUES ('20180904084300_add_blockchain_network_to_gateways.rb')"
 self << "INSERT INTO \"schema_migrations\" (\"filename\") VALUES ('20190414124746_sets_blockchain_network_from_test_mode.rb')"
+self << "INSERT INTO \"schema_migrations\" (\"filename\") VALUES ('20190513140136_add_removed_to_gateways.rb')"
                 end
               end

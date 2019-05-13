@@ -1,5 +1,10 @@
 require 'rails_helper'
 
+def expect_gateway_not_found
+  expect(response.status).to eq 404
+  expect(response.body).to eq %({"error":"Gateway not found"})
+end
+
 def expect_order_json(order, json)
   expect(json).to be_kind_of String
   expect(json).to match_response_schema :order
@@ -331,6 +336,16 @@ RSpec.describe OrdersController, type: :request do
         expect_order_create do
           post url, params: params, headers: signature_header_with_nonce
         end
+      end
+
+      it "does not create order for removed gateway" do
+        gateway.removed = true
+        gateway.save
+
+        expect {
+          post url, params: params, headers: signature_header
+        }.to change { Order.orm.count }.by 0
+        expect_gateway_not_found
       end
     end
 
