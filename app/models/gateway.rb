@@ -7,7 +7,7 @@ class Gateway < SimpleDelegator
   include GlobalID::Identification
 
   def self.find_by_uid(uid)
-    find_by(hashed_id: uid)
+    find_by(hashed_id: uid, removed: false)
   end
 
   def blockchain_network
