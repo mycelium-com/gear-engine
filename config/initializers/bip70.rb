@@ -4,7 +4,7 @@ Sidekiq.configure_client do
   key_file = "#{file}.key"
   if [crt_file, key_file].all? { |name| File.readable?(name) }
     Rails.application.config.bip70_certs_chain =
-      File.read(crt_file).each_line("-----END CERTIFICATE-----\n").map { |cert|
+      File.read(crt_file).strip.each_line("-----END CERTIFICATE-----\n").map { |cert|
         OpenSSL::X509::Certificate.new(cert)
       }
     Rails.application.config.bip70_key =
