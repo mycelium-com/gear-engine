@@ -1,4 +1,4 @@
-FROM ruby:2.6.2-stretch
+FROM ruby:2.6.3-stretch
 
 RUN apt-get update \
   && apt-get install -y --fix-missing --no-install-recommends \

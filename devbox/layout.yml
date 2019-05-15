@@ -10,7 +10,7 @@ windows:
   root: ~/Projects/gear-engine/devbox
   panes:
   - commands:
-    - docker-compose -f docker-compose-specs.yml up -d
+    - docker-compose -f docker-compose-specs.yml up --build -d
     - docker attach devbox_gear-engine-specs_1
 
 - name: test.log
@@ -19,9 +19,9 @@ windows:
   - commands:
     - less +F log/test.log
 
-- name: gear-engine
-  root: ~/Projects/gear-engine
-  panes:
-  - commands:
-    - sleep 8
-    - ENABLE_CELLULOID=yes bin/foreman start -p 9000
+#- name: gear-engine
+#  root: ~/Projects/gear-engine
+#  panes:
+#  - commands:
+#    - sleep 8
+#    - ENABLE_CELLULOID=yes bin/foreman start -p 9000

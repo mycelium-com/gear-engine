@@ -1,4 +1,4 @@
-FROM ruby:2.6.2-stretch AS build
+FROM ruby:2.6.3-stretch AS build
 
 ENV GEAR_ENGINE_PATH /gear-engine
 RUN mkdir -p $GEAR_ENGINE_PATH
@@ -21,7 +21,7 @@ RUN rm $GEM_HOME/cache/*.gem
 
 #############################
 
-FROM ruby:2.6.2-stretch AS production
+FROM ruby:2.6.3-stretch AS production
 
 ENV RAILS_ENV production
 ENV RAILS_LOG_TO_STDOUT yes
