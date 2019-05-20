@@ -1,14 +1,9 @@
+---
+:concurrency: 5
 :queues:
 - urgent
 - default
 - background
-
-development:
-  :concurrency: 2
-
-production:
-  :concurrency: 8
-
 :schedule:
   ExchangeRateCacheUpdateJob:
     interval: 1m
