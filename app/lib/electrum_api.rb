@@ -46,7 +46,7 @@ class ElectrumAPI
           tx.amount        = response['vout'].map { |out|
             if out.dig('scriptPubKey', 'addresses') == [address]
               # TODO: when/if more currencies are supported, this assumption may break
-              (out['value'] * (10 ** Currency.precision(:BTC))).to_i
+              (out['value'] * (10 ** Currency.precision(:BTC))).round(0)
             else
               0
             end

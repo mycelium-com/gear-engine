@@ -20,13 +20,13 @@ class OrderPersist
   end
 
   def order_build
-    order             = Order.new # Kernel.const_get(gateway.order_class).new
-    order.gateway     = gateway
+    order         = Order.new # Kernel.const_get(gateway.order_class).new
+    order.gateway = gateway
     order_data.each do |k, v|
       order.public_send "#{k}=", v
     end
-    order.address     = gateway.new_address(order.keychain_id)
-    order.amount      = order_amount(
+    order.address = gateway.new_address(order.keychain_id)
+    order.amount  = order_amount(
       **order_params.slice(:amount, :currency, :btc_denomination)
     ) do |rate|
       Rails.logger.debug "ExchangeRate: #{rate}"
@@ -53,26 +53,28 @@ class OrderPersist
 
   # @return [Integer] amount in blockchain currency minimal unit
   def order_amount(amount:, currency:, btc_denomination: nil)
-    from = Currency[currency]
-    to   = Currency[gateway.blockchain_currency]
-    if from == to
-      if to == Currency[:BTC]
-        # TODO: maybe deprecate btc_denomination param
-        Satoshi.new(amount, from_unit: btc_denomination.presence || :satoshi).to_i
+    from   = Currency[currency]
+    to     = Currency[gateway.blockchain_currency]
+    result =
+      if from == to
+        if to == Currency[:BTC]
+          # TODO: maybe deprecate btc_denomination param
+          Satoshi.new(amount, from_unit: btc_denomination.presence || :satoshi).to_i
+        else
+          amount
+        end
       else
-        amount.to_i
+        rate = ExchangeRate.convert(from: from, to: to)
+        if rate&.rate.nil?
+          context.fail!(response: {
+            status: :unprocessable_entity,
+            json:   { error: { currency: ["#{from}->#{to} exchange rate unknown"] } }
+          })
+        end
+        yield rate if block_given?
+        amount.to_d * rate.rate * (10 ** Currency.precision(to))
       end
-    else
-      rate = ExchangeRate.convert(from: from, to: to)
-      if rate&.rate.nil?
-        context.fail!(response: {
-          status: :unprocessable_entity,
-          json:   { error: { currency: ["#{from}->#{to} exchange rate unknown"] } }
-        })
-      end
-      yield rate if block_given?
-      (amount.to_d * rate.rate * (10 ** Currency.precision(to))).to_i
-    end
+    result.round(0)
   end
 
   def order_data
