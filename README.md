@@ -1,6 +1,19 @@
 # Gear Engine
 
-Attempt to merge `straight` and `straight-server` gems into single Rails app.
+## Deploy
+
+### Staging
+
+Push to the main branch.
+
+### Production
+
+Push `prd` tag in order to promote the latest staging image to production.
+
+```bash
+git tag -f prd HEAD
+git push -f origin prd
+```
 
 ## Hints
 

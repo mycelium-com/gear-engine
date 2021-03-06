@@ -1,0 +1,24 @@
+name: prd
+on:
+  push:
+    tags:
+    - prd
+jobs:
+  prd:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Tag latest as prd
+      uses: mycelium-com/actions-docker-registry-tag@action
+      with:
+        registry: ghcr.io
+        token: ${{ secrets.DEPLOYER_GHCR_PAT }}
+        repository: ${{ github.event.repository.full_name }}
+        target: latest
+        tags: prd
+
+    - name: Deploy prd.gear.mycelium.com
+      uses: mycelium-com/action-bashless-deploy@master
+      with:
+        hosts: deployer@prd.gear.mycelium.com
+        privateKey: ${{ secrets.DEPLOYER_SSH_KEY }}

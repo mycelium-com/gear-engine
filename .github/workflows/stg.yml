@@ -1,0 +1,29 @@
+name: stg
+on:
+  push:
+    branches:
+    - master
+jobs:
+  stg:
+    if: >
+      !contains(github.event.head_commit.message, '#skip-ci')
+    runs-on: ubuntu-latest
+    steps:
+
+    - uses: actions/checkout@master
+
+    - name: Build and push to Registry
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: ${{ github.event.repository.full_name }}
+        username: MyceliumDeploy
+        password: ${{ secrets.DEPLOYER_GHCR_PAT }}
+        registry: ghcr.io
+        tag_names: true
+        cache: ${{ !contains(github.event.head_commit.message, '#no-cache') }}
+
+    - name: Deploy stg.gear.mycelium.com
+      uses: mycelium-com/action-bashless-deploy@master
+      with:
+        hosts: deployer@stg.gear.mycelium.com
+        privateKey: ${{ secrets.DEPLOYER_SSH_KEY }}
