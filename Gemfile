@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.3'
+ruby '2.7.7'
 
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'envied'
@@ -17,6 +17,7 @@ gem 'rack-cors', require: 'rack/cors'
 # Background processing
 gem 'sidekiq'
 gem 'sidekiq-scheduler'
+gem 'thwait' # no longer bundled on ruby 2.7.0, required by sidekiq-scheduler-3.0.0/lib/sidekiq-scheduler/scheduler.rb:2
 gem 'celluloid', '~> 0.18.0.pre2', require: false
 gem 'celluloid-io', require: false
 # Business logic encapsulation
@@ -26,7 +27,7 @@ gem 'dry-struct'
 gem 'dry-validation'
 
 # Straight
-gem 'btcruby' #, '1.1.1'
+gem 'btcruby', github: 'EugZol/btcruby' # https://github.com/oleganza/btcruby/issues/29#issuecomment-565481659
 gem 'satoshi-unit', '0.1.8' # newer version does not like floats: Satoshi::TooManyDigitsAfterDecimalPoint (Too many digits (20) after decimal point used for btc value, while 8 allowed)
 # gem 'httparty', '~> 0.13.5'
 # gem 'faraday'
@@ -46,6 +47,7 @@ gem 'ruby-protocol-buffers'
 # Utils
 # gem 'ice_nine', require: %w[ice_nine ice_nine/core_ext/object]
 
+gem 'bigdecimal', '1.4.4' # https://github.com/ruby/bigdecimal#which-version-should-you-select
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

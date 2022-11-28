@@ -1,4 +1,4 @@
-FROM ruby:2.6.3-stretch
+FROM --platform=linux/amd64 ruby:2.7.7-bullseye
 
 ENV GEAR_ENGINE_PATH /gear-engine
 RUN mkdir -p $GEAR_ENGINE_PATH
@@ -22,9 +22,7 @@ ENV RAILS_ENV production
 ENV RAILS_LOG_TO_STDOUT yes
 ENV RAILS_SERVE_STATIC_FILES yes
 
-# https://github.com/oleganza/btcruby/issues/29
-RUN ln -nfs /usr/lib/x86_64-linux-gnu/libssl.so.1.0.2 /usr/lib/x86_64-linux-gnu/libssl.so; \
-  mkdir -p $GEAR_ENGINE_PATH/tmp; \
+RUN mkdir -p $GEAR_ENGINE_PATH/tmp; \
   chown -R nobody: $GEAR_ENGINE_PATH/tmp
 
 USER nobody
