@@ -9,6 +9,7 @@ RUN apt-get update \
   && apt-get install -y --fix-missing --no-install-recommends $BUILD_PACKAGES; \
   rm -rf /var/lib/apt/lists/*
 
+RUN gem install bundler:2.3.26
 COPY Gemfile* ./
 RUN bundle install --without development test
 

@@ -1,3 +1,0 @@
-#!/usr/bin/env ruby
-
-system %(itermocil --layout #{__dir__}/layout.yml)

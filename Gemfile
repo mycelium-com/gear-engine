@@ -8,23 +8,30 @@ gem 'envied'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use postgresql as the database for Active Record
-gem 'pg', '>= 0.18', '< 2.0'
+gem 'pg', '~> 1.1'
 # Use Redis adapter to run Action Cable in production
 gem 'redis-rails'
 # Use Iodine as the app server
 gem 'iodine', '~> 0.7'
 gem 'rack-cors', require: 'rack/cors'
 # Background processing
-gem 'sidekiq'
-gem 'sidekiq-scheduler'
-gem 'thwait' # no longer bundled on ruby 2.7.0, required by sidekiq-scheduler-3.0.0/lib/sidekiq-scheduler/scheduler.rb:2
-gem 'celluloid', '~> 0.18.0.pre2', require: false
+gem 'sidekiq', '~> 5.2'
+gem 'sidekiq-scheduler', '~> 3.0'
+# gem 'thwait' # no longer bundled on ruby 2.7.0, required by sidekiq-scheduler-3.0.0/lib/sidekiq-scheduler/scheduler.rb:2
+gem 'celluloid', '0.18.0', require: false
 gem 'celluloid-io', require: false
 # Business logic encapsulation
 gem 'interactor-rails'
-gem 'enumerate_it'
-gem 'dry-struct'
-gem 'dry-validation'
+gem 'enumerate_it', '~> 1.7'
+gem 'dry-struct', '0.6.0'
+gem 'dry-validation', '0.13.1'
+
+# indirect deps, break on update
+gem 'dry-configurable', '~> 0.8.2'
+gem 'dry-container', '~> 0.7.0'
+gem 'dry-core', '~> 0.4.7' # just in case
+gem 'redis', '~> 4.1'
+gem 'redis-store', '1.6.0' # why it gets downgraded to 1.3.0?
 
 # Straight
 gem 'btcruby', github: 'EugZol/btcruby' # https://github.com/oleganza/btcruby/issues/29#issuecomment-565481659
@@ -38,7 +45,7 @@ gem 'concurrent-ruby'
 # Straight Server
 # gem 'socket.io-client-simple'
 gem 'sequel', '~> 4.25' # TODO: upgrade?
-gem 'sequel-rails'
+gem 'sequel-rails' #, '~> 1.0.1'
 # gem 'logmaster', '~> 0.2.0'
 # gem 'ruby-hmac'
 gem 'ruby-protocol-buffers'
@@ -62,7 +69,7 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'listen', '~> 3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   # gem 'spring'
   # gem 'spring-watcher-listen', '~> 2.0.0'
@@ -75,13 +82,14 @@ group :test do
   gem 'rspec-retry'
   gem 'capybara', '~> 2.15'
   gem 'geckodriver-helper'
-  gem 'selenium-webdriver'
+  gem 'selenium-webdriver', '~> 3.141'
+  gem 'rubyzip', '~> 2.3'
   gem 'webmock'
   gem 'vcr'
   gem 'tcr'
   gem 'timecop'
   gem 'factory_bot_rails', require: false
-  gem 'database_cleaner'
+  gem 'database_cleaner', '~> 1.7'
   gem 'json_matchers'
   gem 'simplecov', require: false
 end

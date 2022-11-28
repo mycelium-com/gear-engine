@@ -1,2 +1,0 @@
-#!/usr/bin/env ruby
-system %(docker-compose -f #{__dir__}/docker-compose-specs.yml run --rm -w /gear-engine gear-engine-specs bin/rails c)
