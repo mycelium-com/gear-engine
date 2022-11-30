@@ -30,7 +30,7 @@ gem 'dry-validation', '0.13.1'
 gem 'dry-configurable', '~> 0.8.2'
 gem 'dry-container', '~> 0.7.0'
 gem 'dry-core', '~> 0.4.7' # just in case
-gem 'redis', '~> 4.1'
+gem 'redis', '~> 4.5.1'
 gem 'redis-store', '1.6.0' # why it gets downgraded to 1.3.0?
 
 # Straight
