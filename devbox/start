@@ -1,0 +1,3 @@
+#!/bin/zsh
+docker-compose up -d
+docker-compose run --rm gear-engine-test bash

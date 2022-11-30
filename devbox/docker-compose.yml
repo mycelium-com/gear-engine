@@ -30,6 +30,7 @@ services:
     volumes:
     - ../:/gear-engine/
     - gear-engine-bundle:/usr/local/bundle/
+    working_dir: /gear-engine
 #    command: /gear-engine/devbox/test/guard
     stdin_open: true
     tty: true
