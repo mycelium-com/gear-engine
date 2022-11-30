@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-set -xe
-cd /gear-engine
-bundle
-RAILS_ENV=test bin/rails db:migrate
-bin/guard

@@ -15,6 +15,7 @@ class OrderStatusFinalize
     when OrderStatus::UNCONFIRMED
       # let's keep it unconfirmed, marking as expired makes no sense
       # TODO: if it has at least 1 confirmation, monitor until it's fully confirmed
+      # Hotfixed via crontask: 0 */2 * * * /usr/bin/docker exec gear-prd_engine_1 bin/rails runner 'Order.orm.where(status: 1).each{|o| OrderStatusCheckJob.new(order: Order.new(o), final: false).enqueue }' > /dev/null 2>&1
     end
     order.save_changed
   end

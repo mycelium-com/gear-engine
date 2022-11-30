@@ -26,10 +26,10 @@ class OrderScheduleStatusCheck
     finish = start + context.order.gateway.orders_expiration_period.seconds
     period = finish - start
     often  = {
-        base_interval: 12.seconds,
-        max_interval:  1.hour,
-        rand_factor:   0.21,
-        multiplier:    1.08,
+        base_interval: ENVied.ORDER_CHECK_BASE_INTERVAL.seconds,
+        max_interval:  ENVied.ORDER_CHECK_MAX_INTERVAL.seconds,
+        rand_factor:   ENVied.ORDER_CHECK_RAND_FACTOR,
+        multiplier:    ENVied.ORDER_CHECK_BACKOFF_MULT,
         max_period:    period,
     }
     now    = start

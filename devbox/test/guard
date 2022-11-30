@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -xe
+cd /gear-engine
+bundle
+export RAILS_ENV=test
+bin/rails db:schema:load || bin/rails db:migrate
+bin/guard

@@ -1,25 +1,41 @@
+---
 version: '3'
 
 services:
 
-  gear-engine-postgres:
-#    image: postgres:latest
-    image: postgres@sha256:709e36b4bc9422935bb3df91966311c078b72ad82c429eb2768097ae1086648d
+  # AWS RDS, Engine version 10.6
+  gear-engine-test-postgres:
+    image: postgres:10.6
+#    platform: linux/amd64
     ports:
     - 5432:5432
     environment:
-    - POSTGRES_USER=dev
+    - POSTGRES_USER=test
     - POSTGRES_PASSWORD=pass
-    - POSTGRES_DB=gear-engine-dev
+    - POSTGRES_DB=gear-engine-test
     volumes:
-    - gear-engine-pgdata:/var/lib/postgresql/data
+    - gear-engine-test-pgdata:/var/lib/postgresql/data/
 
-  gear-engine-redis:
-#    image: redis:latest
-    image: redis@sha256:fb38b203a9488b10f81740123b2213468afe679d8ee8919429e9c81233a5a111
+  # AWS ElastiCache, Engine version 5.0.3
+  gear-engine-test-redis:
+    image: redis:5.0.3
+#    platform: linux/amd64
     ports:
     - 6379:6379
 
+  # RUBYOPT='-W0' bundle exec rake spec
+  gear-engine-test:
+    platform: linux/amd64
+    build: test
+    volumes:
+    - ../:/gear-engine/
+    - gear-engine-bundle:/usr/local/bundle/
+    working_dir: /gear-engine
+#    command: /gear-engine/devbox/test/guard
+    stdin_open: true
+    tty: true
+
 volumes:
 
-  gear-engine-pgdata:
+  gear-engine-bundle:
+  gear-engine-test-pgdata:
