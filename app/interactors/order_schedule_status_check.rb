@@ -35,6 +35,7 @@ class OrderScheduleStatusCheck
     now    = start
     with_intervals often do |interval|
       now += interval
+      now = now.round(2)
       yield now, false
     end
     yield finish, true
