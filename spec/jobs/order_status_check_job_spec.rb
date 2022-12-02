@@ -136,7 +136,7 @@ RSpec.describe OrderStatusCheckJob, type: :job do
   context "finalized order" do
 
     before do
-      order.status = OrderStatus::CANCELED
+      order.update(status: OrderStatus::CANCELED)
     end
 
     def job_runs

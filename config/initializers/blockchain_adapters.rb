@@ -2,12 +2,7 @@
 
 # Public servers: https://1209k.com/bitcoin-eye/ele.php?chain=btc
 Rails.application.config.blockchain_adapters =
-  %i[
-    BTC
-    BTC_TEST
-    BCH
-    BCH_TEST
-  ].each_with_object(HashWithIndifferentAccess.new) do |network, result|
+  BlockchainNetwork.keys.each_with_object(HashWithIndifferentAccess.new) do |network, result|
     servers         =
       begin
         ENV["ELECTRUMX_#{network}"].split(',')

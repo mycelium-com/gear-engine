@@ -5,6 +5,13 @@ GIT
     btcruby (1.8)
       ffi (~> 1.9, >= 1.9.3)
 
+GIT
+  remote: https://github.com/boazsegev/iodine.git
+  revision: 1840a84a89c690fa4737ff4eade2343e5a0c76eb
+  ref: 1840a84a89c690fa4737ff4eade2343e5a0c76eb
+  specs:
+    iodine (0.7.51)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -171,7 +178,6 @@ GEM
       interactor (~> 3.0)
       rails (>= 4.2)
     io-like (0.3.1)
-    iodine (0.7.50)
     json (2.6.2)
     json_matchers (0.11.1)
       json_schema
@@ -298,7 +304,7 @@ GEM
       rubocop-ast (>= 1.23.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.23.0)
+    rubocop-ast (1.24.0)
       parser (>= 3.1.1.0)
     rubocop-rspec (2.15.0)
       rubocop (~> 1.33)
@@ -397,7 +403,7 @@ DEPENDENCIES
   guard-bundler
   guard-rspec
   interactor-rails
-  iodine (~> 0.7)
+  iodine (~> 0.7.50)!
   json_matchers
   listen (~> 3.0)
   pg (~> 1.1)

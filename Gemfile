@@ -12,7 +12,7 @@ gem 'pg', '~> 1.1'
 # Use Redis adapter to run Action Cable in production
 gem 'redis-rails'
 # Use Iodine as the app server
-gem 'iodine', '~> 0.7'
+gem 'iodine', '~> 0.7.50', github: 'boazsegev/iodine', ref: '1840a84a89c690fa4737ff4eade2343e5a0c76eb' # https://github.com/boazsegev/iodine/issues/132
 gem 'rack-cors', require: 'rack/cors'
 # Background processing
 gem 'sidekiq', '~> 5.2'
