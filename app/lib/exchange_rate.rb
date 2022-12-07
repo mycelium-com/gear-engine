@@ -204,23 +204,16 @@ module ExchangeRate
 
   def self.fetch_okcoin
     pairs = {
-      Currency[%i[BTC USD]] => open('https://www.okcoin.com/api/v1/ticker.do?symbol=btc_usd').read,
-      Currency[%i[BCH USD]] => open('https://www.okcoin.com/api/v1/ticker.do?symbol=bch_usd').read
+      Currency[%i[BTC USD]] => open('https://www.okcoin.com/api/market/v3/oracle').read
     }
     pairs.flat_map do |pair, data|
       parsed = JSON(data)
-      time   = Time.at(parsed['date'].to_i).utc
+      time   = Time.at(parsed['timestamp'].to_i).utc
       [
         Pair.new(
           src:  'okcoin',
           pair: pair,
-          rate: parsed['ticker']['buy'].to_d,
-          time: time
-        ),
-        Pair.new(
-          src:  'okcoin',
-          pair: pair.reverse,
-          rate: 1 / parsed['ticker']['sell'].to_d,
+          rate: parsed['prices']['BTC'].to_d,
           time: time
         )
       ]
