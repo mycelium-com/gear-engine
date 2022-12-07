@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
 Dir.chdir __dir__
-system %(docker-compose exec gear-engine-test /gear-engine/spec/coverage)
+system %(docker-compose exec gear-engine-test bash -c "DISABLE_SPRING=1 SPEC_COVERAGE=1 bin/rails spec")
 system %(open ../coverage/index.html; true)

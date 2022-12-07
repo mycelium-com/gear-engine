@@ -17,9 +17,6 @@ gem 'rack-cors', require: 'rack/cors'
 # Background processing
 gem 'sidekiq', '~> 5.2'
 gem 'sidekiq-scheduler', '~> 3.0'
-# gem 'thwait' # no longer bundled on ruby 2.7.0, required by sidekiq-scheduler-3.0.0/lib/sidekiq-scheduler/scheduler.rb:2
-gem 'celluloid', '0.18.0', require: false
-gem 'celluloid-io', require: false
 # Business logic encapsulation
 gem 'interactor-rails'
 gem 'enumerate_it', '~> 1.7'

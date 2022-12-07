@@ -6,24 +6,10 @@ class OrderSubscribeToStatusChange
 
   def call
     network = order.gateway.blockchain_network
-
     BlockbookRealtimeAPI.each_instance(network: network) do |blockbook|
       unsubscribe_addresses = Order.each_final(network, blockbook.each_subscribed_address).map(&:address)
       blockbook.unsubscribe(*unsubscribe_addresses)
       blockbook.subscribe(order.address, &method(:order_status_check))
-    end
-
-    unless defined?(Celluloid) && Celluloid.running?
-      Rails.logger.debug "Skipping: Celluloid not enabled"
-      return
-    end
-
-    name  = :"Electrum#{network}"
-    actor = Celluloid::Actor[name]
-    if actor
-      actor.address_subscribe address: order.address
-    else
-      Rails.logger.warn "Missing actor #{name}"
     end
   end
 
