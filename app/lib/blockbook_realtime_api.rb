@@ -4,6 +4,7 @@ class BlockbookRealtimeAPI
 
   class << self
     def instance(network:, url:)
+      raise ArgumentError if url.blank?
       URI(url)
       network = BlockchainNetwork[network]
 
@@ -89,14 +90,17 @@ class BlockbookRealtimeAPI
 
   def subscribe(address, &callback)
     Rails.logger.debug "[BlockbookRealtimeAPI] [#{timestamp} subscribe] #{connection.inspect} #{address.inspect}"
-    raise if address.blank?
+    raise ArgumentError if address.blank?
     subscribed[address] = AddressSubscription.new([], callback)
     resubscribe
   end
 
-  def unsubscribe(address)
-    Rails.logger.debug "[BlockbookRealtimeAPI] [#{timestamp} unsubscribe] #{connection.inspect} #{address.inspect}"
-    subscribed&.delete(address)
+  def unsubscribe(*addresses)
+    return if addresses.blank?
+    Rails.logger.debug "[BlockbookRealtimeAPI] [#{timestamp} unsubscribe] #{connection.inspect}\n#{addresses.inspect}"
+    addresses.each do |address|
+      subscribed&.delete(address)
+    end
     resubscribe
   end
 
@@ -109,6 +113,10 @@ class BlockbookRealtimeAPI
         addresses: subscribed.keys
       }
     )
+  end
+
+  def each_subscribed_address(&block)
+    subscribed.each_key(&block)
   end
 
   private
@@ -142,11 +150,13 @@ class BlockbookRealtimeAPI
   end
 
   def make_or_queue_request(id:, method:, params:)
-    request = "#{JSON.dump(id: id, method: method, params: params)}\n"
+    request = "#{JSON.dump(id: id, method: method, params: params)}\n".freeze
     if connection&.open?
       connection.write request
+      true
     else
       requests_queue << request
+      false
     end
   end
 

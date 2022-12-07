@@ -88,4 +88,12 @@ FactoryBot.define do
       end
     end
   end
+
+  factory :transaction_struct, class: Straight::Transaction do
+    to_create { raise } # build only
+    sequence(:tid) { |i| "tid#{i}" }
+    amount { 1 }
+    confirmations { 0 }
+    block_height { 0 }
+  end
 end

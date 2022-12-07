@@ -8,6 +8,8 @@ class OrderSubscribeToStatusChange
     network = order.gateway.blockchain_network
 
     BlockbookRealtimeAPI.each_instance(network: network) do |blockbook|
+      unsubscribe_addresses = Order.each_final(network, blockbook.each_subscribed_address).map(&:address)
+      blockbook.unsubscribe(*unsubscribe_addresses)
       blockbook.subscribe(order.address, &method(:order_status_check))
     end
 

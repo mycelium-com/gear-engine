@@ -17,11 +17,11 @@ class OrderStatusCheck
   end
 
   def order_status
-    uniq_transactions = transactions_since.uniq(&:tid)
+    uniq_transactions = transactions_since.reverse_each.uniq(&:tid)
     amount_paid       = uniq_transactions.map(&:amount).reduce(:+) || 0
 
     if !uniq_transactions.empty? && amount_paid <= 0
-      Straight.logger.warn "Strange transactions for address #{address}: #{uniq_transactions.inspect}"
+      Straight.logger.warn "Strange transactions for address #{order.address}: #{uniq_transactions.inspect}"
       amount_paid = 0
     end
 

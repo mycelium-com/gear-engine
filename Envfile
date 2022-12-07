@@ -1,8 +1,6 @@
 variable :DATABASE_URL, :uri
 variable :REDIS_URL, :uri
 variable :STRAIGHT_SERVER_SECRET
-variable :ELECTRUMX_BTC
-variable :ELECTRUMX_BTC_TEST
 
 variable :ORDER_CHECK_BASE_INTERVAL, :integer
 variable :ORDER_CHECK_MAX_INTERVAL, :integer

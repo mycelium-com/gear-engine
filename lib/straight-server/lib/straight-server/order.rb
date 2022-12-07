@@ -97,7 +97,7 @@ module StraightServer
 
     def validate
       super # calling Sequel::Model validator
-      validates_unique :id
+      # validates_unique :id # seems useless: SELECT count(*) AS "count" FROM "orders" WHERE (("id" = 1) AND ("id" != 1)) LIMIT 1
       validates_presence [:address, :keychain_id, :gateway_id, :amount]
       errors.add(:address, "already in use") if (self[:status].to_i < 2) && (same_address_orders.where('status < 2').count > 0)
     end

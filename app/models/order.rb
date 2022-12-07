@@ -20,6 +20,13 @@ class Order < SimpleDelegator
         blockchain_network: BlockchainNetwork[network].to_s)))
   end
 
+  def self.each_final(network, addresses)
+    wrap_each(orm.where('"status" >= 2').where(
+      address: Array(addresses)).where(
+      gateway_id: Gateway.orm.select(:id).where(
+        blockchain_network: BlockchainNetwork[network].to_s)))
+  end
+
   def gateway
     @gateway ||= Gateway.find_by_id(gateway_id) if gateway_id.present?
   end
