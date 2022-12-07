@@ -183,11 +183,8 @@ GEM
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     lumberjack (1.2.8)
-    mail (2.8.0)
+    mail (2.7.1)
       mini_mime (>= 0.1.1)
-      net-imap
-      net-pop
-      net-smtp
     marcel (1.0.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
@@ -195,14 +192,6 @@ GEM
     minitest (5.16.3)
     msgpack (1.6.0)
     nenv (0.3.0)
-    net-imap (0.3.1)
-      net-protocol
-    net-pop (0.1.2)
-      net-protocol
-    net-protocol (0.2.0)
-      timeout
-    net-smtp (0.3.3)
-      net-protocol
     nio4r (2.5.8)
     nokogiri (1.13.9)
       mini_portile2 (~> 2.8.0)
@@ -361,7 +350,6 @@ GEM
       e2mmap
     tilt (2.0.11)
     timecop (0.9.6)
-    timeout (0.3.1)
     tzinfo (1.2.10)
       thread_safe (~> 0.1)
     unicode-display_width (2.3.0)
@@ -409,6 +397,7 @@ DEPENDENCIES
   iodine (~> 0.7.50)!
   json_matchers
   listen (~> 3.0)
+  mail (~> 2.7.1)
   pg (~> 1.1)
   rack-cors
   rails (~> 5.2.0)
