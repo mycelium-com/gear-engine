@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BlockbookRealtimeAPI
 
   private_class_method :new
@@ -48,7 +50,7 @@ class BlockbookRealtimeAPI
   end
 
   def connect
-    Rails.logger.debug "[BlockbookRealtimeAPI] [#{timestamp} connect] #{url}"
+    Rails.logger.debug logger_tagged('connect', url)
     Iodine.connect(url: url, handler: self, ping: 3)
     nil
   end
@@ -56,13 +58,13 @@ class BlockbookRealtimeAPI
   # Iodine hooks
 
   def on_open(iodine_conn)
-    Rails.logger.debug "[BlockbookRealtimeAPI] [#{timestamp} on_open] #{iodine_conn.inspect}"
+    Rails.logger.debug logger_tagged('on_open', inspect_iodine_conn(iodine_conn))
     @connection = iodine_conn
     make_queued_requests
   end
 
   def on_message(iodine_conn, message)
-    Rails.logger.debug "[BlockbookRealtimeAPI] [#{timestamp} on_message] #{iodine_conn.inspect}\n#{message}"
+    Rails.logger.debug logger_tagged('on_message', "#{message}(from #{inspect_iodine_conn(iodine_conn)})")
     parsed = JSON(message).fetch('data') rescue {}
 
     address = parsed.fetch('address', nil)
@@ -75,9 +77,9 @@ class BlockbookRealtimeAPI
   def on_close(iodine_conn)
     if connection.nil?
       # why?
-      Rails.logger.debug "[BlockbookRealtimeAPI] [#{timestamp} on_close_before_on_open] #{iodine_conn.inspect}"
+      Rails.logger.debug logger_tagged('on_close_before_on_open', inspect_iodine_conn(iodine_conn))
     else
-      Rails.logger.debug "[BlockbookRealtimeAPI] [#{timestamp} on_close_reconnection] #{connection.inspect} == #{iodine_conn.inspect}"
+      Rails.logger.debug logger_tagged('on_close_reconnection', inspect_iodine_conn(iodine_conn))
       connection.close # just in case
       delay_reconnection
       connect
@@ -89,7 +91,7 @@ class BlockbookRealtimeAPI
   # @see https://github.com/trezor/blockbook/blob/master/docs/api.md#websocket-api
 
   def subscribe(address, &callback)
-    Rails.logger.debug "[BlockbookRealtimeAPI] [#{timestamp} subscribe] #{connection.inspect} #{address.inspect}"
+    Rails.logger.debug logger_tagged('subscribe', address.inspect)
     raise ArgumentError if address.blank?
     subscribed[address] = AddressSubscription.new([], callback)
     resubscribe
@@ -97,7 +99,7 @@ class BlockbookRealtimeAPI
 
   def unsubscribe(*addresses)
     return if addresses.blank?
-    Rails.logger.debug "[BlockbookRealtimeAPI] [#{timestamp} unsubscribe] #{connection.inspect}\n#{addresses.inspect}"
+    Rails.logger.debug logger_tagged('unsubscribe', addresses.inspect)
     addresses.each do |address|
       subscribed&.delete(address)
     end
@@ -105,7 +107,7 @@ class BlockbookRealtimeAPI
   end
 
   def resubscribe
-    Rails.logger.debug "[BlockbookRealtimeAPI] [#{timestamp} resubscribe] #{connection.inspect}\n#{subscribed.keys.inspect}"
+    Rails.logger.debug logger_tagged('resubscribe', subscribed.keys.inspect)
     make_or_queue_request(
       id:     '',
       method: 'subscribeAddresses',
@@ -137,7 +139,7 @@ class BlockbookRealtimeAPI
     subscription = subscribed.fetch(address)
     subscription.transactions << transaction.freeze
     if subscription.callback.respond_to?(:call)
-      Rails.logger.debug "[BlockbookRealtimeAPI] [#{timestamp} subscription_callback] #{connection} #{subscription.inspect}"
+      Rails.logger.debug logger_tagged('subscription_callback', subscription.inspect)
       begin
         result = subscription.callback.call(subscription.transactions.dup)
         if result == :unsubscribe
@@ -145,7 +147,7 @@ class BlockbookRealtimeAPI
         end
       rescue RuntimeError => ex
         Sentry.capture_exception ex
-        Rails.logger.error "[BlockbookRealtimeAPI] [#{timestamp} subscription_callback_failed] #{connection}\n#{ex.inspect}"
+        Rails.logger.error logger_tagged('subscription_callback_failed', ex.inspect)
       end
     end
   end
@@ -163,12 +165,22 @@ class BlockbookRealtimeAPI
 
   def make_queued_requests
     return if requests_queue.empty?
-    Rails.logger.debug "[BlockbookRealtimeAPI] [#{timestamp} make_queued_requests] #{connection}\n#{requests_queue.join}"
+    Rails.logger.debug logger_tagged('make_queued_requests', requests_queue.join)
     until requests_queue.empty? do
       request = requests_queue.shift
       connection.write request
     end
-    Rails.logger.debug "[BlockbookRealtimeAPI] [#{timestamp} made_queued_requests] #{connection}"
+    Rails.logger.debug logger_tagged('made_queued_requests')
+  end
+
+  def logger_tagged(event, data = nil)
+    thread = "Thread#{Thread.current.object_id}"
+    conn   = "IodineConn#{connection&.object_id}"
+    "[BlockbookRealtimeAPI] [#{thread}] [#{conn}] [#{timestamp}] [#{event}] [BB_#{network}] [#{url}]#{data.nil? ? nil : "\n"}#{data}"
+  end
+
+  def inspect_iodine_conn(iodine_conn)
+    "[IodineConn#{iodine_conn&.object_id}] #{iodine_conn.inspect}"
   end
 
   def timestamp

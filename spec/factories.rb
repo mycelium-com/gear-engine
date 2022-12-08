@@ -4,7 +4,7 @@ FactoryBot.define do
   end
 
   factory :params_create_order, parent: :params do
-    amount { 1 }
+    amount { 100 }
 
     trait :negative_amount do
       amount { -1 }

@@ -121,7 +121,7 @@ module ExchangeRate
   # it seems the most appropriate rate to use is the bid price
 
   def self.fetch_bitpay
-    data   = open('https://bitpay.com/api/rates').read
+    data   = URI.open('https://bitpay.com/api/rates').read
     time   = Time.now.utc
     parsed = JSON(data)
     first  = parsed.shift
@@ -140,7 +140,7 @@ module ExchangeRate
   end
 
   def self.fetch_bitstamp
-    data   = open('https://www.bitstamp.net/api/ticker/').read
+    data   = URI.open('https://www.bitstamp.net/api/ticker/').read
     parsed = JSON(data)
     time   = Time.at(parsed['timestamp'].to_i).utc
     pair   = Currency[%i[BTC USD]]
@@ -165,7 +165,7 @@ module ExchangeRate
       return %i[BTC BCH USD].map { |e| fetch_coinbase(currency: e) }.reduce(:concat)
     end
 
-    data   = open("https://api.coinbase.com/v2/exchange-rates?currency=#{currency}").read
+    data   = URI.open("https://api.coinbase.com/v2/exchange-rates?currency=#{currency}").read
     time   = Time.now.utc
     parsed = JSON(data)
     from   = parsed['data']['currency']
@@ -181,7 +181,7 @@ module ExchangeRate
   end
 
   def self.fetch_kraken
-    data   = open('https://api.kraken.com/0/public/Ticker?pair=BCHEUR,BCHUSD,BCHXBT,XBTCAD,XBTEUR,XBTGBP,XBTJPY,XBTUSD').read
+    data   = URI.open('https://api.kraken.com/0/public/Ticker?pair=BCHEUR,BCHUSD,BCHXBT,XBTCAD,XBTEUR,XBTGBP,XBTJPY,XBTUSD').read
     time   = Time.now.utc
     parsed = JSON(data)['result']
     parsed.flat_map do |key, value|
@@ -206,7 +206,7 @@ module ExchangeRate
 
   def self.fetch_okcoin
     pairs = {
-      Currency[%i[BTC USD]] => open('https://www.okcoin.com/api/market/v3/oracle').read
+      Currency[%i[BTC USD]] => URI.open('https://www.okcoin.com/api/market/v3/oracle').read
     }
     pairs.flat_map do |pair, data|
       parsed = JSON(data)

@@ -8,6 +8,12 @@ RSpec.describe OrderSubscribeToStatusChange, type: :interactor do
     let(:order2) { create(:order, gateway: gateway) }
     let(:order3) { create(:order, gateway: gateway) }
 
+    before do
+      ENV['BLOCKBOOK_BTC_WS']               = 'wss://bb-btc.mycelium.com:9130/websocket'
+      ENV['BLOCKBOOK_BTC_TEST_WS']          = 'wss://bb-btc.mycelium.com:19130/websocket'
+      Thread.current[:BlockbookRealtimeAPI] = nil
+    end
+
     it "uses BlockbookRealtimeAPI" do
       subscribed = -> { BlockbookRealtimeAPI.each_instance(network: gateway.blockchain_network).map(&:each_subscribed_address).map(&:to_a) }
       expect(subscribed.call).to eq [[]]

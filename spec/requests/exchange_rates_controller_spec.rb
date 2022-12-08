@@ -26,7 +26,7 @@ RSpec.describe ExchangeRatesController, type: :controller do
       get :index, params: { from: :UAH, to: :BTC }
       parsed = JSON(response.body)
       expect(parsed.size).to eq 1
-      expect(parsed[0]['src']).to eq '1 / (bitpay)'
+      expect(parsed[0]['src']).to eq '1 / (coinbase)'
     end
   end
 end

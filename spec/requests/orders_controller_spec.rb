@@ -168,7 +168,7 @@ RSpec.shared_examples "order create action" do |price_currency:|
           post url, params: build(:params_create_order, currency: price_currency.to_s)
         end
       end
-    expect(order.amount_with_currency).to eq "1.00 #{price_currency}"
+    expect(order.amount_with_currency).to eq "100.00 #{price_currency}"
   end
 end
 

@@ -19,16 +19,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 14 Jun 2019 11:30:04 GMT
+      - Thu, 08 Dec 2022 09:26:35 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d4d3c08b624167e440775bda72c740b751560511804; expires=Sat, 13-Jun-20
-        11:30:04 GMT; path=/; domain=.bitpay.com; HttpOnly
       Strict-Transport-Security:
       - max-age=31536000
       X-Download-Options:
@@ -40,23 +37,28 @@ http_interactions:
       Cache-Control:
       - public, max-age=60, s-maxage=60
       Expires:
-      - Fri, 14 Jun 2019 11:30:22 GMT
+      - Thu, 08 Dec 2022 09:27:18 GMT
       Cf-Cache-Status:
       - HIT
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Age:
+      - '17'
+      Last-Modified:
+      - Thu, 08 Dec 2022 09:26:18 GMT
+      Set-Cookie:
+      - __cf_bm=sphGOjm.fhndj.x5T9J7BZO3HCeUwHb1Bvjm6Nicjig-1670491595-0-AdzkMOPwGyBIsBfUTT/In65MqIw9GpF/l6Kd74UKOK6zTcytinrRcccPiLAZJYe1FRmy3K9JyuuwvnQuGzSdKTo=;
+        path=/; expires=Thu, 08-Dec-22 09:56:35 GMT; domain=.bitpay.com; HttpOnly;
+        Secure; SameSite=None
       Vary:
       - Accept-Encoding
       Server:
       - cloudflare
       Cf-Ray:
-      - 4e6bf85b5f2a3e66-ZRH
+      - 776475d51ab9994e-FRA
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        W3siY29kZSI6IkJUQyIsIm5hbWUiOiJCaXRjb2luIiwicmF0ZSI6MX0seyJjb2RlIjoiQkNIIiwibmFtZSI6IkJpdGNvaW4gQ2FzaCIsInJhdGUiOjIwLjA5OTQ2NX0seyJjb2RlIjoiVVNEIiwibmFtZSI6IlVTIERvbGxhciIsInJhdGUiOjgyODIuMzg2NzM1fSx7ImNvZGUiOiJFVVIiLCJuYW1lIjoiRXVyb3pvbmUgRXVybyIsInJhdGUiOjczNTcuOTY5MTc1fSx7ImNvZGUiOiJHQlAiLCJuYW1lIjoiUG91bmQgU3RlcmxpbmciLCJyYXRlIjo2NTQ5LjcyMzV9LHsiY29kZSI6IkpQWSIsIm5hbWUiOiJKYXBhbmVzZSBZZW4iLCJyYXRlIjo4OTYwMTUuNzU4MDg2fSx7ImNvZGUiOiJDQUQiLCJuYW1lIjoiQ2FuYWRpYW4gRG9sbGFyIiwicmF0ZSI6MTEwNDQuNTM3ODY0fSx7ImNvZGUiOiJBVUQiLCJuYW1lIjoiQXVzdHJhbGlhbiBEb2xsYXIiLCJyYXRlIjoxMjAwNC4xNTE3NTZ9LHsiY29kZSI6IkNOWSIsIm5hbWUiOiJDaGluZXNlIFl1YW4iLCJyYXRlIjo1NzM1MS4zODY5NDd9LHsiY29kZSI6IkNIRiIsIm5hbWUiOiJTd2lzcyBGcmFuYyIsInJhdGUiOjgyNDMuNDA5ODIzfSx7ImNvZGUiOiJTRUsiLCJuYW1lIjoiU3dlZGlzaCBLcm9uYSIsInJhdGUiOjc4MjQ5LjM5NzQ4NX0seyJjb2RlIjoiTlpEIiwibmFtZSI6Ik5ldyBaZWFsYW5kIERvbGxhciIsInJhdGUiOjEyNjcxLjA5OTIzfSx7ImNvZGUiOiJLUlciLCJuYW1lIjoiU291dGggS29yZWFuIFdvbiIsInJhdGUiOjk4MTA2MDMuNzc4MTU0fSx7ImNvZGUiOiJBRUQiLCJuYW1lIjoiVUFFIERpcmhhbSIsInJhdGUiOjMwNDIzLjUzMzgyOH0seyJjb2RlIjoiQUZOIiwibmFtZSI6IkFmZ2hhbiBBZmdoYW5pIiwicmF0ZSI6NjYzMzU3LjA1OTU3M30seyJjb2RlIjoiQUxMIiwibmFtZSI6IkFsYmFuaWFuIExlayIsInJhdGUiOjg5NjQ4NS41NDAxOTZ9LHsiY29kZSI6IkFNRCIsIm5hbWUiOiJBcm1lbmlhbiBEcmFtIiwicmF0ZSI6Mzk2Mzk1My4yNDgxODN9LHsiY29kZSI6IkFORyIsIm5hbWUiOiJOZXRoZXJsYW5kcyBBbnRpbGxlYW4gR3VpbGRlciIsInJhdGUiOjE1NTQwLjU0MDM5N30seyJjb2RlIjoiQU9BIiwibmFtZSI6IkFuZ29sYW4gS3dhbnphIiwicmF0ZSI6MjgwNzU5Mi40NDM3ODR9LHsiY29kZSI6IkFSUyIsIm5hbWUiOiJBcmdlbnRpbmUgUGVzbyIsInJhdGUiOjM2MDM5MS4wNzk4ODF9LHsiY29kZSI6IkFXRyIsIm5hbWUiOiJBcnViYW4gRmxvcmluIiwicmF0ZSI6MTQ3NTIuOTkzMDg5fSx7ImNvZGUiOiJBWk4iLCJuYW1lIjoiQXplcmJhaWphbmkgTWFuYXQiLCJyYXRlIjoxNDEwMC43NjM0MTZ9LHsiY29kZSI6IkJBTSIsIm5hbWUiOiJCb3NuaWEtSGVyemVnb3ZpbmEgQ29udmVydGlibGUgTWFyayIsInJhdGUiOjE0MzYxLjYxNzE4N30seyJjb2RlIjoiQkJEIiwibmFtZSI6IkJhcmJhZGlhbiBEb2xsYXIiLCJyYXRlIjoxNjU2NC43NzM0N30seyJjb2RlIjoiQkRUIiwibmFtZSI6IkJhbmdsYWRlc2hpIFRha2EiLCJyYXRlIjo3MDAzMjUuNDkyNzY1fSx7ImNvZGUiOiJCR04iLCJuYW1lIjoiQnVsZ2FyaWFuIExldiIsInJhdGUiOjE0MzczLjQ2OTI4Mn0seyJjb2RlIjoiQkhEIiwibmFtZSI6IkJhaHJhaW5pIERpbmFyIiwicmF0ZSI6MzEyMS45Mjk3MjZ9LHsiY29kZSI6IkJJRiIsIm5hbWUiOiJCdXJ1bmRpYW4gRnJhbmMiLCJyYXRlIjoxNTIxNzI0Ny4zMzYzMzd9LHsiY29kZSI6IkJNRCIsIm5hbWUiOiJCZXJtdWRhbiBEb2xsYXIiLCJyYXRlIjo4MjgyLjM4NjczNX0seyJjb2RlIjoiQk5EIiwibmFtZSI6IkJydW5laSBEb2xsYXIiLCJyYXRlIjoxMTE4NS42OTQ1ODF9LHsiY29kZSI6IkJPQiIsIm5hbWUiOiJCb2xpdmlhbiBCb2xpdmlhbm8iLCJyYXRlIjo1NzI3My4zNjY4NjN9LHsiY29kZSI6IkJSTCIsIm5hbWUiOiJCcmF6aWxpYW4gUmVhbCIsInJhdGUiOjMxODgyLjk4OTc2fSx7ImNvZGUiOiJCU0QiLCJuYW1lIjoiQmFoYW1pYW4gRG9sbGFyIiwicmF0ZSI6ODI4Mi4zODY3MzV9LHsiY29kZSI6IkJUTiIsIm5hbWUiOiJCaHV0YW5lc2UgTmd1bHRydW0iLCJyYXRlIjo1NzY0NTkuOTk3MjUxfSx7ImNvZGUiOiJCV1AiLCJuYW1lIjoiQm90c3dhbmFuIFB1bGEiLCJyYXRlIjo5MDE0NS42MjE0Nn0seyJjb2RlIjoiQllOIiwibmFtZSI6IkJlbGFydXNpYW4gUnVibGUiLCJyYXRlIjoxNzE1Mi4zNTkxMTV9LHsiY29kZSI6IkJaRCIsIm5hbWUiOiJCZWxpemUgRG9sbGFyIiwicmF0ZSI6MTY3MDYuNDE4ODQ4fSx7ImNvZGUiOiJDREYiLCJuYW1lIjoiQ29uZ29sZXNlIEZyYW5jIiwicmF0ZSI6MTM2NjcyODkuNDkxODE3fSx7ImNvZGUiOiJDTEYiLCJuYW1lIjoiQ2hpbGVhbiBVbml0IG9mIEFjY291bnQgKFVGKSIsInJhdGUiOjIwMS4yOTUxMjd9LHsiY29kZSI6IkNMUCIsIm5hbWUiOiJDaGlsZWFuIFBlc28iLCJyYXRlIjo1NzYyODUzLjE2NzQ0OX0seyJjb2RlIjoiQ09QIiwibmFtZSI6IkNvbG9tYmlhbiBQZXNvIiwicmF0ZSI6MjcxMTIzNTAuNjk1NDM4fSx7ImNvZGUiOiJDUkMiLCJuYW1lIjoiQ29zdGEgUmljYW4gQ29sw7NuIiwicmF0ZSI6NDg2MzI3NC41OTQ3NzR9LHsiY29kZSI6IkNVUCIsIm5hbWUiOiJDdWJhbiBQZXNvIiwicmF0ZSI6MjEzMjcxLjQ1ODQyNn0seyJjb2RlIjoiQ1ZFIiwibmFtZSI6IkNhcGUgVmVyZGVhbiBFc2N1ZG8iLCJyYXRlIjo4MDk3MTUuMTE1NTY3fSx7ImNvZGUiOiJDWksiLCJuYW1lIjoiQ3plY2ggS29ydW5hIiwicmF0ZSI6MTg3NzYwLjE5MTYwNn0seyJjb2RlIjoiREpGIiwibmFtZSI6IkRqaWJvdXRpYW4gRnJhbmMiLCJyYXRlIjoxNDc0Njc4Ljk1ODE2N30seyJjb2RlIjoiREtLIiwibmFtZSI6IkRhbmlzaCBLcm9uZSIsInJhdGUiOjU0ODc5Ljc5ODUwOX0seyJjb2RlIjoiRE9QIiwibmFtZSI6IkRvbWluaWNhbiBQZXNvIiwicmF0ZSI6NDI2NzQ5Ljk3NjUyMX0seyJjb2RlIjoiRFpEIiwibmFtZSI6IkFsZ2VyaWFuIERpbmFyIiwicmF0ZSI6OTg4MTcxLjU2MTM1M30seyJjb2RlIjoiRUdQIiwibmFtZSI6IkVneXB0aWFuIFBvdW5kIiwicmF0ZSI6MTM4ODMwLjE5NDY5MX0seyJjb2RlIjoiRVRCIiwibmFtZSI6IkV0aGlvcGlhbiBCaXJyIiwicmF0ZSI6MjM5Nzc0LjU0MTA1OH0seyJjb2RlIjoiRkpEIiwibmFtZSI6IkZpamlhbiBEb2xsYXIiLCJyYXRlIjoxNzg4MS4yMjU3MTJ9LHsiY29kZSI6IkZLUCIsIm5hbWUiOiJGYWxrbGFuZCBJc2xhbmRzIFBvdW5kIiwicmF0ZSI6NjU0NC44NDEzODd9LHsiY29kZSI6IkdFTCIsIm5hbWUiOiJHZW9yZ2lhbiBMYXJpIiwicmF0ZSI6MjI2NTIuMzI3NzJ9LHsiY29kZSI6IkdIUyIsIm5hbWUiOiJHaGFuYWlhbiBDZWRpIiwicmF0ZSI6NDQ1OTEuNTQxOTQzfSx7ImNvZGUiOiJHSVAiLCJuYW1lIjoiR2licmFsdGFyIFBvdW5kIiwicmF0ZSI6NjU0NC44NDEzODd9LHsiY29kZSI6IkdNRCIsIm5hbWUiOiJHYW1iaWFuIERhbGFzaSIsInJhdGUiOjQxMjQ2Mi44NTk0MDN9LHsiY29kZSI6IkdORiIsIm5hbWUiOiJHdWluZWFuIEZyYW5jIiwicmF0ZSI6NzU3MTY2NzguMDUxNTUxfSx7ImNvZGUiOiJHVFEiLCJuYW1lIjoiR3VhdGVtYWxhbiBRdWV0emFsIiwicmF0ZSI6NjM2OTUuNjI4OTI2fSx7ImNvZGUiOiJHVVNEIiwibmFtZSI6IkdlbWluaSBVUyBEb2xsYXIiLCJyYXRlIjo4MjgyLjM4NjczNX0seyJjb2RlIjoiR1lEIiwibmFtZSI6Ikd1eWFuYWVzZSBEb2xsYXIiLCJyYXRlIjoxNzM0MDU2LjQ2NzQ5Mn0seyJjb2RlIjoiSEtEIiwibmFtZSI6IkhvbmcgS29uZyBEb2xsYXIiLCJyYXRlIjo2NDgyOS45NjgwNDl9LHsiY29kZSI6IkhOTCIsIm5hbWUiOiJIb25kdXJhbiBMZW1waXJhIiwicmF0ZSI6MjAyODgxLjY5MjkyOH0seyJjb2RlIjoiSFJLIiwibmFtZSI6IkNyb2F0aWFuIEt1bmEiLCJyYXRlIjo1NDQ2MS4xOTg0MDF9LHsiY29kZSI6IkhURyIsIm5hbWUiOiJIYWl0aWFuIEdvdXJkZSIsInJhdGUiOjc2NjE1MC4wOTI2Mzd9LHsiY29kZSI6IkhVRiIsIm5hbWUiOiJIdW5nYXJpYW4gRm9yaW50IiwicmF0ZSI6MjM2NDU1OS4yOTQ5NDJ9LHsiY29kZSI6IklEUiIsIm5hbWUiOiJJbmRvbmVzaWFuIFJ1cGlhaCIsInJhdGUiOjExODcxNzY2MC44NjI4MDZ9LHsiY29kZSI6IklMUyIsIm5hbWUiOiJJc3JhZWxpIFNoZWtlbCIsInJhdGUiOjI5ODI1LjM4ODE0MX0seyJjb2RlIjoiSU5SIiwibmFtZSI6IkluZGlhbiBSdXBlZSIsInJhdGUiOjU3NzU5Mi42MDUzNTR9LHsiY29kZSI6IklRRCIsIm5hbWUiOiJJcmFxaSBEaW5hciIsInJhdGUiOjk4ODkyOTcuOTM5ODA3fSx7ImNvZGUiOiJJUlIiLCJuYW1lIjoiSXJhbmlhbiBSaWFsIiwicmF0ZSI6MzQ4NzI5ODkzLjQ3NzE3NX0seyJjb2RlIjoiSVNLIiwibmFtZSI6IkljZWxhbmRpYyBLcsOzbmEiLCJyYXRlIjoxMDQwMDE4LjA2ODIzOH0seyJjb2RlIjoiSkVQIiwibmFtZSI6IkplcnNleSBQb3VuZCIsInJhdGUiOjY1NDQuODQxMzg3fSx7ImNvZGUiOiJKTUQiLCJuYW1lIjoiSmFtYWljYW4gRG9sbGFyIiwicmF0ZSI6MTA3NTA1My43OTgyMDN9LHsiY29kZSI6IkpPRCIsIm5hbWUiOiJKb3JkYW5pYW4gRGluYXIiLCJyYXRlIjo1ODcyLjIyMDQ3OH0seyJjb2RlIjoiS0VTIiwibmFtZSI6IktlbnlhbiBTaGlsbGluZyIsInJhdGUiOjg0MzIyOS43OTM0OX0seyJjb2RlIjoiS0dTIiwibmFtZSI6Ikt5cmd5c3RhbmkgU29tIiwicmF0ZSI6NTY5MDU5LjQ4NTkyNn0seyJjb2RlIjoiS0hSIiwibmFtZSI6IkNhbWJvZGlhbiBSaWVsIiwicmF0ZSI6MzM4MDI5NDkuMzA4ODg5fSx7ImNvZGUiOiJLTUYiLCJuYW1lIjoiQ29tb3JpYW4gRnJhbmMiLCJyYXRlIjozNjE2Mjk0LjQ0MTI0MX0seyJjb2RlIjoiS1BXIiwibmFtZSI6Ik5vcnRoIEtvcmVhbiBXb24iLCJyYXRlIjo3NDU0MTQ4LjA2MTV9LHsiY29kZSI6IktXRCIsIm5hbWUiOiJLdXdhaXRpIERpbmFyIiwicmF0ZSI6MjUxNy4wMTczMjl9LHsiY29kZSI6IktZRCIsIm5hbWUiOiJDYXltYW4gSXNsYW5kcyBEb2xsYXIiLCJyYXRlIjo2OTA3LjQxOTQzMX0seyJjb2RlIjoiS1pUIiwibmFtZSI6IkthemFraHN0YW5pIFRlbmdlIiwicmF0ZSI6MzE4NDA4MC43NTY0MDN9LHsiY29kZSI6IkxBSyIsIm5hbWUiOiJMYW90aWFuIEtpcCIsInJhdGUiOjcyMjMwOTIwLjY1OTQ0NX0seyJjb2RlIjoiTEJQIiwibmFtZSI6IkxlYmFuZXNlIFBvdW5kIiwicmF0ZSI6MTI1MTY3NTYuOTUzMjY5fSx7ImNvZGUiOiJMS1IiLCJuYW1lIjoiU3JpIExhbmthbiBSdXBlZSIsInJhdGUiOjE0NjQyNDMuMTUwODgxfSx7ImNvZGUiOiJMUkQiLCJuYW1lIjoiTGliZXJpYW4gRG9sbGFyIiwicmF0ZSI6MTYwNzgyMi4xNTEzOTV9LHsiY29kZSI6IkxTTCIsIm5hbWUiOiJMZXNvdGhvIExvdGkiLCJyYXRlIjoxMjI5NjMuODAwMzUzfSx7ImNvZGUiOiJMWUQiLCJuYW1lIjoiTGlieWFuIERpbmFyIiwicmF0ZSI6MTE1NDQuNjQ0OTR9LHsiY29kZSI6Ik1BRCIsIm5hbWUiOiJNb3JvY2NhbiBEaXJoYW0iLCJyYXRlIjo3OTc0Ni45NjA2Nzh9LHsiY29kZSI6Ik1ETCIsIm5hbWUiOiJNb2xkb3ZhbiBMZXUiLCJyYXRlIjoxNTA3NDAuMzY2MjA0fSx7ImNvZGUiOiJNR0EiLCJuYW1lIjoiTWFsYWdhc3kgQXJpYXJ5IiwicmF0ZSI6MzAyNjQyMTEuNzMzMzY3fSx7ImNvZGUiOiJNS0QiLCJuYW1lIjoiTWFjZWRvbmlhbiBEZW5hciIsInJhdGUiOjQ1MTgyMC4wODIwMTJ9LHsiY29kZSI6Ik1NSyIsIm5hbWUiOiJNeWFubWEgS3lhdCIsInJhdGUiOjEyNjU2MjA5LjYyNzI5OX0seyJjb2RlIjoiTU5UIiwibmFtZSI6Ik1vbmdvbGlhbiBUdWdyaWsiLCJyYXRlIjoyMDMyMjkwNi40NTEwMDZ9LHsiY29kZSI6Ik1PUCIsIm5hbWUiOiJNYWNhbmVzZSBQYXRhY2EiLCJyYXRlIjo2NjgyOC4yNTEyMTR9LHsiY29kZSI6Ik1SVSIsIm5hbWUiOiJNYXVyaXRhbmlhbiBPdWd1aXlhIiwicmF0ZSI6MzA0OTU3LjQ3OTU4M30seyJjb2RlIjoiTVVSIiwibmFtZSI6Ik1hdXJpdGlhbiBSdXBlZSIsInJhdGUiOjI5NTcxOC4zODYwNzR9LHsiY29kZSI6Ik1WUiIsIm5hbWUiOiJNYWxkaXZpYW4gUnVmaXlhYSIsInJhdGUiOjEyNzk2My4wMjQxMzl9LHsiY29kZSI6Ik1XSyIsIm5hbWUiOiJNYWxhd2lhbiBLd2FjaGEiLCJyYXRlIjo2MTczNTE2Ljc4NjAwNX0seyJjb2RlIjoiTVhOIiwibmFtZSI6Ik1leGljYW4gUGVzbyIsInJhdGUiOjE1ODk4My44MTc0Mzl9LHsiY29kZSI6Ik1ZUiIsIm5hbWUiOiJNYWxheXNpYW4gUmluZ2dpdCIsInJhdGUiOjM0NTIyLjE4MDU3NX0seyJjb2RlIjoiTVpOIiwibmFtZSI6Ik1vemFtYmljYW4gTWV0aWNhbCIsInJhdGUiOjUxMzY3My42MjUzMDV9LHsiY29kZSI6Ik5BRCIsIm5hbWUiOiJOYW1pYmlhbiBEb2xsYXIiLCJyYXRlIjoxMjI5NjMuODAwMzUzfSx7ImNvZGUiOiJOR04iLCJuYW1lIjoiTmlnZXJpYW4gTmFpcmEiLCJyYXRlIjoyOTgxNjU5LjIyNDZ9LHsiY29kZSI6Ik5JTyIsIm5hbWUiOiJOaWNhcmFndWFuIEPDs3Jkb2JhIiwicmF0ZSI6MjczMTc2LjI3MjA3NH0seyJjb2RlIjoiTk9LIiwibmFtZSI6Ik5vcndlZ2lhbiBLcm9uZSIsInJhdGUiOjcxOTIwLjEzODM0M30seyJjb2RlIjoiTlBSIiwibmFtZSI6Ik5lcGFsZXNlIFJ1cGVlIiwicmF0ZSI6OTIyMzMwLjY5NDg3M30seyJjb2RlIjoiT01SIiwibmFtZSI6Ik9tYW5pIFJpYWwiLCJyYXRlIjozMTg4Ljg4NDU0MX0seyJjb2RlIjoiUEFCIiwibmFtZSI6IlBhbmFtYW5pYW4gQmFsYm9hIiwicmF0ZSI6ODI4Mi4zODY3MzV9LHsiY29kZSI6IlBBWCIsIm5hbWUiOiJQYXhvcyBTdGFuZGFyZCBVU0QiLCJyYXRlIjo4MjgyLjM4NjczNX0seyJjb2RlIjoiUEVOIiwibmFtZSI6IlBlcnV2aWFuIE51ZXZvIFNvbCIsInJhdGUiOjI3NjMxLjgxNDU3OX0seyJjb2RlIjoiUEdLIiwibmFtZSI6IlBhcHVhIE5ldyBHdWluZWFuIEtpbmEiLCJyYXRlIjoyNzk3MS4yMzUwN30seyJjb2RlIjoiUEhQIiwibmFtZSI6IlBoaWxpcHBpbmUgUGVzbyIsInJhdGUiOjQzMDc2Ni45MzQwODd9LHsiY29kZSI6IlBLUiIsIm5hbWUiOiJQYWtpc3RhbmkgUnVwZWUiLCJyYXRlIjoxMjcxMzQ2LjM2MzgyM30seyJjb2RlIjoiUExOIiwibmFtZSI6IlBvbGlzaCBabG90eSIsInJhdGUiOjMxMjU4LjkyMDIwMn0seyJjb2RlIjoiUFlHIiwibmFtZSI6IlBhcmFndWF5YW4gR3VhcmFuaSIsInJhdGUiOjUxODEwMDI5LjY0NzUxM30seyJjb2RlIjoiUUFSIiwibmFtZSI6IlFhdGFyaSBSaWFsIiwicmF0ZSI6MzAxNTguMzE1MjR9LHsiY29kZSI6IlJPTiIsIm5hbWUiOiJSb21hbmlhbiBMZXUiLCJyYXRlIjozNDcwNi4xNzM3OTZ9LHsiY29kZSI6IlJTRCIsIm5hbWUiOiJTZXJiaWFuIERpbmFyIiwicmF0ZSI6ODY2MTc1LjU4MjczN30seyJjb2RlIjoiUlVCIiwibmFtZSI6IlJ1c3NpYW4gUnVibGUiLCJyYXRlIjo1MzMzOTEuMjYzMjE1fSx7ImNvZGUiOiJSV0YiLCJuYW1lIjoiUndhbmRhbiBGcmFuYyIsInJhdGUiOjc1Mzg5MjQuNTM0NjUyfSx7ImNvZGUiOiJTQVIiLCJuYW1lIjoiU2F1ZGkgUml5YWwiLCJyYXRlIjozMTA2NS4yNDQ4N30seyJjb2RlIjoiU0JEIiwibmFtZSI6IlNvbG9tb24gSXNsYW5kcyBEb2xsYXIiLCJyYXRlIjo2ODE0OC44MjgwODV9LHsiY29kZSI6IlNDUiIsIm5hbWUiOiJTZXljaGVsbG9pcyBSdXBlZSIsInJhdGUiOjExMzE0MC42OTkxOX0seyJjb2RlIjoiU0RHIiwibmFtZSI6IlN1ZGFuZXNlIFBvdW5kIiwicmF0ZSI6MzczODk4Ljg3NDEwMX0seyJjb2RlIjoiU0dEIiwibmFtZSI6IlNpbmdhcG9yZSBEb2xsYXIiLCJyYXRlIjoxMTMyNC4xMzQ2NzV9LHsiY29kZSI6IlNIUCIsIm5hbWUiOiJTYWludCBIZWxlbmEgUG91bmQiLCJyYXRlIjo2NTQ0Ljg0MTM4N30seyJjb2RlIjoiU0xMIiwibmFtZSI6IlNpZXJyYSBMZW9uZWFuIExlb25lIiwicmF0ZSI6Njk0ODkyMjQuNzA2NjV9LHsiY29kZSI6IlNPUyIsIm5hbWUiOiJTb21hbGkgU2hpbGxpbmciLCJyYXRlIjo0Nzk0OTYzLjEwODg5Nn0seyJjb2RlIjoiU1JEIiwibmFtZSI6IlN1cmluYW1lc2UgRG9sbGFyIiwicmF0ZSI6NjE3NzAuMDQwMjd9LHsiY29kZSI6IlNUTiIsIm5hbWUiOiJTw6NvIFRvbcOpIGFuZCBQcsOtbmNpcGUgRG9icmEiLCJyYXRlIjoxODA0NzMuMjA2OTU2fSx7ImNvZGUiOiJTVkMiLCJuYW1lIjoiU2FsdmFkb3JhbiBDb2zDs24iLCJyYXRlIjo3MjUyNi4xNjg4NjN9LHsiY29kZSI6IlNZUCIsIm5hbWUiOiJTeXJpYW4gUG91bmQiLCJyYXRlIjo0MjY1NjIxLjkzMjc5NH0seyJjb2RlIjoiU1pMIiwibmFtZSI6IlN3YXppIExpbGFuZ2VuaSIsInJhdGUiOjEyMjk2NC4wNTcxMDd9LHsiY29kZSI6IlRIQiIsIm5hbWUiOiJUaGFpIEJhaHQiLCJyYXRlIjoyNTgxNTMuNzEyMTQzfSx7ImNvZGUiOiJUSlMiLCJuYW1lIjoiVGFqaWtpc3RhbmkgU29tb25pIiwicmF0ZSI6NzgxNTcuNTcwNjY0fSx7ImNvZGUiOiJUTVQiLCJuYW1lIjoiVHVya21lbmlzdGFuaSBNYW5hdCIsInJhdGUiOjI4OTg4LjIzNzYxOX0seyJjb2RlIjoiVE5EIiwibmFtZSI6IlR1bmlzaWFuIERpbmFyIiwicmF0ZSI6MjQ0NTkuMTcxNzk4fSx7ImNvZGUiOiJUT1AiLCJuYW1lIjoiVG9uZ2FuIFBhyrthbmdhIiwicmF0ZSI6MTg5ODYuMzYxMTM5fSx7ImNvZGUiOiJUUlkiLCJuYW1lIjoiVHVya2lzaCBMaXJhIiwicmF0ZSI6NDg5NTAuNDM3ODQ1fSx7ImNvZGUiOiJUVEQiLCJuYW1lIjoiVHJpbmlkYWQgYW5kIFRvYmFnbyBEb2xsYXIiLCJyYXRlIjo1NjE5OS43MjEwNzF9LHsiY29kZSI6IlRXRCIsIm5hbWUiOiJOZXcgVGFpd2FuIERvbGxhciIsInJhdGUiOjI2MDg2OC41OTU2OTF9LHsiY29kZSI6IlRaUyIsIm5hbWUiOiJUYW56YW5pYW4gU2hpbGxpbmciLCJyYXRlIjoxOTAzMjkyNC43MTcwM30seyJjb2RlIjoiVUFIIiwibmFtZSI6IlVrcmFpbmlhbiBIcnl2bmlhIiwicmF0ZSI6MjE5MzE2LjYyMzQyMX0seyJjb2RlIjoiVUdYIiwibmFtZSI6IlVnYW5kYW4gU2hpbGxpbmciLCJyYXRlIjozMTAzOTkzMi41NjI4NDJ9LHsiY29kZSI6IlVTREMiLCJuYW1lIjoiQ2lyY2xlIFVTRCBDb2luIiwicmF0ZSI6ODI4Mi4zODY3MzV9LHsiY29kZSI6IlVZVSIsIm5hbWUiOiJVcnVndWF5YW4gUGVzbyIsInJhdGUiOjI5MzEyMC4xMTg1MzF9LHsiY29kZSI6IlVaUyIsIm5hbWUiOiJVemJla2lzdGFuIFNvbSIsInJhdGUiOjcwNTg1NDI5LjY1ODI2fSx7ImNvZGUiOiJWRUYiLCJuYW1lIjoiVmVuZXp1ZWxhbiBCb2zDrXZhciBGdWVydGUiLCJyYXRlIjoyMDU4MDcwNzUxLjkwODI4NX0seyJjb2RlIjoiVkVTIiwibmFtZSI6IlZlbmV6dWVsYW4gQm9sw612YXIgU29iZXJhbm8iLCJyYXRlIjo1MDg5OTUxNy4xMjM0MDF9LHsiY29kZSI6IlZORCIsIm5hbWUiOiJWaWV0bmFtZXNlIERvbmciLCJyYXRlIjoxOTM0NjExOTIuNzQ1NTExfSx7ImNvZGUiOiJWVVYiLCJuYW1lIjoiVmFudWF0dSBWYXR1IiwicmF0ZSI6OTI2NjM0LjgxMTA3fSx7ImNvZGUiOiJXU1QiLCJuYW1lIjoiU2Ftb2FuIFRhbGEiLCJyYXRlIjoyMTY2OS42MzkwOTl9LHsiY29kZSI6IlhBRiIsIm5hbWUiOiJDRkEgRnJhbmMgQkVBQyIsInJhdGUiOjQ4MjA4MjUuMDI3MTI0fSx7ImNvZGUiOiJYQ0QiLCJuYW1lIjoiRWFzdCBDYXJpYmJlYW4gRG9sbGFyIiwicmF0ZSI6MjIzODMuNTY0MjcxfSx7ImNvZGUiOiJYT0YiLCJuYW1lIjoiQ0ZBIEZyYW5jIEJDRUFPIiwicmF0ZSI6NDgyMDgyNS4wMjcxMjR9LHsiY29kZSI6IlhQRiIsIm5hbWUiOiJDRlAgRnJhbmMiLCJyYXRlIjo4NzcwMDQuODE5OTU4fSx7ImNvZGUiOiJZRVIiLCJuYW1lIjoiWWVtZW5pIFJpYWwiLCJyYXRlIjoyMDczNTAxLjcwNjA1fSx7ImNvZGUiOiJaQVIiLCJuYW1lIjoiU291dGggQWZyaWNhbiBSYW5kIiwicmF0ZSI6MTIyNzU5LjMwODIyNH0seyJjb2RlIjoiWk1XIiwibmFtZSI6IlphbWJpYW4gS3dhY2hhIiwicmF0ZSI6MTA4NTczLjgwNzcwOX0seyJjb2RlIjoiWldMIiwibmFtZSI6IlppbWJhYndlYW4gRG9sbGFyIiwicmF0ZSI6MjY2OTg2OC44NjcwNjd9LHsiY29kZSI6IlhBRyIsIm5hbWUiOiJTaWx2ZXIgKHRyb3kgb3VuY2UpIiwicmF0ZSI6NTQ5LjY4NjUyfSx7ImNvZGUiOiJYQVUiLCJuYW1lIjoiR29sZCAodHJveSBvdW5jZSkiLCJyYXRlIjo2LjExfV0=
-    http_version: 
-  recorded_at: Fri, 14 Jun 2019 11:30:04 GMT
+        W3siY29kZSI6IkJUQyIsIm5hbWUiOiJCaXRjb2luIiwicmF0ZSI6MX0seyJjb2RlIjoiQkNIIiwibmFtZSI6IkJpdGNvaW4gQ2FzaCIsInJhdGUiOjE1Mi4yNn0seyJjb2RlIjoiVVNEIiwibmFtZSI6IlVTIERvbGxhciIsInJhdGUiOjE2NjU1LjYyfSx7ImNvZGUiOiJFVVIiLCJuYW1lIjoiRXVyb3pvbmUgRXVybyIsInJhdGUiOjE1ODM4LjAyfSx7ImNvZGUiOiJHQlAiLCJuYW1lIjoiUG91bmQgU3RlcmxpbmciLCJyYXRlIjoxMzY1Ni44M30seyJjb2RlIjoiSlBZIiwibmFtZSI6IkphcGFuZXNlIFllbiIsInJhdGUiOjIyNzkxODAuMjJ9LHsiY29kZSI6IkNBRCIsIm5hbWUiOiJDYW5hZGlhbiBEb2xsYXIiLCJyYXRlIjoyMjc3MS45M30seyJjb2RlIjoiQVVEIiwibmFtZSI6IkF1c3RyYWxpYW4gRG9sbGFyIiwicmF0ZSI6MjQ3NzkuODd9LHsiY29kZSI6IkNOWSIsIm5hbWUiOiJDaGluZXNlIFl1YW4iLCJyYXRlIjoxMTYxNjcuOTZ9LHsiY29kZSI6IkNIRiIsIm5hbWUiOiJTd2lzcyBGcmFuYyIsInJhdGUiOjE1NjYyLjY4fSx7ImNvZGUiOiJTRUsiLCJuYW1lIjoiU3dlZGlzaCBLcm9uYSIsInJhdGUiOjE3MjcwMy41OX0seyJjb2RlIjoiTlpEIiwibmFtZSI6Ik5ldyBaZWFsYW5kIERvbGxhciIsInJhdGUiOjI2MTk0LjQ2fSx7ImNvZGUiOiJLUlciLCJuYW1lIjoiU291dGggS29yZWFuIFdvbiIsInJhdGUiOjIxOTc4OTI1Ljc0fSx7ImNvZGUiOiJFVEgiLCJuYW1lIjoiRXRoZXIiLCJyYXRlIjoxMy41MX0seyJjb2RlIjoiTUFUSUNfZSIsIm5hbWUiOiJNYXRpYyIsInJhdGUiOjE4NjU3LjU4fSx7ImNvZGUiOiJNQVRJQyIsIm5hbWUiOiJNYXRpYyIsInJhdGUiOjE4NjU3LjU4fSx7ImNvZGUiOiJFVEhfbSIsIm5hbWUiOiJFdGhlciIsInJhdGUiOjEzLjUxfSx7ImNvZGUiOiJMVEMiLCJuYW1lIjoiTGl0ZWNvaW4iLCJyYXRlIjoyMjEuMDR9LHsiY29kZSI6IlhSUCIsIm5hbWUiOiJSaXBwbGUiLCJyYXRlIjo0MzE5Mi45Mn0seyJjb2RlIjoiQUVEIiwibmFtZSI6IlVBRSBEaXJoYW0iLCJyYXRlIjo2MTE3NS42OH0seyJjb2RlIjoiQUZOIiwibmFtZSI6IkFmZ2hhbiBBZmdoYW5pIiwicmF0ZSI6MTQ1ODE0MS4wM30seyJjb2RlIjoiQUxMIiwibmFtZSI6IkFsYmFuaWFuIExlayIsInJhdGUiOjE4NDY1MjcuNTN9LHsiY29kZSI6IkFNRCIsIm5hbWUiOiJBcm1lbmlhbiBEcmFtIiwicmF0ZSI6NjU2OTYzMi4zMX0seyJjb2RlIjoiQU5HIiwibmFtZSI6Ik5ldGhlcmxhbmRzIEFudGlsbGVhbiBHdWlsZGVyIiwicmF0ZSI6Mjk5ODEuOX0seyJjb2RlIjoiQU9BIiwibmFtZSI6IkFuZ29sYW4gS3dhbnphIiwicmF0ZSI6ODQwNDIwNS4wNH0seyJjb2RlIjoiQVBFIiwibmFtZSI6IkFwZUNvaW4iLCJyYXRlIjo0MzA4LjIzfSx7ImNvZGUiOiJBUlMiLCJuYW1lIjoiQXJnZW50aW5lIFBlc28iLCJyYXRlIjoyODI4MzgxLjAxfSx7ImNvZGUiOiJBV0ciLCJuYW1lIjoiQXJ1YmFuIEZsb3JpbiIsInJhdGUiOjI5OTgwLjEyfSx7ImNvZGUiOiJBWk4iLCJuYW1lIjoiQXplcmJhaWphbmkgTWFuYXQiLCJyYXRlIjoyODMxNC41Nn0seyJjb2RlIjoiQkFNIiwibmFtZSI6IkJvc25pYS1IZXJ6ZWdvdmluYSBDb252ZXJ0aWJsZSBNYXJrIiwicmF0ZSI6MzEwMTkuMTh9LHsiY29kZSI6IkJCRCIsIm5hbWUiOiJCYXJiYWRpYW4gRG9sbGFyIiwicmF0ZSI6MzMzMTEuMjR9LHsiY29kZSI6IkJEVCIsIm5hbWUiOiJCYW5nbGFkZXNoaSBUYWthIiwicmF0ZSI6MTcwOTg3Ni4yNX0seyJjb2RlIjoiQkdOIiwibmFtZSI6IkJ1bGdhcmlhbiBMZXYiLCJyYXRlIjozMDk2OS44fSx7ImNvZGUiOiJCSEQiLCJuYW1lIjoiQmFocmFpbmkgRGluYXIiLCJyYXRlIjo2Mjc4Ljl9LHsiY29kZSI6IkJJRiIsIm5hbWUiOiJCdXJ1bmRpYW4gRnJhbmMiLCJyYXRlIjozNDQ0OTE1MC40N30seyJjb2RlIjoiQk1EIiwibmFtZSI6IkJlcm11ZGFuIERvbGxhciIsInJhdGUiOjE2NjU1LjYyfSx7ImNvZGUiOiJCTkQiLCJuYW1lIjoiQnJ1bmVpIERvbGxhciIsInJhdGUiOjIyNjA4LjAxfSx7ImNvZGUiOiJCT0IiLCJuYW1lIjoiQm9saXZpYW4gQm9saXZpYW5vIiwicmF0ZSI6MTE0OTU2Ljk4fSx7ImNvZGUiOiJCUkwiLCJuYW1lIjoiQnJhemlsaWFuIFJlYWwiLCJyYXRlIjo4NjY5NC4xN30seyJjb2RlIjoiQlNEIiwibmFtZSI6IkJhaGFtaWFuIERvbGxhciIsInJhdGUiOjE2NjU1LjYyfSx7ImNvZGUiOiJCVE4iLCJuYW1lIjoiQmh1dGFuZXNlIE5ndWx0cnVtIiwicmF0ZSI6MTM3MTM0NC4zNX0seyJjb2RlIjoiQlVTRCIsIm5hbWUiOiJCaW5hbmNlIFVTRCIsInJhdGUiOjE2NjU1LjYyfSx7ImNvZGUiOiJCVVNEX20iLCJuYW1lIjoiQmluYW5jZSBVU0QiLCJyYXRlIjoxNjY1NS42Mn0seyJjb2RlIjoiQldQIiwibmFtZSI6IkJvdHN3YW5hbiBQdWxhIiwicmF0ZSI6MjE0NjU3LjQzfSx7ImNvZGUiOiJCWU4iLCJuYW1lIjoiQmVsYXJ1c2lhbiBSdWJsZSIsInJhdGUiOjQxOTk5LjI2fSx7ImNvZGUiOiJCWkQiLCJuYW1lIjoiQmVsaXplIERvbGxhciIsInJhdGUiOjMzNTMzLjExfSx7ImNvZGUiOiJDREYiLCJuYW1lIjoiQ29uZ29sZXNlIEZyYW5jIiwicmF0ZSI6MzQxODYxMDAuMTh9LHsiY29kZSI6IkNMRiIsIm5hbWUiOiJDaGlsZWFuIFVuaXQgb2YgQWNjb3VudCAoVUYpIiwicmF0ZSI6NTIzLjI3fSx7ImNvZGUiOiJDTFAiLCJuYW1lIjoiQ2hpbGVhbiBQZXNvIiwicmF0ZSI6MTQ0Mzg3NTguMTl9LHsiY29kZSI6IkNPUCIsIm5hbWUiOiJDb2xvbWJpYW4gUGVzbyIsInJhdGUiOjgwMjgxNjU2Ljd9LHsiY29kZSI6IkNSQyIsIm5hbWUiOiJDb3N0YSBSaWNhbiBDb2zDs24iLCJyYXRlIjoxMDAxNTg0NS4yfSx7ImNvZGUiOiJDVVAiLCJuYW1lIjoiQ3ViYW4gUGVzbyIsInJhdGUiOjQyODg4Mi4yNX0seyJjb2RlIjoiQ1ZFIiwibmFtZSI6IkNhcGUgVmVyZGVhbiBFc2N1ZG8iLCJyYXRlIjoxNzQ4ODI4Ljc1fSx7ImNvZGUiOiJDWksiLCJuYW1lIjoiQ3plY2ggS29ydW5hIiwicmF0ZSI6Mzg0OTk0LjU5fSx7ImNvZGUiOiJEQUkiLCJuYW1lIjoiRGFpIiwicmF0ZSI6MTY2NTUuNjJ9LHsiY29kZSI6IkRBSV9tIiwibmFtZSI6IkRhaSIsInJhdGUiOjE2NjU1LjYyfSx7ImNvZGUiOiJESkYiLCJuYW1lIjoiRGppYm91dGlhbiBGcmFuYyIsInJhdGUiOjI5NjE1NTYuMTh9LHsiY29kZSI6IkRLSyIsIm5hbWUiOiJEYW5pc2ggS3JvbmUiLCJyYXRlIjoxMTc3ODIuNTh9LHsiY29kZSI6IkRPR0UiLCJuYW1lIjoiRG9nZWNvaW4iLCJyYXRlIjoxNzMwMDkuNDd9LHsiY29kZSI6IkRPUCIsIm5hbWUiOiJEb21pbmljYW4gUGVzbyIsInJhdGUiOjkxMTU1MC43Mn0seyJjb2RlIjoiRFpEIiwibmFtZSI6IkFsZ2VyaWFuIERpbmFyIiwicmF0ZSI6MjMwMzIwNi42Mn0seyJjb2RlIjoiRUdQIiwibmFtZSI6IkVneXB0aWFuIFBvdW5kIiwicmF0ZSI6NDEwNDc5LjQ1fSx7ImNvZGUiOiJFVEIiLCJuYW1lIjoiRXRoaW9waWFuIEJpcnIiLCJyYXRlIjo4ODk2NTcuMzl9LHsiY29kZSI6IkVVUk9DIiwibmFtZSI6IkNpcmNsZSBFdXJvIENvaW4iLCJyYXRlIjoxNTgzNC4wNX0seyJjb2RlIjoiRkpEIiwibmFtZSI6IkZpamlhbiBEb2xsYXIiLCJyYXRlIjozNjc0My45N30seyJjb2RlIjoiRktQIiwibmFtZSI6IkZhbGtsYW5kIElzbGFuZHMgUG91bmQiLCJyYXRlIjoxMzY1Ni44M30seyJjb2RlIjoiR0VMIiwibmFtZSI6Ikdlb3JnaWFuIExhcmkiLCJyYXRlIjo0NDcyMC4zNH0seyJjb2RlIjoiR0hTIiwibmFtZSI6IkdoYW5haWFuIENlZGkiLCJyYXRlIjoyMTYyNzYuNDR9LHsiY29kZSI6IkdJUCIsIm5hbWUiOiJHaWJyYWx0YXIgUG91bmQiLCJyYXRlIjoxMzY1Ni44M30seyJjb2RlIjoiR01EIiwibmFtZSI6IkdhbWJpYW4gRGFsYXNpIiwicmF0ZSI6MTAzOTMxMC43OH0seyJjb2RlIjoiR05GIiwibmFtZSI6Ikd1aW5lYW4gRnJhbmMiLCJyYXRlIjoxNDMzOTUwMTkuMTl9LHsiY29kZSI6IkdUUSIsIm5hbWUiOiJHdWF0ZW1hbGFuIFF1ZXR6YWwiLCJyYXRlIjoxMzEyNjAuOX0seyJjb2RlIjoiR1VTRCIsIm5hbWUiOiJHZW1pbmkgVVMgRG9sbGFyIiwicmF0ZSI6MTY2NTUuNjJ9LHsiY29kZSI6IkdZRCIsIm5hbWUiOiJHdXlhbmFlc2UgRG9sbGFyIiwicmF0ZSI6MzQ4MDY4Ni42fSx7ImNvZGUiOiJIS0QiLCJuYW1lIjoiSG9uZyBLb25nIERvbGxhciIsInJhdGUiOjEyOTY3My40Nn0seyJjb2RlIjoiSE5MIiwibmFtZSI6IkhvbmR1cmFuIExlbXBpcmEiLCJyYXRlIjo0MTA2NjcuMn0seyJjb2RlIjoiSFJLIiwibmFtZSI6IkNyb2F0aWFuIEt1bmEiLCJyYXRlIjoxMTk2MDIuMzV9LHsiY29kZSI6IkhURyIsIm5hbWUiOiJIYWl0aWFuIEdvdXJkZSIsInJhdGUiOjIzODcyODIuMDl9LHsiY29kZSI6IkhVRiIsIm5hbWUiOiJIdW5nYXJpYW4gRm9yaW50IiwicmF0ZSI6NjUyOTIxNi4yM30seyJjb2RlIjoiSURSIiwibmFtZSI6IkluZG9uZXNpYW4gUnVwaWFoIiwicmF0ZSI6MjYwMzI2NDAyLjQ1fSx7ImNvZGUiOiJJTFMiLCJuYW1lIjoiSXNyYWVsaSBTaGVrZWwiLCJyYXRlIjo1NzI3Ni42NX0seyJjb2RlIjoiSU5SIiwibmFtZSI6IkluZGlhbiBSdXBlZSIsInJhdGUiOjEzNzE2MDIuOTN9LHsiY29kZSI6IklRRCIsIm5hbWUiOiJJcmFxaSBEaW5hciIsInJhdGUiOjI0MjgwMzAxLjY1fSx7ImNvZGUiOiJJUlIiLCJuYW1lIjoiSXJhbmlhbiBSaWFsIiwicmF0ZSI6Njk3ODcwNTM2LjY2fSx7ImNvZGUiOiJJU0siLCJuYW1lIjoiSWNlbGFuZGljIEtyw7NuYSIsInJhdGUiOjIzNjQwOTguOX0seyJjb2RlIjoiSkVQIiwibmFtZSI6IkplcnNleSBQb3VuZCIsInJhdGUiOjEzNjU2LjgzfSx7ImNvZGUiOiJKTUQiLCJuYW1lIjoiSmFtYWljYW4gRG9sbGFyIiwicmF0ZSI6MjU1NzE0NC43M30seyJjb2RlIjoiSk9EIiwibmFtZSI6IkpvcmRhbmlhbiBEaW5hciIsInJhdGUiOjExODI1LjQ5fSx7ImNvZGUiOiJLRVMiLCJuYW1lIjoiS2VueWFuIFNoaWxsaW5nIiwicmF0ZSI6MjA0NjE0My4wOX0seyJjb2RlIjoiS0dTIiwibmFtZSI6Ikt5cmd5c3RhbmkgU29tIiwicmF0ZSI6MTQxNDg5NS4wNH0seyJjb2RlIjoiS0hSIiwibmFtZSI6IkNhbWJvZGlhbiBSaWVsIiwicmF0ZSI6Njg1MjMzOTAuOTJ9LHsiY29kZSI6IktNRiIsIm5hbWUiOiJDb21vcmlhbiBGcmFuYyIsInJhdGUiOjc4MDQ4MjAuMTF9LHsiY29kZSI6IktQVyIsIm5hbWUiOiJOb3J0aCBLb3JlYW4gV29uIiwicmF0ZSI6MTQ5OTAwNTkuMjZ9LHsiY29kZSI6IktXRCIsIm5hbWUiOiJLdXdhaXRpIERpbmFyIiwicmF0ZSI6NTExMS42MX0seyJjb2RlIjoiS1lEIiwibmFtZSI6IkNheW1hbiBJc2xhbmRzIERvbGxhciIsInJhdGUiOjEzODY0LjQyfSx7ImNvZGUiOiJLWlQiLCJuYW1lIjoiS2F6YWtoc3RhbmkgVGVuZ2UiLCJyYXRlIjo3ODc0NTgxLjM2fSx7ImNvZGUiOiJMQUsiLCJuYW1lIjoiTGFvdGlhbiBLaXAiLCJyYXRlIjoyODc3NjIxMDcuNjZ9LHsiY29kZSI6IkxCUCIsIm5hbWUiOiJMZWJhbmVzZSBQb3VuZCIsInJhdGUiOjI1MTU2MzkyLjQ3fSx7ImNvZGUiOiJMS1IiLCJuYW1lIjoiU3JpIExhbmthbiBSdXBlZSIsInJhdGUiOjYxMTM2NTcuMjF9LHsiY29kZSI6IkxSRCIsIm5hbWUiOiJMaWJlcmlhbiBEb2xsYXIiLCJyYXRlIjoyNTY0OTY1Ljc2fSx7ImNvZGUiOiJMU0wiLCJuYW1lIjoiTGVzb3RobyBMb3RpIiwicmF0ZSI6Mjg3Nzc4LjMyfSx7ImNvZGUiOiJMWUQiLCJuYW1lIjoiTGlieWFuIERpbmFyIiwicmF0ZSI6ODA3NTAuNX0seyJjb2RlIjoiTUFEIiwibmFtZSI6Ik1vcm9jY2FuIERpcmhhbSIsInJhdGUiOjE3NjA4MC44NX0seyJjb2RlIjoiTURMIiwibmFtZSI6Ik1vbGRvdmFuIExldSIsInJhdGUiOjMyMzEyOS4xMn0seyJjb2RlIjoiTUdBIiwibmFtZSI6Ik1hbGFnYXN5IEFyaWFyeSIsInJhdGUiOjcyODIzNTc5Ljc5fSx7ImNvZGUiOiJNS0QiLCJuYW1lIjoiTWFjZWRvbmlhbiBEZW5hciIsInJhdGUiOjk3NzIwNC44NH0seyJjb2RlIjoiTU1LIiwibmFtZSI6Ik15YW5tYSBLeWF0IiwicmF0ZSI6MzQ5MzU1NDEuNzd9LHsiY29kZSI6Ik1OVCIsIm5hbWUiOiJNb25nb2xpYW4gVHVncmlrIiwicmF0ZSI6NTY3NDUxMjMuNTh9LHsiY29kZSI6Ik1PUCIsIm5hbWUiOiJNYWNhbmVzZSBQYXRhY2EiLCJyYXRlIjoxMzM0NjcuNjR9LHsiY29kZSI6Ik1SVSIsIm5hbWUiOiJNYXVyaXRhbmlhbiBPdWd1aXlhIiwicmF0ZSI6NjMwMzQzLjg3fSx7ImNvZGUiOiJNVVIiLCJuYW1lIjoiTWF1cml0aWFuIFJ1cGVlIiwicmF0ZSI6NzMwODQ4LjY3fSx7ImNvZGUiOiJNVlIiLCJuYW1lIjoiTWFsZGl2aWFuIFJ1Zml5YWEiLCJyYXRlIjoyNTU2NjMuNzl9LHsiY29kZSI6Ik1XSyIsIm5hbWUiOiJNYWxhd2lhbiBLd2FjaGEiLCJyYXRlIjoxNzA3NTIyNS43N30seyJjb2RlIjoiTVhOIiwibmFtZSI6Ik1leGljYW4gUGVzbyIsInJhdGUiOjMyNzc1NS44MX0seyJjb2RlIjoiTVlSIiwibmFtZSI6Ik1hbGF5c2lhbiBSaW5nZ2l0IiwicmF0ZSI6NzMyODQuNzN9LHsiY29kZSI6Ik1aTiIsIm5hbWUiOiJNb3phbWJpY2FuIE1ldGljYWwiLCJyYXRlIjoxMDY0Mjk0LjA2fSx7ImNvZGUiOiJOQUQiLCJuYW1lIjoiTmFtaWJpYW4gRG9sbGFyIiwicmF0ZSI6Mjg1ODEwLjQ2fSx7ImNvZGUiOiJOR04iLCJuYW1lIjoiTmlnZXJpYW4gTmFpcmEiLCJyYXRlIjo3Mzc4MDE2LjE5fSx7ImNvZGUiOiJOSU8iLCJuYW1lIjoiTmljYXJhZ3VhbiBDw7NyZG9iYSIsInJhdGUiOjYwNzM3OC45OH0seyJjb2RlIjoiTk9LIiwibmFtZSI6Ik5vcndlZ2lhbiBLcm9uZSIsInJhdGUiOjE2Njc0Mi43N30seyJjb2RlIjoiTlBSIiwibmFtZSI6Ik5lcGFsZXNlIFJ1cGVlIiwicmF0ZSI6MjE5NDEwNS4xfSx7ImNvZGUiOiJPTVIiLCJuYW1lIjoiT21hbmkgUmlhbCIsInJhdGUiOjY0MTIuNDN9LHsiY29kZSI6IlBBQiIsIm5hbWUiOiJQYW5hbWFuaWFuIEJhbGJvYSIsInJhdGUiOjE2NjU1LjYyfSx7ImNvZGUiOiJQQVgiLCJuYW1lIjoiUGF4b3MgU3RhbmRhcmQgVVNEIiwicmF0ZSI6MTY2NTUuNjJ9LHsiY29kZSI6IlBFTiIsIm5hbWUiOiJQZXJ1dmlhbiBOdWV2byBTb2wiLCJyYXRlIjo2MzYyMy4zOX0seyJjb2RlIjoiUEdLIiwibmFtZSI6IlBhcHVhIE5ldyBHdWluZWFuIEtpbmEiLCJyYXRlIjo1ODYxOS4wNH0seyJjb2RlIjoiUEhQIiwibmFtZSI6IlBoaWxpcHBpbmUgUGVzbyIsInJhdGUiOjkyMjEzMC4xMn0seyJjb2RlIjoiUEtSIiwibmFtZSI6IlBha2lzdGFuaSBSdXBlZSIsInJhdGUiOjM3MzY4NTAuMzJ9LHsiY29kZSI6IlBMTiIsIm5hbWUiOiJQb2xpc2ggWmxvdHkiLCJyYXRlIjo3NDIwMy4zMX0seyJjb2RlIjoiUFlHIiwibmFtZSI6IlBhcmFndWF5YW4gR3VhcmFuaSIsInJhdGUiOjExOTUwMzA1My4yNn0seyJjb2RlIjoiUUFSIiwibmFtZSI6IlFhdGFyaSBSaWFsIiwicmF0ZSI6NjA3OTAuNjl9LHsiY29kZSI6IlJPTiIsIm5hbWUiOiJSb21hbmlhbiBMZXUiLCJyYXRlIjo3Nzg5OC4zNH0seyJjb2RlIjoiUlNEIiwibmFtZSI6IlNlcmJpYW4gRGluYXIiLCJyYXRlIjoxODU2NDM1LjU2fSx7ImNvZGUiOiJSVUIiLCJuYW1lIjoiUnVzc2lhbiBSdWJsZSIsInJhdGUiOjEwNDQ1NTcuNDF9LHsiY29kZSI6IlJXRiIsIm5hbWUiOiJSd2FuZGFuIEZyYW5jIiwicmF0ZSI6MTgwNjg0MTQuMjN9LHsiY29kZSI6IlNBUiIsIm5hbWUiOiJTYXVkaSBSaXlhbCIsInJhdGUiOjYyNjMxLjc3fSx7ImNvZGUiOiJTQkQiLCJuYW1lIjoiU29sb21vbiBJc2xhbmRzIERvbGxhciIsInJhdGUiOjEzNjYzNS43N30seyJjb2RlIjoiU0NSIiwibmFtZSI6IlNleWNoZWxsb2lzIFJ1cGVlIiwicmF0ZSI6MjE5NjY4LjUxfSx7ImNvZGUiOiJTREciLCJuYW1lIjoiU3VkYW5lc2UgUG91bmQiLCJyYXRlIjo5NDc3MDQ4LjU4fSx7ImNvZGUiOiJTR0QiLCJuYW1lIjoiU2luZ2Fwb3JlIERvbGxhciIsInJhdGUiOjIyNTk2LjY4fSx7ImNvZGUiOiJTSElCIiwibmFtZSI6IlNoaWJhIEludSIsInJhdGUiOjE4MTYzMTY0MDEuMzF9LHsiY29kZSI6IlNISUJfbSIsIm5hbWUiOiJTaGliYSBJbnUiLCJyYXRlIjoxODE2MzE2NDAxLjMxfSx7ImNvZGUiOiJTSFAiLCJuYW1lIjoiU2FpbnQgSGVsZW5hIFBvdW5kIiwicmF0ZSI6MTM2NTYuODN9LHsiY29kZSI6IlNMTCIsIm5hbWUiOiJTaWVycmEgTGVvbmVhbiBMZW9uZSIsInJhdGUiOjI5NDIyMTU1Mi4wM30seyJjb2RlIjoiU09TIiwibmFtZSI6IlNvbWFsaSBTaGlsbGluZyIsInJhdGUiOjk0NTY4NzEuOTd9LHsiY29kZSI6IlNSRCIsIm5hbWUiOiJTdXJpbmFtZXNlIERvbGxhciIsInJhdGUiOjUyOTM0OC45Nn0seyJjb2RlIjoiU1ROIiwibmFtZSI6IlPDo28gVG9tw6kgYW5kIFByw61uY2lwZSBEb2JyYSIsInJhdGUiOjM4ODU2Ni40fSx7ImNvZGUiOiJTVkMiLCJuYW1lIjoiU2FsdmFkb3JhbiBDb2zDs24iLCJyYXRlIjoxNDU1NzMuNDN9LHsiY29kZSI6IlNZUCIsIm5hbWUiOiJTeXJpYW4gUG91bmQiLCJyYXRlIjo0MTg0Nzc0OC40NH0seyJjb2RlIjoiU1pMIiwibmFtZSI6IlN3YXppIExpbGFuZ2VuaSIsInJhdGUiOjI4Nzc4Mi42Nn0seyJjb2RlIjoiVEhCIiwibmFtZSI6IlRoYWkgQmFodCIsInJhdGUiOjU3OTM5MC43N30seyJjb2RlIjoiVEpTIiwibmFtZSI6IlRhamlraXN0YW5pIFNvbW9uaSIsInJhdGUiOjE2NzE5Ni4xN30seyJjb2RlIjoiVE1UIiwibmFtZSI6IlR1cmttZW5pc3RhbmkgTWFuYXQiLCJyYXRlIjo1ODM3Ny45NX0seyJjb2RlIjoiVE5EIiwibmFtZSI6IlR1bmlzaWFuIERpbmFyIiwicmF0ZSI6NTMzMzkuNjN9LHsiY29kZSI6IlRPUCIsIm5hbWUiOiJUb25nYW4gUGHKu2FuZ2EiLCJyYXRlIjozOTA1MC4zNX0seyJjb2RlIjoiVFJZIiwibmFtZSI6IlR1cmtpc2ggTGlyYSIsInJhdGUiOjMxMDU3Mi4zNn0seyJjb2RlIjoiVFREIiwibmFtZSI6IlRyaW5pZGFkIGFuZCBUb2JhZ28gRG9sbGFyIiwicmF0ZSI6MTEyOTI1LjI4fSx7ImNvZGUiOiJUV0QiLCJuYW1lIjoiTmV3IFRhaXdhbiBEb2xsYXIiLCJyYXRlIjo1MTEwMDIuODN9LHsiY29kZSI6IlRaUyIsIm5hbWUiOiJUYW56YW5pYW4gU2hpbGxpbmciLCJyYXRlIjozODg3NDIyMC4zNX0seyJjb2RlIjoiVUFIIiwibmFtZSI6IlVrcmFpbmlhbiBIcnl2bmlhIiwicmF0ZSI6NjE0MzkxLjExfSx7ImNvZGUiOiJVR1giLCJuYW1lIjoiVWdhbmRhbiBTaGlsbGluZyIsInJhdGUiOjYxNDIxODE0LjY5fSx7ImNvZGUiOiJVU0RDIiwibmFtZSI6IkNpcmNsZSBVU0QgQ29pbiIsInJhdGUiOjE2NjU1LjYyfSx7ImNvZGUiOiJVU0RDX20iLCJuYW1lIjoiQ2lyY2xlIFVTRCBDb2luIiwicmF0ZSI6MTY2NTUuNjJ9LHsiY29kZSI6IlVTRFQiLCJuYW1lIjoiVGV0aGVyIiwicmF0ZSI6MTY2NTUuNjJ9LHsiY29kZSI6IlVTRFRfbSIsIm5hbWUiOiJUZXRoZXIiLCJyYXRlIjoxNjY1NS42Mn0seyJjb2RlIjoiVVlVIiwibmFtZSI6IlVydWd1YXlhbiBQZXNvIiwicmF0ZSI6NjUzMzk1Ljl9LHsiY29kZSI6IlVaUyIsIm5hbWUiOiJVemJla2lzdGFuIFNvbSIsInJhdGUiOjE4NzMzMjczNi43fSx7ImNvZGUiOiJWRVMiLCJuYW1lIjoiVmVuZXp1ZWxhbiBCb2zDrXZhciBTb2JlcmFubyIsInJhdGUiOjE5MzE0NS4yNX0seyJjb2RlIjoiVk5EIiwibmFtZSI6IlZpZXRuYW1lc2UgRG9uZyIsInJhdGUiOjM5NjUxNTY2NS4xNn0seyJjb2RlIjoiVlVWIiwibmFtZSI6IlZhbnVhdHUgVmF0dSIsInJhdGUiOjE5NjYwOTYuMTd9LHsiY29kZSI6IldCVEMiLCJuYW1lIjoiV3JhcHBlZCBCVEMiLCJyYXRlIjowLjk5fSx7ImNvZGUiOiJXQlRDX20iLCJuYW1lIjoiV3JhcHBlZCBCVEMiLCJyYXRlIjowLjk5fSx7ImNvZGUiOiJXU1QiLCJuYW1lIjoiU2Ftb2FuIFRhbGEiLCJyYXRlIjo0NDkyOS4zN30seyJjb2RlIjoiWEFGIiwibmFtZSI6IkNGQSBGcmFuYyBCRUFDIiwicmF0ZSI6MTAzODY0NTkuOTV9LHsiY29kZSI6IlhBRyIsIm5hbWUiOiJTaWx2ZXIgKHRyb3kgb3VuY2UpIiwicmF0ZSI6NzMzLjQxfSx7ImNvZGUiOiJYQVUiLCJuYW1lIjoiR29sZCAodHJveSBvdW5jZSkiLCJyYXRlIjo5LjM0fSx7ImNvZGUiOiJYQ0QiLCJuYW1lIjoiRWFzdCBDYXJpYmJlYW4gRG9sbGFyIiwicmF0ZSI6NDUwMTIuNjV9LHsiY29kZSI6IlhQRiIsIm5hbWUiOiJDRlAgRnJhbmMiLCJyYXRlIjoxODg5NTA1LjV9LHsiY29kZSI6IlhPRiIsIm5hbWUiOiJDRkEgRnJhbmMgQkNFQU8iLCJyYXRlIjoxMDM4NjQ1OS45NX0seyJjb2RlIjoiWUVSIiwibmFtZSI6IlllbWVuaSBSaWFsIiwicmF0ZSI6NDE2NzIzNS41OX0seyJjb2RlIjoiWkFSIiwibmFtZSI6IlNvdXRoIEFmcmljYW4gUmFuZCIsInJhdGUiOjI4NjAwMS4yNX0seyJjb2RlIjoiWk1XIiwibmFtZSI6IlphbWJpYW4gS3dhY2hhIiwicmF0ZSI6Mjg3NjI5LjY5fSx7ImNvZGUiOiJaV0wiLCJuYW1lIjoiWmltYmFid2VhbiBEb2xsYXIiLCJyYXRlIjo1MzYzMTEwLjA5fV0=
+  recorded_at: Thu, 08 Dec 2022 09:26:35 GMT
 - request:
     method: get
     uri: https://www.bitstamp.net/api/ticker/
@@ -76,37 +78,34 @@ http_interactions:
       message: OK
     headers:
       Etag:
-      - '"c2-58b46f7a219ba"'
+      - '"1359247958"'
       Last-Modified:
-      - Fri, 14 Jun 2019 11:30:02 GMT
+      - Thu, 08 Dec 2022 09:26:33 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '146'
-      Connection:
-      - keep-alive
+      - '156'
       Cache-Control:
-      - max-age=2, public
+      - max-age=1, public
       Expires:
-      - Fri, 14 Jun 2019 11:30:06 GMT
+      - Thu, 08 Dec 2022 09:26:36 GMT
       Date:
-      - Fri, 14 Jun 2019 11:30:04 GMT
+      - Thu, 08 Dec 2022 09:26:35 GMT
       Set-Cookie:
-      - incap_ses_466_99025=orgPa0lFrUiMcseAJpN3BjyFA10AAAAAN95eNRCFFW1jzGE3pXo7OQ==;
+      - incap_ses_9197_99025=cNILNpU3tSgqFa41T0+if8utkWMAAAAA4tWtSmfS8rldVzqF0o8OLg==;
         path=/; Domain=.bitstamp.net
-      - visid_incap_99025=i/P4cRVfSO67Xpmr9HkG8DyFA10AAAAAQUIPAAAAAAAKukHpwrRTTysx7AZTwWLu;
-        expires=Fri, 12 Jun 2020 17:05:14 GMT; path=/; Domain=.bitstamp.net
-      X-Iinfo:
-      - 10-23282110-0 0CNN RT(1560511804713 255) q(0 -1 -1 1) r(0 -1)
+      - visid_incap_99025=8sAL3xZlS1O/BQIKQMKEiMutkWMAAAAAQUIPAAAAAABS/0tIcvOvyB7cBbTbm1t3;
+        expires=Thu, 07 Dec 2023 22:30:48 GMT; HttpOnly; path=/; Domain=.bitstamp.net
       X-Cdn:
-      - Incapsula
+      - Imperva
+      X-Iinfo:
+      - 14-508312754-508309773 2CNN RT(1670491595486 201) q(0 0 0 0) r(0 0)
     body:
       encoding: ASCII-8BIT
-      string: '{"high": "8335.56000000", "last": "8291.08", "timestamp": "1560511801",
-        "bid": "8286.53", "vwap": "8231.46", "volume": "7474.74418312", "low": "8049.22000000",
-        "ask": "8291.08", "open": 8235.44}'
-    http_version: 
-  recorded_at: Fri, 14 Jun 2019 11:30:05 GMT
+      string: '{"timestamp": "1670491592", "open": 16838.0, "high": "16894", "low":
+        "16772", "last": "16825", "volume": "1016.17271878", "vwap": "16827", "bid":
+        "16824", "ask": "16825", "open_24": "16828", "percent_change_24": "-0.02"}'
+  recorded_at: Thu, 08 Dec 2022 09:26:36 GMT
 - request:
     method: get
     uri: https://api.coinbase.com/v2/exchange-rates?currency=BTC
@@ -126,61 +125,62 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 14 Jun 2019 11:30:06 GMT
+      - Thu, 08 Dec 2022 09:26:36 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=dd6bb4723e58d293324f8409ecdb636901560511806; expires=Sat, 13-Jun-20
-        11:30:06 GMT; path=/; domain=.coinbase.com; HttpOnly
       Cache-Control:
-      - public, max-age=30
+      - max-age=30, public, s-maxage=30, stale-while-revalidate=30
       Content-Disposition:
       - attachment; filename=response.json
       Content-Security-Policy:
       - 'default-src ''self'' https://www.coinbase.com; child-src ''self'' https://www.coinbase.com
         https://fast.wistia.net https://*.online-metrix.net https://*.wpstn.com https://netverify.com
-        https://platform.twitter.com https://www.google.com/recaptcha/ https://cdn.plaid.com/link/
-        https://*.doubleclick.net/ blob:; connect-src ''self'' https://www.coinbase.com
-        https://api.coinbase.com https://api.mixpanel.com https://*.online-metrix.net
+        https://platform.twitter.com https://www.google.com/recaptcha/ https://recaptcha.net/recaptcha/
+        https://cdn.plaid.com/link/ https://*.doubleclick.net/ blob:; connect-src
+        ''self'' https://www.coinbase.com https://api.coinbase.com https://*.online-metrix.net
         https://api.cloudinary.com https://ott9.wpstn.com/live https://api.amplitude.com/
-        https://d3907m2cqladbn.cloudfront.net/ https://exceptions.coinbase.com https://assets.coinbase.com/
-        static.coinbase.com wss://ws.coinbase.com wss://ws.coinbase.com:443 https://www.coinbase.com/api;
-        font-src ''self'' https://www.coinbase.com https://assets.coinbase.com/ https://card.coinbase.com/
+        https://api2.amplitude.com/ https://d3907m2cqladbn.cloudfront.net/ https://exceptions.coinbase.com
+        https://assets.coinbase.com/ https://sessions.coinbase.com/ https://dynamic-assets.coinbase.com/
+        https://events-service.coinbase.com/amp static.coinbase.com wss://ws.coinbase.com
+        wss://ws.coinbase.com:443 https://www.coinbase.com/api; font-src ''self''
+        https://www.coinbase.com https://assets.coinbase.com/ https://card.coinbase.com/
         static.coinbase.com; img-src ''self'' data: https://www.coinbase.com https://images.coinbase.com
         https://d3907m2cqladbn.cloudfront.net/ https://static-assets.coinbase.com/
-        https://dynamic-assets.coinbase.com https://exceptions.coinbase.com https://coinbase-uploads.s3.amazonaws.com
+        https://dynamic-assets.coinbase.com/ https://exceptions.coinbase.com https://coinbase-uploads.s3.amazonaws.com
         https://s3.amazonaws.com/app-public/ https://maps.gstatic.com https://ssl.google-analytics.com
         https://www.google.com https://maps.googleapis.com https://csi.gstatic.com
         https://www.google-analytics.com https://res.cloudinary.com https://secure.gravatar.com
         https://i2.wp.com https://*.online-metrix.net https://assets.coinbase.com/
-        https://hexagon-analytics.com https://api.mixpanel.com https://cb-brand.s3.amazonaws.com
-        https://googleads.g.doubleclick.net https://stats.g.doubleclick.net/r/collect
-        https://card.coinbase.com/ blob: static.coinbase.com https://www.facebook.com/tr;
-        media-src ''self'' https://www.coinbase.com blob:; object-src ''self'' data:
-        blob: https://www.coinbase.com https://cdn.siftscience.com https://*.online-metrix.net
-        https://www.gstatic.com https://www.google.com/recaptcha/api/; script-src
-        ''self'' ''unsafe-inline'' ''unsafe-eval'' https://www.coinbase.com https://fast.wistia.com/assets/external/E-v1.js
-        https://cdn.siftscience.com https://*.google-analytics.com https://www.google.com
-        https://www.gstatic.com https://*.online-metrix.net https://code.jquery.com
-        https://chart.googleapis.com https://maps.googleapis.com https://maps.gstatic.com
-        https://netverify.com https://ajax.cloudflare.com https://cdn.plaid.com/link/v2/stable/
-        https://www.googletagmanager.com/gtag/js https://www.googletagmanager.com/gtm.js
-        https://www.googleadservices.com https://googleads.g.doubleclick.net https://assets.coinbase.com/
-        https://card.coinbase.com/ static.coinbase.com; style-src ''self'' ''unsafe-inline''
-        https://www.coinbase.com https://assets.coinbase.com/ https://card.coinbase.com/
-        static.coinbase.com; report-uri /csp-report'
+        https://hexagon-analytics.com https://cb-brand.s3.amazonaws.com https://googleads.g.doubleclick.net
+        https://stats.g.doubleclick.net/r/collect https://card.coinbase.com/ blob:
+        static.coinbase.com https://www.facebook.com/tr; media-src ''self'' https://www.coinbase.com
+        blob:; object-src ''self'' data: blob: https://www.coinbase.com https://cdn.siftscience.com
+        https://*.online-metrix.net https://www.gstatic.com https://www.google.com/recaptcha/api/
+        https://recaptcha.net/recaptcha/; script-src ''self'' ''unsafe-inline'' ''unsafe-eval''
+        https://www.coinbase.com https://fast.wistia.com/assets/external/E-v1.js https://cdn.siftscience.com
+        https://*.google-analytics.com https://www.google.com https://www.gstatic.com
+        https://*.online-metrix.net https://code.jquery.com https://chart.googleapis.com
+        https://maps.googleapis.com https://maps.gstatic.com https://netverify.com
+        https://ajax.cloudflare.com https://cdn.plaid.com/link/v2/stable/ https://www.googletagmanager.com/gtag/js
+        https://www.googletagmanager.com/gtm.js https://www.googleadservices.com https://googleads.g.doubleclick.net
+        https://recaptcha.net https://assets.coinbase.com/ https://card.coinbase.com/
+        static.coinbase.com; style-src ''self'' ''unsafe-inline'' https://www.coinbase.com
+        https://assets.coinbase.com/ https://card.coinbase.com/ static.coinbase.com;
+        report-uri /csp-report'
       Etag:
-      - W/"efb58500b650d523d9fcc53fdb091b9b"
+      - W/"08c304a3182101801321649b17a1a12d"
       Expect-Ct:
-      - enforce; max-age=86400; report-uri="https://coinbase.report-uri.io/r/default/ct/reportOnly"
+      - enforce, max-age=86400, report-uri="https://coinbase.report-uri.io/r/default/ct/reportOnly"
       Referrer-Policy:
       - strict-origin-when-cross-origin
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Trace-Id:
+      - '6390745446015770541'
       Vary:
       - Origin,Accept-Encoding
       X-Content-Type-Options:
@@ -194,22 +194,25 @@ http_interactions:
       X-Powered-By:
       - Proof-of-Work
       X-Request-Id:
-      - 0bc9b168-34a5-443a-8d8d-e3a3e4a111a0
+      - 7e7bb043-9ada-4ffe-8000-fd66528c3858
       X-Xss-Protection:
       - 1; mode=block
       Cf-Cache-Status:
       - HIT
-      Expires:
-      - Fri, 14 Jun 2019 11:30:36 GMT
+      Age:
+      - '28'
+      Set-Cookie:
+      - __cf_bm=0tJxQiovWJjclpK2Q5yD6isBPkBj5UJh70CofbWeUcU-1670491596-0-AXXmNqvmBFlQF5c5AYXaMQyLAbtyIKIVXKFDIyXouBI31vvI1jjWZem3j2HEaohwdrDTTTqmWEgfctNbhjY62eM=;
+        path=/; expires=Thu, 08-Dec-22 09:56:36 GMT; domain=.coinbase.com; HttpOnly;
+        Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 4e6bf8642a55cc46-ZRH
+      - 776475df7eda9122-FRA
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"currency":"BTC","rates":{"AED":"30414.49163375","AFN":"663248.2994875","ALL":"897385.8581","AMD":"3963404.888198115","ANG":"15537.34437754","AOA":"2806781.6850825","ARS":"360289.9064335","AUD":"12004.75075075","AWG":"14748.732813755","AZN":"14096.6914875","BAM":"14387.460071915","BAT":"25804.224353530555214517","BBD":"16559.99","BCH":"20.138958815829223","BDT":"700495.856995","BGN":"14383.1793145","BHD":"3120.854315425","BIF":"15213622.12510457","BMD":"8279.995","BND":"11184.592406015","BOB":"57257.929063935","BRL":"31873.06243297","BSD":"8279.995","BSV":"39.39447140128550740703","BTC":"1.0","BTN":"576293.53079645","BWP":"90123.332337665","BYN":"17102.06471266","BYR":"171020647.1266","BZD":"16702.52183393","CAD":"11047.359768885","CDF":"13672484.962823515","CHF":"8241.782823075","CLF":"201.179038515","CLP":"5765360.5185","CNH":"57400.692737725","CNY":"57330.68538","COP":"27070434.40390945","CRC":"4853936.566437115","CUC":"8279.995","CVE":"811186.9701525","CZK":"187777.45260775","DAI":"8287.088747968259357204","DJF":"1474253.10975","DKK":"54908.828242475","DOP":"426916.5422","DZD":"988300.2032","EEK":"121001.288411545","EGP":"138822.39617","EOS":"1291.5196666156678","ERN":"124172.17045676","ETB":"239109.654210025","ETC":"987.1668311944719","ETH":"32.425421530479895","EUR":"7360.445","FJD":"17876.06208527","FKP":"6550.53588436","GBP":"6552.69","GEL":"22645.786325","GGP":"6550.53588436","GHS":"44577.837081","GIP":"6550.53588436","GMD":"412343.751","GNF":"75912562.564932895","GTQ":"63680.588705515","GYD":"1730057.29559878","HKD":"64813.73086125","HNL":"202844.77478912","HRK":"54498.0990905","HTG":"768807.397224045","HUF":"2364766.572","IDR":"118714428.3125","ILS":"29771.988861735","IMP":"6550.53588436","INR":"577830.239908485","IQD":"9887574.39427891","ISK":"1040808.27173221","JEP":"6550.53588436","JMD":"1074329.35125","JOD":"5870.524734995","JPY":"896199.56061196365","KES":"843400.2907","KGS":"568895.15654407","KHR":"33767108.333261785","KMF":"3615250.15071661","KRW":"9806412.07825","KWD":"2517.11848","KYD":"6905.242590165","KZT":"3181836.4786","LAK":"72223609.876882675","LBP":"12531358.43275","LKR":"1465018.042166735","LRD":"1607357.85473269","LSL":"122615.473436795","LTC":"62.99212598425197","LTL":"26701.700475775","LVL":"5433.837798695","LYD":"11556.04126171","MAD":"79817.08180125","MDL":"150820.299364885","MGA":"30233258.631230285","MKD":"451629.92607645","MMK":"12644811.2554398","MNT":"20317037.73125","MOP":"66811.188575055","MRO":"2955958.215","MTL":"5661.34722131","MUR":"296174.270230695","MVR":"127926.07178991","MWK":"6173086.79780833","MXN":"158860.8120695","MYR":"34512.21147928","MZN":"513525.2899","NAD":"122615.473436795","NGN":"2987287.555001305","NIO":"273121.373111535","NOK":"71927.629325415","NPR":"922064.35007752","NZD":"12677.359584585","OMR":"3187.4668752","PAB":"8279.995","PEN":"27630.80699472","PGK":"27965.15319282","PHP":"430675.65993","PKR":"1270979.2325","PLN":"31293.413103","PYG":"51727459.608432485","QAR":"30149.606313705","REP":"449.7413986957499","RON":"34733.7510255","RSD":"866347.990482685","RUB":"532922.8341865","RWF":"7544843.40609239","SAR":"31059.00644455","SBD":"68129.148499185","SCR":"113104.7317","SEK":"78297.20591905","SGD":"11321.626323265","SHP":"6550.53588436","SLL":"69469158.05","SOS":"4793410.515066685","SRD":"61752.20271","SSP":"1078580.300683","STD":"174298859.51780195","SVC":"72503.51125766","SZL":"122615.225036945","THB":"258120.68004993","TJS":"78180.11022976","TMT":"28979.86658007","TND":"24465.108226375","TOP":"18980.87837811","TRY":"48797.50469289","TTD":"56188.46006975","TWD":"260770.518569785","TZS":"19047712.436031245","UAH":"219154.90766","UGX":"31032675.605050275","USD":"8279.995","USDC":"8276.335","UYU":"292633.595328785","UZS":"70570330.639960305","VEF":"2057476435.317268795","VES":"50884818.68435393","VND":"193243066.468736545","VUV":"926367.14883921","WST":"21664.134957785","XAF":"4823430.166858865","XAG":"550.60484630895","XAU":"6.1161011067","XCD":"22377.10048725","XDR":"5955.162843885","XLM":"67773.63605557437","XOF":"4823430.166858865","XPD":"5.685044567","XPF":"877478.74636121","XPT":"10.18315185075","XRP":"20863.75964948884","YER":"2072902.933406265","ZAR":"122604.825363225","ZEC":"89.40713745815787434274","ZMK":"43495436.846023725","ZMW":"108352.01457","ZRX":"25843.13218762114","ZWL":"2669097.879304945"}}}'
-    http_version: 
-  recorded_at: Fri, 14 Jun 2019 11:30:06 GMT
+      string: '{"data":{"currency":"BTC","rates":{"AED":"61794.56684709642329606454304679808447","AFN":"1472908.24346494013815184642073611940951","ALL":"1865228.12253868962918367278277530881112","AMD":"6636171.1717422469026605510504314247637","ANG":"30285.55702441943713582724040107968263","AOA":"8489403.57251528752942312511656054396422","ARS":"2856922.60599183340151622459","AWG":"30282.80547264254885673640015809548592","AZN":"28601.31000001835460471","BAM":"31332.50148988899936040963051283790267","BBD":"33928.47223052176989294550049784063474","BDT":"1727192.79987831149092100108717797857816","BGN":"31316.75202002009553004481999892031737","BHD":"6341.75332443406975678520463","BIF":"34789702.23327294629039881709677384437063","BMD":"16824.3000000107968263","BND":"22836.96665158465707743341137107968263","BOB":"116032.78405652729514199452931914474723","BRL":"87572.16393005617668898412998596412581","BSD":"16804.4069430715883736296185573552035","BTN":"1385232.61008988912405482054910580889774","BWP":"216831.37650853922339471248444750603572","BYN":"42469.54684142725104217543739784063474","BYR":"424695468.4142725104217543739784063474","BZD":"33872.71650032173579469314229892031737","CAD":"22987.0999999843993448","CDF":"34525548.94317832305860347926944408179416","CHF":"15829.14835263296119261074746368974513","CLF":"528.57423099572562634756449084173592","CLP":"14584985.67000993850108545037139570916318","CNY":"117290.60194445441546223727286687300202","COP":"81159189.58037046225911709419681625474759","CRC":"10117280.35502455157042744357580292792419","CUC":"16824.3000000107968263","CVE":"1766539.48745092803132421601818846160265","CZK":"389547.69373564568261270452253424263871","DJF":"2991549.12358059949990224598367470875168","DKK":"119097.032541076429329790281","DOP":"920782.4143550900785168729839709555113","DZD":"2324344.34220149477256718020202008620073","EGP":"414717.31257026602628337236992658158116","ETB":"898649.4859463424826771722838027952691","EUR":"16011.75","FJD":"37140.18602877252744881182476809229639","FKP":"13822.84488000887067248808","GBP":"13822.855","GEL":"45257.36700002904178031699999892031737","GHS":"218466.78259004012821123297585465332954","GIP":"13822.84488000887067248808","GMD":"1049836.32000067540102626000107752326474","GNF":"144849105.2752840978049346724786851832164","GTQ":"132590.23891118508677763066509892031737","GYD":"3515936.66198324148489434131148151793392","HKD":"130991.47426088184886894226966941783551","HNL":"414826.21626416651846115901009758192129","HRK":"120934.75083007762885628703001295619156","HTG":"2411458.71692855339278813071076269396555","HUF":"6644432.06995438425398291854223175091284","IDR":"262879687.5001687004109375","ILS":"57888.35151892553599945566508446692529","INR":"1387012.11630088933565134829950874440335","IQD":"24514498.03294593738391956022730610848088","ISK":"2390564.787001534121048967","JMD":"2582719.54413461046921480508401671920239","JOD":"11945.253000007665746673","JPY":"2304524.5","KES":"2066865.25500133654862329500651912371994","KGS":"1429224.285000917190394185","KHR":"69217396.05494332020359181520189144384209","KMF":"7883853.00981752599623072183737739717957","KRW":"22197476.691014245008715431","KWD":"5164.71125991068712447945858415363647","KYD":"13997.500562220249279025769118985743","KZT":"7954037.22597534823257081401807928554031","LAK":"290671967.38626133859631244407792829944792","LBP":"25395169.81133705181334650679245287093142","LKR":"6175052.11851117128176085738732152272852","LRD":"2590833.07411258109006090182405363690215","LSL":"290646.05921981991134373456424841629458","LYD":"81565.44293216719466445452070733127982","MAD":"177864.11054951423504814426545938254465","MDL":"326368.57420001545792424615906923484769","MGA":"73561406.76093119979669220164954660480657","MKD":"987101.43272883198530095507525203865086","MMK":"35289317.51303331757526274484061306237079","MNT":"57319805.7079762844121763384695","MOP":"134743.17802753726051825149544504565664","MUR":"740231.73228437495387359782984709555113","MVR":"258247.61304825289632256377369076535169","MWK":"17246847.7703852350853700119938489649394","MXN":"331134.86065207835016471900330642530349","MYR":"74077.39290004754010862890000107968263","MZN":"1075072.77000068847704048999907579166872","NAD":"288581.47512883013496907780446015794172","NGN":"7452426.51358581691053254870302400455875","NIO":"613530.21708909402803714090689326319077","NOK":"168609.43325410818322871681398704380844","NPR":"2216326.11121042419112500847021032422823","NZD":"26491.62310261824816645820621046278302","OMR":"6468.5708573513312569689145808449983","PAB":"16805.47697317078474681073556","PEN":"64242.15163080970579040626082533140495","PGK":"59184.95496307442709804129987133360218","PHP":"932049.39570059749573922369959080028323","PKR":"3774515.74257534691734149703159315631962","PLN":"75139.91343705289528645945415073702453","PYG":"120690817.79060829861065208008608332840246","QAR":"61257.27630003931965670830000539841315","RON":"78776.32912790294909468878929897371415","RSD":"1877423.63700120409271948699953465678647","RUB":"1050088.00509373458887576189005019765325","RWF":"18247613.88287505078730974149674592520123","SAR":"63269.7149445406027069361745","SBD":"138019.55829128861136737545922483270049","SCR":"220148.08536194135858917561385182476624","SEK":"174870.08664781764273902238867178338963","SHP":"13822.84488000887067248808","SLL":"155367380.03443681823983722011675368501416","SRD":"534709.90260034365787461660032930320215","SSP":"2191533.31800141092706025800290866500522","STD":"383997663.4366936266609445374552","SVC":"146947.17961483822838651318177240278671","SZL":"290661.82607507967948864627551419223787","THB":"585014.5596003754272441036","TJS":"168889.44007900843189992692493131079627","TMT":"58853.83980878718887746183346160728784","TND":"53888.23290003458728192890000323904789","TOP":"39452.98350002531519281349999784063474","TRY":"313672.24147131726585116726595420752919","TTD":"114018.29383591659230578820017139217498","TWD":"515908.58424841171132429732409037557349","TZS":"39267916.20002212904153735802937621991556","UAH":"620297.90953419897344603786637978957231","UGX":"62036504.42481857236759357920353932934865","UYU":"660850.79847102286790064755381291136273","UZS":"189229820.25221760806671139359884059003076","VES":"212754.22611943652616757742129568126948","VND":"400578571.42882849586412548285714275431594","VUV":"1986007.66920126359505249719300149719234","WST":"45384.390465029124978785565","XAF":"10496952.3478573363142109401346","XAG":"739.54592408671833244211433223608984","XAU":"9.43187742815052346303082841966165","XCD":"45466.1658199405380057019133064221244","XDR":"12671.9449899081320939913759","XOF":"10508541.06029180112537913022181933704826","XPD":"9.02833378052688942292997085123678","XPF":"1917970.20000123160538628000049233527928","XPT":"16.62480237155185823069169940416963","YER":"4209432.02204027632705336598497308504864","ZAR":"289352.70182413807340852807617979565435","ZMW":"290540.40518837466849037631158453143204","JEP":"13822.84488000887067248808","GGP":"13822.84488000887067248808","IMP":"13822.84488000887067248808","GBX":"2324745.58003755630014713954525631681292","CNH":"117298.01069642567344848977082540540018","LTL":"0","ZWD":"8074457.6976953117711548543734702641253","ZWL":"5417424.6000034765780686","VEF":"21275422611.943652616757742129568126948","SGD":"22836.14300840295951416863506762438993","AUD":"25047.17662501607545758412500107968263","USD":"16824.3000000107968263","BTC":"1.0","BCH":"153.5390756947643175","BSV":"384.63015671640850061718253811051646","ETH":"13.651877133105802","ETH2":"13.651877133105802","ETC":"895.6560680698611733","LTC":"223.4886579506090066","ZRX":"90867.7873693775556565","USDC":"16824.3000000107968263","BAT":"75329.5668549905838041","LOOM":"350506.25000022493332043999999964010579","MANA":"42462.8450106157112527","KNC":"26831.2315535283069493","LINK":"2457.3345292361375616","DNT":"837029.85074680581287313343283621839062","MKR":"27.6472214542438485","CVC":"174979.71918887984173925940717599958528","OMG":"14581.510644502770487","GNT":"98400.49409929708302377851921117415319","DAI":"16813.7873055905842791","SNT":"752765.10067162401824202006711356015691","ZEC":"382.6286588865506026","XRP":"43609.36770787220477671948878579992664","REP":"3054.3677458766035431","XLM":"199800.1998001998001998","EOS":"17091.0955392240642625","XTZ":"17027.073046143367955","ALGO":"75728.8905717531238167","DASH":"381.0249571346923223","ATOM":"1748.7103261344758241","OXT":"204426.48845699631678480102065648767308","COMP":"443.6557231588287489","ENJ":"56163.9988767200224656","REPV2":"3054.3677458766035431","BAND":"7919.8511067991921752","NMR":"1205.1096649795131357","CGLD":"28563.2676378177663525","UMA":"9379.9831160303911453","LRC":"69735.0069735006973501","YFI":"2.4230676035861401","UNI":"2817.6951253874330797","BAL":"2892.3886791907096476","REN":"193423.597678916827853","WBTC":"1.0016025641025641","NU":"160642.570281124497992","YFII":"11.24025414387552000070631178220188","FIL":"3852.2285141954620748","AAVE":"275.6719503790489318","BNT":"45578.8514129443938013","GRT":"271002.7100271002710027","SNX":"8543.3575395130286202","STORJ":"53404.5393858477970628","SUSHI":"14378.1452192667145938","MATIC":"18841.2623645784267546","SKL":"653594.7712418300653595","ADA":"54229.9349240780911063","ANKR":"803212.8514056224899598","CRV":"25542.7841634738186462","ICP":"4042.0371867421180275","NKN":"207900.2079002079002079","OGN":"164744.6457990115321252","1INCH":"38314.1762452107279693","USDT":"16823.16","FORTH":"4473.2721986132856184","CTSI":"139860.1398601398601399","TRB":"1239.6950350213847394","POLY":"80383.65981849401210188788819847146495","MIR":"124843.9450686641697878","RLC":"16273.3930024410089504","DOT":"3174.0993493096333915","SOL":"1248.127808287568647","DOGE":"174825.1748251748251748","MLN":"810.3727714748784441","GTC":"9613.88571429188342004857142826294782","AMP":"4962920.35398548578873451433628271447484","SHIB":"1835711947.62801929365007483255319169493139","CHZ":"110395.66929140942767173913385806084821","KEEP":"198412.6984126984126984","LPT":"2313.7436372049976863","QNT":"142.76634562358082040479316097007573","BOND":"4308.39948783887254088193341876725119","RLY":"1690884.42211163787280157427135730477152","CLV":"267689.73747033885125537050119306317736","FARM":"480.90038587997143717414892103772656","MASK":"4745.92383639232687907784203138443731","ANT":"7539.2038600723763571","FET":"227355.40540555130823615810810796220505","PAX":"16830.190566709144833512279297630007","ACH":"1839927.82152349046736456223097163963981","ASM":"1431855.31914985504979853255319197177309","PLA":"83723.81189355957678990411296383771857","RAI":"5976.66074600738809024353463602688377","TRIBE":"82409.83535818909300386089905209322023","ORN":"18570.1021355617455896","IOTX":"639585.63010875486839741000950357685886","UST":"767479.41518649712906905257829038505453","QUICK":"304.81565359200583614786212478904875","AXS":"2045.617265009716682","REQ":"183992.640294388224471","WLUNA":"98140932.15896165680675878076124396572833","TRU":"458715.5963302752293578","RAD":"10277.4922918807810894","COTI":"238642.55319164250858016042553217524262","DDX":"35735.55649959812453601627017869949295","SUKU":"333815.47619069041372763761904794466619","RGT":"47617.41340794026452567133694403055034","XYO":"4081632.6530612244897959","ZEN":"1673.2201121057475111","AST":"164701.90895752126164324054331896666141","AUCTION":"3338.15476190690391856047619033908792","BUSD":"16832.71635818989124616370685308914375","JASMY":"4468605.57769211071058417717131457901177","WCFG":"82815.7349896480331263","BTRST":"18426.3865855905656901","AGLD":"54350.83185272426734677129381387174708","AVAX":"1275.5183387649155926","FX":"98387.7192983087532717877192981824747","TRAC":"91860.769860828811408548730548671598","LCX":"442162.94349568454195366180026272838203","ARPA":"607375.45126392768276795368231015359461","BADGER":"6446.09195402712556244747126458706199","KRL":"58703.07048154499895013360781548630842","PERP":"36507.10643378712582711186177730565919","RARI":"8127.68115942550526616594202869863505","DESO":"1872.48747913308867902686143608009631","API3":"11940.59616750233934576730305149638737","NCT":"2244736.49099543653386412208805827868459","SHPING":"3411253.04136471955156370362530439807389","UPI":"9597761.47501386061468667990552999474904","CRO":"265576.95343347745514706042620319772788","MTL":"23205.93103449765067886689655164967706","ABT":"149019.48627113194666833900797138665146","CVX":"4308.39948783887254088193341876725119","AVT":"11806.52631579705072910052631599783349","MDT":"719294.57032966211314888262077811722755","VGX":"42076.52869828885047679183943984905602","ALCX":"970.81938834453612771531448408284528","COVAL":"1758944.06691174038912717107684236711039","FOX":"534953.89507188543243046554849014847507","MUSD":"17570.5497105065410120900116299805375","CELR":"1407302.38394067727477403515683780075306","GALA":"654387.39790006988797835823803951411913","POWR":"115313.91363955309751483237148776483157","GYEN":"2309761.12026507369930921912685333042563","ALICE":"13092.84046693447207470525291818291025","INV":"335.61340514683447242697785776587908","LQTY":"27596.65381778200148738053719387217293","PRO":"43552.4203986818460544132280615982981","SPELL":"26662916.0063562548750640342313786269816","ENS":"1251.34250650879787066146522825825092","DIA":"51838.05518328417991270875999482027592","BLZ":"269620.19230786533306457999999955705328","CTX":"7880.2341920425279450988290399137876","ERN":"8878.25857520358589004754617361260958","IDEX":"357583.42189183415225789729011740750135","MCO2":"8433.23308271217885186751879698706926","POLS":"46163.53409249772677493788997065562132","SUPER":"170165.87438060884747088699908921492968","UNFI":"3458.23227132801542506150051363937028","STX":"66224.36528246721822095719543387555611","KSM":"560.71654724248600465762706206526922","GODS":"74140.35474280399576300193786468510547","IMX":"38245.73766767628317068175721775438395","RBN":"74600.59860330693719034746923896593892","BICO":"57313.23454270412792347672968813584748","GFI":"26246.95787833197558791691107596806474","ATA":"152601.36054431561804054891156499064107","GLM":"76283.38245300746619700697574200650887","MPL":"3747.060133632694545374164810930887","PLU":"2019.72388955711891694104441805614553","SWFTC":"15204970.62811640020511782866696830130588","SAND":"28890.35803212981364694443633570344555","OCEAN":"123345.30791796771859881519061579144998","GNO":"189.04769930907054739075678363137672","FIDA":"44727.63525192289481482440382835946033","ORCA":"37676.18407795498137020048034949524639","CRPT":"226742.5876012236769950097035041013306","QSP":"1365608.76623464259901294389610355957944","RNDR":"33239.75106195949249686205077584343618","NEST":"672837.4325139290874498610677865808832","PRQ":"211360.55276395473410019678391966309644","HOPR":"293874.23580804885233216174672455136616","JUP":"4074173.62877123061457167485288722635339","MATH":"150016.04993322155020349458314773628645","SYN":"26811.63346615266380251924302759164103","AIOZ":"436428.0155644824080982750972763626171","WAMPL":"3876.56682027898541283539170504922244","AERGO":"155924.9304912956153564602409642756874","INDEX":"8739.89610390171296478506493527526285","TONE":"896578.73701096705701680828137485289956","HIGH":"13858.56672159044285873273476154537751","GUSD":"16815.89205398380544933470764651414375","FLOW":"16374.01459855065389057598540148875063","ROSE":"381763.10415272967683300725663763019774","OP":"16446.04105572902892218469208196156898","APE":"4352.9883570532467469529107376940882","MINA":"30769.2307692307692308","MUSE":"2430.55475296313161148976596361180648","SYLO":"7276946.36678667682789128415224907517328","CBETH":"14.19005769037062309763739427380457","DREP":"56704.75227506166805165564206287262567","ELA":"15556.44937587683534698911234432361215","FORT":"104498.75776404221657366925465855274575","ALEPH":"235140.4612160838138031322851157642253","DEXT":"127215.87901709487213110648393201034057","FIS":"57070.21709637312368146046132979123948","BIT":"56221.5538847478590124501253132471284","GMT":"41690.74464133514345142071738372246031","GST":"742991.52093317421012001826179085318178","MEDIA":"819.6979293549718512500609013529803","C98":"75158.81170431448175564350681235318334","00":"89277.26187323320133220000795955097187","APT":"3508.71741397514072027699687213319036","AURORA":"54713.17073174242951043390243954228679","BOBA":"85816.37337419432127940093343489158026","DAR":"127941.44486700225805304577946820608128","DYP":"62435.93787694430335341992355193051578","EGLD":"379.26735798040602862471596053588019","GAL":"11911.00884956516582028185840703187245","GHST":"16518.70397644653532303751104527746013","HBAR":"357014.3236076561668786137931039637742","HFT":"36037.9136767929671671614865587084924","ILV":"389.58666203567864883491142736538409","INJ":"10574.67001886285174149921433072843775","LDO":"16534.93857494918605353877149876088764","LIT":"19963.57164047558169693590922548159745","LOKA":"38254.43383358525834171927694376254471","MAGIC":"27425.53762690225967247601902485817813","METIS":"982.44087591303913248875912402454408","MNDE":"177940.77207837965931457388154389788671","MONA":"38.26269885493872849440408915888439","MSOL":"1152.74409044267180835383350454645676","MXC":"652231.05252997855467711812948224876857","NEAR":"10008.5068411723953343909577631334032","OOKI":"4691662.01896564328665551860011148166945","PNG":"379823.90789052481852020587538111414615","POND":"1947256.94444569407643262111111067124041","PUNDIX":"44280.30003950729469587470982989186728","PYR":"5419.32678370455666536597036546216919","QI":"2092574.62686701453050040358208946629392","RARE":"138871.64671903257797293399092032083302","RPL":"869.38945580321451416029694015823597","STG":"41587.69002598145258227175009240348223","TIME":"237.63135593235530755661016911943141","WAXL":"35830.68895753550516277992865457989381","XCN":"461382.14726479629299083914438498469356","XMON":"1.09389351251463977522389103038698"}}}'
+  recorded_at: Thu, 08 Dec 2022 09:26:36 GMT
 - request:
     method: get
     uri: https://api.coinbase.com/v2/exchange-rates?currency=BCH
@@ -229,61 +232,62 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 14 Jun 2019 11:30:06 GMT
+      - Thu, 08 Dec 2022 09:26:37 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '2129'
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d540bf7f74a8b4f24ffc20252e1983b4f1560511806; expires=Sat, 13-Jun-20
-        11:30:06 GMT; path=/; domain=.coinbase.com; HttpOnly
       Cache-Control:
-      - public, max-age=30
+      - max-age=30, public, s-maxage=30, stale-while-revalidate=30
       Content-Disposition:
       - attachment; filename=response.json
       Content-Security-Policy:
       - 'default-src ''self'' https://www.coinbase.com; child-src ''self'' https://www.coinbase.com
         https://fast.wistia.net https://*.online-metrix.net https://*.wpstn.com https://netverify.com
-        https://platform.twitter.com https://www.google.com/recaptcha/ https://cdn.plaid.com/link/
-        https://*.doubleclick.net/ blob:; connect-src ''self'' https://www.coinbase.com
-        https://api.coinbase.com https://api.mixpanel.com https://*.online-metrix.net
+        https://platform.twitter.com https://www.google.com/recaptcha/ https://recaptcha.net/recaptcha/
+        https://cdn.plaid.com/link/ https://*.doubleclick.net/ blob:; connect-src
+        ''self'' https://www.coinbase.com https://api.coinbase.com https://*.online-metrix.net
         https://api.cloudinary.com https://ott9.wpstn.com/live https://api.amplitude.com/
-        https://d3907m2cqladbn.cloudfront.net/ https://exceptions.coinbase.com https://assets.coinbase.com/
-        static.coinbase.com wss://ws.coinbase.com wss://ws.coinbase.com:443 https://www.coinbase.com/api;
-        font-src ''self'' https://www.coinbase.com https://assets.coinbase.com/ https://card.coinbase.com/
+        https://api2.amplitude.com/ https://d3907m2cqladbn.cloudfront.net/ https://exceptions.coinbase.com
+        https://assets.coinbase.com/ https://sessions.coinbase.com/ https://dynamic-assets.coinbase.com/
+        https://events-service.coinbase.com/amp static.coinbase.com wss://ws.coinbase.com
+        wss://ws.coinbase.com:443 https://www.coinbase.com/api; font-src ''self''
+        https://www.coinbase.com https://assets.coinbase.com/ https://card.coinbase.com/
         static.coinbase.com; img-src ''self'' data: https://www.coinbase.com https://images.coinbase.com
         https://d3907m2cqladbn.cloudfront.net/ https://static-assets.coinbase.com/
-        https://dynamic-assets.coinbase.com https://exceptions.coinbase.com https://coinbase-uploads.s3.amazonaws.com
+        https://dynamic-assets.coinbase.com/ https://exceptions.coinbase.com https://coinbase-uploads.s3.amazonaws.com
         https://s3.amazonaws.com/app-public/ https://maps.gstatic.com https://ssl.google-analytics.com
         https://www.google.com https://maps.googleapis.com https://csi.gstatic.com
         https://www.google-analytics.com https://res.cloudinary.com https://secure.gravatar.com
         https://i2.wp.com https://*.online-metrix.net https://assets.coinbase.com/
-        https://hexagon-analytics.com https://api.mixpanel.com https://cb-brand.s3.amazonaws.com
-        https://googleads.g.doubleclick.net https://stats.g.doubleclick.net/r/collect
-        https://card.coinbase.com/ blob: static.coinbase.com https://www.facebook.com/tr;
-        media-src ''self'' https://www.coinbase.com blob:; object-src ''self'' data:
-        blob: https://www.coinbase.com https://cdn.siftscience.com https://*.online-metrix.net
-        https://www.gstatic.com https://www.google.com/recaptcha/api/; script-src
-        ''self'' ''unsafe-inline'' ''unsafe-eval'' https://www.coinbase.com https://fast.wistia.com/assets/external/E-v1.js
-        https://cdn.siftscience.com https://*.google-analytics.com https://www.google.com
-        https://www.gstatic.com https://*.online-metrix.net https://code.jquery.com
-        https://chart.googleapis.com https://maps.googleapis.com https://maps.gstatic.com
-        https://netverify.com https://ajax.cloudflare.com https://cdn.plaid.com/link/v2/stable/
-        https://www.googletagmanager.com/gtag/js https://www.googletagmanager.com/gtm.js
-        https://www.googleadservices.com https://googleads.g.doubleclick.net https://assets.coinbase.com/
-        https://card.coinbase.com/ static.coinbase.com; style-src ''self'' ''unsafe-inline''
-        https://www.coinbase.com https://assets.coinbase.com/ https://card.coinbase.com/
-        static.coinbase.com; report-uri /csp-report'
+        https://hexagon-analytics.com https://cb-brand.s3.amazonaws.com https://googleads.g.doubleclick.net
+        https://stats.g.doubleclick.net/r/collect https://card.coinbase.com/ blob:
+        static.coinbase.com https://www.facebook.com/tr; media-src ''self'' https://www.coinbase.com
+        blob:; object-src ''self'' data: blob: https://www.coinbase.com https://cdn.siftscience.com
+        https://*.online-metrix.net https://www.gstatic.com https://www.google.com/recaptcha/api/
+        https://recaptcha.net/recaptcha/; script-src ''self'' ''unsafe-inline'' ''unsafe-eval''
+        https://www.coinbase.com https://fast.wistia.com/assets/external/E-v1.js https://cdn.siftscience.com
+        https://*.google-analytics.com https://www.google.com https://www.gstatic.com
+        https://*.online-metrix.net https://code.jquery.com https://chart.googleapis.com
+        https://maps.googleapis.com https://maps.gstatic.com https://netverify.com
+        https://ajax.cloudflare.com https://cdn.plaid.com/link/v2/stable/ https://www.googletagmanager.com/gtag/js
+        https://www.googletagmanager.com/gtm.js https://www.googleadservices.com https://googleads.g.doubleclick.net
+        https://recaptcha.net https://assets.coinbase.com/ https://card.coinbase.com/
+        static.coinbase.com; style-src ''self'' ''unsafe-inline'' https://www.coinbase.com
+        https://assets.coinbase.com/ https://card.coinbase.com/ static.coinbase.com;
+        report-uri /csp-report'
       Etag:
-      - W/"b97efebaeee322582fbf80328c3d43ca"
+      - W/"54e436d7178a3b71da2964eb87047774"
       Expect-Ct:
-      - enforce; max-age=86400; report-uri="https://coinbase.report-uri.io/r/default/ct/reportOnly"
+      - enforce, max-age=86400, report-uri="https://coinbase.report-uri.io/r/default/ct/reportOnly"
       Referrer-Policy:
       - strict-origin-when-cross-origin
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Trace-Id:
+      - '3954175480922046841'
       Vary:
       - Origin,Accept-Encoding
       X-Content-Type-Options:
@@ -297,24 +301,25 @@ http_interactions:
       X-Powered-By:
       - Proof-of-Work
       X-Request-Id:
-      - 9e4bdaf7-dcd3-4090-8388-a45ef45c3f8a
+      - 26f649c4-a8f9-4869-91dd-a38e74229973
       X-Xss-Protection:
       - 1; mode=block
       Cf-Cache-Status:
       - HIT
-      Expires:
-      - Fri, 14 Jun 2019 11:30:36 GMT
-      Accept-Ranges:
-      - bytes
+      Age:
+      - '26'
+      Set-Cookie:
+      - __cf_bm=X2WrAQd.qV9s6G8ZyVZmmZtZhXA1wXP3TQXL21uTvJU-1670491597-0-ARCGiQC40ODurOeo+1DOMODA6kPUZRFi9J+Yhro5DM09Jf7fUCbLOo88i4FIKeG4/5JVh8LIYjbgHJ4U1W88sVY=;
+        path=/; expires=Thu, 08-Dec-22 09:56:37 GMT; domain=.coinbase.com; HttpOnly;
+        Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 4e6bf866ba99cc4a-ZRH
+      - 776475e27cce921a-FRA
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"currency":"BCH","rates":{"AED":"1511.30361375","AFN":"32956.9720875","ALL":"44591.3253","AMD":"196942.569430995","ANG":"772.05448602","AOA":"139469.6763225","ARS":"17902.8945855","AUD":"596.51903475","AWG":"732.868182315","AZN":"700.4680875","BAM":"714.916450395","BAT":"1282.218292027331415621","BBD":"822.87","BCH":"1.0","BDT":"34807.812435","BGN":"714.7037385","BHD":"155.076023025","BIF":"755968.64720841","BMD":"411.435","BND":"555.765163695","BOB":"2845.160660655","BRL":"1583.78035761","BSD":"411.435","BSV":"1.95752103002331556239","BTC":"0.049655","BTN":"28636.16811885","BWP":"4478.250680145","BYN":"849.80582658","BYR":"8498058.2658","BZD":"829.95244209","CAD":"548.946040005","CDF":"679389.160341195","CHF":"409.536227475","CLF":"9.996636195","CLP":"286482.1905","CNH":"2852.254622925","CNY":"2848.77594","COP":"1345136.58268785","CRC":"241193.308837995","CUC":"411.435","CVE":"40308.0812325","CZK":"9330.70807575","DAI":"411.787490091518266452","DJF":"73256.00175","DKK":"2728.433259675","DOP":"21213.5886","DZD":"49108.8816","EEK":"6012.583956585","EGP":"6898.11921","EOS":"64.1614035087719379891","ERN":"6170.14586988","ETB":"11881.417872825","ETC":"48.9570442646358852756","ETH":"1.609557155152178999985","EUR":"365.33","FJD":"888.26594751","FKP":"325.49774868","GBP":"325.655","GEL":"1125.274725","GGP":"325.49774868","GHS":"2215.083753","GIP":"325.49774868","GMD":"20489.463","GNF":"3772114.014429135","GTQ":"3164.304207195","GYD":"85966.97503014","HKD":"3220.61032125","HNL":"10079.40704256","HRK":"2708.0240265","HTG":"38202.229769085","HUF":"117505.836","IDR":"5898949.3125","ILS":"1479.377492055","IMP":"325.49774868","INR":"28712.527574805","IQD":"491316.01781283","ISK":"51718.02051573","JEP":"325.49774868","JMD":"53383.69125","JOD":"291.707826435","JPY":"44532.37788433245","KES":"41908.7691","KGS":"28268.54107191","KHR":"1677895.966977705","KMF":"179642.67439293","KRW":"487283.04225","KWD":"125.07624","KYD":"343.123212645","KZT":"158106.2418","LAK":"3588809.042722275","LBP":"622686.30075","LKR":"72797.108957055","LRD":"79870.00945797","LSL":"6092.793209835","LTC":"3.127831838224114209165","LTL":"1326.814102575","LVL":"270.008744535","LYD":"574.22254923","MAD":"3966.13054125","MDL":"7494.297988005","MGA":"1502298.101018205","MKD":"22441.60275885","MMK":"628323.7995774","MNT":"1009558.63125","MOP":"3319.864489215","MRO":"146882.295","MTL":"281.31374403","MUR":"14716.972760535","MVR":"6356.67815583","MWK":"306742.21018929","MXN":"7893.8330535","MYR":"1714.92032664","MZN":"25517.1987","NAD":"6092.793209835","NGN":"148439.057655465","NIO":"13571.468599455","NOK":"3574.101695895","NPR":"45817.60567176","NZD":"629.941134105","OMR":"158.3860176","PAB":"411.435","PEN":"1372.98163536","PGK":"1389.59538066","PHP":"21400.38009","PKR":"63155.2725","PLN":"1554.977439","PYG":"2570350.265186805","QAR":"1498.141396665","REP":"22.37884144683165547704","RON":"1725.9286815","RSD":"43049.045979405","RUB":"26481.0674745","RWF":"374905.13542407","SAR":"1543.32971415","SBD":"3385.354243905","SCR":"5620.2021","SEK":"3890.60753265","SGD":"562.574412945","SHP":"325.49774868","SLL":"3451939.65","SOS":"238185.754371405","SRD":"3068.48223","SSP":"53594.921979","STD":"8660953.45054035","SVC":"3602.71741158","SZL":"6092.780866785","THB":"12826.08045009","TJS":"3884.78901888","TMT":"1440.01673991","TND":"1215.677280375","TOP":"943.16454243","TRY":"2424.76008057","TTD":"2792.01848175","TWD":"12957.751581705","TZS":"946485.543302685","UAH":"10889.86158","UGX":"1542021.328221075","USD":"411.435","USDC":"411.435","UYU":"14541.035748705","UZS":"3506657.188422465","VEF":"102236513.085425835","VES":"2528479.22920209","VND":"9602295.780681585","VUV":"46031.41280673","WST":"1076.496225705","XAF":"239677.438295745","XAG":"27.35969103135","XAU":"0.3039105771","XCD":"1111.92365925","XDR":"295.913515005","XLM":"3362.688287169092761545","XOF":"239677.438295745","XPD":"0.282491271","XPF":"43602.13599273","XPT":"0.50600333475","XRP":"1035.577649131638561711","YER":"103003.059591945","ZAR":"6092.264104425","ZEC":"4.44266277939747367362","ZMK":"2161299.017540925","ZMW":"5384.03841","ZRX":"1280.064091096471063815","ZWL":"132628.133950785"}}}'
-    http_version: 
-  recorded_at: Fri, 14 Jun 2019 11:30:06 GMT
+      string: '{"data":{"currency":"BCH","rates":{"AED":"401.70894337729327213779243140242036","AFN":"9574.95851759996206986471200001680788","ALL":"12125.31872124994597558705000002433056","AMD":"43139.8656141999014007849040000389756","ANG":"196.87781195999991085099519999999444","AOA":"55187.20355232614007307474033706731336","ARS":"18572.04314099999055860292","AWG":"196.85992490271740413108837349279296","AZN":"185.92899999999990548","BAM":"203.68370083432647898711203814064196","BBD":"220.55936994999986600109400000001112","BDT":"11227.99025948001432865441759998981408","BGN":"203.58131799999988556916000000000556","BHD":"41.22593873699997904213044","BIF":"226157.98180314297849108654507857733844","BMD":"109.3699999999999444","BND":"148.45663966299993546667755999999444","BOB":"754.29620205620678501838397800933924","BRL":"569.28178699999956841544000000007228","BSD":"109.240680881971864115741455265258","BTN":"9005.00410509999649398721199999945512","BWP":"1409.55924755999976465586719999975536","BYN":"276.08247225999983777503120000001112","BYR":"2760824.7225999983777503120000001112","BZD":"220.19691776999987712235240000000556","CAD":"149.663001699999923916404","CDF":"224440.79622409182105689247527190642208","CHF":"102.90080153862895237572117081674444","CLF":"3.43611108004287746119762228779296","CLP":"94812.85300000371397524199999808743784","CNY":"762.47291920952078898261819466601976","COP":"527592.86058851878630051779691268692692","CRC":"65769.56856620034950216214399980532772","CUC":"109.3699999999999444","CVE":"11483.7719098199575777746984000185982","CZK":"2532.33901344128465517370012493829748","DJF":"19447.21192832985816972877960006707584","DKK":"774.216011899999606414828","DOP":"5985.7451815499915979200860000027244","DZD":"15109.90298000001278176459999998959724","EGP":"2695.95956299999788574956000000037808","ETB":"5841.8652947158784472837424686567908","EUR":"104.06","FJD":"241.43780995133482522220295058770132","FKP":"89.85839199999995431904","GBP":"89.4450000000002649","GEL":"294.20529999999983949900000000000556","GHS":"1420.19055840999881866926920000023352","GIP":"89.85839199999995431904","GMD":"6824.68800000000744568599999999445112","GNF":"941622.9289746169043651870001945094832","GTQ":"861.93151748999955088623880000000556","GYD":"22856.10650789989196013834800004901696","HKD":"851.53840218632850195574625985289588","HNL":"2696.66751501000063057666119999898252","HRK":"786.16249699999973158563999999993328","HTG":"15676.2088093000301461919159999806234","HUF":"43193.56736924830649617075239821649392","IDR":"1708906.24999999913125","ILS":"376.31574601147266976483305990773452","INR":"9016.5721699999904399454000000025298","IQD":"159361.79513332353839697823925397056544","ISK":"15540.383299999992099796","JMD":"16789.52684758479876213477045153802932","JOD":"77.652699999999960524","JPY":"14972.9717399999354064788000000289676","KES":"13436.10450000005920714599999996642872","KGS":"9290.98149999999527678","KHR":"449962.64965105763173563511997058569292","KMF":"51250.69118377519629672916788971049916","KRW":"144299.496899999926643028","KWD":"33.57432228954958408495282711019636","KYD":"90.993779027302499441847728645684","KZT":"51706.93885655659511031431933301499828","LAK":"1889575.97481113538259164519942232164896","LBP":"165086.79245283010475512969811320754696","LKR":"40142.26150277473955698320568458760176","LRD":"16842.2706035621694037456330981339042","LSL":"1889.40755317316547723125705012294104","LYD":"530.23379834438263126511357824184616","MAD":"1156.2441094600000137396951999996942","MDL":"2121.62948593598340626649951503394572","MGA":"478201.83053309071816654495995375837516","MKD":"6416.86630037998713519672560000488168","MMK":"229405.83895900424541437007999778248852","MNT":"372619.791033049810572731266","MOP":"875.92716373711152664432674605992832","MUR":"4812.03643300999701781082120000027244","MVR":"1678.79444845070994098881901929669772","MWK":"112116.8631471039922056479036391594072","MXN":"2152.61376161234341693514422925523612","MYR":"481.55610999999976613019999999999444","MZN":"6988.74299999998708508800000000475936","NAD":"1875.98627787306937694017838765008336","NGN":"48446.109959425195515765177891174545","NIO":"3988.38583732999993016285959999900476","NOK":"1096.08207859999931154503200000006672","NPR":"14407.70711310000493598717199999376724","NZD":"172.21452415443715094997455438684776","OMR":"42.0503435309677507930309927602804","PAB":"109.24763684399994446220528","PEN":"417.6199974951198552011519545700306","PGK":"384.74459705944929539089095267996984","PHP":"6058.98862999999277469260000000210724","PKR":"24537.05573279129355503075173085292856","PLN":"488.46325449529532442884191333607164","PYG":"784576.75753228080631393018364418938248","QAR":"398.2161699999998522453999999999722","RON":"512.1025609810341042494199456385602","RSD":"12204.59829999998908174900000000239636","RUB":"6826.324133368282244403245265825311","RWF":"118622.55965292835617938936442516269124","SAR":"411.298462549999790909806","SBD":"897.22598207999979543172959999987212","SCR":"1431.12023061999979744299439999973312","SEK":"1136.78080970141594233617692787091044","SHP":"89.85839199999995431904","SLL":"1009999.24837024074618360839987735178208","SRD":"3475.9973400000015687057999999983042","SSP":"14246.53620000002222182199999998502136","STD":"2496259.8414224787309861279776","SVC":"955.26191487696576210622897358212148","SZL":"1889.51004902498455645015163400205956","THB":"3803.0136399999980666768","TJS":"1097.90232350999975903668119999983876","TMT":"382.59211140332262231914168396499392","TND":"350.31210999999985472419999999998332","TOP":"256.47264999999984774400000000001112","TRY":"2039.09422975671714007462554198106772","TTD":"741.20057279210360890075791130125624","TWD":"3353.77530472070457930533901004599612","TZS":"255269.57999997990814844400001014804528","UAH":"4032.38068542000382324337039999701428","UGX":"403281.7109144540722663857374631268462","UYU":"4296.00350853998984298446480000405324","UZS":"1230129.36294358444511926128021093610288","VES":"1383.05484986999925315380440000002224","VND":"2604047.61904761772380848219047619047672","VUV":"12910.47227999992254311960000003603992","WST":"295.03104349999985001622","XAF":"68237.7084505399653102625048","XAG":"4.80757818853161417199024154376992","XAU":"0.0613139586381698038300621716902","XCD":"295.5626418765537333059734082801872","XDR":"82.3767184099999581224692","XOF":"68313.04338150033824553877999981039288","XPD":"0.05869063590019149216367051247464","XPF":"12468.17999999999864887199999999746464","XPT":"0.10807312252964218205928853755044","YER":"27364.32304763047140164190245720962432","ZAR":"1880.9998037651287823284717990197178","ZMW":"1888.72072629661437023441654848850352","JEP":"89.85839199999995431904","GGP":"89.85839199999995431904","IMP":"89.85839199999995431904","GBX":"15112.51131331135536881961177551626896","CNH":"762.52108140367424354213416801399384","LTL":"0","ZWD":"52489.7581710008188554565199995701564","ZWL":"35217.1399999999820968","VEF":"138305484.986999925315380440000002224","SGD":"148.45128539240429673939948964356684","AUD":"162.82458749999992816249999999999444","USD":"109.3699999999999444","BTC":"0.006513","BCH":"1.0","BSV":"2.50037150074871348289589977481448","ETH":"0.08873869670871201788825512476556","ETH2":"0.08873869670871201788825512476556","ETC":"5.82529960053261811061517976032064","LTC":"1.45158935563076382406118521467944","ZRX":"592.06608706949722668167430681116816","USDC":"109.3699999999999444","BAT":"492.08134617115065880352677044902132","LOOM":"2278.54166666666550468766666666666852","MANA":"275.699521048651237468710612553565","KNC":"174.55909344824825051307501396536836","LINK":"15.96875456270987525602657322236888","DNT":"5441.29353233830569556884577114427656","MKR":"0.18000625421748009449092315541832","CVC":"1137.49349973998901840886947477899264","OMG":"94.82810942038404930160415311917508","GNT":"639.67368863092134909258372607437972","DAI":"109.37546877343861564721986099305","SNT":"4893.51230425055679101325055928411908","ZEC":"2.49049299783673334691779574177156","XRP":"283.49212426115320081821533400268832","REP":"19.93983591613490597526344576116544","XLM":"1298.80771423142627875219190575717464","EOS":"111.3237314876074544267891495750424","XTZ":"110.81053698074969212567983789260296","ALGO":"492.1034870641167312712710911136128","DASH":"2.4794831104057997095148492405364","ATOM":"11.36606910885944184487581189919276","OXT":"1328.91859052247806431484325637909904","COMP":"2.88119072708113376330031612223536","ENJ":"365.175292153589128057262103505844","REPV2":"19.93983591613490597526344576116544","BAND":"51.5409990574929037583034872761552","NMR":"7.84014336917562635133691756272244","CGLD":"185.84536958368724848651486830925968","UMA":"61.11763062307904312386867840178728","LRC":"453.44112769485880978690381426202212","YFI":"0.01574963027177433599342193370528","UNI":"18.36916358750418443874000671817524","BAL":"18.79209621993126207473539518900336","REN":"1260.74927953890426335080979827089076","WBTC":"0.00651089415406575769008215263732","NU":"1038.15851922164161599140579022306672","YFII":"0.07306970249667897485384055211344","FIL":"25.08198601077856959216867331727916","AAVE":"1.79030937960386001186740874120264","BNT":"296.35550738382317586090746511313016","GRT":"1762.61079774375413894042868654311104","SNX":"55.6307222787385269392268565615464","STORJ":"347.868956743002368380216284987277","SUSHI":"93.6627558448231065450304016442592","MATIC":"122.52968855030242218706049742325924","SKL":"4247.37864077669686862869902912621424","ADA":"352.52215954875082560068573730862332","ANKR":"5241.79247543733258063241936256889784","CRV":"165.88806309722424143613286819354016","ICP":"26.28770580459078415722160797980852","NKN":"1355.26641883519138162750061957868588","OGN":"1072.30746605225691845923898230305408","1INCH":"249.70319634703183343336073059360888","USDT":"109.3699999999999444","FORTH":"29.08776595744678953476595744681064","CTSI":"915.61322729175340255027752197572404","TRB":"8.05375552282768530874374079528636","POLY":"522.5513616817961958576039178213106","MIR":"814.37081161578513862048920327624828","RLC":"106.62442115525220183775920058493704","DOT":"20.65728586268768787153621682878276","SOL":"8.11049314052651077290025954764352","DOGE":"1135.42694004671626880343835971969792","MLN":"5.20685551059271276901118781242592","GTC":"62.49714285714282224657142857143016","AMP":"32262.53687315632577693605899705014992","SHIB":"11933442.44408073588652690508074195308132","CHZ":"717.65091863517023674960367454068348","KEEP":"1285.19388954171497498899882491186856","LPT":"14.9821917808219086935616438356172","QNT":"0.92808349951207515519381390809724","BOND":"28.00768245838667024284379001280372","RLY":"10991.95979899496929170830150753768576","CLV":"1740.17501988862282001801750198886368","FARM":"3.12619694154637615474746319851328","MASK":"30.85190409026797098493794076163428","ANT":"49.10209212534790894916108467271532","FET":"1477.9729729729722201436486486486494","PAX":"109.408292902515823680533186615316","ACH":"11960.84864391950398592906124234470428","ASM":"9308.08510638297399637610638297872092","PLA":"544.26474247325178025725727792983116","RAI":"38.85257548845468867166785079928876","TRIBE":"535.72295388927636883361299950826324","ORN":"119.3995633187772371313100436681196","IOTX":"4157.76468352024118284739669264398568","UST":"4989.16588737084343342421186962571164","QUICK":"1.981520065223294117662378838665","AXS":"13.321559074299628152771010962241","REQ":"1193.34424440807358815724440807419556","WLUNA":"637986.35011374872776373642192148398604","TRU":"2984.17462482946641890579399727148908","RAD":"66.68902439024386746956097560975664","COTI":"1551.34751773049566788551773049645256","DDX":"232.3067119796090606081435853865746","SUKU":"2170.03968253968143980639682539682372","RGT":"309.54729197785833320265142206334392","XYO":"26322.50300842357266364488929001203156","ZEN":"10.9097256857855296588653366583546","AST":"1070.68037200195736396139843367596508","AUCTION":"21.70039682539681297625396825396896","BUSD":"109.424712356178029997186093046525","JASMY":"29049.13678618856424802671845949535276","WCFG":"538.7684729064036721133743842364506","BTRST":"119.92324561403502253308771929824776","AGLD":"353.31933451784831287642900985301104","AVAX":"8.29188779378316421368536770280548","FX":"639.5906432748534753838011695906436","TRAC":"597.160797160796856623696423696424","LCX":"2874.37582128777777576178318002628164","ARPA":"3948.37545126353589571878339350180668","BADGER":"41.90421455938695409831800766283412","KRL":"381.61200279134662795939567341242296","PERP":"237.32233915590744303436877508950772","RARI":"52.8357487922705016350966183574894","DESO":"12.17250973845297458090873678352628","API3":"77.62242725337114260238963804116556","NCT":"14592.39492995329477886214743162108292","SHPING":"22175.58799675586869689388726682887132","UPI":"62392.32375323738656055390728718609952","CRO":"1726.44041041831008874822730860300144","MTL":"150.85517241379302600434482758620728","ABT":"968.73339238263900878278653675819448","CVX":"28.00768245838667024284379001280372","AVT":"76.75087719298241923345614035087612","MDT":"4675.9298845660514921607759726378794","VGX":"273.52757283981479214585544579217176","ALCX":"6.31102135025966746369070975187264","COVAL":"11434.39623627809141370161683220073332","FOX":"3477.58346581875817340746740858505316","MUSD":"114.22115760161588818383594541605","CELR":"9148.47344207444118432026516102049528","GALA":"4253.98677557370456470434733566705644","POWR":"749.62302947224088456006648389307516","GYEN":"15015.10159253156842346841131246567844","ALICE":"85.112840466926025706517509727627","INV":"2.18172750847795818288370237382704","LQTY":"179.39801525465422270713122283277084","PRO":"283.1219259642763302604115972042428","SPELL":"173328.0507131536361317354041204437408","ENS":"8.13462253625882357263369282261296","DIA":"336.98448645067845389651196253331296","BLZ":"1752.72435897435807884635897435897664","CTX":"51.2271662763465791978454332552688","ERN":"57.71503957783637690163060686016104","IDEX":"2324.5483528161518521434272051009538","MCO2":"54.82205513784458360432581453634088","POLS":"300.09603512141567410934997942104816","SUPER":"1106.20006068574839587739294022453984","UNFI":"22.48098663926000674342857142857264","STX":"430.50580594371164793444381027356868","KSM":"3.64505915680719602497550408265336","GODS":"481.96540707282116923812724468436836","IMX":"248.6246874289610032126380995680826","RBN":"484.95732180467773237213923068395696","BICO":"372.57707375234182904644728325668624","GFI":"170.62402496099834838653042121685112","ATA":"992.01814058956866038460997732426116","GLM":"495.89662208116047781596984810700756","MPL":"24.358574610244978916926503340756","PLU":"13.12965186074429397233013205281964","SWFTC":"98843.19927699949788008059466787166544","SAND":"187.8080192324202719697703271228634","OCEAN":"801.83284457477965057736656891495624","GNO":"1.22894544637338650324580032586336","FIDA":"290.76166422969545335362767512960204","ORCA":"244.92218116672252845086675624230132","CRPT":"1473.9892183288402216138544474393528","QSP":"8877.43506493506041866898701298701472","RNDR":"216.08218907438495773314096611676184","NEST":"4373.9252149570063761247110577884416","PRQ":"1373.99497487437116146353768844221072","HOPR":"1910.39301310043570660496069868995808","JUP":"26485.04661581303895816123005206441732","MATH":"975.2117699509580435903990191707526","SYN":"174.29482071713138249142231075697364","AIOZ":"2837.0946822308675600072503242542148","WAMPL":"25.20046082949307454494009216589872","AERGO":"1013.6237256719179319680630213160312","INDEX":"56.8155844155843888318831168831158","TONE":"5828.40394351185421748103703703703728","HIGH":"90.09060955518941484998846787479188","GUSD":"109.315342328835530052786106946525","FLOW":"106.44282238442817002507785888077844","ROSE":"2481.73360562740968019677376900385512","OP":"106.91104594330395195204887585532824","APE":"28.2975420439844647944890038809816","MINA":"200.12808783165589610566514181152528","MUSE":"15.80034672060097451963941057497824","SYLO":"47305.36332179928390942909342560553664","CBETH":"0.09224553827468829610549576599916","DREP":"368.62150320188724283832524435456596","ELA":"101.1280628756356433749214054553842","FORT":"679.316770186335060083385093167701","ALEPH":"1528.5814116002787523910342417889564","DEXT":"826.99432892249485432712098298676716","FIS":"370.99728629579357064955766621438224","BIT":"365.4803675856305573621720969089392","GMT":"271.01970016107036659177289059595828","GST":"4829.97703585938634162542695636813464","MEDIA":"5.3286236297198512611084043848964","C98":"488.58610676792469888538798302434792","00":"580.36614486601190857452825683205156","APT":"22.80917622523461176858811261730768","AURORA":"355.67479674796730410799186991869652","BOBA":"557.86789084417211677287783728640888","DAR":"831.71102661596916425831178707224064","DYP":"405.87831443786741728722553949492664","EGLD":"2.46550946798918032761857529305572","GAL":"77.4300884955751813921681415929206","GHST":"107.38340697103577859691654393716444","HBAR":"2320.8488063660465707391511936339496","HFT":"234.2722501874262476639305986933712","ILV":"2.53259233530160590351591987958892","INJ":"68.742928975487081278425518541797","LDO":"107.48894348894343419226535626535632","LIT":"129.7775140907741822805117175912206","LOKA":"248.68121873578886550789949977262548","MAGIC":"178.28563745608279075262638238814844","METIS":"6.38656934306568954528467153284704","MNDE":"1156.74246430460014968034849286092148","MONA":"0.24873494729420903455158572224532","MSOL":"7.49366221308666891447619047619088","MXC":"4239.96898623764079648651618530723116","NEAR":"65.0624628197501146044497323022016","OOKI":"30499.1634132738272163143418851087566","PNG":"2469.1274410204299461643204650637762","POND":"12658.56481481480837517381481481481708","PUNDIX":"287.85366495591510213695591525200864","PYR":"35.22950555645029477151377033338772","QI":"13603.23383084576422798511442786069696","RARE":"902.76516714816297456279570780024776","RPL":"5.65165414199321832989064373390236","STG":"270.34977135088355754034198492151924","TIME":"1.54477401129943047368926553672508","WAXL":"232.92514109253528260775519114045628","XCN":"2999.31441107911543629423995612230928","XMON":"0.00711109130624449838496226911224"}}}'
+  recorded_at: Thu, 08 Dec 2022 09:26:37 GMT
 - request:
     method: get
     uri: https://api.coinbase.com/v2/exchange-rates?currency=USD
@@ -334,61 +339,62 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 14 Jun 2019 11:30:07 GMT
+      - Thu, 08 Dec 2022 09:26:37 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d540bf7f74a8b4f24ffc20252e1983b4f1560511806; expires=Sat, 13-Jun-20
-        11:30:06 GMT; path=/; domain=.coinbase.com; HttpOnly
       Cache-Control:
-      - public, max-age=30
+      - max-age=30, public, s-maxage=30, stale-while-revalidate=30
       Content-Disposition:
       - attachment; filename=response.json
       Content-Security-Policy:
       - 'default-src ''self'' https://www.coinbase.com; child-src ''self'' https://www.coinbase.com
         https://fast.wistia.net https://*.online-metrix.net https://*.wpstn.com https://netverify.com
-        https://platform.twitter.com https://www.google.com/recaptcha/ https://cdn.plaid.com/link/
-        https://*.doubleclick.net/ blob:; connect-src ''self'' https://www.coinbase.com
-        https://api.coinbase.com https://api.mixpanel.com https://*.online-metrix.net
+        https://platform.twitter.com https://www.google.com/recaptcha/ https://recaptcha.net/recaptcha/
+        https://cdn.plaid.com/link/ https://*.doubleclick.net/ blob:; connect-src
+        ''self'' https://www.coinbase.com https://api.coinbase.com https://*.online-metrix.net
         https://api.cloudinary.com https://ott9.wpstn.com/live https://api.amplitude.com/
-        https://d3907m2cqladbn.cloudfront.net/ https://exceptions.coinbase.com https://assets.coinbase.com/
-        static.coinbase.com wss://ws.coinbase.com wss://ws.coinbase.com:443 https://www.coinbase.com/api;
-        font-src ''self'' https://www.coinbase.com https://assets.coinbase.com/ https://card.coinbase.com/
+        https://api2.amplitude.com/ https://d3907m2cqladbn.cloudfront.net/ https://exceptions.coinbase.com
+        https://assets.coinbase.com/ https://sessions.coinbase.com/ https://dynamic-assets.coinbase.com/
+        https://events-service.coinbase.com/amp static.coinbase.com wss://ws.coinbase.com
+        wss://ws.coinbase.com:443 https://www.coinbase.com/api; font-src ''self''
+        https://www.coinbase.com https://assets.coinbase.com/ https://card.coinbase.com/
         static.coinbase.com; img-src ''self'' data: https://www.coinbase.com https://images.coinbase.com
         https://d3907m2cqladbn.cloudfront.net/ https://static-assets.coinbase.com/
-        https://dynamic-assets.coinbase.com https://exceptions.coinbase.com https://coinbase-uploads.s3.amazonaws.com
+        https://dynamic-assets.coinbase.com/ https://exceptions.coinbase.com https://coinbase-uploads.s3.amazonaws.com
         https://s3.amazonaws.com/app-public/ https://maps.gstatic.com https://ssl.google-analytics.com
         https://www.google.com https://maps.googleapis.com https://csi.gstatic.com
         https://www.google-analytics.com https://res.cloudinary.com https://secure.gravatar.com
         https://i2.wp.com https://*.online-metrix.net https://assets.coinbase.com/
-        https://hexagon-analytics.com https://api.mixpanel.com https://cb-brand.s3.amazonaws.com
-        https://googleads.g.doubleclick.net https://stats.g.doubleclick.net/r/collect
-        https://card.coinbase.com/ blob: static.coinbase.com https://www.facebook.com/tr;
-        media-src ''self'' https://www.coinbase.com blob:; object-src ''self'' data:
-        blob: https://www.coinbase.com https://cdn.siftscience.com https://*.online-metrix.net
-        https://www.gstatic.com https://www.google.com/recaptcha/api/; script-src
-        ''self'' ''unsafe-inline'' ''unsafe-eval'' https://www.coinbase.com https://fast.wistia.com/assets/external/E-v1.js
-        https://cdn.siftscience.com https://*.google-analytics.com https://www.google.com
-        https://www.gstatic.com https://*.online-metrix.net https://code.jquery.com
-        https://chart.googleapis.com https://maps.googleapis.com https://maps.gstatic.com
-        https://netverify.com https://ajax.cloudflare.com https://cdn.plaid.com/link/v2/stable/
-        https://www.googletagmanager.com/gtag/js https://www.googletagmanager.com/gtm.js
-        https://www.googleadservices.com https://googleads.g.doubleclick.net https://assets.coinbase.com/
-        https://card.coinbase.com/ static.coinbase.com; style-src ''self'' ''unsafe-inline''
-        https://www.coinbase.com https://assets.coinbase.com/ https://card.coinbase.com/
-        static.coinbase.com; report-uri /csp-report'
+        https://hexagon-analytics.com https://cb-brand.s3.amazonaws.com https://googleads.g.doubleclick.net
+        https://stats.g.doubleclick.net/r/collect https://card.coinbase.com/ blob:
+        static.coinbase.com https://www.facebook.com/tr; media-src ''self'' https://www.coinbase.com
+        blob:; object-src ''self'' data: blob: https://www.coinbase.com https://cdn.siftscience.com
+        https://*.online-metrix.net https://www.gstatic.com https://www.google.com/recaptcha/api/
+        https://recaptcha.net/recaptcha/; script-src ''self'' ''unsafe-inline'' ''unsafe-eval''
+        https://www.coinbase.com https://fast.wistia.com/assets/external/E-v1.js https://cdn.siftscience.com
+        https://*.google-analytics.com https://www.google.com https://www.gstatic.com
+        https://*.online-metrix.net https://code.jquery.com https://chart.googleapis.com
+        https://maps.googleapis.com https://maps.gstatic.com https://netverify.com
+        https://ajax.cloudflare.com https://cdn.plaid.com/link/v2/stable/ https://www.googletagmanager.com/gtag/js
+        https://www.googletagmanager.com/gtm.js https://www.googleadservices.com https://googleads.g.doubleclick.net
+        https://recaptcha.net https://assets.coinbase.com/ https://card.coinbase.com/
+        static.coinbase.com; style-src ''self'' ''unsafe-inline'' https://www.coinbase.com
+        https://assets.coinbase.com/ https://card.coinbase.com/ static.coinbase.com;
+        report-uri /csp-report'
       Etag:
-      - W/"e56abb755c816b9a352c3d54798dd23e"
+      - W/"f35dd1940923f36d88621bcffc1dc89f"
       Expect-Ct:
-      - enforce; max-age=86400; report-uri="https://coinbase.report-uri.io/r/default/ct/reportOnly"
+      - enforce, max-age=86400, report-uri="https://coinbase.report-uri.io/r/default/ct/reportOnly"
       Referrer-Policy:
       - strict-origin-when-cross-origin
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Trace-Id:
+      - '7332867714495075821'
       Vary:
       - Origin,Accept-Encoding
       X-Content-Type-Options:
@@ -402,22 +408,25 @@ http_interactions:
       X-Powered-By:
       - Proof-of-Work
       X-Request-Id:
-      - 2492df0c-cf2b-4de2-b5bb-3a661c351336
+      - d64302af-4a7f-46e1-9fec-231173d24eb0
       X-Xss-Protection:
       - 1; mode=block
       Cf-Cache-Status:
       - HIT
-      Expires:
-      - Fri, 14 Jun 2019 11:30:37 GMT
+      Age:
+      - '4'
+      Set-Cookie:
+      - __cf_bm=VYUxEezm_TsSfa8P9kwYYCZNRxEUvoZiWf41xpajlfk-1670491597-0-AV/RdNUNU7C1itdlkZky2/04z98Vf8dt9u9uS5YK71xnl+ofMOtr7VotAk6GIWlJH9cy6C/5EiQHJTCO82MZwjk=;
+        path=/; expires=Thu, 08-Dec-22 09:56:37 GMT; domain=.coinbase.com; HttpOnly;
+        Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 4e6bf8693eb1cc4a-ZRH
+      - 776475e59c3d9be6-FRA
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"currency":"USD","rates":{"AED":"3.67","AFN":"80.10","ALL":"108.38","AMD":"478.67","ANG":"1.88","AOA":"338.98","ARS":"43.51","AUD":"1.45","AWG":"1.78","AZN":"1.70","BAM":"1.74","BAT":"3.11645410","BBD":"2.00","BCH":"0.00243052","BDT":"84.60","BGN":"1.74","BHD":"0.377","BIF":"1837","BMD":"1.00","BND":"1.35","BOB":"6.92","BRL":"3.85","BSD":"1.00","BSV":"0.00475779","BTC":"0.00012100","BTN":"69.60","BWP":"10.88","BYN":"2.07","BYR":"20655","BZD":"2.02","CAD":"1.33","CDF":"1651.27","CHF":"1.00","CLF":"0.0243","CLP":"696","CNH":"6.93","CNY":"6.92","COP":"3269.38","CRC":"586.22","CUC":"1.00","CVE":"97.97","CZK":"22.68","DAI":"1.00085673","DJF":"178","DKK":"6.63","DOP":"51.56","DZD":"119.36","EEK":"14.61","EGP":"16.77","EOS":"0.1559","ERN":"15.00","ETB":"28.88","ETC":"0.11899096","ETH":"0.00391206","EUR":"0.89","FJD":"2.16","FKP":"0.79","GBP":"0.79","GEL":"2.74","GGP":"0.79","GHS":"5.38","GIP":"0.79","GMD":"49.80","GNF":"9168","GTQ":"7.69","GYD":"208.94","HKD":"7.83","HNL":"24.50","HRK":"6.58","HTG":"92.85","HUF":"286","IDR":"14337.50","ILS":"3.60","IMP":"0.79","INR":"69.79","IQD":"1194.152","ISK":"126","JEP":"0.79","JMD":"129.75","JOD":"0.709","JPY":"108","KES":"101.86","KGS":"68.71","KHR":"4078.16","KMF":"437","KRW":"1184","KWD":"0.304","KYD":"0.83","KZT":"384.28","LAK":"8722.66","LBP":"1513.45","LKR":"176.93","LRD":"194.13","LSL":"14.81","LTC":"0.00760225","LTL":"3.22","LVL":"0.66","LYD":"1.396","MAD":"9.64","MDL":"18.22","MGA":"3651.4","MKD":"54.54","MMK":"1527.15","MNT":"2453.75","MOP":"8.07","MRO":"357.0","MTL":"0.68","MUR":"35.77","MVR":"15.45","MWK":"745.54","MXN":"19.19","MYR":"4.17","MZN":"62.02","NAD":"14.81","NGN":"360.78","NIO":"32.99","NOK":"8.69","NPR":"111.36","NZD":"1.53","OMR":"0.385","PAB":"1.00","PEN":"3.34","PGK":"3.38","PHP":"52.01","PKR":"153.50","PLN":"3.78","PYG":"6247","QAR":"3.64","REP":"0.05439217","RON":"4.19","RSD":"104.63","RUB":"64.36","RWF":"911","SAR":"3.75","SBD":"8.23","SCR":"13.66","SEK":"9.46","SGD":"1.37","SHP":"0.79","SLL":"8390.00","SOS":"578.91","SRD":"7.46","SSP":"130.26","STD":"21050.60","SVC":"8.76","SZL":"14.81","THB":"31.17","TJS":"9.44","TMT":"3.50","TND":"2.955","TOP":"2.29","TRY":"5.89","TTD":"6.79","TWD":"31.49","TZS":"2300.45","UAH":"26.47","UGX":"3748","USD":"1.00","USDC":"1.000000","UYU":"35.34","UZS":"8522.99","VEF":"248487.64","VES":"6145.51","VND":"23339","VUV":"112","WST":"2.62","XAF":"583","XAG":"0","XAU":"0","XCD":"2.70","XDR":"1","XLM":"8.1730730","XOF":"583","XPD":"0","XPF":"106","XPT":"0","XRP":"2.516990","YER":"250.35","ZAR":"14.81","ZEC":"0.01079797","ZMK":"5253.08","ZMW":"13.09","ZRX":"3.11121828","ZWL":"322.36"}}}'
-    http_version: 
-  recorded_at: Fri, 14 Jun 2019 11:30:07 GMT
+      string: '{"data":{"currency":"USD","rates":{"AED":"3.67295","AFN":"87.5464799999996977","ALL":"110.8651249999995624","AMD":"394.439659999999299","ANG":"1.8001080000000001","AOA":"504.5917852457361994","ARS":"169.8075999999986426","AWG":"1.7999444537141584","AZN":"1.7","BAM":"1.8623361144219309","BBD":"2.0166349999999998","BDT":"102.6606040000001832","BGN":"1.86118","BHD":"0.3769401","BIF":"2067.8246484698097601","BMD":"1","BND":"1.3573799000000001","BOB":"6.8967376982372421","BRL":"5.2045979500129594","BSD":"0.998817599725445","BTN":"82.3352300000000098","BWP":"12.8879880000000044","BYN":"2.525465","BYR":"25254.65","BZD":"2.0133209999999999","CAD":"1.36838","CDF":"2052.1239482864765032","CHF":"0.9408592792528674","CLF":"0.0314173089516584","CLP":"866.9000000000343986","CNY":"6.9720999999999978","COP":"4823.9266763145200193","CRC":"601.3492600000035013","CUC":"1","CVE":"104.9992859999996655","CZK":"23.1559000000000052","DJF":"177.8112089999987936","DKK":"7.0796961394416952","DOP":"54.729314999999951","DZD":"138.1540000000001871","EGP":"24.6509999999999942","ETB":"53.413781610275957","EUR":"0.9518461055216593","FJD":"2.2075323210325953","FKP":"0.8219560911056131","GBP":"0.82193","GEL":"2.6899999999999999","GHS":"12.9851929999999958","GIP":"0.8219560911056131","GMD":"62.4000000000000998","GNF":"8609.517499996501628","GTQ":"7.8808769999999999","GYD":"208.9796699999991184","HKD":"7.78579","HNL":"24.6563730000000183","HRK":"7.1902000000000003","HTG":"143.3318900000003485","HUF":"394.5193373653209612","IDR":"15625","ILS":"3.4402044307080904","INR":"82.4414542012989476","IQD":"1457.0887367040652776","ISK":"142.1199999999993764","JMD":"153.5112631213752153","JOD":"0.71","JPY":"136.9029999999995917","KES":"122.8500000000006038","KGS":"84.9499999999996874","KHR":"4114.1323000005290343","KMF":"468.5991696422713939","KRW":"1319.2612137203166227","KWD":"0.3069792656994569","KYD":"0.83198115595961","KZT":"472.7707676378954137","LAK":"17276.9130000103898984","LBP":"1509.4339622641509434","LKR":"367.0317409049534604","LRD":"153.9935137931990305","LSL":"17.2753730746380766","LYD":"4.8480734967942114","MAD":"10.5718580000000055","MDL":"19.3986420950533463","MGA":"4372.3309000008316839","MKD":"58.6711739999999122","MMK":"2097.5207000000398833","MNT":"3406.9652650001477429","MOP":"8.0088430441356128","MUR":"43.9977729999999951","MVR":"15.3496795140414263","MWK":"1025.115325474115838","MXN":"19.6834894890166129","MYR":"4.4030000000000001","MZN":"63.8999999999999144","NAD":"17.1526586620926244","NGN":"442.9561119084321125","NIO":"36.4669090000000179","NOK":"10.0231534845493089","NPR":"131.7336300000001121","NZD":"1.5748279500464574","OMR":"0.384477859842441","PAB":"0.9988812","PEN":"3.8184145331911865","PGK":"3.5178257022899286","PHP":"55.3999999999999612","PKR":"224.3490512278623574","PLN":"4.465458","PYG":"7173.6011477761836442","QAR":"3.6410000000000005","RON":"4.6828953967606539","RSD":"111.6700000000005358","RUB":"62.4200000000001431","RWF":"1084.5986984815618221","SAR":"3.760615","SBD":"8.2035840000000023","SCR":"13.0851260000000048","SEK":"10.3967800000000027","SHP":"0.8219560911056131","SLL":"9234.7010000022059032","SRD":"31.7820000000000305","SSP":"130.26","STD":"22823.9905040084346573","SVC":"8.7342225004751417","SZL":"17.2763102224100349","THB":"34.7799999999999756","TJS":"10.0384230000000029","TMT":"3.4981449337416368","TND":"3.2030000000000003","TOP":"2.3449999999999998","TRY":"18.6464991104687599","TTD":"6.7770007569909846","TWD":"30.6645","TZS":"2333.9999999998174812","UAH":"36.875364","UGX":"3687.3156342182890855","UYU":"39.2795419999999271","UZS":"11247.4111999962061852","VES":"12.6456509999999996","VND":"23809.5238095238095238","VUV":"118.044","WST":"2.69755","XAF":"624.2896869999964265","XAG":"0.043976340728688","XAU":"0.000561","XCD":"2.702410550210788","XDR":"0.753193","XOF":"624.6049500000034102","XPD":"0.0005370569280344","XPF":"114.0000000000000456","XPT":"0.0009871863215463","YER":"250.1995341284674528","ZAR":"17.1986495620363889","ZMW":"17.2690932275451708","JEP":"0.8219560911056131","GGP":"0.8219560911056131","IMP":"0.8219560911056131","GBX":"138.1824312093311832","CNH":"6.9713600000000019","ZWD":"479.9691999999942369","ZWL":"322.0000000000001288","VEF":"1264565.09999999996","SGD":"1.3573800000000001","AUD":"1.4889593662988937","USD":"1.0","BTC":"0.0000594416350016","BCH":"0.0091432751211484","BSV":"0.0228777982406973","ETH":"0.0008114577839088","ETH2":"0.0008114577839088","ETC":"0.053248136315229","LTC":"0.0132749236691889","ZRX":"5.4134231239782164","USDC":"1","BAT":"4.49842555105713","LOOM":"20.8333333333333333","MANA":"2.5198437696862795","KNC":"1.595405232929164","LINK":"0.1460493646852636","DNT":"49.7512437810945274","MKR":"0.0016441554384552","CVC":"10.4004160166406656","OMG":"0.8670394936489357","GNT":"5.8488859597668002","DAI":"1.000050002500125","SNT":"44.7427293064876957","ZEC":"0.0227634873662645","XRP":"2.5919263619205791","REP":"0.1823154056517776","XLM":"11.8712679701318898","EOS":"1.017863504504046","XTZ":"1.0126582278481013","ALGO":"4.49842555105713","DASH":"0.0226449275362319","ATOM":"0.1039230969082879","OXT":"12.1506682867557716","COMP":"0.0263435194942044","ENJ":"3.33889816360601","REPV2":"0.1823154056517776","BAND":"0.4697040864255519","NMR":"0.0716845878136201","CGLD":"1.7021276595744681","UMA":"0.5588153115395362","LRC":"4.1459369817578773","YFI":"0.0001437673958549","UNI":"0.1679543164259321","BAL":"0.1718213058419244","REN":"11.514104778353483","WBTC":"0.0000595308965353","NU":"9.4921689606074988","YFII":"0.0006705289132067","FIL":"0.229278917803508","AAVE":"0.0163706310878284","BNT":"2.7096599376778214","GRT":"16.0901045856798069","SNX":"0.508646998982706","STORJ":"3.1806615776081425","SUSHI":"0.856384345294168","MATIC":"1.1200716845878136","SKL":"38.7596899224806202","ADA":"3.2247662044501774","ANKR":"47.9386385426653883","CRV":"1.5167602002123464","ICP":"0.2402979694821579","NKN":"12.3915737298636927","OGN":"9.8044021765772832","1INCH":"2.2831050228310502","USDT":"1","FORTH":"0.2659574468085106","CTSI":"8.3717036416910841","TRB":"0.0736105999263894","POLY":"4.7835446065534561","MIR":"7.4626865671641791","RLC":"0.9748964172556666","DOT":"0.1888752478987629","SOL":"0.0741015190811412","DOGE":"10.3852944230968948","MLN":"0.0477099236641221","GTC":"0.5714285714285714","AMP":"294.9852507374631268","SHIB":"109110.7474086197490453","CHZ":"6.5616797900262467","KEEP":"11.7096018735362998","LPT":"0.136986301369863","QNT":"0.0084857227714371","BOND":"0.2560819462227913","RLY":"100.5025125628140704","CLV":"15.9108989657915672","FARM":"0.0285836787194512","MASK":"0.2820874471086037","ANT":"0.4489539373260303","FET":"13.5226504394861393","PAX":"1.00035012254289","ACH":"109.3613298337707787","ASM":"85.1063829787234043","PLA":"4.9763622791739239","RAI":"0.3552397868561279","TRIBE":"4.8987784993787369","ORN":"1.091703056768559","IOTX":"38.0155863904200722","UST":"45.6173163332801131","QUICK":"0.0181175831144125","AXS":"0.1212121212121212","REQ":"10.9110747408619749","WLUNA":"5832.9444703686420905","TRU":"27.2851296043656207","RAD":"0.6097560975609756","COTI":"14.1843971631205674","DDX":"2.1240441801189465","SUKU":"19.8412698412698413","RGT":"2.8302462808337956","XYO":"240.6738868832731649","ZEN":"0.0997506234413965","AST":"9.7895252080274107","AUCTION":"0.1988071570576541","BUSD":"1.0005002501250625","JASMY":"265.6042496679946879","WCFG":"4.9261083743842365","BTRST":"1.0964912280701754","AGLD":"3.2304958811177516","AVAX":"0.0757862826828344","FX":"5.847953216374269","TRAC":"5.4570259208731241","LCX":"26.2812089356110381","ARPA":"36.1663652802893309","BADGER":"0.3831417624521073","KRL":"3.4891835310537334","PERP":"2.1699034392969513","RARI":"0.4830917874396135","DESO":"0.1114827201783724","API3":"0.7097232079488999","NCT":"133.4222815210140093","SHPING":"202.7575020275750203","UPI":"569.96944963749943","CRO":"15.7853196527229676","MTL":"1.3793103448275862","ABT":"8.8573959255978742","CVX":"0.2560819462227913","AVT":"0.7017543859649123","MDT":"42.7533133817870885","VGX":"2.5009378516943854","ALCX":"0.0577034045008656","COVAL":"104.5478306325143753","FOX":"31.7965023847376789","MUSD":"1.0234909388607248","CELR":"83.6470096194061062","GALA":"38.8953714507973551","POWR":"6.8540095956134339","GYEN":"137.2872048325096101","ALICE":"0.7782101167315175","INV":"0.0199481348493916","LQTY":"1.6402854096612811","PRO":"2.588661661920787","SPELL":"1581.9030293443011943","ENS":"0.0743770918557084","DIA":"3.0821865031053029","BLZ":"16.0256410256410256","CTX":"0.468384074941452","ERN":"0.5277044854881266","IDEX":"21.2539851222104145","MCO2":"0.5012531328320802","POLS":"2.7438606118809164","SUPER":"10.1142914938808536","UNFI":"0.2055498458376156","STX":"3.9362330249950797","KSM":"0.0334616028107746","GODS":"4.4067423157430869","IMX":"2.2773855613755409","RBN":"4.4153034417290328","BICO":"3.4065746891500596","GFI":"1.5600624024960998","ATA":"9.0702947845804989","GLM":"4.5433893684688778","MPL":"0.22271714922049","PLU":"0.1200480192076831","SWFTC":"903.7505648441030276","SAND":"1.7168855695767877","OCEAN":"7.3313782991202346","GNO":"0.0112365863250744","FIDA":"2.6585138907350791","ORCA":"2.2514916131937409","CRPT":"13.477088948787062","QSP":"81.4332247557003257","RNDR":"1.9741387819563715","NEST":"39.992001599680064","PRQ":"12.422360248447205","HOPR":"17.4672489082969432","JUP":"242.1600678048189853","MATH":"8.9166295140436915","SYN":"1.5936254980079681","AIOZ":"25.940337224383917","WAMPL":"0.2304147465437788","AERGO":"9.267840593141798","INDEX":"0.5194805194805195","TONE":"53.3475593491597759","HIGH":"0.8237232289950577","GUSD":"0.9995002498750625","FLOW":"0.9737098344693281","ROSE":"22.6911731336510098","OP":"0.9775171065493646","APE":"0.2588326646822829","MINA":"1.8298261665141812","MUSE":"0.1444669170759896","SYLO":"432.5259515570934256","CBETH":"0.0008435117079425","DREP":"3.3704078193461409","ELA":"0.9246417013407305","FORT":"6.2111801242236025","ALEPH":"13.976240391334731","DEXT":"7.5614366729678639","FIS":"3.3921302578018996","BIT":"3.3495226930162452","GMT":"2.4764735017335315","GST":"44.1618088676912206","MEDIA":"0.048721071863581","C98":"4.4672771945499218","00":"5.3106744556558683","APT":"0.2085505735140772","AURORA":"3.2520325203252033","BOBA":"5.1007396072430502","DAR":"7.6045627376425856","DYP":"3.7275184046221228","EGLD":"0.0225428313796213","GAL":"0.7082152974504249","GHST":"0.9813542688910697","HBAR":"21.220159151193634","HFT":"2.142015636714148","ILV":"0.0231561884913743","INJ":"0.630119722747322","LDO":"0.9828009828009828","LIT":"1.184342985728667","LOKA":"2.2737608003638017","MAGIC":"1.6300982116241423","METIS":"0.0583941605839416","MNDE":"10.5764145954521417","MONA":"0.0022742520553553","MSOL":"0.0685166152792052","MXC":"38.7672029463074239","NEAR":"0.594883997620464","OOKI":"278.8622420524261015","PNG":"22.5759115024269105","POND":"115.7407407407407407","PUNDIX":"2.6319252533228056","PYR":"0.3221130616846513","QI":"124.4090569793480965","RARE":"8.2542302930251754","RPL":"0.0516825339901762","STG":"2.4718823384006921","TIME":"0.0141242937853107","WAXL":"2.1296986476413587","XCN":"27.4235568353215412","XMON":"0.0000650009321298"}}}'
+  recorded_at: Thu, 08 Dec 2022 09:26:37 GMT
 - request:
     method: get
     uri: https://api.kraken.com/0/public/Ticker?pair=BCHEUR,BCHUSD,BCHXBT,XBTCAD,XBTEUR,XBTGBP,XBTJPY,XBTUSD
@@ -437,165 +446,96 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 14 Jun 2019 11:30:08 GMT
+      - Thu, 08 Dec 2022 09:26:39 GMT
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=deb94ea0fdd3959b8874e0a401afde4bd1560511808; expires=Sat, 13-Jun-20
-        11:30:08 GMT; path=/; domain=.kraken.com; HttpOnly
       Cache-Control:
-      - public,max-age=2,smaxage=2
+      - public, max-age=1
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Last-Modified:
+      - Thu, 08 Dec 2022 09:26:31 GMT
+      Cf-Cache-Status:
+      - EXPIRED
+      Set-Cookie:
+      - __cf_bm=j33eIbF.ZE5fkMOq9eQ5aSKTPZ9VjHbDdADEN8wajBc-1670491599-0-AVlSKfS8b/e7Ch+orpf+zWbjBwM/T0mij2WVpgXSH4wZk7ZDxS97V1ShAV9C39nD7hIBm2D9HSgWnkuUTqz28MU=;
+        path=/; expires=Thu, 08-Dec-22 09:56:39 GMT; domain=.kraken.com; HttpOnly;
+        Secure; SameSite=None
+      - __cfruid=72db54ba801f659ae950daa044cf0ad9c120e46c-1670491599; path=/; domain=.kraken.com;
+        HttpOnly; Secure; SameSite=None
       Vary:
       - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 776475ef5bb19277-FRA
+    body:
+      encoding: ASCII-8BIT
+      string: '{"error":[],"result":{"BCHEUR":{"a":["104.080000","4","4.000"],"b":["103.990000","16","16.000"],"c":["104.000000","6.02000000"],"v":["339.07029707","920.28487472"],"p":["103.909406","103.932976"],"t":[91,254],"l":["103.450000","103.420000"],"h":["104.470000","104.470000"],"o":"103.900000"},"BCHUSD":{"a":["109.360000","12","12.000"],"b":["109.310000","5","5.000"],"c":["109.400000","4.68453028"],"v":["1151.46411492","2060.10406686"],"p":["109.506043","109.426273"],"t":[161,409],"l":["108.620000","108.620000"],"h":["109.900000","109.900000"],"o":"109.300000"},"BCHXBT":{"a":["0.00651000","186","186.000"],"b":["0.00649000","38","38.000"],"c":["0.00651000","0.04039696"],"v":["3.97456955","184.11469947"],"p":["0.00649017","0.00650639"],"t":[49,167],"l":["0.00646000","0.00645000"],"h":["0.00652000","0.00652000"],"o":"0.00649000"},"XXBTZCAD":{"a":["22983.00000","1","1.000"],"b":["22969.90000","1","1.000"],"c":["22987.10000","0.00135872"],"v":["9.67172753","29.78944551"],"p":["22952.41674","22940.88520"],"t":[201,639],"l":["22901.50000","22863.50000"],"h":["23040.90000","23040.90000"],"o":"22936.40000"},"XXBTZEUR":{"a":["16007.10000","1","1.000"],"b":["16004.70000","1","1.000"],"c":["16007.10000","0.00927713"],"v":["136.51034622","840.45475688"],"p":["16003.65523","16007.72568"],"t":[6705,21904],"l":["15970.70000","15938.80000"],"h":["16065.60000","16070.50000"],"o":"16016.80000"},"XXBTZGBP":{"a":["13836.00000","2","2.000"],"b":["13825.80000","1","1.000"],"c":["13834.10000","0.04657981"],"v":["6.32108823","51.15567099"],"p":["13818.99815","13809.06614"],"t":[288,1354],"l":["13773.00000","13750.00000"],"h":["13854.30000","13883.20000"],"o":"13797.20000"},"XXBTZJPY":{"a":["2306830.000","1","1.000"],"b":["2303857.000","1","1.000"],"c":["2306199.000","0.03234769"],"v":["0.04178090","0.34206132"],"p":["2304971.724","2312215.974"],"t":[5,28],"l":["2300735.000","2291423.000"],"h":["2306199.000","2319746.000"],"o":"2301031.000"},"XXBTZUSD":{"a":["16821.10000","1","1.000"],"b":["16821.00000","3","3.000"],"c":["16821.10000","0.00117141"],"v":["377.45866443","1536.89156123"],"p":["16833.30589","16821.71407"],"t":[4254,14400],"l":["16791.10000","16763.80000"],"h":["16880.00000","16898.40000"],"o":"16836.90000"}}}'
+  recorded_at: Thu, 08 Dec 2022 09:26:39 GMT
+- request:
+    method: get
+    uri: https://www.okcoin.com/api/market/v3/oracle
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 08 Dec 2022 09:26:40 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Set-Cookie:
+      - __cf_bm=GayxtmT56tUzem0zQllY47I0quqZnjbMSwNhfxnmIgA-1670491600-0-AY6I3diO5IVX2Ec4RDaebI5ot74kbmGtbPbHuufI/tvj9nfgofxyEybqMiItbzUILtCETLYf9vE5he9rtFvT0oU=;
+        path=/; expires=Thu, 08-Dec-22 09:56:40 GMT; domain=.okcoin.com; HttpOnly;
+        Secure; SameSite=None
+      - locale=en-US; Max-Age=604800; Expires=Thu, 15-Dec-2022 09:26:40 GMT; Path=/
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubdomains; preload
       Cf-Cache-Status:
-      - MISS
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      - DYNAMIC
       Server:
       - cloudflare
       Cf-Ray:
-      - 4e6bf871290ecc5a-ZRH
+      - 776475f58a10bb7a-FRA
     body:
       encoding: ASCII-8BIT
-      string: '{"error":[],"result":{"BCHEUR":{"a":["365.900000","4","4.000"],"b":["365.700000","2","2.000"],"c":["366.000000","1.00000000"],"v":["1759.44751495","6275.49302134"],"p":["364.442657","367.784266"],"t":[1055,3611],"l":["360.100000","353.700000"],"h":["369.000000","377.200000"],"o":"365.600000"},"BCHUSD":{"a":["411.700000","9","9.000"],"b":["411.500000","4","4.000"],"c":["411.500000","0.33443968"],"v":["2541.81165323","12854.46140522"],"p":["409.922942","414.156699"],"t":[1748,6150],"l":["406.000000","398.200000"],"h":["415.700000","426.000000"],"o":"411.900000"},"BCHXBT":{"a":["0.04970000","2","2.000"],"b":["0.04967000","72","72.000"],"c":["0.04967000","0.00541981"],"v":["582.63801026","2600.16637649"],"p":["0.04959831","0.05035598"],"t":[536,1549],"l":["0.04931000","0.04912000"],"h":["0.05049000","0.05160000"],"o":"0.05010000"},"XXBTZCAD":{"a":["11038.10000","1","1.000"],"b":["10965.10000","1","1.000"],"c":["11039.60000","0.04186445"],"v":["11.41630196","55.00934512"],"p":["10932.86488","10942.86291"],"t":[102,500],"l":["10840.20000","10687.10000"],"h":["11048.60000","11088.40000"],"o":"10897.80000"},"XXBTZEUR":{"a":["7370.90000","1","1.000"],"b":["7369.80000","1","1.000"],"c":["7371.10000","0.07018838"],"v":["1317.91786238","4327.20311582"],"p":["7339.55194","7303.16523"],"t":[6892,21052],"l":["7270.00000","7150.00000"],"h":["7396.10000","7396.10000"],"o":"7311.60000"},"XXBTZGBP":{"a":["6740.10000","1","1.000"],"b":["6561.30000","1","1.000"],"c":["6600.00000","0.07135000"],"v":["0.21869708","0.66862816"],"p":["6605.64458","6635.09574"],"t":[10,36],"l":["6505.20000","6505.20000"],"h":["6671.90000","6997.30000"],"o":"6505.20000"},"XXBTZJPY":{"a":["902341.000","1","1.000"],"b":["886191.000","1","1.000"],"c":["885508.000","0.03441334"],"v":["0.07092334","0.07092334"],"p":["887375.237","887375.237"],"t":[3,3],"l":["885508.000","885508.000"],"h":["891202.000","890418.000"],"o":"891202.000"},"XXBTZUSD":{"a":["8291.50000","1","1.000"],"b":["8290.90000","1","1.000"],"c":["8290.20000","0.97541610"],"v":["1490.66299448","5576.16882570"],"p":["8248.78358","8228.09467"],"t":[4351,19698],"l":["8175.00000","8005.00000"],"h":["8318.70000","8344.90000"],"o":"8237.60000"}}}'
-    http_version: 
-  recorded_at: Fri, 14 Jun 2019 11:30:09 GMT
-- request:
-    method: get
-    uri: https://www.okcoin.com/api/v1/ticker.do?symbol=btc_usd
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: ''
-    headers:
-      Date:
-      - Fri, 14 Jun 2019 11:30:09 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Set-Cookie:
-      - __cfduid=db03e2807f75748788e67dc44df4fecae1560511809; expires=Sat, 13-Jun-20
-        11:30:09 GMT; path=/; domain=.okcoin.com; HttpOnly
-      - locale=en_US; Max-Age=604800; Expires=Fri, 21-Jun-2019 11:30:09 GMT; Path=/
-      X-Content-Type-Options:
-      - nosniff
-      X-Xss-Protection:
-      - 1; mode=block
-      Cache-Control:
-      - no-cache, no-store, max-age=0, must-revalidate
-      Pragma:
-      - no-cache
-      Expires:
-      - '0'
-      X-Frame-Options:
-      - DENY
-      X-Ratelimit-Limit:
-      - '20'
-      X-Ratelimit-Remaining:
-      - '19'
-      X-Ratelimit-Used:
-      - '1'
-      X-Ratelimit-Reset:
-      - '1560511811643'
-      X-Kong-Upstream-Latency:
-      - '4'
-      X-Kong-Proxy-Latency:
-      - '0'
-      Via:
-      - kong/0.12.3
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 4e6bf8796f5dcc46-ZRH
-    body:
-      encoding: ASCII-8BIT
-      string: '{"date":"1560511809","ticker":{"high":"8316.53","vol":"314.2513","last":"8284.56","low":"8035.61","buy":"8284.56","sell":"8292.38"}}'
-    http_version: 
-  recorded_at: Fri, 14 Jun 2019 11:30:09 GMT
-- request:
-    method: get
-    uri: https://www.okcoin.com/api/v1/ticker.do?symbol=bch_usd
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: ''
-    headers:
-      Date:
-      - Fri, 14 Jun 2019 11:30:11 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Set-Cookie:
-      - __cfduid=d47ae305cdfcdd40e730b3e448e22f5941560511810; expires=Sat, 13-Jun-20
-        11:30:10 GMT; path=/; domain=.okcoin.com; HttpOnly
-      - locale=en_US; Max-Age=604800; Expires=Fri, 21-Jun-2019 11:30:11 GMT; Path=/
-      X-Content-Type-Options:
-      - nosniff
-      X-Xss-Protection:
-      - 1; mode=block
-      Cache-Control:
-      - no-cache, no-store, max-age=0, must-revalidate
-      Pragma:
-      - no-cache
-      Expires:
-      - '0'
-      X-Frame-Options:
-      - DENY
-      X-Ratelimit-Limit:
-      - '20'
-      X-Ratelimit-Remaining:
-      - '19'
-      X-Ratelimit-Used:
-      - '1'
-      X-Ratelimit-Reset:
-      - '1560511813078'
-      X-Kong-Upstream-Latency:
-      - '4'
-      X-Kong-Proxy-Latency:
-      - '0'
-      Via:
-      - kong/0.12.3
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 4e6bf87d5ee83e6c-ZRH
-    body:
-      encoding: ASCII-8BIT
-      string: '{"date":"1560511811","ticker":{"high":"422.11","vol":"725.4923","last":"409.29","low":"398.35","buy":"410.55","sell":"411.83"}}'
-    http_version: 
-  recorded_at: Fri, 14 Jun 2019 11:30:11 GMT
-recorded_with: VCR 4.0.0
+      string: '{"messages":["0x0000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000006391ada800000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000a09a54c0000000000000000000000000000000000000000000000000000000000000006707269636573000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000034254430000000000000000000000000000000000000000000000000000000000","0x0000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000006391ada800000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000bc18580000000000000000000000000000000000000000000000000000000000000006707269636573000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000034554480000000000000000000000000000000000000000000000000000000000"],"prices":{"BTC":"16840.43","ETH":"1232.7"},"signatures":["0xce6ad9522be01f335b8831e1de374451aff322412b584f6867d33e4cbf79a93176c45379af3cbe2440e73f790b52f3d557152e892d5e2d1538d47f3d73420a5b000000000000000000000000000000000000000000000000000000000000001b","0xe6e1d36c8fcd3018d47e8cdc7590ad101c4150cbbc318c6b10d2e2658d25e4db4bb6587244969d78ad68d9454f7b23d91bbf4d9136916712a2a91196e63ee13b000000000000000000000000000000000000000000000000000000000000001c"],"timestamp":"1670491560"}'
+  recorded_at: Thu, 08 Dec 2022 09:26:40 GMT
+recorded_with: VCR 6.1.0

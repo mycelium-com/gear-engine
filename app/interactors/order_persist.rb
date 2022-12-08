@@ -74,7 +74,15 @@ class OrderPersist
         yield rate if block_given?
         amount.to_d * rate.rate * (10 ** Currency.precision(to))
       end
-    result.round(0)
+    rounded = result.round(0)
+    if rounded < 1 # satoshi
+      context.fail!(response: {
+        status: :unprocessable_entity,
+        json:   { error: { amount: ["too low"] } }
+      })
+    else
+      rounded
+    end
   end
 
   def order_data

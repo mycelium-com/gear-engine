@@ -23,7 +23,7 @@ services:
     ports:
     - 6379:6379
 
-  # RUBYOPT='-W0' bundle exec rake spec
+  # export RUBYOPT='-W0'; bundle exec rake spec
   gear-engine-test:
     platform: linux/amd64
     build: test
