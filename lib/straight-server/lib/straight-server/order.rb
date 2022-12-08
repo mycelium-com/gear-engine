@@ -49,6 +49,7 @@ module StraightServer
         begin
           transaction.update(item)
         rescue => ex
+          Sentry.capture_exception ex
           StraightServer.logger.warn "Error during accepted transaction save: #{item.inspect} #{transaction.inspect} #{ex.full_message}"
         end
         transaction

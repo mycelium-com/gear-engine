@@ -52,6 +52,7 @@ module StraightServer
         def create_pk_infrastructure
           ['x509+sha256', create_pki_data.to_s]
         rescue => ex
+          Sentry.capture_exception ex
           Rails.logger.error ex.full_message
           ['none', '']
         end
@@ -69,6 +70,7 @@ module StraightServer
         def create_signature(data)
           Rails.application.config.bip70_key.sign(OpenSSL::Digest::SHA256.new, data)
         rescue => ex
+          Sentry.capture_exception ex
           Rails.logger.error ex.full_message
           ''
         end

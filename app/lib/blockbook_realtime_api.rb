@@ -144,6 +144,7 @@ class BlockbookRealtimeAPI
           unsubscribe(address)
         end
       rescue RuntimeError => ex
+        Sentry.capture_exception ex
         Rails.logger.error "[BlockbookRealtimeAPI] [#{timestamp} subscription_callback_failed] #{connection}\n#{ex.inspect}"
       end
     end

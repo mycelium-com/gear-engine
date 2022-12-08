@@ -34,6 +34,7 @@ class ElectrumAPI
         begin
           response = client.request(method: 'blockchain.transaction.get', params: [item['tx_hash'], true]) # true means verbose
         rescue => ex
+          Sentry.capture_exception ex
           Rails.logger.error "[ElectrumAPI] [TransactionFetchFailed] #{ex.message}\nAddress: #{address.inspect}\nTX: #{item.inspect}"
           next
         end
@@ -53,6 +54,7 @@ class ElectrumAPI
           }.reduce(:+)
           result << tx
         rescue => ex
+          Sentry.capture_exception ex
           Rails.logger.error "[ElectrumAPI] [UnexpectedResponse] #{item.inspect} =>\n#{response.inspect}\n#{ex.full_message}"
           next
         end

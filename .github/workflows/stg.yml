@@ -21,6 +21,7 @@ jobs:
         registry: ghcr.io
         tag_names: true
         cache: ${{ !contains(github.event.head_commit.message, '#no-cache') }}
+        buildargs: GITHUB_SHA
 
     - name: Deploy stg.gear.mycelium.com
       uses: mycelium-com/action-bashless-deploy@master

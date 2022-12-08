@@ -22,6 +22,8 @@ gem 'interactor-rails'
 gem 'enumerate_it', '~> 1.7'
 gem 'dry-struct', '0.6.0'
 gem 'dry-validation', '0.13.1'
+# Errors logging
+gem 'sentry-rails'
 
 # Straight
 gem 'btcruby', github: 'EugZol/btcruby' # https://github.com/oleganza/btcruby/issues/29#issuecomment-565481659

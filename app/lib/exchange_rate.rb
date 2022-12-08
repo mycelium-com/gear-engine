@@ -55,6 +55,7 @@ module ExchangeRate
         pairs = public_send(:"fetch_#{provider}")
         pairs.each(&method(:write_cache))
       rescue => ex
+        Sentry.capture_exception ex
         Rails.logger.error "[ExchangeRate] update_cache(#{provider.inspect}) failed: #{ex.inspect}"
         next
       end
@@ -66,6 +67,7 @@ module ExchangeRate
       Rails.cache.write("#{KEY_PREFIX}#{pair.pair_str}_#{pair.src}", pair)
     end
   rescue => ex
+    Sentry.capture_exception ex
     Rails.logger.error "[ExchangeRate] write_cache(#{pair.inspect}) failed: #{ex.inspect}"
   end
 

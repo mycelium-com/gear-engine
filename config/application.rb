@@ -61,6 +61,7 @@ module GearEngine
         require 'straight-server/lib/straight-server/order'
         require 'straight-server/lib/straight-server/transaction'
       rescue => ex
+        Sentry.capture_exception ex
         Rails.logger.error ex
       end
     end

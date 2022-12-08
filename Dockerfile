@@ -29,3 +29,5 @@ RUN mkdir -p $GEAR_ENGINE_PATH/tmp; \
 USER nobody
 
 LABEL org.opencontainers.image.source=https://github.com/mycelium-com/gear-engine
+ARG GITHUB_SHA
+ENV GITHUB_SHA=$GITHUB_SHA
